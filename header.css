@@ -1,0 +1,46 @@
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1em 1em;
+  overflow: hidden;
+  z-index: 10;
+  width: 100%;
+  box-sizing: border-box;
+}
+header .headerDiv {
+  background-color: rgb(116, 184, 248);
+  padding: 1em;
+  margin: 5px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  max-width: 60em;
+  width: 100%;
+}
+header .headerDiv img {
+  max-width: 3em;
+  height: auto;
+}
+header .headerDiv .titleDiv {
+  margin: 0 0.5em;
+  display: flex;
+  align-items: center;
+}
+header .headerDiv .titleDiv a {
+  text-decoration: none;
+  color: black;
+}
+header .headerDiv .titleDiv h1 {
+  font-size: 2em;
+  word-break: keep-all;
+  margin: 0 0.5em;
+  color: white;
+}
+header .headerDiv .description {
+  max-width: 10em;
+  overflow: hidden;
+}
+header .headerDiv form {
+  margin-left: auto;
+}/*# sourceMappingURL=header.css.map */

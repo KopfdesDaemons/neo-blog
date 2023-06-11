@@ -12,25 +12,61 @@ Tested up to: 6.2.2
 body {
     margin: 0;
     font-family: 'Quicksand';
-    background-color: rgb(245, 247, 255);
+    background: linear-gradient(90deg, rgba(234,238,255,1) 0%, rgba(232,250,255,1) 37%, rgba(234,238,255,1) 100%);
 }
 
 main {
     display: flex;
     flex-direction: column;
+    position: relative;
+}
+
+.backgroundDiv {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(245, 247, 255);
+    z-index: 2;
+    position: absolute;
+    margin-top: 45em;
+}
+
+.landingpageDiv {
+    width: 100vw;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    
+    img {
+        max-width: 130em;
+        width: 100%;
+        object-fit: cover;
+    }
+    
+    .color {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 255, 255, 0.068);
+    }
 }
 
 .spacer {
     margin: 0 auto;
+    // margin-top: 40em;
     max-width: 80em;
+    z-index: 5;
+    position: relative;
 }
 
+.shadow {
+    box-shadow: 1px 1px 10px -4px #000000;
+}
 
 .postCard {
-    background-color: rgb(205, 243, 243);
-    box-shadow: 1px 1px 5px -4px #000000;
-    border-radius: 25px;
-    // max-height: 25em;
+    background-color: rgb(225, 245, 245);
+    border-radius: 18px;
     padding: 2em;
     margin-top: 2em;
     display: grid;
@@ -44,7 +80,7 @@ main {
         width: auto;
         overflow: hidden;
         display: flex;
-        border-radius: 15px;
+        border-radius: 12px;
 
         img {
             width: auto;
@@ -61,7 +97,6 @@ main {
 
     .textDiv {
         padding: 1em;
-        // font-size: 1.3em;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -80,11 +115,9 @@ main {
 
             .readMore {
                 text-decoration: none;
-                // border: 1px solid gray;
                 background-color: rgb(119, 162, 202);
-                color: whitesmoke;
+                color: white;
                 border-radius: 8px;
-                // color: #000000;
                 padding: 0.8em 1.2em;
             }
 
@@ -94,10 +127,8 @@ main {
                 color: black;
                 transition: all 200ms;
             }
-
         }
     }
-
 
     h2 {
         margin: 0 0 0.5em 0;
@@ -113,25 +144,52 @@ main {
         margin: 0;
         padding: 0;
 
+        li {
+            margin: 0.4em 0.2em;
+        }
+
         a {
             text-decoration: none;
             color: black;
             text-align: center;
-            margin: 0.2em;
-            outline: 1px solid rgb(97, 97, 97);
             background-color: aliceblue;
             padding: 0.6em 1em;
             border-radius: 32px;
             font-size: 0.7em;
             min-width: 2em;
         }
-
+        
         a:hover {
-            outline: none;
+            outline: 1px solid rgb(97, 97, 97);
         }
     }
 }
 
 .stickyPost {
     border: 1px solid;
+}
+
+.pagination {
+    margin-top: 2em;
+    display: flex;
+    justify-content: flex-end;
+    background-color: white;
+    padding: 0.5em;
+    border-radius: 18px;
+    a, span {
+        color: #000000;
+        background-color: aquamarine;
+        border-radius: 12px;
+        margin: 0.2em;
+        padding: 0.5em 1em;
+        text-decoration: none;
+    }
+
+    span {
+        outline: 2px solid;
+    }
+
+    a:hover {
+        background-color: aliceblue;
+    }
 }

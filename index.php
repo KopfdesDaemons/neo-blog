@@ -1,10 +1,17 @@
 <?php get_header(); ?>
 <main role="main">
+    <!-- <div class="landingpageDiv">
+        <img src="<?php echo get_stylesheet_directory_uri() . '/landingpageImg.jpg' ?>"
+            alt="landingpage backgroundimage">
+        <div class="color"></div>
+    </div> -->
     <section class="spacer">
         <?php
+        $paged = (get_query_var('paged')) ? get_query_var('paged') : 1; // Aktuelle Seite abrufen
         $args = array(
             'post_type' => 'post', // Beitragstyp (kann angepasst werden)
-            'posts_per_page' => -1 // Anzahl der Beiträge (-1 für alle Beiträge)
+            'posts_per_page' => 10, // Anzahl der Beiträge pro Seite
+            'paged' => $paged // Aktuelle Seite übergeben
         );
 
         $query = new WP_Query($args);
@@ -12,7 +19,7 @@
         if ($query->have_posts()) {
             while ($query->have_posts()) {
                 $query->the_post();
-                $post_classes = array('postCard');
+                $post_classes = array('postCard shadow');
                 if (is_sticky()) {
                     $post_classes[] = 'stickyPost';
                 }
@@ -59,12 +66,24 @@
         </div>
         <?php
             }
-            echo wp_reset_postdata();
+            // Pagination hinzufügen
+            echo '<div class="pagination shadow">';
+            echo paginate_links(array(
+                'total' => $query->max_num_pages,
+                'current' => $paged,
+                'prev_next' => true,
+                'prev_text' => __('« Previous'),
+                'next_text' => __('Next »'),
+            ));
+            echo '</div>';
+
+            wp_reset_postdata();
         } else {
             echo 'Keine Beiträge gefunden.';
         }
         ?>
     </section>
-
+    <!-- <div class="backgroundDiv">
+    </div> -->
 </main>
 <?php get_footer(); ?>

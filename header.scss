@@ -1,0 +1,58 @@
+header {
+    // background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1em 1em;
+    // max-height: 4em;
+    overflow: hidden;
+
+
+    // position: fixed;
+    z-index: 10;
+    width: 100%;
+    box-sizing: border-box;
+
+    .headerDiv {
+        background-color: rgb(116, 184, 248);
+        padding: 1em;
+        margin: 5px;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        max-width: 60em;
+        width: 100%;
+
+        img {
+            max-width: 3em;
+            height: auto;
+        }
+
+        .titleDiv {
+            margin: 0 0.5em;
+            display: flex;
+            align-items: center;
+
+            a {
+                text-decoration: none;
+                color: black;
+            }
+
+            h1 {
+                font-size: 2em;
+                word-break: keep-all;
+                margin: 0 0.5em;
+                color: white;
+            }
+        }
+
+        .description {
+            max-width: 10em;
+            overflow: hidden;
+        }
+
+        form {
+            margin-left: auto;
+        }
+    }
+}
