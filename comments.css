@@ -1,0 +1,76 @@
+.comments-area {
+  background-color: rgb(225, 245, 245);
+  border-radius: 12px;
+  padding: 1em;
+  max-width: 50em;
+}
+.comments-area h2 {
+  margin: 0;
+}
+.comments-area .comment {
+  list-style: none;
+}
+.comments-area .commentCard {
+  background-color: rgb(172, 224, 255);
+  border-radius: 12px;
+  padding: 1em;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  margin-top: 1em;
+}
+.comments-area .cardBackground {
+  background-color: azure;
+}
+.comments-area .reply {
+  display: flex;
+  justify-content: space-between;
+}
+.comments-area .reply a {
+  text-decoration: none;
+  background-color: azure;
+  padding: 0.5em 1em;
+  border-radius: 12px;
+  color: black;
+}
+.comments-area .reply a:hover {
+  background-color: rgb(225, 245, 245);
+}
+.comments-area .profilepicture {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.comments-area .profilepicture img {
+  background-color: white;
+}
+.comments-area .commentContent {
+  display: flex;
+  flex-direction: column;
+  margin: 0.5em 0.5em 0.5em 1em;
+  overflow: auto;
+}
+.comments-area .commentContent .name {
+  color: black;
+  font-size: 1.3em;
+  text-decoration: none;
+  font-style: normal;
+}
+.comments-area .commentContent .date {
+  font-size: 0.8em;
+}
+.comments-area .commentContent .commentText {
+  overflow: auto;
+  max-height: 30em;
+}
+.comments-area .children {
+  grid-column-end: 3;
+  padding: 0;
+}
+.comments-area .children .comment {
+  margin-left: 2em;
+}
+.comments-area .children .author img {
+  max-width: 5em;
+  height: auto;
+}/*# sourceMappingURL=comments.css.map */

@@ -1,0 +1,89 @@
+.comments-area {
+    background-color: rgb(225, 245, 245);
+    border-radius: 12px;
+    padding: 1em;
+    max-width: 50em;
+
+    h2 {
+        margin: 0;
+    }
+
+    .comment {
+        list-style: none;
+    }
+
+    .commentCard {
+        background-color: rgb(172, 224, 255);
+        border-radius: 12px;
+        padding: 1em;
+        display: grid;
+        grid-template-columns: auto 1fr;
+        margin-top: 1em;
+    }
+
+    .cardBackground {
+        background-color: azure;
+    }
+    
+    .reply {
+        display: flex;
+        justify-content: space-between;
+        a {
+            text-decoration: none;
+            background-color: azure;
+            padding: 0.5em 1em;
+            border-radius: 12px;
+            color: black;
+        }
+
+        a:hover {
+            background-color: rgb(225, 245, 245);
+        }
+    }
+    
+    .profilepicture {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        img {
+            background-color: white;
+        }
+    }
+    
+    .commentContent {
+        display: flex;
+        flex-direction: column;
+        margin: 0.5em 0.5em 0.5em 1em;
+        overflow: auto;
+        .name{
+            color: black;
+            font-size: 1.3em;
+            text-decoration: none;
+            font-style: normal;
+        }
+
+        .date {
+            font-size: 0.8em;
+        }
+        
+        .commentText {
+            overflow: auto;
+            max-height: 30em;
+        }
+    }
+
+    .children {
+        grid-column-end: 3;
+        padding: 0;
+
+        .comment {
+            margin-left: 2em;
+        }
+
+        .author img {
+            max-width: 5em;
+            height: auto;
+        }
+    }
+}

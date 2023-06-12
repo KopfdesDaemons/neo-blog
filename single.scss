@@ -1,0 +1,15 @@
+h1 {
+    font-size: clamp(14px, 4vw, 30px);
+}
+
+p {
+    font-size: clamp(12px, 2vw 16px);
+}
+
+img {
+    margin: 0.5em;
+}
+
+.wp-block-quote {
+    background-color: aqua;
+}

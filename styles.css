@@ -18,6 +18,7 @@ main {
   display: flex;
   flex-direction: column;
   position: relative;
+  align-items: center;
 }
 
 .backgroundDiv {
@@ -52,7 +53,7 @@ main {
 
 .spacer {
   margin: 0 auto;
-  max-width: 80em;
+  max-width: 60em;
   z-index: 5;
   position: relative;
 }
@@ -174,4 +175,25 @@ main {
 }
 .pagination a:hover {
   background-color: aliceblue;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }/*# sourceMappingURL=styles.css.map */
