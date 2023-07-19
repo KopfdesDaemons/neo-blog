@@ -24,6 +24,8 @@
   background-color: inherit;
   box-sizing: border-box;
   overflow: hidden;
+  border-radius: 8px;
+  width: 100%;
 }
 
 .inputfeld input {
@@ -80,7 +82,7 @@ input.ng-dirty.ng-invalid,
 .inputfeld input:not(:placeholder-shown) + .placeholder,
 .inputfeld input:focus + .placeholder,
 input:-webkit-autofill + .placeholder {
-  transform: scale(0.8) translateY(-0.1em);
+  transform: scale(0.8) translateY(-0.05em);
   height: auto;
   color: var(--primary-color);
 }

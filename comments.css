@@ -9,6 +9,7 @@
 }
 .comments-area .comment {
   list-style: none;
+  font-size: 0.9em;
 }
 .comments-area .commentCard {
   background-color: rgb(172, 224, 255);
@@ -43,6 +44,8 @@
 }
 .comments-area .profilepicture img {
   background-color: white;
+  max-height: 5em;
+  width: auto;
 }
 .comments-area .commentContent {
   display: flex;
@@ -50,18 +53,15 @@
   margin: 0.5em 0.5em 0.5em 1em;
   overflow: auto;
 }
-.comments-area .commentContent .name {
-  color: black;
-  font-size: 1.3em;
-  text-decoration: none;
-  font-style: normal;
-}
-.comments-area .commentContent .date {
-  font-size: 0.8em;
+.comments-area .commentContent header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9em;
 }
 .comments-area .commentContent .commentText {
   overflow: auto;
   max-height: 30em;
+  margin: 0.5em 0;
 }
 .comments-area .children {
   grid-column-end: 3;
@@ -69,6 +69,7 @@
 }
 .comments-area .children .comment {
   margin-left: 2em;
+  font-size: 1em;
 }
 .comments-area .children .author img {
   max-width: 5em;

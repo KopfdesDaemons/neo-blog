@@ -14,22 +14,30 @@
     <header id="header" class="clearfix header" role="banner">
 
         <div class="headerDiv">
-            <div class="titleDiv">
-                <?php
-                $site_icon_url = get_site_icon_url();
-                if ($site_icon_url) {
-                    echo '<img src="' . esc_url($site_icon_url) . '"/>';
-                }
-                ?>
-                <a href="<?php echo esc_url(home_url('/')); ?>">
-                    <h1 class="site-title"><?php bloginfo('title'); ?></h1>
-                </a>
-                <!-- <?php if (get_bloginfo('description') != '') { ?>
-                    <span class="description">
-                        <?php bloginfo('description'); ?>
-                    </span>
-                <?php } ?> -->
+            <div class="firstHeaderColumn">
+                <div class="titleDiv">
+                    <!-- <?php
+                            $site_icon_url = get_site_icon_url();
+                            if ($site_icon_url) {
+                                echo '<img src="' . esc_url($site_icon_url) . '"/>';
+                            }
+                            ?> -->
+                    <a href="<?php echo esc_url(home_url('/')); ?>">
+                        <h1 class="site-title"><?php bloginfo('title'); ?></h1>
+                    </a>
+                    <!-- <?php if (get_bloginfo('description') != '') { ?>
+                        <span class="description">
+                            <?php bloginfo('description'); ?>
+                        </span>
+                    <?php } ?> -->
+                </div>
+                <div class="searchDiv">
+                    <?php get_search_form(array('button_text' => 's')); ?>
+                </div>
             </div>
-            <?php get_search_form(array('button_text' => 's')); ?>
+            <div class="secondHeaderColumn">
+                <?php wp_nav_menu(array('theme_location' => 'header-menu')); ?>
+
+            </div>
         </div>
     </header>

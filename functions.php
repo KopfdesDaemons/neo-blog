@@ -4,11 +4,21 @@ function enqueue_custom_styles()
     wp_enqueue_style('custom-styles', get_stylesheet_directory_uri() . '/styles.css', array(), '1', 'all');
     wp_enqueue_style('searchform-styles', get_stylesheet_directory_uri() . '/searchform.css', array(), '1', 'all');
     wp_enqueue_style('header-styles', get_stylesheet_directory_uri() . '/header.css', array(), '1', 'all');
+    wp_enqueue_style('sidebar-styles', get_stylesheet_directory_uri() . '/sidebar.css', array(), '1', 'all');
     wp_enqueue_style('comments-styles', get_stylesheet_directory_uri() . '/comments.css', array(), '1', 'all');
     wp_enqueue_style('single-styles', get_stylesheet_directory_uri() . '/single.css', array(), '1', 'all');
     wp_enqueue_style('custom-font', get_stylesheet_directory_uri() . '/fonts/fonts.css', array(), '1', 'all');
 }
 add_action('wp_enqueue_scripts', 'enqueue_custom_styles');
+
+// Anzahl der Wörter in der Vorschau im Feed
+function mytheme_custom_excerpt_length($length)
+{
+    return 30;
+}
+add_filter('excerpt_length', 'mytheme_custom_excerpt_length', 999);
+
+
 
 function custom_comment_callback($comment, $args, $depth)
 {
@@ -68,3 +78,37 @@ function custom_comment_callback($comment, $args, $depth)
         </div>
     <?php
 }
+
+function register_my_menus()
+{
+    register_nav_menus(
+        array(
+            'header-menu' => __('Header Menu')
+        )
+    );
+}
+add_action('init', 'register_my_menus');
+
+add_action('widgets_init', function () {
+    register_sidebar(array(
+        'name' => 'Sidebar with Article Suggestions',
+        'id' => 'sidebar-with-article-suggestions',
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget' => '</div>',
+        'before_title' => '<h2 class="widget-title">',
+        'after_title' => '</h2>',
+    ));
+});
+
+function my_register_sidebar()
+{
+    register_sidebar(array(
+        'name' => __('My Sidebar'),
+        'id' => 'my-sidebar',
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget' => '</div>',
+        'before_title' => '<h2 class="widget-title">',
+        'after_title' => '</h2>',
+    ));
+}
+add_action('widgets_init', 'my_register_sidebar');

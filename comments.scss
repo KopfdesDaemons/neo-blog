@@ -10,6 +10,7 @@
 
     .comment {
         list-style: none;
+        font-size: 0.9em;
     }
 
     .commentCard {
@@ -48,6 +49,8 @@
         align-items: center;
         img {
             background-color: white;
+            max-height: 5em;
+            width: auto;
         }
     }
     
@@ -56,20 +59,17 @@
         flex-direction: column;
         margin: 0.5em 0.5em 0.5em 1em;
         overflow: auto;
-        .name{
-            color: black;
-            font-size: 1.3em;
-            text-decoration: none;
-            font-style: normal;
-        }
 
-        .date {
-            font-size: 0.8em;
+        header {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.9em;
         }
         
         .commentText {
             overflow: auto;
             max-height: 30em;
+            margin: 0.5em 0;
         }
     }
 
@@ -79,6 +79,7 @@
 
         .comment {
             margin-left: 2em;
+            font-size: 1em;
         }
 
         .author img {
