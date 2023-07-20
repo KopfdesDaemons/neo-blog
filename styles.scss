@@ -59,6 +59,7 @@ main {
     max-width: 70em;
     z-index: 5;
     position: relative;
+    // overflow: hidden;
 }
 
 .grid {
@@ -67,7 +68,7 @@ main {
 }
 
 .shadow {
-    box-shadow: 1px 1px 10px -4px #000000;
+    box-shadow: 1px 1px 10px -6px #000000;
 }
 
 .postCard {
@@ -228,3 +229,8 @@ main {
   ::-webkit-scrollbar-thumb:hover {
     background: #555;
   }
+
+  .content {
+    max-width: 45em;
+    padding: 1em;
+}

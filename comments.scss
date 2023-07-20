@@ -1,4 +1,5 @@
 .comments-area {
+    margin-top: 2em;
     background-color: rgb(225, 245, 245);
     border-radius: 12px;
     padding: 1em;
@@ -6,6 +7,10 @@
 
     h2 {
         margin: 0;
+    }
+
+    ul {
+        padding: 0;
     }
 
     .comment {
@@ -87,4 +92,65 @@
             height: auto;
         }
     }
+
+    .comment-respond {
+        .comment-form-comment {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-submit {
+            margin: 0.5rem;
+        }
+
+        .submit {
+            text-decoration: none;
+            background-color: rgb(162, 210, 238);
+            padding: 0.5rem 1rem;
+            border-radius: 12px;
+            color: black;
+            border: none;
+            cursor: pointer;
+            font-size: 1.2em;
+            height: auto;
+        }
+
+        .submit:hover {
+            background-color: rgb(243, 246, 253);
+        }
+    }
+
+    textarea { resize: vertical; }
+
+    input {
+        padding: 0.5em;
+        height: 25px;
+        // border-radius: 8px;
+        border: solid 1px rgb(12, 12, 12);
+        background-color: rgb(236, 244, 248);
+    }
+
+    
+    .comment-form-author, .comment-form-email, .comment-form-url {
+        position: relative;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: flex-start;
+
+        label{
+            position: absolute;
+            top: 8px;
+            left: 5px;
+        }
+
+        input:not(:placeholder-shown)+label,
+        input:focus+label,
+        input:-webkit-autofill+label {
+          transform: scale(0.8) translateY(-0.8em);
+          height: auto;
+          font-size: 0.8em;
+        }
+    }
 }
+
+

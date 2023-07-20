@@ -1,6 +1,6 @@
 #sidebar {
     margin: 0.5em 1em;
-    // padding: 0.5em;
+    padding-bottom: 0.5em;
     border-radius: 18px;
     background-color: aliceblue;
     width: 20em;
@@ -15,11 +15,15 @@
 
     hr {
         width: 80%;
-        margin-top: 1em;
+        margin-top: 1rem;
+    }
+
+    h2 {
+        margin: 0;
     }
 
     select {
-        margin: 0.5em 0;
+        margin: 0.5rem 0;
         padding: 6px;
         border: none;
     
@@ -32,16 +36,16 @@
 .widget {
     max-height: 800px;
     overflow-y: auto;
-    padding: 1em;
+    padding: 1rem 1rem 0 1rem;
 }
 
 .wp-block-archives {
-    padding: 1em;
+    padding: 1rem;
 }
 .widget_archive {
     padding: 0;
     li {
-        padding: 0.8em 1em;
+        padding: 0.8em 1rem;
         background-color: aliceblue;
         a {
             text-decoration: none;
@@ -58,7 +62,7 @@
 
 .wp-block-calendar {
     .wp-calendar-nav {
-        margin-top: 1em;
+        margin-top: 1rem;
         a {
             background-color: azure;
             padding: 8px;
@@ -67,39 +71,42 @@
     }
 }
 
-.widget_categories {
+.widget_categories, .wp-block-categories{
     li {
-        margin-top: 0.5em;
-        padding: 0.5em;
-        border-radius: 16px;
-        background-color: rgb(220, 235, 235);
-
+        margin: 1.5rem 0;
         a {
-            color: rgb(115, 115, 235);
+            padding: 0.5em;
+            border-radius: 14px;
+            background-color: rgb(220, 235, 235);
+            color: rgb(17, 17, 17);
+            text-decoration: none;
+            border: solid 1px;
+        }
+
+        a:hover {
+            background-color: rgb(203, 216, 216);
         }
     }
 }
 
-.widget_recent_comments {
-    ol {
-        margin: 0;
-        padding: 0;
+.widget_recent_comments ol, .wp-block-latest-comments {
+    margin: 0;
+    padding: 1rem 0 0 0 ;
 
-        li {
-            background-color: rgb(220, 235, 235);
-            padding: 0.5em;
-            border-radius: 16px;
-        }
+    li {
+        background-color: rgb(220, 235, 235);
+        padding: 0.5rem;
+        border-radius: 16px;
+    }
 
-        p {
-            margin-bottom: 5px;
-        }
+    p {
+        margin-bottom: 5px;
     }
 }
 
 .wp-block-loginout {
     a {
-        padding: 0.5em;
+        padding: 0.5rem;
         border-radius: 16px;
         background-color: rgb(220, 235, 235);
         text-decoration: none;
@@ -108,16 +115,32 @@
 
 .wp-block-page-list, .widget_rss {
     li {
-        padding: 0.5em;
+        padding: 0.5rem;
         background-color: rgb(220, 235, 235);
-        margin-top: 0.5em;
+        margin-top: 0.5rem;
     }
 }
 
 .widget_recent_entries{
     li {
-        padding: 0.5em;
-        background-color: rgb(220, 235, 235);
-        margin-top: 0.5em;
+        margin-top: 0.5rem;
+        width: 100%;
+        a {
+            display: block;
+            padding: 0.5rem;
+            background-color: rgb(220, 235, 235);
+            color: rgb(17, 17, 17);
+            text-decoration: none;
+        }
+
+        a:hover {
+            background-color: rgb(203, 216, 216);
+        }
+    }
+}
+
+.widget_tag_cloud {
+    p {
+        margin: 0;
     }
 }

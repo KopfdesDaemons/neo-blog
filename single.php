@@ -10,8 +10,18 @@
             <h1 class="title"><?php the_title(); ?></h1>
         </header>
 
-        <div class="content spacer">
-            <?php the_content(); ?>
+        <div class="grid">
+            <div class="content">
+                <?php the_content(); ?>
+                <?php
+                // Kommentare anzeigen
+                if (comments_open() || get_comments_number()) {
+                    comments_template();
+                }
+            endwhile;
+                ?>
+            </div>
+            <?php get_sidebar(); ?>
         </div>
 
         <footer class="entry-footer">
@@ -19,13 +29,6 @@
         </footer>
     </article>
 
-    <?php
-        // Kommentare anzeigen
-        if (comments_open() || get_comments_number()) {
-            comments_template();
-        }
-    endwhile;
-    ?>
 </main>
 
 <?php get_footer(); ?>

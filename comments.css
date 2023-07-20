@@ -1,4 +1,5 @@
 .comments-area {
+  margin-top: 2em;
   background-color: rgb(225, 245, 245);
   border-radius: 12px;
   padding: 1em;
@@ -6,6 +7,9 @@
 }
 .comments-area h2 {
   margin: 0;
+}
+.comments-area ul {
+  padding: 0;
 }
 .comments-area .comment {
   list-style: none;
@@ -74,4 +78,56 @@
 .comments-area .children .author img {
   max-width: 5em;
   height: auto;
+}
+.comments-area .comment-respond .comment-form-comment {
+  display: flex;
+  flex-direction: column;
+}
+.comments-area .comment-respond .form-submit {
+  margin: 0.5rem;
+}
+.comments-area .comment-respond .submit {
+  text-decoration: none;
+  background-color: rgb(162, 210, 238);
+  padding: 0.5rem 1rem;
+  border-radius: 12px;
+  color: black;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2em;
+  height: auto;
+}
+.comments-area .comment-respond .submit:hover {
+  background-color: rgb(243, 246, 253);
+}
+.comments-area textarea {
+  resize: vertical;
+}
+.comments-area input {
+  padding: 0.5em;
+  height: 25px;
+  border: solid 1px rgb(12, 12, 12);
+  background-color: rgb(236, 244, 248);
+}
+.comments-area .comment-form-author, .comments-area .comment-form-email, .comments-area .comment-form-url {
+  position: relative;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: flex-start;
+}
+.comments-area .comment-form-author label, .comments-area .comment-form-email label, .comments-area .comment-form-url label {
+  position: absolute;
+  top: 8px;
+  left: 5px;
+}
+.comments-area .comment-form-author input:not(:placeholder-shown) + label,
+.comments-area .comment-form-author input:focus + label,
+.comments-area .comment-form-author input:-webkit-autofill + label, .comments-area .comment-form-email input:not(:placeholder-shown) + label,
+.comments-area .comment-form-email input:focus + label,
+.comments-area .comment-form-email input:-webkit-autofill + label, .comments-area .comment-form-url input:not(:placeholder-shown) + label,
+.comments-area .comment-form-url input:focus + label,
+.comments-area .comment-form-url input:-webkit-autofill + label {
+  transform: scale(0.8) translateY(-0.8em);
+  height: auto;
+  font-size: 0.8em;
 }/*# sourceMappingURL=comments.css.map */

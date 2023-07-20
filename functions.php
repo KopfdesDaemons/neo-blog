@@ -67,12 +67,41 @@ function custom_comment_callback($comment, $args, $depth)
                 <?php edit_comment_link(__('✏️'), '  ', ''); ?>
             </div>
             <div class="comment-form-reply" style="display: none;">
-                <form class="comment-form" method="post" action="<?php echo site_url('/wp-comments-post.php'); ?>">
-                    <input type="hidden" name="comment_post_ID" value="<?php echo get_the_ID(); ?>">
-                    <input type="hidden" name="comment_parent" value="<?php echo get_comment_ID(); ?>">
-                    <textarea name="comment" class="comment-input" required></textarea>
-                    <input type="submit" class="comment-submit" value="<?php _e('Submit'); ?>">
-                </form>
+                <?php
+                    $fields = array(
+                        'author' => '<p class="comment-form-author">' .
+                            '<input id="author" name="author" type="text" value="' . esc_attr(get_comment_author()) .
+                            '" size="30" ' . 'aria-required="true" required />' .
+                            '<label for="author">' . __('Your Name', 'domain') . '<span class="required">*</span></label>' .
+                            '</p>',
+
+                        'email'  => '<p class="comment-form-email">' .
+                            '<input id="email" name="email" type="text" value="' . esc_attr(get_comment_author_email()) .
+                            '" size="30" ' . 'aria-required="true" required />' .
+                            '<label for="email">' . __('Your Email', 'domain') . '<span class="required">*</span></label>' .
+                            '</p>',
+
+                        'url'    => '<p class="comment-form-url">' .
+                            '<input id="url" name="url" type="text" value="' . esc_attr(get_comment_author_url()) .
+                            '" size="30" />' .
+                            '<label for="url">' . __('Your Website', 'domain') . '</label>' .
+                            '</p>'
+                    );
+
+                    $args = array(
+                        'fields'               => apply_filters('comment_form_default_fields', $fields),
+                        'comment_field'        => '<p class="comment-form-comment"><label for="comment">' . _x('Comment', 'noun') . '</label> ' .
+                            '<textarea id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea></p>',
+                        'logged_in_as'         => '',
+                        'title_reply'          => '',
+                        'class_submit'         => 'submit',
+                        'comment_notes_before' => '',
+                        'comment_notes_after'  => '',
+                        'submit_button'        => '<input name="%1$s" type="submit" id="%2$s" class="%3$s" value="%4$s" />',
+                    );
+
+                    comment_form($args);
+                    ?>
             </div>
         </div>
     </div>
@@ -101,3 +130,48 @@ function sidebar()
     ));
 }
 add_action('widgets_init', 'sidebar');
+
+
+function custom_comment_form_fields($fields)
+{
+    $commenter = wp_get_current_commenter(); // Get the comment author's information
+
+    // Change the label and input for the Author (Name) field
+    $fields['author'] = '<p class="comment-form-author">' .
+        '<input id="author" name="author" placeholder="&nbsp;" type="text" value="' . esc_attr($commenter['comment_author']) .
+        '" size="30" ' . 'aria-required="true" required />' .
+        '<label for="author">' . __('Your Name', 'domain') . '<span class="required">*</span></label>' .
+        '</p>';
+
+    // Change the label and input for the Email field
+    $fields['email'] = '<p class="comment-form-email">' .
+        '<input id="email" name="email" placeholder="&nbsp;" type="text" value="' . esc_attr($commenter['comment_author_email']) .
+        '" size="30" ' . 'aria-required="true" required />' .
+        '<label for="email">' . __('Your Email', 'domain') . '<span class="required">*</span></label>' .
+        '</p>';
+
+    // Add the URL field back with its label and input
+    $fields['url'] = '<p class="comment-form-url">' .
+        '<input id="url" name="url" placeholder="&nbsp;" type="text" value="' . esc_attr($commenter['comment_author_url']) .
+        '" size="30" />' .
+        '<label for="url">' . __('Your Website', 'domain') . '</label>' .
+        '</p>';
+
+    // Add more custom fields here if desired
+
+    return $fields;
+}
+
+add_filter('comment_form_default_fields', 'custom_comment_form_fields');
+
+// function custom_comment_submit_text($defaults)
+// {
+//     $defaults['label_submit'] = __('🌎 posten', 'domain');
+
+//     return $defaults;
+// }
+
+// add_filter('comment_form_defaults', 'custom_comment_submit_text');
+
+
+    ?>
