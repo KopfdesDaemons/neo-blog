@@ -1,12 +1,123 @@
 #sidebar {
     margin: 0.5em 1em;
-    padding: 0.5em;
+    // padding: 0.5em;
     border-radius: 18px;
     background-color: aliceblue;
+    width: 20em;
+    height: min-content;
+    overflow: hidden;
 
     ul {
         margin: 0;
         list-style: none;
         padding: 0;
+    }
+
+    hr {
+        width: 80%;
+        margin-top: 1em;
+    }
+
+    select {
+        margin: 0.5em 0;
+        padding: 6px;
+        border: none;
+    
+        option {
+            padding: 4px;
+        }
+    }
+}
+
+.widget {
+    max-height: 800px;
+    overflow-y: auto;
+    padding: 1em;
+}
+
+.wp-block-archives {
+    padding: 1em;
+}
+.widget_archive {
+    padding: 0;
+    li {
+        padding: 0.8em 1em;
+        background-color: aliceblue;
+        a {
+            text-decoration: none;
+            width: 100%;
+            height: 100%;
+            color: black;
+        }
+    }
+    
+    li:nth-child(even) {
+        background-color: rgb(220, 235, 235);
+    }
+}
+
+.wp-block-calendar {
+    .wp-calendar-nav {
+        margin-top: 1em;
+        a {
+            background-color: azure;
+            padding: 8px;
+            border-radius: 16px;
+        }
+    }
+}
+
+.widget_categories {
+    li {
+        margin-top: 0.5em;
+        padding: 0.5em;
+        border-radius: 16px;
+        background-color: rgb(220, 235, 235);
+
+        a {
+            color: rgb(115, 115, 235);
+        }
+    }
+}
+
+.widget_recent_comments {
+    ol {
+        margin: 0;
+        padding: 0;
+
+        li {
+            background-color: rgb(220, 235, 235);
+            padding: 0.5em;
+            border-radius: 16px;
+        }
+
+        p {
+            margin-bottom: 5px;
+        }
+    }
+}
+
+.wp-block-loginout {
+    a {
+        padding: 0.5em;
+        border-radius: 16px;
+        background-color: rgb(220, 235, 235);
+        text-decoration: none;
+    }
+}
+
+.wp-block-page-list, .widget_rss {
+    li {
+        padding: 0.5em;
+        background-color: rgb(220, 235, 235);
+        margin-top: 0.5em;
+    }
+}
+
+.widget_recent_entries{
+    li {
+        padding: 0.5em;
+        background-color: rgb(220, 235, 235);
+        margin-top: 0.5em;
     }
 }

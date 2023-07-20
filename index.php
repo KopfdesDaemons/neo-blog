@@ -1,16 +1,11 @@
 <?php get_header(); ?>
 <main role="main">
-    <!-- <div class="landingpageDiv">
-        <img src="<?php echo get_stylesheet_directory_uri() . '/landingpageImg.jpg' ?>"
-            alt="landingpage backgroundimage">
-        <div class="color"></div>
-    </div> -->
     <section class="spacer grid">
         <div class="feed">
             <?php
             $paged = (get_query_var('paged')) ? get_query_var('paged') : 1; // Aktuelle Seite abrufen
             $args = array(
-                'post_type' => 'post', // Beitragstyp (kann angepasst werden)
+                'post_type' => 'post', // Beitragstyp
                 'posts_per_page' => 10, // Anzahl der Beiträge pro Seite
                 'paged' => $paged // Aktuelle Seite übergeben
             );
@@ -35,19 +30,19 @@
                     <h2><?php the_title(); ?></h2>
                     <span class="date"><?php the_date(); ?></span>
                     <?php the_excerpt(); ?>
-                    <!-- <div class="tagsDiv">
-                    <?php
-                    $tags = get_the_tags();
-                    if ($tags) {
-                        echo '<ul>';
-                        foreach ($tags as $tag) {
-                            $tag_link = get_tag_link($tag->term_id);
-                            echo '<li><a href="' . $tag_link . '">' . $tag->name . '</a></li>';
-                        }
-                        echo '</ul>';
-                    }
-                    ?>
-                </div> -->
+                    <div class="tagsDiv">
+                        <?php
+                                $tags = get_the_tags();
+                                if ($tags) {
+                                    echo '<ul>';
+                                    foreach ($tags as $tag) {
+                                        $tag_link = get_tag_link($tag->term_id);
+                                        echo '<li><a href="' . $tag_link . '">' . $tag->name . '</a></li>';
+                                    }
+                                    echo '</ul>';
+                                }
+                                ?>
+                    </div>
                     <div class="buttomDiv">
                         <a href="<?php comments_link(); ?>">
                             <?php
@@ -65,9 +60,10 @@
                     </div>
                 </div>
             </div>
+
             <?php
+                    // Pagination
                 }
-                // Pagination hinzufügen
                 echo '<div class="pagination shadow">';
                 echo paginate_links(array(
                     'total' => $query->max_num_pages,
@@ -84,16 +80,7 @@
             }
             ?>
         </div>
-        <!-- <?php
-                // This is the widget area
-                if (is_active_sidebar('my-sidebar')) {
-                    dynamic_sidebar('my-sidebar');
-                }
-                ?> -->
-
         <?php get_sidebar(); ?>
     </section>
-    <!-- <div class="backgroundDiv">
-    </div> -->
 </main>
 <?php get_footer(); ?>
