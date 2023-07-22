@@ -6,13 +6,13 @@
         the_post();
     ?>
     <article class="spacer" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-        <header>
-            <h1 class="title"><?php the_title(); ?></h1>
-        </header>
-
         <div class="grid">
             <div class="content">
+                <header>
+                    <h1 class="title"><?php the_title(); ?></h1>
+                </header>
                 <?php the_content(); ?>
+                <?php echo theme_slug_social_sharing(); ?>
                 <?php
                 // Kommentare anzeigen
                 if (comments_open() || get_comments_number()) {

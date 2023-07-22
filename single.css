@@ -1,3 +1,14 @@
 h1 {
   font-size: clamp(14px, 4vw, 30px);
+}
+
+p {
+  font-size: clamp(12px, 2vw, 16px);
+}
+
+.wp-block-quote {
+  border-left: 5px solid blue;
+  padding: 0.5em;
+  background-color: rgb(240, 248, 248);
+  font-style: italic;
 }/*# sourceMappingURL=single.css.map */

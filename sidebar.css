@@ -1,5 +1,5 @@
 #sidebar {
-  margin: 0.5em 1em;
+  margin: 0 1em;
   padding-bottom: 0.5em;
   border-radius: 18px;
   background-color: aliceblue;
@@ -91,6 +91,14 @@
 }
 .widget_recent_comments ol p, .wp-block-latest-comments p {
   margin-bottom: 5px;
+}
+.widget_recent_comments ol .wp-block-latest-comments__comment-link, .wp-block-latest-comments .wp-block-latest-comments__comment-link {
+  font-size: 0.8em;
+}
+.widget_recent_comments ol .wp-block-latest-comments__comment-author, .wp-block-latest-comments .wp-block-latest-comments__comment-author {
+  text-decoration: none;
+  font-weight: bold;
+  color: unset;
 }
 
 .wp-block-loginout a {

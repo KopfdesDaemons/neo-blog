@@ -30,15 +30,29 @@
   display: flex;
   justify-content: space-between;
 }
-.comments-area .reply a {
-  text-decoration: none;
-  background-color: azure;
-  padding: 0.5em 1em;
-  border-radius: 12px;
-  color: black;
-}
 .comments-area .reply a:hover {
   background-color: rgb(225, 245, 245);
+}
+.comments-area .comment-reply-link {
+  text-decoration: none;
+  background-color: azure;
+  padding: 0.5rem 1rem;
+  border-radius: 12px;
+  color: black;
+  font-size: 1em;
+}
+.comments-area .comment-edit-link, .comments-area #cancel-comment-reply-link {
+  text-decoration: none;
+  display: block;
+  background-color: azure;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 12px;
+  color: black;
+  font-size: 1em;
 }
 .comments-area .profilepicture {
   height: 100%;
@@ -79,14 +93,21 @@
   max-width: 5em;
   height: auto;
 }
-.comments-area .comment-respond .comment-form-comment {
+.comments-area .comment-form-comment {
   display: flex;
   flex-direction: column;
 }
-.comments-area .comment-respond .form-submit {
+.comments-area .form-submit {
   margin: 0.5rem;
 }
-.comments-area .comment-respond .submit {
+.comments-area hr {
+  margin-top: 1em;
+}
+.comments-area .comment-reply-title {
+  display: flex;
+  justify-content: space-between;
+}
+.comments-area .submit {
   text-decoration: none;
   background-color: rgb(162, 210, 238);
   padding: 0.5rem 1rem;
@@ -97,7 +118,7 @@
   font-size: 1.2em;
   height: auto;
 }
-.comments-area .comment-respond .submit:hover {
+.comments-area .submit:hover {
   background-color: rgb(243, 246, 253);
 }
 .comments-area textarea {
