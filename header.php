@@ -25,19 +25,17 @@
                     <a href="<?php echo esc_url(home_url('/')); ?>">
                         <h1 class="site-title"><?php bloginfo('title'); ?></h1>
                     </a>
-                    <!-- <?php if (get_bloginfo('description') != '') { ?>
-                        <span class="description">
-                            <?php bloginfo('description'); ?>
-                        </span>
-                    <?php } ?> -->
                 </div>
                 <div class="searchDiv">
                     <?php get_search_form(array('button_text' => 's')); ?>
                 </div>
             </div>
-            <div class="secondHeaderColumn">
-                <?php wp_nav_menu(array('theme_location' => 'header-menu')); ?>
 
+
+            <div class="secondHeaderColumn">
+                <?php
+                $header_menu = get_theme_mod('header_menu', false);
+                if ($header_menu) wp_nav_menu(array('theme_location' => 'header-menu')); ?>
             </div>
         </div>
     </header>

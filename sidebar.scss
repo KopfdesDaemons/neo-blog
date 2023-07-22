@@ -153,4 +153,18 @@
     p {
         margin: 0;
     }
+
+    a {
+        margin: 0.2em;
+        border: 1px solid;
+        text-decoration: none;
+        padding: 0.4em;
+        font-size: 0.9em !important;
+    }
+
+    a:hover {
+        transition: all 500ms;
+        color: rgb(252, 252, 252);
+        background-color: rgb(157, 157, 177);
+    }
 }
