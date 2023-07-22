@@ -11,27 +11,28 @@
 </head>
 
 <body <?php body_class(); ?>>
+
     <header id="header" class="clearfix header" role="banner">
-
         <div class="headerDiv">
-            <div class="firstHeaderColumn">
-                <div class="titleDiv">
-                    <!-- <?php
-                            $site_icon_url = get_site_icon_url();
-                            if ($site_icon_url) {
-                                echo '<img src="' . esc_url($site_icon_url) . '"/>';
-                            }
-                            ?> -->
-                    <a href="<?php echo esc_url(home_url('/')); ?>">
-                        <h1 class="site-title"><?php bloginfo('title'); ?></h1>
-                    </a>
-                </div>
-                <div class="searchDiv">
-                    <?php get_search_form(array('button_text' => 's')); ?>
-                </div>
+            <div class="titleDiv">
+                <a href="<?php echo esc_url(home_url('/')); ?>">
+                    <span class="site-title"><?php bloginfo('title'); ?></span>
+                </a>
             </div>
-
-
+            <?php
+            $searchbar = get_theme_mod('searchbar', false);
+            if ($searchbar) {
+                echo '
+        <div class="SearchColumn">
+            <div class="searchDiv">
+                ';
+                get_search_form(array('button_text' => 's'));
+                echo '
+            </div>
+        </div>
+        ';
+            }
+            ?>
             <div class="secondHeaderColumn">
                 <?php
                 $header_menu = get_theme_mod('header_menu', false);

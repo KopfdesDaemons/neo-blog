@@ -27,7 +27,9 @@
                 </a>
                 <?php } ?>
                 <div class="textDiv">
-                    <h2><?php the_title(); ?></h2>
+                    <a href="<?php the_permalink(); ?>">
+                        <h2><?php the_title(); ?></h2>
+                    </a>
                     <span class="date"><?php the_date(); ?></span>
                     <?php the_excerpt(); ?>
                     <div class="tagsDiv">

@@ -7,45 +7,48 @@
 .header .headerDiv {
   background-color: rgb(116, 184, 248);
   width: 100%;
-}
-.header .headerDiv .firstHeaderColumn {
-  display: grid;
-  grid-template-columns: auto 1fr;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
   align-items: center;
 }
-.header .headerDiv .firstHeaderColumn img {
+.header .headerDiv .SearchColumn {
+  display: flex;
+  align-items: center;
+}
+.header .headerDiv .SearchColumn img {
   max-width: 3em;
   height: auto;
 }
-.header .headerDiv .firstHeaderColumn .titleDiv {
+.header .headerDiv .SearchColumn .description {
+  max-width: 10em;
+  overflow: hidden;
+}
+.header .headerDiv .SearchColumn .searchDiv {
+  display: flex;
+  justify-content: center;
+  width: 70vw;
+  max-width: 60em;
+}
+.header .headerDiv .SearchColumn form {
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+}
+.header .headerDiv .titleDiv {
   margin: 0 0.5em;
   display: flex;
   align-items: center;
 }
-.header .headerDiv .firstHeaderColumn .titleDiv a {
+.header .headerDiv .titleDiv a {
   text-decoration: none;
   color: black;
 }
-.header .headerDiv .firstHeaderColumn .titleDiv h1 {
+.header .headerDiv .titleDiv .site-title {
   font-size: 1.5em;
   word-break: keep-all;
   margin: 0 0.5em;
   color: white;
-}
-.header .headerDiv .firstHeaderColumn .description {
-  max-width: 10em;
-  overflow: hidden;
-}
-.header .headerDiv .firstHeaderColumn .searchDiv {
-  display: flex;
-  justify-content: center;
-  width: 1fr;
-  margin-right: 10em;
-}
-.header .headerDiv .firstHeaderColumn form {
-  margin-left: auto;
-  margin-right: auto;
-  width: 60%;
 }
 .header .headerDiv .secondHeaderColumn {
   width: 100%;

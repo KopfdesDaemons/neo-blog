@@ -257,6 +257,18 @@ function custom_theme_settings($wp_customize)
         'label' => __('Zeige Menü im Header', 'dein-theme-textdomain'),
         'section' => 'custom_theme_options',
     ));
+
+    $wp_customize->add_setting('searchbar', array(
+        'default' => true,
+        'transport' => 'refresh',
+        'sanitize_callback' => 'sanitize_checkbox',
+    ));
+
+    $wp_customize->add_control('searchbar', array(
+        'type' => 'checkbox',
+        'label' => __('Zeige Suchleiste', 'dein-theme-textdomain'),
+        'section' => 'custom_theme_options',
+    ));
 }
 add_action('customize_register', 'custom_theme_settings');
 
