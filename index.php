@@ -14,8 +14,18 @@
             <?php
                 }
 
-                // Pagination, falls erforderlich
-                the_posts_pagination();
+                // Pagination
+                if ($wp_query->max_num_pages > 1) {
+                    echo '<div class="pagination shadow">';
+                    echo paginate_links(array(
+                        'total' => $wp_query->max_num_pages,
+                        'current' => $paged,
+                        'prev_next' => true,
+                        'prev_text' => __('« Previous'),
+                        'next_text' => __('Next »'),
+                    ));
+                    echo '</div>';
+                }
             } else {
                 // Wenn keine Beiträge gefunden werden
                 echo 'Keine Beiträge gefunden.';

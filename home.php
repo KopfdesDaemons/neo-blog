@@ -19,53 +19,12 @@
                     if (is_sticky()) {
                         $post_classes[] = 'stickyPost';
                     }
-            ?>
-                    <div class="<?php echo implode(' ', $post_classes); ?>">
-                        <?php if (has_post_thumbnail()) { ?>
-                            <a class="imgA" href="<?php the_permalink(); ?>">
-                                <img src="<?php the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>">
-                            </a>
-                        <?php } ?>
-                        <div class="textDiv">
-                            <a href="<?php the_permalink(); ?>">
-                                <h2><?php the_title(); ?></h2>
-                            </a>
-                            <span class="date"><?php the_date(); ?></span>
-                            <?php the_excerpt(); ?>
-                            <div class="tagsDiv">
-                                <?php
-                                $tags = get_the_tags();
-                                if ($tags) {
-                                    echo '<ul>';
-                                    foreach ($tags as $tag) {
-                                        $tag_link = get_tag_link($tag->term_id);
-                                        echo '<li><a href="' . $tag_link . '">' . $tag->name . '</a></li>';
-                                    }
-                                    echo '</ul>';
-                                }
-                                ?>
-                            </div>
-                            <div class="buttomDiv">
-                                <a href="<?php comments_link(); ?>">
-                                    <?php
-                                    $commentscount = get_comments_number();
-                                    if ($commentscount == 1) {
-                                        $commenttext = 'comment';
-                                    } else {
-                                        $commenttext = 'comments';
-                                    }
-                                    echo $commentscount . ' ' . $commenttext;
-                                    ?>
-                                </a>
 
-                                <a class="readMore" href="<?php the_permalink(); ?>">read more</a>
-                            </div>
-                        </div>
-                    </div>
-
-            <?php
-                    // Pagination
+                    // Zeige Kachel mit Beitrag
+                    require_once get_template_directory() . '/template-parts/feed.php';
+                    echo display_post_card($post_classes);
                 }
+                // Pagination
                 echo '<div class="pagination shadow">';
                 echo paginate_links(array(
                     'total' => $query->max_num_pages,

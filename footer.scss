@@ -1,18 +1,18 @@
 #footer {
-    margin-top: 2em;
+    margin-top: auto;
     background-color: rgb(184, 204, 204);
     display: flex;
     justify-content: center;
     
     nav {
         ul{
-            padding: 1em;
+            padding: 1.5em;
             padding: 0;
             list-style: none;
             display: flex;
             align-items: flex-start;
             li {
-                margin: 1em;
+                margin: 1.5em;
                 a {
                     font-weight: bold;
                     font-size: 0.8em;

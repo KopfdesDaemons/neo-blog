@@ -1,0 +1,25 @@
+.error {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    span {
+        font-size: 5em;
+    }
+
+    a {
+        margin: 1em 2em 0 2em;
+        text-decoration: none;
+        background-color: rgb(119, 162, 202);
+        color: white;
+        border-radius: 8px;
+        padding: 0.8em 1.2em;
+      }
+
+      a:hover {
+        background-color: transparent;
+        outline: 1px solid black;
+        color: black;
+        transition: all 200ms;
+      }
+}
