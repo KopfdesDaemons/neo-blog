@@ -20,20 +20,20 @@
                         $post_classes[] = 'stickyPost';
                     }
             ?>
-            <div class="<?php echo implode(' ', $post_classes); ?>">
-                <?php if (has_post_thumbnail()) { ?>
-                <a class="imgA" href="<?php the_permalink(); ?>">
-                    <img src="<?php the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>">
-                </a>
-                <?php } ?>
-                <div class="textDiv">
-                    <a href="<?php the_permalink(); ?>">
-                        <h2><?php the_title(); ?></h2>
-                    </a>
-                    <span class="date"><?php the_date(); ?></span>
-                    <?php the_excerpt(); ?>
-                    <div class="tagsDiv">
-                        <?php
+                    <div class="<?php echo implode(' ', $post_classes); ?>">
+                        <?php if (has_post_thumbnail()) { ?>
+                            <a class="imgA" href="<?php the_permalink(); ?>">
+                                <img src="<?php the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>">
+                            </a>
+                        <?php } ?>
+                        <div class="textDiv">
+                            <a href="<?php the_permalink(); ?>">
+                                <h2><?php the_title(); ?></h2>
+                            </a>
+                            <span class="date"><?php the_date(); ?></span>
+                            <?php the_excerpt(); ?>
+                            <div class="tagsDiv">
+                                <?php
                                 $tags = get_the_tags();
                                 if ($tags) {
                                     echo '<ul>';
@@ -44,10 +44,10 @@
                                     echo '</ul>';
                                 }
                                 ?>
-                    </div>
-                    <div class="buttomDiv">
-                        <a href="<?php comments_link(); ?>">
-                            <?php
+                            </div>
+                            <div class="buttomDiv">
+                                <a href="<?php comments_link(); ?>">
+                                    <?php
                                     $commentscount = get_comments_number();
                                     if ($commentscount == 1) {
                                         $commenttext = 'comment';
@@ -56,12 +56,12 @@
                                     }
                                     echo $commentscount . ' ' . $commenttext;
                                     ?>
-                        </a>
+                                </a>
 
-                        <a class="readMore" href="<?php the_permalink(); ?>">read more</a>
+                                <a class="readMore" href="<?php the_permalink(); ?>">read more</a>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
 
             <?php
                     // Pagination
