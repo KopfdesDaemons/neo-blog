@@ -34,6 +34,7 @@ main {
 .grid {
   display: grid;
   grid-template-columns: auto auto;
+  margin-bottom: 2em;
 }
 
 .shadow {
@@ -85,8 +86,14 @@ main {
   margin-top: auto;
   width: 100%;
   display: flex;
-  justify-content: right;
+  justify-content: space-between;
   align-items: center;
+}
+.postCard .textDiv .buttomDiv .postLinks {
+  display: flex;
+}
+.postCard .textDiv .buttomDiv .pin {
+  visibility: hidden;
 }
 .postCard .textDiv .buttomDiv .commentscount {
   display: flex;
@@ -119,6 +126,7 @@ main {
 .postCard h2 {
   margin: 0 0 0.5em 0;
   word-wrap: break-word;
+  overflow-wrap: anywhere;
   font-size: 1.4em;
 }
 .postCard .tagsDiv ul {
@@ -148,6 +156,9 @@ main {
 
 .stickyPost {
   border: 1px solid;
+}
+.stickyPost .textDiv .buttomDiv .pin {
+  visibility: visible;
 }
 
 .pagination {
@@ -202,7 +213,6 @@ main {
   background-color: #ffffff;
   border-radius: 16px;
   overflow: hidden;
-  margin-bottom: 2em;
 }
 
 h1 {
@@ -210,7 +220,13 @@ h1 {
 }
 
 .social-sharing-links {
-  margin-top: 4em;
+  margin-top: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.social-sharing-links span {
+  margin: 0.5em;
 }
 .social-sharing-links ul {
   display: flex;

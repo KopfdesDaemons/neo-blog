@@ -60,7 +60,7 @@
   margin: 0;
 }
 .header .headerDiv .secondHeaderColumn ul a {
-  color: black;
+  color: rgb(63, 63, 63);
   text-decoration: none;
 }
 .header .headerDiv .secondHeaderColumn ul li {

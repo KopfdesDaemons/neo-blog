@@ -80,7 +80,7 @@
             background-color: rgb(225, 245, 245);
             color: rgb(17, 17, 17);
             text-decoration: none;
-            border: solid 1px;
+            border: 1px solid rgb(212, 212, 212);
         }
 
         a:hover {
@@ -133,11 +133,12 @@
     }
 }
 
+// Beitragsvorschläge
 .widget_recent_entries{
     li {
         margin-top: 0.5rem;
         width: 100%;
-        border: 1px solid;
+        border: 1px solid rgb(212, 212, 212);
         a {
             display: block;
             padding: 0.5rem;
@@ -158,16 +159,18 @@
     }
 
     a {
-        margin: 0.2em;
-        border: 1px solid;
-        text-decoration: none;
-        padding: 0.4em;
-        font-size: 0.9em !important;
+        margin: 0.2em 0.2em;
+      text-decoration: none;
+      color: black;
+      text-align: center;
+      background-color: rgb(224, 233, 241);
+      padding: 0.6em 1em;
+      border-radius: 32px;
+      font-size: 0.7em !important;
+      min-width: 2em;
     }
 
     a:hover {
-        transition: all 500ms;
-        color: rgb(252, 252, 252);
-        background-color: rgb(157, 157, 177);
+      outline: 1px solid rgb(97, 97, 97);
     }
 }

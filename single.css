@@ -15,6 +15,59 @@ h1 {
   align-items: flex-end;
 }
 
+.post-categories ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 0;
+  display: flex;
+  gap: 0.5em;
+}
+
+.post-tags ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 1.2em;
+}
+.post-tags ul li {
+  margin: 0.4em 0.2em;
+}
+.post-tags ul a {
+  text-decoration: none;
+  color: black;
+  text-align: center;
+  background-color: aliceblue;
+  padding: 0.6em 1em;
+  border-radius: 32px;
+  font-size: 0.7em;
+  min-width: 2em;
+}
+.post-tags ul a:hover {
+  outline: 1px solid rgb(97, 97, 97);
+}
+
+.content .author-info {
+  border: 2px solid rgb(192, 192, 192);
+  padding: 1em;
+  display: flex;
+  margin: 1em 3em 0em 3em;
+}
+.content .author-info .author-avatar {
+  margin-right: 1em;
+}
+.content .author-info .author-row {
+  display: flex;
+  justify-content: space-between;
+}
+.content .author-info .author-row h3 {
+  margin: 0;
+}
+.content .author-info .author-row a:hover {
+  transform: scale(1.5);
+}
+
 .post-password-form {
   background-color: rgb(247, 165, 165);
   border-radius: 8px;
