@@ -49,7 +49,11 @@ main {
 }
 
 .shadow {
-  box-shadow: 1px 1px 10px -6px #000000;
+  box-shadow: 1px 1px 8px -6px #000000;
+}
+
+#authorPageComments {
+  background-color: white;
 }
 
 .postCard {

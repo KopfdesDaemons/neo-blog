@@ -61,6 +61,30 @@ h1 {
     }
 }
 
+.author-info {
+    border: 2px solid rgb(192, 192, 192);
+    padding: 1em;
+    display: flex;
+    margin: 1em 3em 0em 3em;
+    background-color: white;
+
+    .author-avatar {
+        margin-right: 1em;
+    }
+
+    .author-row {
+        display: flex;
+        justify-content: space-between;
+
+        h3 {
+            margin: 0;
+        }
+
+        a:hover {
+            transform: scale(1.5);
+        }
+    }
+}
 .content {
     display: flex;
     flex-direction: column;
@@ -69,29 +93,6 @@ h1 {
         margin-top: auto;
     }
 
-    .author-info {
-        border: 2px solid rgb(192, 192, 192);
-        padding: 1em;
-        display: flex;
-        margin: 1em 3em 0em 3em;
-
-        .author-avatar {
-            margin-right: 1em;
-        }
-
-        .author-row {
-            display: flex;
-            justify-content: space-between;
-
-            h3 {
-                margin: 0;
-            }
-
-            a:hover {
-                transform: scale(1.5);
-            }
-        }
-    }
 
     .page-links {
         margin-top: 2em;

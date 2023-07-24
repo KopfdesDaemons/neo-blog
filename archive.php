@@ -2,6 +2,73 @@
 <main role="main">
     <section class="spacer grid">
         <div class="feed">
+            <?php if (is_author()) {;
+                $author_id = get_the_author_meta('ID');
+                $author_name = get_the_author_meta('display_name');
+                $author_description = get_the_author_meta('description');
+                $author_website = get_the_author_meta('user_url');
+
+                // Avatar des Autors
+                $author_avatar = get_avatar($author_id, 140); // 96 ist die Größe des Avatars in Pixeln
+
+            ?>
+            <div class="author-info">
+                <div class="author-avatar">
+                    <?php echo $author_avatar; ?>
+                </div>
+                <div class="author-details">
+                    <div class="author-row">
+                        <h3><a href="<?php echo get_author_posts_url($author_id); ?>"><?php echo $author_name; ?></a>
+                        </h3>
+                        <?php if ($author_website) : ?>
+                        <a href="<?php echo $author_website; ?>" target="_blank">🌐</a>
+                        <?php endif; ?>
+                    </div>
+                    <p><?php echo $author_description; ?></p>
+                    <?php $author_roles = get_the_author_meta('roles');
+                        if (!empty($author_roles)) {
+                            echo '<b>Role: </b>' . $author_roles[0] . ' ';
+                        }
+                        $author_posts_count = count_user_posts($author_id);
+                        echo '<b>Number of posts: </b>' . $author_posts_count;
+                        ?>
+                </div>
+            </div>
+
+            <!-- Zeige die letzten Kommentare des Autors -->
+            <h3>Last comments from <?php echo $author_name; ?></h3>
+            <ol class="has-avatars has-dates has-excerpts wp-block-latest-comments">
+                <?php
+                    $args = array(
+                        'user_id' => $author_id,
+                        'number' => 5, // Anzahl der anzuzeigenden Kommentare
+                    );
+
+                    $author_comments = get_comments($args);
+
+                    if ($author_comments) {
+                        foreach ($author_comments as $comment) {
+                            echo '<li class="wp-block-latest-comments__comment" id="authorPageComments">';
+                            echo get_avatar($comment->comment_author_email, 48); // Gravatar-Avatar
+                            echo '<article>';
+                            echo '<footer class="wp-block-latest-comments__comment-meta">';
+                            echo '<a class="wp-block-latest-comments__comment-author" href="' . esc_url($comment->comment_author_url) . '">' . $comment->comment_author . '</a>';
+                            echo ' zu <a class="wp-block-latest-comments__comment-link" href="' . esc_url(get_comment_link($comment)) . '">' . get_the_title($comment->comment_post_ID) . '</a>';
+                            echo '<time datetime="' . esc_attr(get_comment_date('c', $comment)) . '" class="wp-block-latest-comments__comment-date">' . get_comment_date('j. F Y', $comment) . '</time>';
+                            echo '</footer>';
+                            echo '<div class="wp-block-latest-comments__comment-excerpt">';
+                            echo '<p>' . get_comment_excerpt($comment) . '</p>'; // Kommentar-Auszug
+                            echo '</div>';
+                            echo '</article>';
+                            echo '</li>';
+                        }
+                    } else {
+                        echo 'Keine Kommentare gefunden.';
+                    }
+                    ?>
+            </ol>
+            <?php } ?>
+
             <h1>
                 <?php
                 if (is_category()) {

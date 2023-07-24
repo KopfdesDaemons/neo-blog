@@ -120,33 +120,6 @@
         }
     }
     
-    .widget_recent_comments ol, .wp-block-latest-comments {
-        margin: 0;
-        padding: 0;
-    
-        li {
-            background-color: rgb(225, 245, 245);
-            padding: 0.5rem;
-            border-radius: 16px;
-            border: 1px solid rgb(212, 212, 212);
-            margin-bottom: 0.5em;
-        }
-    
-        p {
-            margin-bottom: 5px;
-        }
-    
-        .wp-block-latest-comments__comment-link {
-            font-size: 0.8em;
-        }
-    
-        .wp-block-latest-comments__comment-author {
-            text-decoration: none;
-            font-weight: bold;
-            color: unset;
-        }
-    }
-    
     .wp-block-page-list {
         font-size: 0.9em;
         max-height: 800px;
@@ -225,5 +198,33 @@
         a:hover {
           outline: 1px solid rgb(97, 97, 97);
         }
+    }
+}
+
+// Auch auf Authorpage
+.widget_recent_comments ol, .wp-block-latest-comments {
+    margin: 0;
+    padding: 0;
+
+    li {
+        background-color: rgb(225, 245, 245);
+        padding: 0.5rem;
+        border-radius: 16px;
+        border: 1px solid rgb(212, 212, 212);
+        margin-bottom: 0.5em;
+    }
+
+    p {
+        margin-bottom: 5px;
+    }
+
+    .wp-block-latest-comments__comment-link {
+        font-size: 0.8em;
+    }
+
+    .wp-block-latest-comments__comment-author {
+        text-decoration: none;
+        font-weight: bold;
+        color: unset;
     }
 }
