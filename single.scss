@@ -1,5 +1,5 @@
 h1 {
-    font-size: clamp(14px, 4vw, 30px);
+    font-size: clamp(25px, 2vw, 30px);
     margin-bottom: 0.5em;
     color: rgb(110, 121, 221);
 }
@@ -28,6 +28,7 @@ h1 {
         display: flex;
         gap: 0.5em;
         flex-wrap: wrap;
+        margin: 0;
     }
 }
 
@@ -65,8 +66,12 @@ h1 {
     border: 2px solid rgb(192, 192, 192);
     padding: 1em;
     display: flex;
-    margin: 1em 3em 0em 3em;
+    margin: 1em 5% 0em 5%;
     background-color: white;
+
+    @media only screen and (max-width: 600px) {
+        flex-direction: column;
+    }
 
     .author-avatar {
         margin-right: 1em;
@@ -80,6 +85,10 @@ h1 {
             margin: 0;
         }
 
+        a {
+            text-decoration: none;
+        }
+        
         a:hover {
             transform: scale(1.5);
         }
@@ -89,8 +98,17 @@ h1 {
     display: flex;
     flex-direction: column;
 
+    @media only screen and (max-width: 600px) {
+        background-color: unset;
+        padding: 0;
+    }
+
     footer {
         margin-top: auto;
+    }
+
+    figure {
+        margin: 0;
     }
 
 
@@ -163,6 +181,7 @@ h1 {
 .post-pagination {
     display: flex;
     justify-content: space-between;
+    margin-top: 0.5em;
 }
 
 .post-password-form {

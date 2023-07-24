@@ -1,7 +1,11 @@
 #sidebar {
+    @media only screen and (max-width: 950px) {
+        display: none;
+    }
+
     margin: 0 1em;
     padding-bottom: 0.5em;
-    border-radius: 18px;
+    border-radius: 12px;
     background-color: aliceblue;
     width: 20em;
     height: min-content;
@@ -65,7 +69,7 @@
             a {
                 background-color: azure;
                 padding: 8px;
-                border-radius: 16px;
+                border-radius: 12px;
             }
         }
     }
@@ -209,13 +213,14 @@
     li {
         background-color: rgb(225, 245, 245);
         padding: 0.5rem;
-        border-radius: 16px;
+        border-radius: 12px;
         border: 1px solid rgb(212, 212, 212);
         margin-bottom: 0.5em;
     }
 
     p {
         margin-bottom: 5px;
+        overflow-wrap: anywhere;
     }
 
     .wp-block-latest-comments__comment-link {

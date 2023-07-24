@@ -1,12 +1,17 @@
 #sidebar {
   margin: 0 1em;
   padding-bottom: 0.5em;
-  border-radius: 18px;
+  border-radius: 12px;
   background-color: aliceblue;
   width: 20em;
   height: -moz-min-content;
   height: min-content;
   overflow: hidden;
+}
+@media only screen and (max-width: 950px) {
+  #sidebar {
+    display: none;
+  }
 }
 #sidebar ul {
   margin: 0;
@@ -58,7 +63,7 @@
 #sidebar .wp-block-calendar .wp-calendar-nav a {
   background-color: azure;
   padding: 8px;
-  border-radius: 16px;
+  border-radius: 12px;
 }
 #sidebar .widget_search form {
   display: flex;
@@ -173,12 +178,13 @@
 .widget_recent_comments ol li, .wp-block-latest-comments li {
   background-color: rgb(225, 245, 245);
   padding: 0.5rem;
-  border-radius: 16px;
+  border-radius: 12px;
   border: 1px solid rgb(212, 212, 212);
   margin-bottom: 0.5em;
 }
 .widget_recent_comments ol p, .wp-block-latest-comments p {
   margin-bottom: 5px;
+  overflow-wrap: anywhere;
 }
 .widget_recent_comments ol .wp-block-latest-comments__comment-link, .wp-block-latest-comments .wp-block-latest-comments__comment-link {
   font-size: 0.8em;

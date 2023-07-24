@@ -25,6 +25,7 @@ h5,
 h6 {
   word-wrap: break-word;
   overflow-wrap: anywhere;
+  margin: 0.2em;
 }
 
 main {
@@ -37,7 +38,7 @@ main {
 .spacer {
   margin: 0 auto;
   max-width: 70em;
-  width: 70em;
+  width: 90vw;
   z-index: 5;
   position: relative;
 }
@@ -58,9 +59,9 @@ main {
 
 .postCard {
   background-color: rgb(225, 245, 245);
-  border-radius: 18px;
+  border-radius: 12px;
   padding: 0.75em;
-  margin-bottom: 0.5em;
+  margin-bottom: 0.8em;
   display: grid;
   grid-template-columns: 40% 1fr;
   grid-auto-flow: column;
@@ -68,11 +69,20 @@ main {
   justify-content: flex-start;
   align-items: center;
   gap: 0.5em;
+  width: 100%;
+  box-sizing: border-box;
+}
+@media only screen and (max-width: 600px) {
+  .postCard {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.9em;
+  }
 }
 .postCard .imgA {
   overflow: hidden;
   display: flex;
-  border-radius: 12px;
+  border-radius: 10px;
 }
 .postCard .imgA img {
   width: 100%;
@@ -149,6 +159,7 @@ main {
   margin: 0;
   padding: 0;
   font-size: 1.2em;
+  margin-bottom: 0.5em;
 }
 .postCard .tagsDiv ul li {
   margin: 0.4em 0.2em;
@@ -182,6 +193,7 @@ main {
   background-color: white;
   padding: 0.5em;
   border-radius: 18px;
+  font-size: clamp(14px, 2vw, 1em);
 }
 .pagination a,
 .pagination span {

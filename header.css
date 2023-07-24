@@ -55,6 +55,11 @@
   display: flex;
   justify-content: center;
 }
+@media only screen and (max-width: 600px) {
+  .header .headerDiv .secondHeaderColumn {
+    display: none;
+  }
+}
 .header .headerDiv .secondHeaderColumn ul {
   display: flex;
   margin: 0;
