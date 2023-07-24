@@ -10,235 +10,245 @@ Tested up to: 6.2.2
 */
 
 body {
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  font-family: "Quicksand";
-  background: linear-gradient(90deg, rgba(234, 238, 255, 1) 0%, rgba(232, 250, 255, 1) 37%, rgba(234, 238, 255, 1) 100%);
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: "Quicksand";
+    background: linear-gradient(90deg, rgba(234, 238, 255, 1) 0%, rgba(232, 250, 255, 1) 37%, rgba(234, 238, 255, 1) 100%);
+}
+
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    word-wrap: break-word;
+    overflow-wrap: anywhere;
 }
 
 main {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  align-items: center;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
 }
 
 .spacer {
-  margin: 0 auto;
-  // margin-top: 40em;
-  max-width: 70em;
-  z-index: 5;
-  position: relative;
-  // overflow: hidden;
+    margin: 0 auto;
+    // margin-top: 40em;
+    max-width: 70em;
+    width: 70em;
+    z-index: 5;
+    position: relative;
+    // overflow: hidden;
 }
 
 .grid {
-  display: grid;
-  grid-template-columns: auto auto;
-  margin-bottom: 2em;
+    display: grid;
+    grid-template-columns: auto auto;
+    margin-bottom: 2em;
 }
 
 .shadow {
-  box-shadow: 1px 1px 10px -6px #000000;
+    box-shadow: 1px 1px 10px -6px #000000;
 }
 
 .postCard {
-  background-color: rgb(225, 245, 245);
-  border-radius: 18px;
-  padding: 0.75em;
-  margin-bottom: 0.5em;
-  display: grid;
-  grid-template-columns: 40% 1fr;
-  grid-auto-flow: column;
-  width: 50rem;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 0.5em;
+    background-color: rgb(225, 245, 245);
+    border-radius: 18px;
+    padding: 0.75em;
+    margin-bottom: 0.5em;
+    display: grid;
+    grid-template-columns: 40% 1fr;
+    grid-auto-flow: column;
+    width: 50rem;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.5em;
 
-  .imgA {
-    overflow: hidden;
-    display: flex;
-    border-radius: 12px;
-
-    img {
-      width: 100%;
-      max-width: 100%;
-      object-fit: cover;
-      height: 15em;
-      transition: all 500ms;
-    }
-  }
-
-  .imgA:hover img {
-    transform: scale(1.2);
-  }
-
-  .textDiv {
-    padding: 0.5em;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    font-size: 0.9em;
-    grid-column: span 2;
-    height: 100%;
-
-    .date {
-      font-size: 0.8em;
-    }
-
-    .buttomDiv {
-      margin-top: auto;
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-
-      .postLinks {
+    .imgA {
+        overflow: hidden;
         display: flex;
-      }
+        border-radius: 12px;
 
-      .pin {
-        visibility: hidden;
-      }
-
-      .commentscount {
-        display: flex;
-        align-items: center;
-        background-color: white;
-        text-decoration: none;
-        padding: 0.8em 1.2em;
-        border-radius: 8px;
-        margin-right: 0.5em;
-        :nth-child(2) {
-            margin-left: 0.5em;
+        img {
+            width: 100%;
+            max-width: 100%;
+            object-fit: cover;
+            height: 15em;
+            transition: all 500ms;
         }
-      }
-
-      .commentscount:hover {
-        background-color: #f8f8f8;
-      }
-
-      .readMore {
-        text-decoration: none;
-        background-color: rgb(119, 162, 202);
-        color: white;
-        border-radius: 8px;
-        padding: 0.8em 1.2em;
-      }
-
-      .readMore:hover {
-        background-color: transparent;
-        outline: 1px solid black;
-        color: black;
-        transition: all 200ms;
-      }
-    }
-  }
-
-  h2 {
-    margin: 0 0 0.5em 0;
-    word-wrap: break-word;
-    overflow-wrap: anywhere;
-    font-size: 1.4em;
-  }
-
-  .tagsDiv ul {
-    display: flex;
-    flex-wrap: wrap;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    font-size: 1.2em;
-
-    li {
-      margin: 0.4em 0.2em;
     }
 
-    a {
-      text-decoration: none;
-      color: black;
-      text-align: center;
-      background-color: aliceblue;
-      padding: 0.6em 1em;
-      border-radius: 32px;
-      font-size: 0.7em;
-      min-width: 2em;
+    .imgA:hover img {
+        transform: scale(1.2);
     }
 
-    a:hover {
-      outline: 1px solid rgb(97, 97, 97);
+    .textDiv {
+        padding: 0.5em;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        font-size: 0.9em;
+        grid-column: span 2;
+        height: 100%;
+
+        .date {
+            font-size: 0.8em;
+        }
+
+        .buttomDiv {
+            margin-top: auto;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .postLinks {
+                display: flex;
+            }
+
+            .pin {
+                visibility: hidden;
+            }
+
+            .commentscount {
+                display: flex;
+                align-items: center;
+                background-color: white;
+                text-decoration: none;
+                padding: 0.8em 1.2em;
+                border-radius: 8px;
+                margin-right: 0.5em;
+
+                :nth-child(2) {
+                    margin-left: 0.5em;
+                }
+            }
+
+            .commentscount:hover {
+                background-color: #f8f8f8;
+            }
+
+            .readMore {
+                text-decoration: none;
+                background-color: rgb(119, 162, 202);
+                color: white;
+                border-radius: 8px;
+                padding: 0.8em 1.2em;
+            }
+
+            .readMore:hover {
+                background-color: transparent;
+                outline: 1px solid black;
+                color: black;
+                transition: all 200ms;
+            }
+        }
     }
-  }
+
+    
+    h2 {
+        margin: 0 0 0.5em 0;
+        font-size: 1.4em;
+    }
+    
+    .tagsDiv ul {
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        font-size: 1.2em;
+
+        li {
+            margin: 0.4em 0.2em;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+            text-align: center;
+            background-color: aliceblue;
+            padding: 0.6em 1em;
+            border-radius: 32px;
+            font-size: 0.7em;
+            min-width: 2em;
+        }
+
+        a:hover {
+            outline: 1px solid rgb(97, 97, 97);
+        }
+    }
 }
 
 .stickyPost {
-  border: 1px solid;
+    border: 1px solid;
 
-  .textDiv .buttomDiv .pin {
-    visibility: visible;
-  }
+    .textDiv .buttomDiv .pin {
+        visibility: visible;
+    }
 }
 
 .pagination {
-  margin-top: 2em;
-  margin-bottom: 3em;
-  display: flex;
-  justify-content: flex-end;
-  background-color: white;
-  padding: 0.5em;
-  border-radius: 18px;
-  a,
-  span {
-    color: #000000;
-    background-color: aquamarine;
-    border-radius: 12px;
-    margin: 0.2em;
-    padding: 0.5em 1em;
-    text-decoration: none;
-  }
+    margin-top: 2em;
+    margin-bottom: 3em;
+    display: flex;
+    justify-content: flex-end;
+    background-color: white;
+    padding: 0.5em;
+    border-radius: 18px;
 
-  span {
-    outline: 2px solid;
-  }
+    a,
+    span {
+        color: #000000;
+        background-color: aquamarine;
+        border-radius: 12px;
+        margin: 0.2em;
+        padding: 0.5em 1em;
+        text-decoration: none;
+    }
 
-  a:hover {
-    background-color: aliceblue;
-  }
+    span {
+        outline: 2px solid;
+    }
+
+    a:hover {
+        background-color: aliceblue;
+    }
 }
 
 /* width */
 ::-webkit-scrollbar {
-  width: 10px;
-  height: 10px;
+    width: 10px;
+    height: 10px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #f1f1f1;
+    background: #f1f1f1;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #888;
+    background: #888;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #555;
+    background: #555;
 }
 
 .content {
-  max-width: 45em;
-  padding: 2em;
-  background-color: #ffffff;
-  border-radius: 16px;
-  overflow: hidden;
-}
-
-h1 {
-    margin-top: 0;
+    max-width: 45em;
+    padding: 2em;
+    background-color: #ffffff;
+    border-radius: 16px;
+    overflow: hidden;
 }
 
 .social-sharing-links {
@@ -250,13 +260,15 @@ h1 {
     span {
         margin: 0.5em;
     }
+
     ul {
         display: flex;
         justify-content: center;
         list-style: none;
         padding: 0;
     }
-    a{
+
+    a {
         margin: 0.5em;
         padding: 0.8em;
         text-decoration: none;

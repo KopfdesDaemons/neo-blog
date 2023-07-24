@@ -11,6 +11,9 @@
 .comments-area ul {
   padding: 0;
 }
+.comments-area .comment-list {
+  list-style: none;
+}
 .comments-area .comment {
   list-style: none;
   font-size: 0.9em;
