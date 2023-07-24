@@ -1,18 +1,62 @@
 h1 {
     font-size: clamp(14px, 4vw, 30px);
-}
-
-p {
-    font-size: clamp(12px, 2vw, 16px);
-}
-
-img {
-    // margin: 0.5em;
+    margin-bottom: 0.5em;
+    color: rgb(110, 121, 221);
 }
 
 .wp-block-quote {
-    border-left: 5px solid blue;
-    padding: 0.5em;
+    border-left: 5px solid rgb(172, 224, 255);
+    padding: 1em;
     background-color: rgb(240, 248, 248);
     font-style: italic;
+    margin: 2em 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.content {
+
+}
+
+.post-password-form {
+    background-color: rgb(247, 165, 165);
+    border-radius: 8px;
+    padding: 1em 3em;
+    margin: 3em;
+    p {
+        display: flex;
+        flex-direction: column;
+
+        label {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1em;
+            margin: 1em;
+        }
+    }
+    input[type="submit"] {
+        text-decoration: none;
+        background-color: rgb(240, 115, 93);
+        color: white;
+        border-radius: 8px;
+        padding: 0.8em 1.2em;
+        border: none;
+      }
+
+      input[type="submit"]:hover {
+        background-color: transparent;
+        outline: 1px solid black;
+        color: black;
+        transition: all 200ms;
+        cursor: pointer;
+      }
+    input[type="password"] {
+        padding: 0.5em;
+        height: 25px;
+        // border-radius: 8px;
+        border: solid 1px rgb(12, 12, 12);
+        background-color: rgb(236, 244, 248);
+    }
 }

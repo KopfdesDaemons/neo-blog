@@ -25,37 +25,6 @@ main {
   align-items: center;
 }
 
-.backgroundDiv {
-  display: flex;
-  width: 100%;
-  height: 100vh;
-  background-color: rgb(245, 247, 255);
-  z-index: 2;
-  position: absolute;
-  margin-top: 45em;
-}
-
-.landingpageDiv {
-  width: 100vw;
-  position: fixed;
-  display: flex;
-  justify-content: center;
-  height: 100vh;
-
-  img {
-    max-width: 130em;
-    width: 100%;
-    object-fit: cover;
-  }
-
-  .color {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 255, 255, 0.068);
-  }
-}
-
 .spacer {
   margin: 0 auto;
   // margin-top: 40em;
@@ -88,7 +57,6 @@ main {
   gap: 0.5em;
 
   .imgA {
-    // width: 40%;
     overflow: hidden;
     display: flex;
     border-radius: 12px;
@@ -111,12 +79,9 @@ main {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    // grid-column-start: 2;
-    // grid-column-end: 3;
     font-size: 0.9em;
     grid-column: span 2;
     height: 100%;
-    // width: 100%;
 
     .date {
       font-size: 0.8em;
@@ -166,7 +131,6 @@ main {
   h2 {
     margin: 0 0 0.5em 0;
     word-wrap: break-word;
-    // max-width: 23em;
     font-size: 1.4em;
   }
 
@@ -256,6 +220,8 @@ main {
   padding: 2em;
   background-color: #ffffff;
   border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 2em;
 }
 
 h1 {

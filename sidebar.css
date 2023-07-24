@@ -53,7 +53,7 @@
   color: black;
 }
 .widget_archive li:nth-child(even) {
-  background-color: rgb(220, 235, 235);
+  background-color: rgb(225, 245, 245);
 }
 
 .wp-block-calendar .wp-calendar-nav {
@@ -71,7 +71,7 @@
 .widget_categories li a, .wp-block-categories li a {
   padding: 0.5em;
   border-radius: 14px;
-  background-color: rgb(220, 235, 235);
+  background-color: rgb(225, 245, 245);
   color: rgb(17, 17, 17);
   text-decoration: none;
   border: solid 1px;
@@ -85,7 +85,7 @@
   padding: 1rem 0 0 0;
 }
 .widget_recent_comments ol li, .wp-block-latest-comments li {
-  background-color: rgb(220, 235, 235);
+  background-color: rgb(225, 245, 245);
   padding: 0.5rem;
   border-radius: 16px;
 }
@@ -104,13 +104,13 @@
 .wp-block-loginout a {
   padding: 0.5rem;
   border-radius: 16px;
-  background-color: rgb(220, 235, 235);
+  background-color: rgb(225, 245, 245);
   text-decoration: none;
 }
 
 .wp-block-page-list li, .widget_rss li {
   padding: 0.5rem;
-  background-color: rgb(220, 235, 235);
+  background-color: rgb(225, 245, 245);
   margin-top: 0.5rem;
 }
 
@@ -121,7 +121,7 @@
 .widget_recent_entries li a {
   display: block;
   padding: 0.5rem;
-  background-color: rgb(220, 235, 235);
+  background-color: rgb(225, 245, 245);
   color: rgb(17, 17, 17);
   text-decoration: none;
 }

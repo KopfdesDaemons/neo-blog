@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <main role="main">
     <section class="spacer grid">
-        <div class="content">
+        <div class="feed">
             <h1>
                 <?php
                 if (is_category()) {
@@ -28,21 +28,30 @@
             if (have_posts()) {
                 while (have_posts()) {
                     the_post();
-                    // Hier kannst du den gewünschten Inhalt und das Layout für jeden Beitrag im Archiv definieren
-                    // Du kannst WordPress-Template-Tags und Funktionen verwenden, um den Inhalt anzupassen
-                    // Hier ist ein einfaches Beispiel, um den Titel und den Auszug anzuzeigen:
-            ?>
-            <article <?php post_class(); ?>>
-                <h2><?php the_title(); ?></h2>
-                <?php the_excerpt(); ?>
-            </article>
-            <?php
+                    $post_classes = array('postCard shadow');
+                    if (is_sticky()) {
+                        $post_classes[] = 'stickyPost';
+                    }
+
+                    // Zeige Kachel mit Beitrag
+                    require_once get_template_directory() . '/template-parts/feed.php';
+                    echo display_post_card($post_classes);
                 }
 
-                // Pagination, falls erforderlich
-                the_posts_pagination();
+                // Pagination (nur anzeigen, wenn es mehr als eine Seite gibt)
+                global $wp_query;
+                $total_pages = $wp_query->max_num_pages;
+                if ($total_pages > 1) {
+                    echo '<div class="pagination shadow">';
+                    echo paginate_links(array(
+                        'total' => $total_pages,
+                        'prev_next' => true,
+                        'prev_text' => __('« Previous'),
+                        'next_text' => __('Next »'),
+                    ));
+                    echo '</div>';
+                }
             } else {
-                // Wenn keine Beiträge gefunden werden
                 echo 'Keine Beiträge gefunden.';
             }
             ?>

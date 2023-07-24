@@ -20,7 +20,7 @@ function mytheme_custom_excerpt_length($length)
 }
 add_filter('excerpt_length', 'mytheme_custom_excerpt_length', 999);
 
-
+add_theme_support('post-thumbnails');
 
 function custom_comment_callback($comment, $args, $depth)
 {

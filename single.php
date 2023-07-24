@@ -11,6 +11,7 @@
                 <header>
                     <h1 class="title"><?php the_title(); ?></h1>
                 </header>
+                <span><?php the_date(); ?></span>
                 <?php the_content(); ?>
                 <?php echo theme_slug_social_sharing(); ?>
                 <?php
