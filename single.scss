@@ -10,10 +10,14 @@ h1 {
     padding: 1em;
     background-color: rgb(240, 248, 248);
     font-style: italic;
-    margin: 2em 0;
+    margin: 1em 0;
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+
+    cite {
+        display: inline-flex;
+        justify-content: flex-end;
+    }
 }
 
 .post-categories {
@@ -34,51 +38,99 @@ h1 {
         margin: 0;
         padding: 0;
         font-size: 1.2em;
-    
+
         li {
-          margin: 0.4em 0.2em;
+            margin: 0.4em 0.2em;
         }
-    
+
         a {
-          text-decoration: none;
-          color: black;
-          text-align: center;
-          background-color: aliceblue;
-          padding: 0.6em 1em;
-          border-radius: 32px;
-          font-size: 0.7em;
-          min-width: 2em;
+            text-decoration: none;
+            color: black;
+            text-align: center;
+            background-color: aliceblue;
+            padding: 0.6em 1em;
+            border-radius: 32px;
+            font-size: 0.7em;
+            min-width: 2em;
         }
-    
+
         a:hover {
-          outline: 1px solid rgb(97, 97, 97);
+            outline: 1px solid rgb(97, 97, 97);
         }
-      }
+    }
 }
 
 .content {
+    display: flex;
+    flex-direction: column;
+
+    footer {
+        margin-top: auto;
+    }
+
     .author-info {
         border: 2px solid rgb(192, 192, 192);
         padding: 1em;
         display: flex;
         margin: 1em 3em 0em 3em;
 
-        .author-avatar{
+        .author-avatar {
             margin-right: 1em;
         }
-        
+
         .author-row {
             display: flex;
             justify-content: space-between;
-            
+
             h3 {
                 margin: 0;
             }
+
             a:hover {
                 transform: scale(1.5);
             }
         }
     }
+
+    .page-links {
+        margin-top: 2em;
+        margin-bottom: 3em;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        background-color: white;
+        padding: 0.5em;
+        border-radius: 18px;
+
+        .page-links-title {
+            margin-right: 0.5em;
+        }
+
+        a,
+        span {
+            color: #000000;
+            border-radius: 12px;
+            text-decoration: none;
+        }
+        
+        .post-page-numbers {
+            background-color: aquamarine;
+            margin: 0.2em;
+            padding: 0.5em 1em;
+        }
+        
+        .current {
+            outline: 2px solid;
+        }
+        a:hover {
+            background-color: aliceblue;
+        }
+    }
+}
+
+.post-pagination {
+    display: flex;
+    justify-content: space-between;
 }
 
 .post-password-form {
@@ -86,6 +138,7 @@ h1 {
     border-radius: 8px;
     padding: 1em 3em;
     margin: 3em;
+
     p {
         display: flex;
         flex-direction: column;
@@ -98,6 +151,7 @@ h1 {
             margin: 1em;
         }
     }
+
     input[type="submit"] {
         text-decoration: none;
         background-color: rgb(240, 115, 93);
@@ -105,15 +159,16 @@ h1 {
         border-radius: 8px;
         padding: 0.8em 1.2em;
         border: none;
-      }
+    }
 
-      input[type="submit"]:hover {
+    input[type="submit"]:hover {
         background-color: transparent;
         outline: 1px solid black;
         color: black;
         transition: all 200ms;
         cursor: pointer;
-      }
+    }
+
     input[type="password"] {
         padding: 0.5em;
         height: 25px;
