@@ -88,6 +88,8 @@
   background-color: rgb(225, 245, 245);
   padding: 0.5rem;
   border-radius: 16px;
+  border: 1px solid rgb(212, 212, 212);
+  margin-bottom: 0.5em;
 }
 .widget_recent_comments ol p, .wp-block-latest-comments p {
   margin-bottom: 5px;
@@ -117,6 +119,7 @@
 .widget_recent_entries li {
   margin-top: 0.5rem;
   width: 100%;
+  border: 1px solid;
 }
 .widget_recent_entries li a {
   display: block;
