@@ -82,23 +82,20 @@ h1 {
   transform: scale(1.5);
 }
 
-.content {
+.articlearea {
   display: flex;
   flex-direction: column;
 }
 @media only screen and (max-width: 600px) {
-  .content {
+  .articlearea .content {
     background-color: unset;
-    padding: 0;
+    padding: 1em;
   }
 }
-.content footer {
-  margin-top: auto;
-}
-.content figure {
+.articlearea figure {
   margin: 0;
 }
-.content .page-links {
+.articlearea .page-links {
   margin-top: 2em;
   margin-bottom: 3em;
   display: flex;
@@ -108,43 +105,43 @@ h1 {
   padding: 0.5em;
   border-radius: 18px;
 }
-.content .page-links .page-links-title {
+.articlearea .page-links .page-links-title {
   margin-right: 0.5em;
 }
-.content .page-links a,
-.content .page-links span {
+.articlearea .page-links a,
+.articlearea .page-links span {
   color: #000000;
   border-radius: 12px;
   text-decoration: none;
 }
-.content .page-links .post-page-numbers {
+.articlearea .page-links .post-page-numbers {
   background-color: aquamarine;
   margin: 0.2em;
   padding: 0.5em 1em;
 }
-.content .page-links .current {
+.articlearea .page-links .current {
   outline: 2px solid;
 }
-.content .page-links a:hover {
+.articlearea .page-links a:hover {
   background-color: aliceblue;
 }
-.content .gallery .gallery-item {
+.articlearea .gallery .gallery-item {
   font-size: 0.8em;
   overflow: hidden;
 }
-.content .gallery .gallery-item img {
+.articlearea .gallery .gallery-item img {
   border-radius: 8px;
   border: none !important;
 }
-.content .gallery .gallery-item img:hover {
+.articlearea .gallery .gallery-item img:hover {
   transform: scale(0.95);
   transition: all 300ms;
 }
-.content .gallery .landscape img {
+.articlearea .gallery .landscape img {
   width: 95%;
   height: auto;
 }
-.content .attachment img {
+.articlearea .attachment img {
   width: 95%;
   height: auto;
 }

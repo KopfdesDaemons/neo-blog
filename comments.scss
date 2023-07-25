@@ -151,6 +151,10 @@
 
     textarea { resize: vertical; }
 
+    label {
+        pointer-events: none;
+    }
+
     input {
         padding: 0.5em;
         height: 25px;

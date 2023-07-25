@@ -38,7 +38,7 @@ main {
 .spacer {
   margin: 0 auto;
   max-width: 70em;
-  width: 90vw;
+  width: 95vw;
   z-index: 5;
   position: relative;
 }

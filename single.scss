@@ -94,17 +94,19 @@ h1 {
         }
     }
 }
-.content {
+.articlearea {
     display: flex;
     flex-direction: column;
 
-    @media only screen and (max-width: 600px) {
-        background-color: unset;
-        padding: 0;
+    .content {
+        @media only screen and (max-width: 600px) {
+            background-color: unset;
+            padding: 1em;
+        }
     }
 
     footer {
-        margin-top: auto;
+        // margin-top: auto;
     }
 
     figure {

@@ -128,6 +128,9 @@
 .comments-area textarea {
   resize: vertical;
 }
+.comments-area label {
+  pointer-events: none;
+}
 .comments-area input {
   padding: 0.5em;
   height: 25px;

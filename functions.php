@@ -10,6 +10,7 @@ function enqueue_custom_styles()
     wp_enqueue_style('comments-styles', get_stylesheet_directory_uri() . '/comments.css', array(), '1', 'all');
     wp_enqueue_style('single-styles', get_stylesheet_directory_uri() . '/single.css', array(), '1', 'all');
     wp_enqueue_style('404-styles', get_stylesheet_directory_uri() . '/404.css', array(), '1', 'all');
+    wp_enqueue_style('fontawesome', get_stylesheet_directory_uri() . '/fonts/fontawesome/css/all.min.css', array(), '1', 'all');
 }
 add_action('wp_enqueue_scripts', 'enqueue_custom_styles');
 
@@ -26,10 +27,10 @@ function custom_comment_callback($comment, $args, $depth)
 {
     $GLOBALS['comment'] = $comment;
 ?>
-<li <?php comment_class(); ?> id="comment-<?php comment_ID(); ?>">
-    <div class="commentCard">
-        <div class="profilepicture">
-            <?php
+    <li <?php comment_class(); ?> id="comment-<?php comment_ID(); ?>">
+        <div class="commentCard">
+            <div class="profilepicture">
+                <?php
                 if ($args['avatar_size'] != 0) {
                     $avatar = get_avatar($comment, $args['avatar_size']);
                     $author_link = get_comment_author_link($comment);
@@ -41,11 +42,11 @@ function custom_comment_callback($comment, $args, $depth)
                     }
                 }
                 ?>
-        </div>
-        <div class="commentContent">
-            <header>
-                <span class="name">
-                    <?php
+            </div>
+            <div class="commentContent">
+                <header>
+                    <span class="name">
+                        <?php
                         if (get_comment_author_url($comment) && $comment->user_id != 0) {
                             $author_link = get_comment_author_link($comment);
                             printf('<a href="%1$s" rel="nofollow">%2$s</a>', esc_url(get_comment_author_url($comment)), get_comment_author($comment));
@@ -53,19 +54,19 @@ function custom_comment_callback($comment, $args, $depth)
                             printf(get_comment_author($comment));
                         }
                         ?>
-                </span>
-                <span class="date">
-                    <?php printf(get_comment_date('d.m.Y')); ?>
-                </span>
-            </header>
-            <?php if ($comment->comment_approved == '0') : ?>
-            <em class="comment-awaiting-moderation"><?php _e('Your comment is awaiting moderation.'); ?></em><br />
-            <?php endif; ?>
-            <div class="commentText">
-                <?php comment_text(); ?>
-            </div>
-            <div class="reply">
-                <?php
+                    </span>
+                    <span class="date">
+                        <?php printf(get_comment_date('d.m.Y')); ?>
+                    </span>
+                </header>
+                <?php if ($comment->comment_approved == '0') : ?>
+                    <em class="comment-awaiting-moderation"><?php _e('Your comment is awaiting moderation.'); ?></em><br />
+                <?php endif; ?>
+                <div class="commentText">
+                    <?php comment_text(); ?>
+                </div>
+                <div class="reply">
+                    <?php
                     comment_reply_link(
                         array_merge(
                             $args,
@@ -79,13 +80,13 @@ function custom_comment_callback($comment, $args, $depth)
                         )
                     );
                     ?>
-                <?php edit_comment_link(__('✏️'), '  ', ''); ?>
+                    <?php edit_comment_link(__('✏️'), '  ', ''); ?>
+                </div>
             </div>
         </div>
-    </div>
-    <?php if ($args['max_depth'] > $depth) { ?>
-    <div class="comment-form-container" style="display:none;">
-        <?php
+        <?php if ($args['max_depth'] > $depth) { ?>
+            <div class="comment-form-container" style="display:none;">
+                <?php
                 comment_form(
                     array(
                         'comment_field' => '<p class="comment-form-comment"><label for="comment">' . _x('Comment', 'noun') . '</label><br /><textarea id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea></p>',
@@ -96,8 +97,8 @@ function custom_comment_callback($comment, $args, $depth)
                     )
                 );
                 ?>
-    </div>
-    <?php } ?>
+            </div>
+        <?php } ?>
     <?php
 }
 

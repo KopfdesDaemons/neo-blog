@@ -50,25 +50,40 @@
   margin: 0 0.5em;
   color: white;
 }
-.header .headerDiv .secondHeaderColumn {
+.header .headerDiv .headerMenuColumn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.header .headerDiv .headerMenuColumn button {
+  padding: 5px;
+  width: 3em;
+  border-radius: 8px;
+  font-size: 1.5em;
+}
+.header .headerDiv .headerMenuColumn .menu-mein-hauptmenue-container {
   width: 100%;
   display: flex;
   justify-content: center;
 }
-@media only screen and (max-width: 600px) {
-  .header .headerDiv .secondHeaderColumn {
-    display: none;
-  }
-}
-.header .headerDiv .secondHeaderColumn ul {
+.header .headerDiv .headerMenuColumn ul {
   display: flex;
   margin: 0;
+  padding: 0;
+  flex-flow: row wrap;
 }
-.header .headerDiv .secondHeaderColumn ul a {
+@media only screen and (max-width: 600px) {
+  .header .headerDiv .headerMenuColumn ul {
+    width: 100%;
+  }
+}
+.header .headerDiv .headerMenuColumn ul a {
   color: rgb(63, 63, 63);
   text-decoration: none;
 }
-.header .headerDiv .secondHeaderColumn ul li {
+.header .headerDiv .headerMenuColumn ul li {
   display: flex;
   align-items: center;
   padding: 0.8rem;
@@ -78,7 +93,7 @@
   border-bottom: 1px solid transparent;
   font-size: 1.2rem;
 }
-.header .headerDiv .secondHeaderColumn ul li ul {
+.header .headerDiv .headerMenuColumn ul li ul {
   position: absolute;
   background-color: rgb(74, 132, 240);
   flex-direction: column;
@@ -88,26 +103,26 @@
   display: none;
   padding: 0;
 }
-.header .headerDiv .secondHeaderColumn ul li ul li {
+.header .headerDiv .headerMenuColumn ul li ul li {
   position: relative;
 }
-.header .headerDiv .secondHeaderColumn ul li ul ul {
+.header .headerDiv .headerMenuColumn ul li ul ul {
   background-color: rgb(101, 106, 179);
   position: absolute;
   left: 100%;
   top: 0;
   display: none;
 }
-.header .headerDiv .secondHeaderColumn ul li:hover {
+.header .headerDiv .headerMenuColumn ul li:hover {
   border-bottom: 1px solid;
   background-color: rgba(38, 0, 255, 0.068);
 }
-.header .headerDiv .secondHeaderColumn ul li:hover ul:first-of-type {
+.header .headerDiv .headerMenuColumn ul li:hover ul:first-of-type {
   display: flex;
 }
-.header .headerDiv .secondHeaderColumn ul li:hover ul:first-of-type ul {
+.header .headerDiv .headerMenuColumn ul li:hover ul:first-of-type ul {
   display: none;
 }
-.header .headerDiv .secondHeaderColumn ul li:hover ul:first-of-type li:hover ul:first-of-type {
+.header .headerDiv .headerMenuColumn ul li:hover ul:first-of-type li:hover ul:first-of-type {
   display: flex;
 }/*# sourceMappingURL=header.css.map */
