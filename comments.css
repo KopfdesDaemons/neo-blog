@@ -15,6 +15,10 @@
   list-style: none;
   font-size: 0.9em;
 }
+.comments-area .comment-awaiting-moderation {
+  color: rgb(255, 0, 0);
+  font-weight: bold;
+}
 .comments-area .comment-body {
   background-color: white;
   border-radius: 12px;
@@ -23,11 +27,20 @@
   border: 1px solid rgb(212, 212, 212);
   box-shadow: inset 0px 0px 50px 0px rgba(193, 232, 255, 0.41);
   overflow-wrap: anywhere;
+  word-wrap: break-word;
 }
 .comments-area .reply {
   display: flex;
-  justify-content: space-between;
   margin-top: 1em;
+}
+.comments-area .reply .comment-reply-link {
+  text-decoration: none;
+  background-color: azure;
+  padding: 0.5rem 1rem;
+  border-radius: 12px;
+  color: black;
+  font-size: 1em;
+  border: 1px solid;
 }
 .comments-area .reply a:hover {
   background-color: rgb(225, 245, 245);
@@ -38,15 +51,6 @@
   margin: 0;
   box-sizing: border-box;
   white-space: pre-wrap;
-}
-.comments-area .comment-reply-link {
-  text-decoration: none;
-  background-color: azure;
-  padding: 0.5rem 1rem;
-  border-radius: 12px;
-  color: black;
-  font-size: 1em;
-  border: 1px solid;
 }
 .comments-area .vcard {
   display: flex;
@@ -67,10 +71,6 @@
 }
 .comments-area .vcard span {
   display: none;
-}
-.comments-area .comment-awaiting-moderation {
-  color: rgb(255, 0, 0);
-  font-weight: bold;
 }
 .comments-area .comment-meta {
   display: flex;
@@ -97,18 +97,20 @@
   max-width: 5em;
   height: auto;
 }
-.comments-area .comment-form-comment {
+.comments-area .comment-respond {
+  padding: 1em;
+}
+.comments-area .comment-respond .comment-form-comment {
   display: flex;
   flex-direction: column;
 }
-.comments-area .form-submit {
+.comments-area .comment-respond .form-submit {
   margin: 0.5rem;
 }
-.comments-area .comment-reply-title {
-  display: flex;
-  justify-content: space-between;
+.comments-area .comment-respond .form-submit textarea {
+  resize: vertical;
 }
-.comments-area .submit {
+.comments-area .comment-respond .form-submit .submit {
   text-decoration: none;
   background-color: rgb(162, 210, 238);
   padding: 0.5rem 1rem;
@@ -119,43 +121,45 @@
   font-size: 1.2em;
   height: auto;
 }
-.comments-area .submit:hover {
+.comments-area .comment-respond .form-submit .submit:hover {
   background-color: rgb(243, 246, 253);
 }
-.comments-area textarea {
-  resize: vertical;
+.comments-area .comment-respond .comment-reply-title {
+  display: flex;
+  justify-content: space-between;
 }
-.comments-area label {
-  pointer-events: none;
-}
-.comments-area input {
+.comments-area .comment-respond input {
   padding: 0.5em;
   height: 25px;
   border: solid 1px rgb(12, 12, 12);
   background-color: rgb(236, 244, 248);
 }
-.comments-area .comment-form-author, .comments-area .comment-form-email, .comments-area .comment-form-url {
+.comments-area .comment-respond .comment-form-author,
+.comments-area .comment-respond .comment-form-email,
+.comments-area .comment-respond .comment-form-url {
   position: relative;
   display: flex;
   flex-direction: column-reverse;
   align-items: flex-start;
 }
-.comments-area .comment-form-author label, .comments-area .comment-form-email label, .comments-area .comment-form-url label {
+.comments-area .comment-respond .comment-form-author label,
+.comments-area .comment-respond .comment-form-email label,
+.comments-area .comment-respond .comment-form-url label {
+  pointer-events: none;
   position: absolute;
   top: 8px;
   left: 5px;
 }
-.comments-area .comment-form-author input:not(:placeholder-shown) + label,
-.comments-area .comment-form-author input:focus + label,
-.comments-area .comment-form-author input:-webkit-autofill + label, .comments-area .comment-form-email input:not(:placeholder-shown) + label,
-.comments-area .comment-form-email input:focus + label,
-.comments-area .comment-form-email input:-webkit-autofill + label, .comments-area .comment-form-url input:not(:placeholder-shown) + label,
-.comments-area .comment-form-url input:focus + label,
-.comments-area .comment-form-url input:-webkit-autofill + label {
+.comments-area .comment-respond .comment-form-author input:not(:placeholder-shown) + label,
+.comments-area .comment-respond .comment-form-author input:focus + label,
+.comments-area .comment-respond .comment-form-author input:-webkit-autofill + label,
+.comments-area .comment-respond .comment-form-email input:not(:placeholder-shown) + label,
+.comments-area .comment-respond .comment-form-email input:focus + label,
+.comments-area .comment-respond .comment-form-email input:-webkit-autofill + label,
+.comments-area .comment-respond .comment-form-url input:not(:placeholder-shown) + label,
+.comments-area .comment-respond .comment-form-url input:focus + label,
+.comments-area .comment-respond .comment-form-url input:-webkit-autofill + label {
   transform: scale(0.8) translateY(-0.8em);
   height: auto;
   font-size: 0.8em;
-}
-.comments-area .comment-respond {
-  padding: 1em;
 }/*# sourceMappingURL=comments.css.map */
