@@ -21,6 +21,7 @@ function mytheme_custom_excerpt_length($length)
 }
 add_filter('excerpt_length', 'mytheme_custom_excerpt_length', 999);
 
+// Theme Support
 add_theme_support('post-thumbnails');
 
 function custom_comment_reply_script()
@@ -153,24 +154,10 @@ function custom_theme_settings($wp_customize)
         'priority' => 30,
     ));
 
-
     // Optionen
     // ######################################################################
 
-    // Füge das Eingabefeld für die benutzerdefinierte Option hinzu
-    $wp_customize->add_setting('search_button', array(
-        'default' => true,
-        'transport' => 'refresh',
-        'sanitize_callback' => 'sanitize_checkbox',
-    ));
-
-    $wp_customize->add_control('search_button', array(
-        'type' => 'checkbox',
-        'label' => __('Zeige Suchbutton', 'dein-theme-textdomain'),
-        'section' => 'custom_theme_options',
-    ));
-
-
+    // Header Menü 
     $wp_customize->add_setting('header_menu', array(
         'default' => true,
         'transport' => 'refresh',
@@ -183,6 +170,20 @@ function custom_theme_settings($wp_customize)
         'section' => 'custom_theme_options',
     ));
 
+    // Suchbutton
+    $wp_customize->add_setting('search_button', array(
+        'default' => true,
+        'transport' => 'refresh',
+        'sanitize_callback' => 'sanitize_checkbox',
+    ));
+
+    $wp_customize->add_control('search_button', array(
+        'type' => 'checkbox',
+        'label' => __('Zeige Suchbutton', 'dein-theme-textdomain'),
+        'section' => 'custom_theme_options',
+    ));
+
+    // Suchleiste
     $wp_customize->add_setting('searchbar', array(
         'default' => true,
         'transport' => 'refresh',
@@ -196,6 +197,32 @@ function custom_theme_settings($wp_customize)
     ));
 }
 add_action('customize_register', 'custom_theme_settings');
+
+function custom_theme_colors($wp_customize)
+{
+    // Sektionen
+    // ######################################################################
+
+    // Füge eine neue Sektion zum Customizer hinzu
+    $wp_customize->add_section('custom_theme_colors', array(
+        'title' => __('Colors', 'dein-theme-textdomain'),
+        'priority' => 30,
+    ));
+
+    // Optionen
+    // ######################################################################
+
+    $wp_customize->add_setting('primary_color', array(
+        'default' => '#74b8f8',
+    ));
+
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'diwp_background_color', array(
+        'label' => 'Primary Color',
+        'section' => 'custom_theme_colors',
+        'settings' => 'primary_color'
+    )));
+}
+add_action('customize_register', 'custom_theme_colors');
 
 // Sanitize-Funktion zum Überprüfen des Checkbox-Werts (true/false)
 function sanitize_checkbox($input)

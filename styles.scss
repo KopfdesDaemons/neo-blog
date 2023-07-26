@@ -15,7 +15,7 @@ body {
     flex-direction: column;
     min-height: 100vh;
     font-family: "Quicksand";
-    background: linear-gradient(90deg, rgba(234, 238, 255, 1) 0%, rgba(232, 250, 255, 1) 37%, rgba(234, 238, 255, 1) 100%);
+    background: linear-gradient(90deg, var(--body) 0%, var(--hintergrund-variant-darker) 37%, var(--body) 100%);
 }
 
 h1,
@@ -42,6 +42,10 @@ main {
     width: 95vw;
     z-index: 5;
     position: relative;
+}
+
+a {
+    color: var(--primary-variant-darker);
 }
 
 .grid {
@@ -134,7 +138,7 @@ main {
             .commentscount {
                 display: flex;
                 align-items: center;
-                background-color: white;
+                background-color: var(--body);
                 border: 1px solid rgb(226, 226, 226);
                 text-decoration: none;
                 padding: 0.8em 1.2em;
@@ -153,7 +157,7 @@ main {
 
             .readMore {
                 text-decoration: none;
-                background-color: rgb(119, 162, 202);
+                background-color: var(--primary-color);
                 color: white;
                 border-radius: 8px;
                 padding: 0.8em 1.2em;
@@ -191,7 +195,7 @@ main {
             text-decoration: none;
             color: black;
             text-align: center;
-            background-color: aliceblue;
+            background-color: var(--hintergrund-variant-darker);
             padding: 0.6em 1em;
             border-radius: 32px;
             font-size: 0.7em;

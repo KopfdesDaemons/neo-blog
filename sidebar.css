@@ -48,10 +48,9 @@
 }
 #sidebar .widget_archive li {
   padding: 0.8em 1em;
-  background-color: aliceblue;
-  background-color: white;
-  border: 1px solid rgb(212, 212, 212);
-  box-shadow: inset 0px 0px 20px 0px rgba(193, 232, 255, 0.41);
+  background-color: var(--body);
+  border: 1px solid var(--hintergrund-variant-darker);
+  box-shadow: inset 0px 0px 20px 0px var(--primary-variant-brighter);
 }
 #sidebar .widget_archive li a {
   text-decoration: none;
@@ -60,15 +59,16 @@
   color: black;
 }
 #sidebar .widget_archive li:nth-child(even) {
-  background-color: rgba(224, 244, 255, 0.41);
+  background-color: var(--primary-variant-much-brighter);
 }
 #sidebar .wp-block-calendar .wp-calendar-nav {
   margin-top: 1rem;
 }
 #sidebar .wp-block-calendar .wp-calendar-nav a {
-  background-color: azure;
+  background-color: var(--hintergrund-variant);
   padding: 8px;
   border-radius: 12px;
+  color: var(--primary-color);
 }
 #sidebar .widget_search form {
   display: flex;
@@ -88,10 +88,10 @@
 #sidebar .widget_search button {
   height: 3em;
   border-radius: 8px;
-  background-color: white;
+  background-color: var(--body);
 }
 #sidebar .widget_search button:hover {
-  background-color: azure;
+  background-color: var(--hintergrund-variant-darker);
 }
 #sidebar .widget_categories, #sidebar .wp-block-categories {
   max-height: 600px;
@@ -106,14 +106,14 @@
 #sidebar .widget_categories li a, #sidebar .wp-block-categories li a {
   padding: 0.5em;
   border-radius: 14px;
-  background-color: white;
+  background-color: var(--body);
   color: rgb(17, 17, 17);
   text-decoration: none;
-  border: 1px solid rgb(212, 212, 212);
-  box-shadow: inset 0px 0px 20px 0px rgba(193, 232, 255, 0.41);
+  border: 1px solid var(--primary-variant-darker);
+  box-shadow: inset 0px 0px 20px 0px var(--primary-variant-much-brighter);
 }
 #sidebar .widget_categories li a:hover, #sidebar .wp-block-categories li a:hover {
-  background-color: rgb(203, 216, 216);
+  background-color: var(--primary-color);
 }
 #sidebar .wp-block-page-list {
   font-size: 0.9em;
@@ -121,9 +121,9 @@
   overflow-y: auto;
 }
 #sidebar .wp-block-page-list li {
-  background-color: white;
-  border: 1px solid rgb(212, 212, 212);
-  box-shadow: inset 0px 0px 20px 0px rgba(193, 232, 255, 0.41);
+  background-color: var(--body);
+  border: 1px solid var(--primary-variant-darker);
+  box-shadow: inset 0px 0px 20px 0px var(--primary-variant-much-brighter);
 }
 #sidebar .wp-block-page-list a {
   color: unset;
@@ -149,12 +149,12 @@
 #sidebar .wp-block-loginout a {
   padding: 0.8em 1em;
   border-radius: 12px;
-  background-color: aquamarine;
+  background-color: var(--primary-color);
   text-decoration: none;
   color: unset;
 }
 #sidebar .wp-block-loginout a:hover {
-  background-color: rgb(231, 231, 231);
+  background-color: var(--hintergrund);
 }
 #sidebar .wp-block-page-list li, #sidebar .widget_rss li {
   padding: 0.5rem;
@@ -168,14 +168,14 @@
 #sidebar .widget_recent_entries li a {
   display: block;
   padding: 0.5rem;
-  background-color: white;
-  border: 1px solid rgb(212, 212, 212);
-  box-shadow: inset 0px 0px 20px 0px rgba(193, 232, 255, 0.41);
+  background-color: var(--body);
+  border: 1px solid var(--primary-variant-much-brighter);
+  box-shadow: inset 0px 0px 20px 0px var(--primary-variant-much-brighter);
   color: rgb(17, 17, 17);
   text-decoration: none;
 }
 #sidebar .widget_recent_entries li a:hover {
-  background-color: rgb(203, 216, 216);
+  background-color: var(--primary-variant-brighter);
 }
 #sidebar .wp-block-tag-cloud p {
   margin: 0;
@@ -185,14 +185,14 @@
   text-decoration: none;
   color: black;
   text-align: center;
-  background-color: rgb(224, 233, 241);
+  background-color: var(--primary-variant-much-brighter);
   padding: 0.6em 1em;
   border-radius: 32px;
   font-size: 0.7em !important;
   min-width: 2em;
 }
 #sidebar .wp-block-tag-cloud a:hover {
-  outline: 1px solid rgb(97, 97, 97);
+  outline: 1px solid var(--schrift);
 }
 
 .widget_recent_comments ol, .wp-block-latest-comments {
@@ -203,9 +203,9 @@
   padding: 0.5rem;
   border-radius: 12px;
   margin-bottom: 0.5em;
-  background-color: white;
-  border: 1px solid rgb(212, 212, 212);
-  box-shadow: inset 0px 0px 50px 0px rgba(193, 232, 255, 0.41);
+  background-color: var(--body);
+  border: 1px solid var(--hintergrund);
+  box-shadow: inset 0px 0px 50px 0px var(--primary-variant-much-brighter);
 }
 .widget_recent_comments ol p, .wp-block-latest-comments p {
   margin-bottom: 5px;

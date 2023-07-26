@@ -6,7 +6,7 @@
     border-bottom: 1px solid gray;
     
     .headerDiv {
-        background-color: rgb(116, 184, 248);
+        background-color: var(--primary-color);
         width: 100%;
         display: flex;
         justify-content: center;
@@ -104,20 +104,20 @@
                     font-size: 1.2rem;
 
                     ul{
+                        background-color: var(--primary-variant-brighter);
                         position: absolute;
-                        background-color: rgb(74, 132, 240);
                         flex-direction: column;
                         top: 100%;
                         left: 0px;
                         z-index: 20;
                         display: none;
                         padding: 0;
-
+                        
                         li {
                             position: relative;
                         }
                         ul {
-                            background-color: rgb(101, 106, 179);
+                            background-color: var(--primary-variant-much-brighter);
                             position: absolute;
                             left: 100%;
                             top: 0;
@@ -128,7 +128,7 @@
 
                 li:hover {
                     border-bottom: 1px solid;
-                    background-color: rgba(38, 0, 255, 0.068);
+                    background-color: rgba(65, 65, 65, 0.068);
                     ul:first-of-type {
                         display: flex;
                         ul {

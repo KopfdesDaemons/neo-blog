@@ -1,6 +1,6 @@
 #footer {
   margin-top: auto;
-  background-color: rgb(184, 204, 204);
+  background-color: var(--hintergrund-variant);
   display: flex;
   justify-content: center;
 }

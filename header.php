@@ -9,6 +9,99 @@
     <?php }
 
     wp_head(); ?>
+
+    <?php
+    // Funktion zur Konvertierung eines Hex-Farbcode in HSL
+    function hex2hsl($hex)
+    {
+        // Lese RGB-Werte aus dem Hex-Farbcode
+        list($r, $g, $b) = sscanf($hex, "#%02x%02x%02x");
+
+        // Konvertiere RGB in HSL
+        $r /= 255.0;
+        $g /= 255.0;
+        $b /= 255.0;
+
+        $max = max($r, $g, $b);
+        $min = min($r, $g, $b);
+
+        $h = 0;
+        $s = 0;
+        $l = ($max + $min) / 2;
+
+        if ($max != $min) {
+            $d = $max - $min;
+            $s = $l > 0.5 ? $d / (2 - $max - $min) : $d / ($max + $min);
+
+            switch ($max) {
+                case $r:
+                    $h = ($g - $b) / $d + ($g < $b ? 6 : 0);
+                    break;
+                case $g:
+                    $h = ($b - $r) / $d + 2;
+                    break;
+                case $b:
+                    $h = ($r - $g) / $d + 4;
+                    break;
+            }
+
+            $h /= 6;
+        }
+
+        return array(round($h * 360), round($s * 100), round($l * 100));
+    }
+
+    // Hole die primäre Farbe aus dem Customizer
+    $primary_color = get_theme_mod('primary_color', '#370d07');
+    // Konvertiere die primäre Farbe in HSL
+    list($primary_hue, $saturation, $lightness) = hex2hsl($primary_color);
+
+    // Definiere die anderen Farben basierend auf der primären Farbe
+    $primary_variant_darker = "hsl($primary_hue, " . (max(0, $saturation - 20)) . "%, " . (max(0, $lightness - 20)) . "%)";
+    $primary_variant_brighter = "hsl($primary_hue, " . (min(100, $saturation + 20)) . "%, " . (min(100, $lightness + 20)) . "%)";
+    $primary_variant_much_brighter = "hsl($primary_hue, " . (min(100, $saturation + 25)) . "%, " . (min(100, $lightness + 25)) . "%)";
+    $hintergrund_inputfeld = "hsl($primary_hue, " . (min(100, $saturation + 45)) . "%, " . (min(100, $lightness + 45)) . "%)";
+    $hintergrund_variant = "hsl($primary_hue, " . (min(100, $saturation + 45)) . "%, " . (min(100, $lightness + 45)) . "%)";
+    $hintergrund_variant_darker = "hsl($primary_hue, " . (min(100, $saturation + 35)) . "%, " . (min(100, $lightness + 35)) . "%)";
+    ?>
+
+    <style>
+        :root {
+            --primary-color: <?php echo $primary_color;
+                                ?>;
+            --primary-variant-darker: <?php echo $primary_variant_darker;
+                                        ?>;
+            --primary-variant-brighter: <?php echo $primary_variant_brighter;
+                                        ?>;
+            --primary-variant-much-brighter: <?php echo $primary_variant_much_brighter;
+                                                ?>;
+            --body: rgb(252, 252, 252);
+            --hintergrund: rgb(240, 240, 240);
+            --schrift: rgb(10, 10, 10);
+            --hintergrund-inputfeld: <?php echo $hintergrund_inputfeld;
+                                        ?>;
+            --hintergrund-variant: <?php echo $hintergrund_variant;
+                                    ?>;
+            --hintergrund-variant-darker: <?php echo $hintergrund_variant_darker;
+                                            ?>;
+        }
+
+        .darkmode {
+            --primary-variant-darker: <?php echo $primary_variant_much_brighter;
+                                        ?>;
+            --primary-variant-much-brighter: <?php echo $primary_variant_darker;
+                                                ?>;
+            --body: rgb(15, 15, 15);
+            --hintergrund: rgb(22, 24, 28);
+            --schrift: rgb(238, 238, 238);
+            --hintergrund-inputfeld: <?php echo $hintergrund_inputfeld;
+                                        ?>;
+            --hintergrund-variant: <?php echo $hintergrund_variant;
+                                    ?>;
+            --hintergrund-variant-darker: <?php echo $hintergrund_variant_darker;
+                                            ?>;
+        }
+    </style>
 </head>
 
 <body <?php body_class(); ?>>

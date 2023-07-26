@@ -2,6 +2,7 @@ h1 {
   font-size: clamp(25px, 4vw, 35px);
   margin-bottom: 0.5em;
   color: rgb(110, 121, 221);
+  color: var(--primary-color);
 }
 
 .wp-block-quote,
@@ -51,8 +52,7 @@ table {
   margin-top: 25px;
   font-size: clamp(0.8rem, 4vw, 1rem);
   border-radius: 10px;
-  background-color: rgb(88, 89, 92);
-  color: rgb(252, 252, 252);
+  background-color: var(--hintergrund);
 }
 
 table thead tr {
@@ -66,11 +66,11 @@ td {
 }
 
 th {
-  color: rgb(41, 41, 41);
+  color: var(--primary-variant-darker);
 }
 
 tbody tr:nth-of-type(even) {
-  background-color: rgb(106, 108, 114);
+  background-color: var(--hintergrund-variant-darker);
 }
 
 .post-categories ul {
@@ -96,16 +96,15 @@ tbody tr:nth-of-type(even) {
 }
 .post-tags ul a {
   text-decoration: none;
-  color: black;
   text-align: center;
-  background-color: aliceblue;
+  background-color: var(--hintergrund-variant-darker);
   padding: 0.6em 1em;
   border-radius: 32px;
   font-size: 0.7em;
   min-width: 2em;
 }
 .post-tags ul a:hover {
-  outline: 1px solid rgb(97, 97, 97);
+  outline: 1px solid var(--primary-variant-brighter);
 }
 
 .author-info {

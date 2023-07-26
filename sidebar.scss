@@ -6,7 +6,6 @@
     margin: 0 1em;
     padding-bottom: 0.5em;
     border-radius: 12px;
-    // background-color: aliceblue;
     width: 20em;
     height: min-content;
     overflow: hidden;
@@ -53,10 +52,9 @@
         padding: 0;
         li {
             padding: 0.8em 1em;
-            background-color: aliceblue;
-            background-color: white;
-            border: 1px solid rgb(212, 212, 212);
-            box-shadow: inset 0px 0px 20px 0px rgb(193 232 255 / 41%);
+            background-color: var(--body);
+            border: 1px solid var(--hintergrund-variant-darker);;
+            box-shadow: inset 0px 0px 20px 0px var(--primary-variant-brighter);
             a {
                 text-decoration: none;
                 width: 100%;
@@ -66,7 +64,7 @@
         }
         
         li:nth-child(even) {
-            background-color: rgba(224, 244, 255, 0.41);
+            background-color: var(--primary-variant-much-brighter);
         }
     }
     
@@ -74,9 +72,10 @@
         .wp-calendar-nav {
             margin-top: 1rem;
             a {
-                background-color: azure;
+                background-color: var(--hintergrund-variant);
                 padding: 8px;
                 border-radius: 12px;
+                color: var(--primary-color);
             }
         }
     }
@@ -103,11 +102,11 @@
         button {
             height: 3em;
             border-radius: 8px;
-            background-color: white;
+            background-color: var(--body);
         }
     
         button:hover {
-            background-color: azure;
+            background-color: var(--hintergrund-variant-darker);
         }
     }
     
@@ -122,15 +121,15 @@
             a {
                 padding: 0.5em;
                 border-radius: 14px;
-                background-color: white;
+                background-color: var(--body);
                 color: rgb(17, 17, 17);
                 text-decoration: none;
-                border: 1px solid rgb(212, 212, 212);
-                box-shadow: inset 0px 0px 20px 0px rgb(193 232 255 / 41%);
+                border: 1px solid var(--primary-variant-darker);;
+                box-shadow: inset 0px 0px 20px 0px var(--primary-variant-much-brighter);
             }
     
             a:hover {
-                background-color: rgb(203, 216, 216);
+                background-color: var(--primary-color);
             }
         }
     }
@@ -141,9 +140,9 @@
         overflow-y: auto;
 
         li {
-            background-color: white;
-            border: 1px solid rgb(212, 212, 212);
-            box-shadow: inset 0px 0px 20px 0px rgb(193 232 255 / 41%);
+            background-color: var(--body);
+            border: 1px solid var(--primary-variant-darker);
+            box-shadow: inset 0px 0px 20px 0px var(--primary-variant-much-brighter);
         }
 
         a {
@@ -173,20 +172,19 @@
         a {
             padding: 0.8em 1em;
             border-radius: 12px;
-            background-color: aquamarine;
+            background-color: var(--primary-color);
             text-decoration: none;
             color: unset;
         }
     
         a:hover {
-            background-color: rgb(231, 231, 231);
+            background-color: var(--hintergrund);
         }
     }
     
     .wp-block-page-list, .widget_rss {
         li {
             padding: 0.5rem;
-            // background-color: rgb(225, 245, 245);
             margin-top: 0.5rem;
         }
     }
@@ -200,15 +198,15 @@
             a {
                 display: block;
                 padding: 0.5rem;
-                background-color: white;
-                border: 1px solid rgb(212, 212, 212);
-                box-shadow: inset 0px 0px 20px 0px rgb(193 232 255 / 41%);
+                background-color: var(--body);
+                border: 1px solid var(--primary-variant-much-brighter);
+                box-shadow: inset 0px 0px 20px 0px var(--primary-variant-much-brighter);
                 color: rgb(17, 17, 17);
                 text-decoration: none;
             }
     
             a:hover {
-                background-color: rgb(203, 216, 216);
+                background-color: var(--primary-variant-brighter);
             }
         }
     }
@@ -223,7 +221,7 @@
           text-decoration: none;
           color: black;
           text-align: center;
-          background-color: rgb(224, 233, 241);
+          background-color: var(--primary-variant-much-brighter);
           padding: 0.6em 1em;
           border-radius: 32px;
           font-size: 0.7em !important;
@@ -231,7 +229,7 @@
         }
     
         a:hover {
-          outline: 1px solid rgb(97, 97, 97);
+          outline: 1px solid var(--schrift);
         }
     }
 }
@@ -248,9 +246,9 @@
         // border: 1px solid rgb(212, 212, 212);
         margin-bottom: 0.5em;
 
-        background-color: white;
-        border: 1px solid rgb(212, 212, 212);
-        box-shadow: inset 0px 0px 50px 0px rgb(193 232 255 / 41%);
+        background-color: var(--body);
+        border: 1px solid var(--hintergrund);
+        box-shadow: inset 0px 0px 50px 0px var(--primary-variant-much-brighter);
     }
 
     p {

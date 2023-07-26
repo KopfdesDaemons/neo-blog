@@ -24,12 +24,12 @@
     }
 
     .comment-body {
-        background-color: white;
+        background-color: var(--body);
         border-radius: 12px;
         padding: 1em;
         margin-top: 1em;
-        border: 1px solid rgb(212, 212, 212);
-        box-shadow: inset 0px 0px 50px 0px rgb(193 232 255 / 41%);
+        border: 1px solid var(--hintergrund);
+        box-shadow: inset 0px 0px 50px 0px var(--primary-variant-much-brighter);
         overflow-wrap: anywhere;
         word-wrap: break-word;
         overflow: hidden;
@@ -83,7 +83,7 @@
     
             .comment-reply-link {
                 text-decoration: none;
-                background-color: azure;
+                background-color: var(--hintergrund-variant);
                 padding: 0.5rem 1rem;
                 border-radius: 12px;
                 color: black;
@@ -91,15 +91,15 @@
             }
     
             a:hover {
-                background-color: rgb(225, 245, 245);
+                background-color: var(--primary-variant-much-brighter);
             }
         }
 
     // Autor-Kommentar
     .bypostauthor {
         .comment-body {
-            background-color: white;
-            border: 1px solid rgb(106, 110, 126);
+            background-color: var(--body);
+            border: 1px solid var(--schrift);
             box-shadow: inset 0px 0px 50px 0px rgba(216, 221, 167, 0.41);
         }
     }
@@ -142,7 +142,7 @@
 
             .submit {
                 text-decoration: none;
-                background-color: rgb(162, 210, 238);
+                background-color: var(--primary-color);
                 padding: 0.5rem 1rem;
                 border-radius: 12px;
                 color: black;
@@ -153,7 +153,7 @@
             }
 
             .submit:hover {
-                background-color: rgb(243, 246, 253);
+                background-color: var(--primary-variant-brighter);
             }
         }
 
@@ -173,8 +173,8 @@
         input {
             padding: 0.5em;
             height: 25px;
-            border: solid 1px rgb(12, 12, 12);
-            background-color: rgb(236, 244, 248);
+            border: solid 1px var(--schrift);
+            background-color: var(--hintergrund-inputfeld);
         }
 
         .comment-form-author,
