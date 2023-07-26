@@ -2,7 +2,6 @@
   margin: 0 1em;
   padding-bottom: 0.5em;
   border-radius: 12px;
-  background-color: aliceblue;
   width: 20em;
   height: -moz-min-content;
   height: min-content;
@@ -34,19 +33,25 @@
   padding: 4px;
 }
 #sidebar .widget {
-  padding: 1rem 1rem 0 1rem;
+  padding: 0 1rem 1rem 1rem;
+}
+#sidebar .wp-widget-group__inner-blocks {
+  margin-top: 1em;
 }
 #sidebar .wp-block-archives {
-  padding: 1rem;
-}
-#sidebar .widget_archive {
-  padding: 0;
+  margin: 0 1em 1em 1em;
   max-height: 800px;
   overflow-y: auto;
 }
+#sidebar .widget_archive {
+  padding: 0;
+}
 #sidebar .widget_archive li {
-  padding: 0.8em 1rem;
+  padding: 0.8em 1em;
   background-color: aliceblue;
+  background-color: white;
+  border: 1px solid rgb(212, 212, 212);
+  box-shadow: inset 0px 0px 20px 0px rgba(193, 232, 255, 0.41);
 }
 #sidebar .widget_archive li a {
   text-decoration: none;
@@ -55,7 +60,7 @@
   color: black;
 }
 #sidebar .widget_archive li:nth-child(even) {
-  background-color: rgb(225, 245, 245);
+  background-color: rgba(224, 244, 255, 0.41);
 }
 #sidebar .wp-block-calendar .wp-calendar-nav {
   margin-top: 1rem;
@@ -75,14 +80,14 @@
 }
 #sidebar .widget_search input[type=search] {
   height: 3em;
-  border-radius: 12px;
+  border-radius: 8px;
 }
 #sidebar .widget_search input[type=search]:focus {
   outline: none;
 }
 #sidebar .widget_search button {
   height: 3em;
-  border-radius: 12px;
+  border-radius: 8px;
   background-color: white;
 }
 #sidebar .widget_search button:hover {
@@ -93,15 +98,19 @@
   overflow-y: auto;
 }
 #sidebar .widget_categories li, #sidebar .wp-block-categories li {
-  margin: 1.5rem 0;
+  display: flex;
+  margin-bottom: 0.2em;
+  align-items: center;
+  gap: 0.2em;
 }
 #sidebar .widget_categories li a, #sidebar .wp-block-categories li a {
   padding: 0.5em;
   border-radius: 14px;
-  background-color: rgb(225, 245, 245);
+  background-color: white;
   color: rgb(17, 17, 17);
   text-decoration: none;
   border: 1px solid rgb(212, 212, 212);
+  box-shadow: inset 0px 0px 20px 0px rgba(193, 232, 255, 0.41);
 }
 #sidebar .widget_categories li a:hover, #sidebar .wp-block-categories li a:hover {
   background-color: rgb(203, 216, 216);
@@ -111,13 +120,27 @@
   max-height: 800px;
   overflow-y: auto;
 }
+#sidebar .wp-block-page-list li {
+  background-color: white;
+  border: 1px solid rgb(212, 212, 212);
+  box-shadow: inset 0px 0px 20px 0px rgba(193, 232, 255, 0.41);
+}
+#sidebar .wp-block-page-list a {
+  color: unset;
+}
 #sidebar .wp-block-page-list ul {
-  list-style: square;
+  list-style: circle;
   padding-left: 2em;
 }
 #sidebar .wp-block-page-list ul li {
   padding-left: 0;
   margin: 0;
+  border: none;
+  background-color: unset;
+  box-shadow: none;
+}
+#sidebar .wp-block-page-list ul li a {
+  text-decoration: none;
 }
 #sidebar .wp-block-loginout {
   display: flex;
@@ -135,7 +158,6 @@
 }
 #sidebar .wp-block-page-list li, #sidebar .widget_rss li {
   padding: 0.5rem;
-  background-color: rgb(225, 245, 245);
   margin-top: 0.5rem;
 }
 #sidebar .widget_recent_entries li {
@@ -146,17 +168,19 @@
 #sidebar .widget_recent_entries li a {
   display: block;
   padding: 0.5rem;
-  background-color: rgb(225, 245, 245);
+  background-color: white;
+  border: 1px solid rgb(212, 212, 212);
+  box-shadow: inset 0px 0px 20px 0px rgba(193, 232, 255, 0.41);
   color: rgb(17, 17, 17);
   text-decoration: none;
 }
 #sidebar .widget_recent_entries li a:hover {
   background-color: rgb(203, 216, 216);
 }
-#sidebar .widget_tag_cloud p {
+#sidebar .wp-block-tag-cloud p {
   margin: 0;
 }
-#sidebar .widget_tag_cloud a {
+#sidebar .wp-block-tag-cloud a {
   margin: 0.2em 0.2em;
   text-decoration: none;
   color: black;
@@ -167,7 +191,7 @@
   font-size: 0.7em !important;
   min-width: 2em;
 }
-#sidebar .widget_tag_cloud a:hover {
+#sidebar .wp-block-tag-cloud a:hover {
   outline: 1px solid rgb(97, 97, 97);
 }
 
@@ -176,11 +200,12 @@
   padding: 0;
 }
 .widget_recent_comments ol li, .wp-block-latest-comments li {
-  background-color: rgb(225, 245, 245);
   padding: 0.5rem;
   border-radius: 12px;
-  border: 1px solid rgb(212, 212, 212);
   margin-bottom: 0.5em;
+  background-color: white;
+  border: 1px solid rgb(212, 212, 212);
+  box-shadow: inset 0px 0px 50px 0px rgba(193, 232, 255, 0.41);
 }
 .widget_recent_comments ol p, .wp-block-latest-comments p {
   margin-bottom: 5px;

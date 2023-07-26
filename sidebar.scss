@@ -6,7 +6,7 @@
     margin: 0 1em;
     padding-bottom: 0.5em;
     border-radius: 12px;
-    background-color: aliceblue;
+    // background-color: aliceblue;
     width: 20em;
     height: min-content;
     overflow: hidden;
@@ -37,19 +37,26 @@
     }
 
     .widget {
-        padding: 1rem 1rem 0 1rem;
+        padding: 0 1rem 1rem  1rem;
+    }
+
+    .wp-widget-group__inner-blocks {
+        margin-top: 1em;
     }
     
     .wp-block-archives {
-        padding: 1rem;
+        margin: 0 1em 1em 1em;
+        max-height: 800px;
+        overflow-y: auto;
     }
     .widget_archive {
         padding: 0;
-        max-height: 800px;
-        overflow-y: auto;
         li {
-            padding: 0.8em 1rem;
+            padding: 0.8em 1em;
             background-color: aliceblue;
+            background-color: white;
+            border: 1px solid rgb(212, 212, 212);
+            box-shadow: inset 0px 0px 20px 0px rgb(193 232 255 / 41%);
             a {
                 text-decoration: none;
                 width: 100%;
@@ -59,7 +66,7 @@
         }
         
         li:nth-child(even) {
-            background-color: rgb(225, 245, 245);
+            background-color: rgba(224, 244, 255, 0.41);
         }
     }
     
@@ -86,7 +93,7 @@
         }
         input[type=search] {
             height: 3em;
-            border-radius: 12px;
+            border-radius: 8px;
         }
     
         input[type=search]:focus {
@@ -95,7 +102,7 @@
     
         button {
             height: 3em;
-            border-radius: 12px;
+            border-radius: 8px;
             background-color: white;
         }
     
@@ -108,14 +115,18 @@
         max-height: 600px;
         overflow-y: auto;
         li {
-            margin: 1.5rem 0;
+            display: flex;
+            margin-bottom: 0.2em;
+            align-items: center;
+            gap: 0.2em;
             a {
                 padding: 0.5em;
                 border-radius: 14px;
-                background-color: rgb(225, 245, 245);
+                background-color: white;
                 color: rgb(17, 17, 17);
                 text-decoration: none;
                 border: 1px solid rgb(212, 212, 212);
+                box-shadow: inset 0px 0px 20px 0px rgb(193 232 255 / 41%);
             }
     
             a:hover {
@@ -128,12 +139,30 @@
         font-size: 0.9em;
         max-height: 800px;
         overflow-y: auto;
+
+        li {
+            background-color: white;
+            border: 1px solid rgb(212, 212, 212);
+            box-shadow: inset 0px 0px 20px 0px rgb(193 232 255 / 41%);
+        }
+
+        a {
+            color: unset;
+        }
+
         ul {
-            list-style: square;
+            list-style: circle;
             padding-left: 2em;
             li {
                 padding-left: 0;
                 margin: 0;
+                border: none;
+                background-color: unset;
+                box-shadow: none;
+
+                a {
+                    text-decoration: none;
+                }
             }
         }
     }
@@ -157,7 +186,7 @@
     .wp-block-page-list, .widget_rss {
         li {
             padding: 0.5rem;
-            background-color: rgb(225, 245, 245);
+            // background-color: rgb(225, 245, 245);
             margin-top: 0.5rem;
         }
     }
@@ -171,7 +200,9 @@
             a {
                 display: block;
                 padding: 0.5rem;
-                background-color: rgb(225, 245, 245);
+                background-color: white;
+                border: 1px solid rgb(212, 212, 212);
+                box-shadow: inset 0px 0px 20px 0px rgb(193 232 255 / 41%);
                 color: rgb(17, 17, 17);
                 text-decoration: none;
             }
@@ -182,7 +213,7 @@
         }
     }
     
-    .widget_tag_cloud {
+    .wp-block-tag-cloud {
         p {
             margin: 0;
         }
@@ -211,11 +242,15 @@
     padding: 0;
 
     li {
-        background-color: rgb(225, 245, 245);
+        // background-color: rgb(225, 245, 245);
         padding: 0.5rem;
         border-radius: 12px;
-        border: 1px solid rgb(212, 212, 212);
+        // border: 1px solid rgb(212, 212, 212);
         margin-bottom: 0.5em;
+
+        background-color: white;
+        border: 1px solid rgb(212, 212, 212);
+        box-shadow: inset 0px 0px 50px 0px rgb(193 232 255 / 41%);
     }
 
     p {

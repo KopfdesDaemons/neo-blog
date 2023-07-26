@@ -17,6 +17,10 @@ body {
   background: linear-gradient(90deg, rgb(234, 238, 255) 0%, rgb(232, 250, 255) 37%, rgb(234, 238, 255) 100%);
 }
 
+h1 {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 h1,
 h2,
 h3,
@@ -63,9 +67,8 @@ main {
 }
 
 .postCard {
-  background-color: white;
-  border: 1px solid gray;
-  box-shadow: inset 0px 0px 50px 0px rgba(167, 175, 221, 0.41);
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(221, 221, 221);
   border-radius: 12px;
   padding: 0.75em;
   margin-bottom: 0.8em;
@@ -131,6 +134,7 @@ main {
   display: flex;
   align-items: center;
   background-color: white;
+  border: 1px solid rgb(226, 226, 226);
   text-decoration: none;
   padding: 0.8em 1.2em;
   border-radius: 8px;
@@ -218,10 +222,13 @@ main {
   background-color: aliceblue;
 }
 
-/* width */
-::-webkit-scrollbar {
+html ::-webkit-scrollbar {
   width: 10px;
   height: 10px;
+}
+html body ::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
 }
 
 /* Track */

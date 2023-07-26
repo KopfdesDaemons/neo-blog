@@ -3,6 +3,7 @@
     z-index: 10;
     width: 100%;
     box-sizing: border-box;
+    border-bottom: 1px solid gray;
     
     .headerDiv {
         background-color: rgb(116, 184, 248);
@@ -95,14 +96,12 @@
                 a {
                     color: rgb(63, 63, 63);
                     text-decoration: none;
+                    padding: 0.8rem;
                 }
 
                 li {
-                    // background-color: rgb(0, 17, 255);
                     display: flex;
                     align-items: center;
-                    padding: 0.8rem;
-                    word-wrap: none;
                     white-space: nowrap;
                     position: relative;
                     border-bottom: 1px solid transparent;
@@ -112,7 +111,6 @@
                         position: absolute;
                         background-color: rgb(74, 132, 240);
                         flex-direction: column;
-                        // top: 56px;
                         top: 100%;
                         left: 0px;
                         z-index: 20;
@@ -125,12 +123,9 @@
                         ul {
                             background-color: rgb(101, 106, 179);
                             position: absolute;
-                            // left: 1em;
-                            // right: 0;
                             left: 100%;
                             top: 0;
                             display: none;
-
                         }
                     }
                 }
@@ -140,7 +135,6 @@
                     background-color: rgba(38, 0, 255, 0.068);
                     ul:first-of-type {
                         display: flex;
-                        // position: relative;
                         ul {
                             display: none;
                         }
