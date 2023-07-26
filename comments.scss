@@ -1,11 +1,11 @@
 .comments-area {
     margin-top: 2em;
-    background-color: rgb(225, 245, 245);
+    // background-color: rgb(225, 245, 245);
     border-radius: 12px;
     padding: 1em;
     max-width: 50em;
 
-    ul {
+    .comment-list {
         padding: 0;
     }
 
@@ -15,7 +15,7 @@
 
     .comment {
         list-style: none;
-        font-size: 0.9em;
+        font-size: 0.8em;
     }
 
     .comment-awaiting-moderation {
@@ -33,34 +33,8 @@
         overflow-wrap: anywhere;
         word-wrap: break-word;
         overflow: hidden;
-    }
-
-    // Zeile mit Antworten-Link
-    .reply {
-        display: flex;
-        margin-top: 1em;
-
-        .comment-reply-link {
-            text-decoration: none;
-            background-color: azure;
-            padding: 0.5rem 1rem;
-            border-radius: 12px;
-            color: black;
-            font-size: 1em;
-            border: 1px solid;
-        }
-
-        a:hover {
-            background-color: rgb(225, 245, 245);
-        }
-    }
-
-    pre {
+        max-height: 500px;
         overflow-y: auto;
-        background-color: white;
-        margin: 0;
-        box-sizing: border-box;
-        white-space: pre-wrap;
     }
 
     // Zeile mit Bild und Namen
@@ -82,7 +56,7 @@
         img {
             height: 3em;
             width: auto;
-            margin-right: 1em;
+            margin: 0 1em 0 0;
         }
 
         // "sagt:"
@@ -102,11 +76,30 @@
         }
     }
 
+        // Zeile mit Antworten-Link
+        .reply {
+            display: flex;
+            margin-top: 1em;
+    
+            .comment-reply-link {
+                text-decoration: none;
+                background-color: azure;
+                padding: 0.5rem 1rem;
+                border-radius: 12px;
+                color: black;
+                border: 1px solid;
+            }
+    
+            a:hover {
+                background-color: rgb(225, 245, 245);
+            }
+        }
+
     // Autor-Kommentar
     .bypostauthor {
         .comment-body {
             background-color: white;
-            border: 1px solid black;
+            border: 1px solid rgb(106, 110, 126);
             box-shadow: inset 0px 0px 50px 0px rgba(216, 221, 167, 0.41);
         }
     }
@@ -173,6 +166,7 @@
             #cancel-comment-reply-link {
                 font-size: 0.8em;
                 color: red;
+                text-decoration: none;
             }
         }
 

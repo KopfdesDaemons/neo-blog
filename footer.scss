@@ -11,6 +11,10 @@
             list-style: none;
             display: flex;
             align-items: flex-start;
+
+            @media only screen and (max-width: 600px) {
+                flex-direction: column;
+            }
             li {
                 margin: 1.5em;
                 a {

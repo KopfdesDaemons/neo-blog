@@ -17,10 +17,6 @@ body {
   background: linear-gradient(90deg, rgb(234, 238, 255) 0%, rgb(232, 250, 255) 37%, rgb(234, 238, 255) 100%);
 }
 
-h1 {
-  font-family: Arial, Helvetica, sans-serif;
-}
-
 h1,
 h2,
 h3,

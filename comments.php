@@ -4,13 +4,13 @@ if (post_password_required()) {
 }
 ?>
 
-<div id="comments" class="comments-area shadow">
+<div id="comments" class="comments-area">
 
     <?php if (have_comments()) : ?>
 
 
-    <h2 class="comments-title">
-        <?php
+        <h2 class="comments-title">
+            <?php
             $comments_number = get_comments_number();
             if ($comments_number === 1) {
                 printf(__('One Comment', 'theme-textdomain'));
@@ -18,10 +18,10 @@ if (post_password_required()) {
                 printf(__('%d Comments', 'theme-textdomain'), $comments_number);
             }
             ?>
-    </h2>
+        </h2>
 
-    <ul class="comment-list">
-        <?php
+        <ul class="comment-list">
+            <?php
             wp_list_comments(array(
                 'style'       => 'ol',
                 'short_ping'  => true,
@@ -29,20 +29,20 @@ if (post_password_required()) {
                 // 'callback'    => 'custom_comment_callback', // Verweise auf die benutzerdefinierte Funktion
             ));
             ?>
-    </ul>
+        </ul>
 
 
-    <?php if (get_comment_pages_count() > 1 && get_option('page_comments')) : ?>
-    <nav class="comment-navigation" role="navigation">
-        <div class="nav-previous"><?php previous_comments_link(__('Older Comments', 'theme-textdomain')); ?></div>
-        <div class="nav-next"><?php next_comments_link(__('Newer Comments', 'theme-textdomain')); ?></div>
-    </nav>
-    <?php endif; ?>
+        <?php if (get_comment_pages_count() > 1 && get_option('page_comments')) : ?>
+            <nav class="comment-navigation" role="navigation">
+                <div class="nav-previous"><?php previous_comments_link(__('Older Comments', 'theme-textdomain')); ?></div>
+                <div class="nav-next"><?php next_comments_link(__('Newer Comments', 'theme-textdomain')); ?></div>
+            </nav>
+        <?php endif; ?>
 
     <?php endif; ?>
 
     <?php if (!comments_open() && get_comments_number() && post_type_supports(get_post_type(), 'comments')) : ?>
-    <p class="no-comments"><?php _e('Comments are closed.', 'theme-textdomain'); ?></p>
+        <p class="no-comments"><?php _e('Comments are closed.', 'theme-textdomain'); ?></p>
     <?php endif; ?>
 
     <?php

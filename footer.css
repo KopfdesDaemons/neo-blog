@@ -11,6 +11,11 @@
   display: flex;
   align-items: flex-start;
 }
+@media only screen and (max-width: 600px) {
+  #footer nav ul {
+    flex-direction: column;
+  }
+}
 #footer nav ul li {
   margin: 1.5em;
 }
