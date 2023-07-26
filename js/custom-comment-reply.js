@@ -11,7 +11,7 @@ for (const replyLink of replyLinks) {
         
         // Verstecke alle Antwortlinks
         for(const replyL of replyLinks){
-            replyL.parentNode.style.display = 'none';
+            // replyL.parentNode.style.display = 'none';
         }
         
         // Zerstöre alle vorhandenen Antwortformulare

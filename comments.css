@@ -5,9 +5,6 @@
   padding: 1em;
   max-width: 50em;
 }
-.comments-area h2 {
-  margin: 0;
-}
 .comments-area ul {
   padding: 0;
 }
@@ -18,24 +15,29 @@
   list-style: none;
   font-size: 0.9em;
 }
-.comments-area .commentCard {
-  background-color: rgb(172, 224, 255);
+.comments-area .comment-body {
+  background-color: white;
   border-radius: 12px;
   padding: 1em;
-  display: grid;
-  grid-template-columns: auto 1fr;
   margin-top: 1em;
   border: 1px solid rgb(212, 212, 212);
-}
-.comments-area .cardBackground {
-  background-color: azure;
+  box-shadow: inset 0px 0px 50px 0px rgba(193, 232, 255, 0.41);
+  overflow-wrap: anywhere;
 }
 .comments-area .reply {
   display: flex;
   justify-content: space-between;
+  margin-top: 1em;
 }
 .comments-area .reply a:hover {
   background-color: rgb(225, 245, 245);
+}
+.comments-area pre {
+  overflow-y: auto;
+  background-color: white;
+  margin: 0;
+  box-sizing: border-box;
+  white-space: pre-wrap;
 }
 .comments-area .comment-reply-link {
   text-decoration: none;
@@ -44,46 +46,44 @@
   border-radius: 12px;
   color: black;
   font-size: 1em;
+  border: 1px solid;
 }
-.comments-area .comment-edit-link, .comments-area #cancel-comment-reply-link {
+.comments-area .vcard {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5em;
+}
+.comments-area .vcard cite a {
   text-decoration: none;
-  display: block;
-  background-color: azure;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 2rem;
-  height: 2rem;
-  border-radius: 12px;
-  color: black;
-  font-size: 1em;
+  color: unset;
+  font-weight: bold;
+  font-size: 1.5em;
+  padding: 0.2em;
 }
-.comments-area .profilepicture {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.comments-area .profilepicture img {
-  background-color: white;
-  max-height: 5em;
+.comments-area .vcard img {
+  height: 3em;
   width: auto;
+  margin-right: 1em;
 }
-.comments-area .commentContent {
-  display: flex;
-  flex-direction: column;
-  margin: 0.5em 0.5em 0.5em 1em;
-  overflow: auto;
+.comments-area .vcard span {
+  display: none;
 }
-.comments-area .commentContent header {
+.comments-area .comment-awaiting-moderation {
+  color: rgb(255, 0, 0);
+  font-weight: bold;
+}
+.comments-area .comment-meta {
   display: flex;
   justify-content: space-between;
-  font-size: 0.9em;
 }
-.comments-area .commentContent .commentText {
-  overflow: auto;
-  max-height: 30em;
+.comments-area .comment-meta a {
+  text-decoration: none;
   margin: 0.5em 0;
+}
+.comments-area .bypostauthor .comment-body {
+  background-color: white;
+  border: 1px solid black;
+  box-shadow: inset 0px 0px 50px 0px rgba(216, 221, 167, 0.41);
 }
 .comments-area .children {
   grid-column-end: 3;
@@ -103,9 +103,6 @@
 }
 .comments-area .form-submit {
   margin: 0.5rem;
-}
-.comments-area hr {
-  margin-top: 1em;
 }
 .comments-area .comment-reply-title {
   display: flex;
@@ -158,4 +155,7 @@
   transform: scale(0.8) translateY(-0.8em);
   height: auto;
   font-size: 0.8em;
+}
+.comments-area .comment-respond {
+  padding: 1em;
 }/*# sourceMappingURL=comments.css.map */

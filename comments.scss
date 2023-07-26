@@ -5,10 +5,6 @@
     padding: 1em;
     max-width: 50em;
 
-    h2 {
-        margin: 0;
-    }
-
     ul {
         padding: 0;
     }
@@ -22,29 +18,35 @@
         font-size: 0.9em;
     }
 
-    .commentCard {
-        background-color: rgb(172, 224, 255);
+    .comment-body {
+        background-color: white;
         border-radius: 12px;
         padding: 1em;
-        display: grid;
-        grid-template-columns: auto 1fr;
         margin-top: 1em;
         border: 1px solid rgb(212, 212, 212);
-    }
-
-    .cardBackground {
-        background-color: azure;
+        box-shadow: inset 0px 0px 50px 0px rgb(193 232 255 / 41%);
+        overflow-wrap: anywhere;
     }
     
     .reply {
         display: flex;
         justify-content: space-between;
+        margin-top: 1em;
         
         a:hover {
             background-color: rgb(225, 245, 245);
         }
     }
     
+    pre {
+        overflow-y: auto;
+        background-color: white;
+        // max-width: 100%;
+        margin: 0;
+        box-sizing: border-box;
+        white-space: pre-wrap;
+    }
+
     .comment-reply-link {
         text-decoration: none;
         background-color: azure;
@@ -52,51 +54,53 @@
         border-radius: 12px;
         color: black;
         font-size: 1em;
+        border: 1px solid;
     }
 
-    .comment-edit-link, #cancel-comment-reply-link {
-        text-decoration: none;
-        display: block;
-        background-color: azure;
-        // padding: 0.5rem 1rem;
+    .vcard {
         display: flex;
         align-items: center;
-        justify-content: center;
-        width: 2rem;
-        height: 2rem;
-        border-radius: 12px;
-        color: black;
-        font-size: 1em;
-    }
+        margin-bottom: 0.5em;
+        cite {
+            a {
+                text-decoration: none;
+                color: unset;
+                font-weight: bold;
+                font-size: 1.5em;
+                padding: 0.2em;
+            }
+        }
 
-    .profilepicture {
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
         img {
-            background-color: white;
-            max-height: 5em;
+            height: 3em;
             width: auto;
+            margin-right: 1em;
+        }
+
+        span {
+            display: none;
+        }
+    }
+
+    .comment-awaiting-moderation {
+        color: rgb(255, 0, 0);
+        font-weight: bold;
+    }
+    
+    .comment-meta {
+        display: flex;
+        justify-content: space-between;
+        a {
+            text-decoration: none;
+            margin: 0.5em 0;
         }
     }
     
-    .commentContent {
-        display: flex;
-        flex-direction: column;
-        margin: 0.5em 0.5em 0.5em 1em;
-        overflow: auto;
-
-        header {
-            display: flex;
-            justify-content: space-between;
-            font-size: 0.9em;
-        }
-        
-        .commentText {
-            overflow: auto;
-            max-height: 30em;
-            margin: 0.5em 0;
+    .bypostauthor {
+        .comment-body {
+            background-color: white;
+            border: 1px solid black;
+            box-shadow: inset 0px 0px 50px 0px rgba(216, 221, 167, 0.41);
         }
     }
 
@@ -122,10 +126,6 @@
 
     .form-submit {
         margin: 0.5rem;
-    }
-
-    hr {
-        margin-top: 1em;
     }
 
     .comment-reply-title {
@@ -183,6 +183,10 @@
           height: auto;
           font-size: 0.8em;
         }
+    }
+
+    .comment-respond{
+        padding: 1em;
     }
 }
 
