@@ -95,24 +95,26 @@ h1 {
     }
 }
 .articlearea {
-    display: flex;
-    flex-direction: column;
+    width: 100%;
+
+    .content {
+        max-width: 45em;
+        padding: 2em;
+        border-radius: 16px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+    }
 
     .content {
         @media only screen and (max-width: 600px) {
-            background-color: unset;
             padding: 1em;
         }
-    }
-
-    footer {
-        // margin-top: auto;
     }
 
     figure {
         margin: 0;
     }
-
 
     .page-links {
         margin-top: 2em;

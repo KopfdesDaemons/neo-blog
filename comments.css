@@ -28,6 +28,7 @@
   box-shadow: inset 0px 0px 50px 0px rgba(193, 232, 255, 0.41);
   overflow-wrap: anywhere;
   word-wrap: break-word;
+  overflow: hidden;
 }
 .comments-area .reply {
   display: flex;
@@ -104,11 +105,12 @@
   display: flex;
   flex-direction: column;
 }
+.comments-area .comment-respond .comment-form-comment textarea {
+  resize: vertical;
+  width: 100%;
+}
 .comments-area .comment-respond .form-submit {
   margin: 0.5rem;
-}
-.comments-area .comment-respond .form-submit textarea {
-  resize: vertical;
 }
 .comments-area .comment-respond .form-submit .submit {
   text-decoration: none;
@@ -127,6 +129,11 @@
 .comments-area .comment-respond .comment-reply-title {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+}
+.comments-area .comment-respond .comment-reply-title #cancel-comment-reply-link {
+  font-size: 0.8em;
+  color: red;
 }
 .comments-area .comment-respond input {
   padding: 0.5em;

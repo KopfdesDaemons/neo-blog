@@ -32,6 +32,7 @@
         box-shadow: inset 0px 0px 50px 0px rgb(193 232 255 / 41%);
         overflow-wrap: anywhere;
         word-wrap: break-word;
+        overflow: hidden;
     }
 
     // Zeile mit Antworten-Link
@@ -134,15 +135,17 @@
         .comment-form-comment {
             display: flex;
             flex-direction: column;
+
+            textarea {
+                resize: vertical;
+                width: 100%;
+            }
         }
 
         // Zeile mit "Kommentar abschicken"
         .form-submit {
             margin: 0.5rem;
 
-            textarea {
-                resize: vertical;
-            }
 
             .submit {
                 text-decoration: none;
@@ -165,6 +168,12 @@
         .comment-reply-title {
             display: flex;
             justify-content: space-between;
+            flex-wrap: wrap;
+
+            #cancel-comment-reply-link {
+                font-size: 0.8em;
+                color: red;
+            }
         }
 
         input {

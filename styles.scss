@@ -40,18 +40,20 @@ main {
 
 .spacer {
     margin: 0 auto;
-    // margin-top: 40em;
     max-width: 70em;
     width: 95vw;
     z-index: 5;
     position: relative;
-    // overflow: hidden;
 }
 
 .grid {
     display: grid;
     grid-template-columns: auto auto;
     margin-bottom: 2em;
+
+    @media only screen and (max-width: 600px) {
+        display: flex;
+    }
 }
 
 .shadow {
@@ -259,14 +261,6 @@ main {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
     background: #555;
-}
-
-.content {
-    max-width: 45em;
-    padding: 2em;
-    // background-color: #ffffff;
-    border-radius: 16px;
-    overflow: hidden;
 }
 
 .social-sharing-links {
