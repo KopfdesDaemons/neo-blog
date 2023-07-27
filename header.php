@@ -102,6 +102,13 @@
                                             ?>;
         }
     </style>
+    <script>
+        function toggleMenu() {
+            var menu = document.querySelector('.mobileExpandedMenu');
+            console.log(menu);
+            menu.classList.toggle('headerMenuOpen');
+        }
+    </script>
 </head>
 
 <body <?php body_class(); ?>>
@@ -123,25 +130,29 @@
                     <span class="site-title"><?php bloginfo('title'); ?></span>
                 </a>
             </div>
-            <?php
-            $searchbar = get_theme_mod('searchbar', false);
-            if ($searchbar) {
-                echo '
-        <div class="SearchColumn">
-            <div class="searchDiv">
-                ';
-                get_search_form(array('button_text' => 's'));
-                echo '
-            </div>
-        </div>
-        ';
-            }
-            ?>
-            <nav class="headerMenuColumn">
-                <!-- <button><i class="fa-solid fa-bars"></i></button> -->
+
+            <button id="headerMenuBtn" onclick="toggleMenu()"><i class="fa-solid fa-bars"></i></button>
+            <div class="mobileExpandedMenu">
+
                 <?php
-                $header_menu = get_theme_mod('header_menu', false);
-                if ($header_menu) wp_nav_menu(array('theme_location' => 'header-menu')); ?>
-            </nav>
+                $searchbar = get_theme_mod('searchbar', false);
+                if ($searchbar) {
+                    echo '
+            <div class="SearchColumn">
+                <div class="searchDiv">
+                    ';
+                    get_search_form(array('button_text' => 's'));
+                    echo '
+                </div>
+            </div>
+            ';
+                }
+                ?>
+                <nav class="headerMenuColumn">
+                    <?php
+                    $header_menu = get_theme_mod('header_menu', false);
+                    if ($header_menu) wp_nav_menu(array('theme_location' => 'header-menu')); ?>
+                </nav>
+            </div>
         </div>
     </header>

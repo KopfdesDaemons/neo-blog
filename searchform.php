@@ -4,6 +4,6 @@
 
     <?php
     $search_button = get_theme_mod('search_button', false);
-    if ($search_button) echo '    <input type="submit" id="searchsubmit" value="🔎">';
+    if ($search_button) echo '    <input type="submit" id="searchsubmit" value="search">';
     ?>
 </form>

@@ -1,9 +1,9 @@
 /*
-Theme Name: Material Blog
+Theme Name: Material Neon Blog
 Author: Rico Angenvoort
 Author URI: https://ricoswebsite.com/
 Description: Ein schlichtes einfaches Theme. Es ist minimalistisch und modern.
-Tags: blog, material design, minimalistic
+Tags: blog, material design, minimalistic, darkmode, dark, black, neon
 Version: 1.0
 Requires at least: 5.0
 Tested up to: 6.2.2
@@ -242,7 +242,7 @@ a {
 }
 @media only screen and (max-width: 600px) {
   .darkmode .postCard {
-    border: 1px solid gray;
+    border: 1px solid rgb(49, 49, 49);
   }
 }
 
