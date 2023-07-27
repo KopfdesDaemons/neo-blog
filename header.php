@@ -75,8 +75,8 @@
                                         ?>;
             --primary-variant-much-brighter: <?php echo $primary_variant_much_brighter;
                                                 ?>;
-            --body: rgb(252, 252, 252);
-            --hintergrund: rgb(240, 240, 240);
+            --body: rgb(240, 240, 240);
+            --hintergrund: rgb(255, 255, 255);
             --schrift: rgb(10, 10, 10);
             --hintergrund-inputfeld: <?php echo $hintergrund_inputfeld;
                                         ?>;
@@ -108,6 +108,16 @@
 
     <header id="header" class="clearfix header" role="banner">
         <div class="headerDiv">
+            <div class="farbpalettenDiv">
+                <ul>
+                    <li title="primary-color"></li>
+                    <li title="primary-variant-darker"></li>
+                    <li title="primary-variant-brighter"></li>
+                    <li title="primary-variant-much-brighter"></li>
+                    <li title="hintergrund-variant"></li>
+                    <li title="hintergrund-variant-darker"></li>
+                </ul>
+            </div>
             <div class="titleDiv">
                 <a href="<?php echo esc_url(home_url('/')); ?>">
                     <span class="site-title"><?php bloginfo('title'); ?></span>

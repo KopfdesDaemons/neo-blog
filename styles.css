@@ -14,7 +14,11 @@ body {
   flex-direction: column;
   min-height: 100vh;
   font-family: "Quicksand";
-  background: linear-gradient(90deg, var(--body) 0%, var(--hintergrund-variant-darker) 37%, var(--body) 100%);
+  background: var(--body);
+}
+
+input {
+  background-color: var(--hintergrund-input);
 }
 
 h1,
@@ -26,6 +30,35 @@ h6 {
   word-wrap: break-word;
   overflow-wrap: anywhere;
   margin: 0.2em;
+}
+
+h1,
+h2,
+h3,
+a,
+p,
+span,
+table,
+label,
+div,
+button {
+  color: var(--schrift);
+}
+
+h2,
+h3,
+.darkmode h2,
+.darkmode h3 {
+  color: var(--primary-variant-darker);
+}
+
+.darkmode .rot,
+.rot {
+  color: red;
+}
+
+.variantColor {
+  color: var(--primary-variant-darker);
 }
 
 main {
@@ -45,6 +78,10 @@ main {
 
 a {
   color: var(--primary-variant-darker);
+}
+
+.darkmode a {
+  color: var(--primary-color);
 }
 
 .grid {
@@ -67,7 +104,7 @@ a {
 }
 
 .postCard {
-  background-color: rgb(255, 255, 255);
+  background-color: var(--hintergrund);
   border: 1px solid rgb(221, 221, 221);
   border-radius: 12px;
   padding: 0.75em;
@@ -177,16 +214,29 @@ a {
 }
 .postCard .tagsDiv ul a {
   text-decoration: none;
-  color: black;
+  color: var(--schrift);
   text-align: center;
-  background-color: var(--hintergrund-variant-darker);
   padding: 0.6em 1em;
   border-radius: 32px;
   font-size: 0.7em;
   min-width: 2em;
+  background-color: var(--hintergrund-variant);
 }
 .postCard .tagsDiv ul a:hover {
   outline: 1px solid rgb(97, 97, 97);
+}
+
+.darkmode .postCard {
+  border: none;
+}
+.darkmode .postCard img {
+  filter: brightness(0.8);
+}
+.darkmode .postCard .tagsDiv a {
+  background-color: var(--primary-variant-much-brighter);
+}
+.darkmode .postCard h2 {
+  color: var(--schrift);
 }
 
 .stickyPost {
@@ -201,7 +251,7 @@ a {
   margin-bottom: 3em;
   display: flex;
   justify-content: flex-end;
-  background-color: white;
+  background-color: var(--hintergrund);
   padding: 0.5em;
   border-radius: 18px;
   font-size: clamp(14px, 2vw, 1em);

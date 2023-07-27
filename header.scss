@@ -6,7 +6,7 @@
     border-bottom: 1px solid gray;
     
     .headerDiv {
-        background-color: var(--primary-color);
+        background-color: var(--hintergrund);
         width: 100%;
         display: flex;
         justify-content: center;
@@ -56,7 +56,7 @@
                 font-size: 1.5em;
                 word-break: keep-all;
                 margin: 0 0.5em;
-                color: white;
+                color: var(--schrift);
             }
         }
         
@@ -90,7 +90,7 @@
                 }
                 
                 a {
-                    color: rgb(63, 63, 63);
+                    color: var(--primary-variant-brighter);
                     text-decoration: none;
                     padding: 0.8rem;
                 }
@@ -146,5 +146,41 @@
         }
 
 
+    }
+
+}
+.farbpalettenDiv {
+    ul {
+        display: flex;
+        list-style: none;
+    }
+    li {
+        height: 30px;
+        width: 30px;
+        border-radius: 8px
+    }
+
+    li:nth-child(1) {
+        background-color: var(--primary-color);
+    }
+
+    li:nth-child(2) {
+        background-color: var(--primary-variant-darker);
+    }
+
+    li:nth-child(3) {
+        background-color: var(--primary-variant-brighter);
+    }
+
+    li:nth-child(4) {
+        background-color: var(--primary-variant-much-brighter);
+    }
+
+    li:nth-child(5) {
+        background-color: var(--hintergrund-variant);
+    }
+
+    li:nth-child(6) {
+        background-color: var(--hintergrund-variant-darker);
     }
 }

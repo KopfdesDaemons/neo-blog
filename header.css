@@ -6,7 +6,7 @@
   border-bottom: 1px solid gray;
 }
 .header .headerDiv {
-  background-color: var(--primary-color);
+  background-color: var(--hintergrund);
   width: 100%;
   display: flex;
   justify-content: center;
@@ -49,7 +49,7 @@
   font-size: 1.5em;
   word-break: keep-all;
   margin: 0 0.5em;
-  color: white;
+  color: var(--schrift);
 }
 .header .headerDiv .headerMenuColumn {
   width: 100%;
@@ -81,7 +81,7 @@
   }
 }
 .header .headerDiv .headerMenuColumn ul a {
-  color: rgb(63, 63, 63);
+  color: var(--primary-variant-brighter);
   text-decoration: none;
   padding: 0.8rem;
 }
@@ -125,4 +125,32 @@
 }
 .header .headerDiv .headerMenuColumn ul li:hover ul:first-of-type li:hover ul:first-of-type {
   display: flex;
+}
+
+.farbpalettenDiv ul {
+  display: flex;
+  list-style: none;
+}
+.farbpalettenDiv li {
+  height: 30px;
+  width: 30px;
+  border-radius: 8px;
+}
+.farbpalettenDiv li:nth-child(1) {
+  background-color: var(--primary-color);
+}
+.farbpalettenDiv li:nth-child(2) {
+  background-color: var(--primary-variant-darker);
+}
+.farbpalettenDiv li:nth-child(3) {
+  background-color: var(--primary-variant-brighter);
+}
+.farbpalettenDiv li:nth-child(4) {
+  background-color: var(--primary-variant-much-brighter);
+}
+.farbpalettenDiv li:nth-child(5) {
+  background-color: var(--hintergrund-variant);
+}
+.farbpalettenDiv li:nth-child(6) {
+  background-color: var(--hintergrund-variant-darker);
 }/*# sourceMappingURL=header.css.map */
