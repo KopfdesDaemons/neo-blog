@@ -43,6 +43,10 @@
         margin-top: 1em;
     }
 
+    .wp-block-social-link:hover {
+        transform: scale(0.9);
+    }
+
     .wp-block-archives {
         margin: 0 1em 1em 1em;
         max-height: 800px;
@@ -233,7 +237,6 @@
             a:hover {
                 background-color: var(--primary-variant-brighter);
             }
-
         }
     }
 
@@ -267,12 +270,9 @@
     padding: 0;
 
     li {
-        // background-color: rgb(225, 245, 245);
         padding: 0.5rem;
         border-radius: 12px;
-        // border: 1px solid rgb(212, 212, 212);
         margin-bottom: 0.5em;
-
         background-color: var(--hintergrund);
         border: 1px solid var(--primary-variant-darker);
         box-shadow: inset 0px 0px 50px 0px var(--hintergrund-variant);

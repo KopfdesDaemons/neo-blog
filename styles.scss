@@ -15,7 +15,6 @@ body {
     flex-direction: column;
     min-height: 100vh;
     font-family: "Quicksand";
-    // background: linear-gradient(90deg, var(--body) 0%, var(--hintergrund-variant-darker) 37%, var(--body) 100%);
     background: var(--body)
 }
 
@@ -45,10 +44,6 @@ label,
 div,
 button {
   color: var(--schrift);
-}
-
-h1 {
-//   color: var(--primary-variant-darker);
 }
 
 h2,
@@ -115,7 +110,6 @@ a {
 .postCard {
     background-color: var(--hintergrund);
     border: 1px solid rgb(221, 221, 221);
-    // box-shadow: inset 0px 0px 50px 0px rgba(167, 175, 221, 0.41);
     border-radius: 12px;
     padding: 0.75em;
     margin-bottom: 0.8em;
@@ -190,7 +184,6 @@ a {
                 padding: 0.8em 1.2em;
                 border-radius: 8px;
                 margin-right: 0.5em;
-                // outline: 1px solid;
 
                 :nth-child(2) {
                     margin-left: 0.5em;
@@ -207,19 +200,20 @@ a {
                 color: white;
                 border-radius: 8px;
                 padding: 0.8em 1.2em;
+                border: 1px solid transparent;
             }
 
             .readMore:hover {
                 background-color: transparent;
-                outline: 1px solid var(--schrift);
+                border: 1px solid var(--schrift);
                 transition: all 200ms;
             }
         }
     }
-
     
     h2 {
         margin: 0 0 0.5em 0;
+        color: var(--schrift);
         font-size: 1.4em;
     }
     
@@ -264,14 +258,12 @@ a {
         background-color: var(--primary-variant-much-brighter);
     }
 
-    h2 {
-        color: var(--schrift);
+    @media only screen and (max-width: 600px) {
+        border: 1px solid gray;
     }
 }
 
 .stickyPost {
-    border: 1px solid;
-
     .textDiv .buttomDiv .pin {
         visibility: visible;
     }
@@ -308,7 +300,7 @@ a {
 
 html {
     ::-webkit-scrollbar {
-        width: 10px;
+        width: 15px;
         height: 10px;
     }
 

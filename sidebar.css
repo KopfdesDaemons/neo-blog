@@ -38,6 +38,9 @@
 #sidebar .wp-widget-group__inner-blocks {
   margin-top: 1em;
 }
+#sidebar .wp-block-social-link:hover {
+  transform: scale(0.9);
+}
 #sidebar .wp-block-archives {
   margin: 0 1em 1em 1em;
   max-height: 800px;

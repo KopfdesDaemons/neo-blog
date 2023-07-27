@@ -1,8 +1,6 @@
 h1 {
     font-size: clamp(25px, 4vw, 35px);
     margin-bottom: 0.5em;
-    // color: rgb(110, 121, 221);
-    // color: var(--primary-color);
 }
 
 // Zitate
@@ -15,8 +13,8 @@ blockquote {
     display: flex;
     flex-direction: column;
     color: white;
-    
-    p{
+
+    p {
         color: white;
     }
 
@@ -63,25 +61,31 @@ table {
     font-size: clamp(0.8rem, 4vw, 1rem);
     border-radius: 10px;
     background-color: var(--hintergrund);
-  }
-  
-  table thead tr {
+}
+
+table thead tr {
     background-color: transparent;
     text-align: left;
-  }
-  
-  th,
-  td {
+}
+
+th,
+td {
     padding: 12px 15px;
-  }
-  
-  th {
+}
+
+th {
     color: var(--primary-variant-darker);
-  }
-  
-  tbody tr:nth-of-type(even) {
+}
+
+tbody tr:nth-of-type(even) {
     background-color: var(--hintergrund-variant-darker);
-  }
+}
+
+.darkmode table {
+    tbody tr:nth-of-type(even) {
+        color: #000000;
+    }
+}
 
 .post-categories {
     ul {
@@ -111,7 +115,7 @@ table {
         a {
             text-decoration: none;
             text-align: center;
-            background-color: var(--hintergrund-variant-darker);
+            background-color: var(--primary-variant-much-brighter);
             padding: 0.6em 1em;
             border-radius: 32px;
             font-size: 0.7em;
@@ -163,6 +167,7 @@ table {
     .content {
         max-width: 45em;
         padding: 2em;
+        padding-top: 0;
         border-radius: 16px;
         overflow: hidden;
         display: flex;
@@ -189,6 +194,7 @@ table {
 
     p {
         // margin: 0;
+        line-height: 24px;
     }
 
     img {
@@ -210,10 +216,10 @@ table {
             margin-right: 0.5em;
         }
 
-        span{
+        span {
             color: var(--schrift);
         }
-        
+
         .post-page-numbers {
             color: #000000;
             border-radius: 12px;
@@ -289,6 +295,7 @@ table {
         display: flex;
         flex-direction: column;
         margin: 0em;
+        color: #000000;
 
         label {
             display: flex;
@@ -296,6 +303,7 @@ table {
             align-items: center;
             gap: 1em;
             margin: 1em;
+            color: #000000;
         }
     }
 

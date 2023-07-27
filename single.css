@@ -80,6 +80,10 @@ tbody tr:nth-of-type(even) {
   background-color: var(--hintergrund-variant-darker);
 }
 
+.darkmode table tbody tr:nth-of-type(even) {
+  color: #000000;
+}
+
 .post-categories ul {
   list-style: none;
   padding: 0;
@@ -104,7 +108,7 @@ tbody tr:nth-of-type(even) {
 .post-tags ul a {
   text-decoration: none;
   text-align: center;
-  background-color: var(--hintergrund-variant-darker);
+  background-color: var(--primary-variant-much-brighter);
   padding: 0.6em 1em;
   border-radius: 32px;
   font-size: 0.7em;
@@ -149,6 +153,7 @@ tbody tr:nth-of-type(even) {
 .articlearea .content {
   max-width: 45em;
   padding: 2em;
+  padding-top: 0;
   border-radius: 16px;
   overflow: hidden;
   display: flex;
@@ -167,6 +172,9 @@ tbody tr:nth-of-type(even) {
 }
 .articlearea figure {
   margin: 0;
+}
+.articlearea p {
+  line-height: 24px;
 }
 .articlearea img {
   margin: 1em 0;
@@ -245,6 +253,7 @@ tbody tr:nth-of-type(even) {
   display: flex;
   flex-direction: column;
   margin: 0em;
+  color: #000000;
 }
 .post-password-form p label {
   display: flex;
@@ -252,6 +261,7 @@ tbody tr:nth-of-type(even) {
   align-items: center;
   gap: 1em;
   margin: 1em;
+  color: #000000;
 }
 .post-password-form input[type=submit] {
   text-decoration: none;

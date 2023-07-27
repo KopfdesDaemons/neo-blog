@@ -6,7 +6,7 @@
             <span>😥</span>
             <a href="<?php echo esc_url(home_url('/')); ?>">Go to the home page</a>
         </div>
-        <!-- <?php get_sidebar(); ?> -->
+        <?php get_sidebar(); ?>
     </section>
 </main>
 <?php get_footer(); ?>

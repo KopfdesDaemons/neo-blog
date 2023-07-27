@@ -193,14 +193,16 @@ a {
   color: white;
   border-radius: 8px;
   padding: 0.8em 1.2em;
+  border: 1px solid transparent;
 }
 .postCard .textDiv .buttomDiv .readMore:hover {
   background-color: transparent;
-  outline: 1px solid var(--schrift);
+  border: 1px solid var(--schrift);
   transition: all 200ms;
 }
 .postCard h2 {
   margin: 0 0 0.5em 0;
+  color: var(--schrift);
   font-size: 1.4em;
 }
 .postCard .tagsDiv ul {
@@ -238,13 +240,12 @@ a {
 .darkmode .postCard .tagsDiv a {
   background-color: var(--primary-variant-much-brighter);
 }
-.darkmode .postCard h2 {
-  color: var(--schrift);
+@media only screen and (max-width: 600px) {
+  .darkmode .postCard {
+    border: 1px solid gray;
+  }
 }
 
-.stickyPost {
-  border: 1px solid;
-}
 .stickyPost .textDiv .buttomDiv .pin {
   visibility: visible;
 }
@@ -276,7 +277,7 @@ a {
 }
 
 html ::-webkit-scrollbar {
-  width: 10px;
+  width: 15px;
   height: 10px;
 }
 html body ::-webkit-scrollbar {
