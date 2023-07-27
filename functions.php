@@ -143,13 +143,13 @@ function theme_slug_social_sharing()
 // #########################################
 
 // Funktion zum Hinzufügen einer benutzerdefinierten Einstellung im Customizer
-function custom_theme_settings($wp_customize)
+function custom_theme_header($wp_customize)
 {
     // Sektionen
     // ######################################################################
 
     // Füge eine neue Sektion zum Customizer hinzu
-    $wp_customize->add_section('custom_theme_options', array(
+    $wp_customize->add_section('custom_theme_header', array(
         'title' => __('Header', 'dein-theme-textdomain'),
         'priority' => 30,
     ));
@@ -167,7 +167,7 @@ function custom_theme_settings($wp_customize)
     $wp_customize->add_control('header_menu', array(
         'type' => 'checkbox',
         'label' => __('Zeige Menü im Header', 'dein-theme-textdomain'),
-        'section' => 'custom_theme_options',
+        'section' => 'custom_theme_header',
     ));
 
     // Suchbutton
@@ -180,7 +180,7 @@ function custom_theme_settings($wp_customize)
     $wp_customize->add_control('search_button', array(
         'type' => 'checkbox',
         'label' => __('Zeige Suchbutton', 'dein-theme-textdomain'),
-        'section' => 'custom_theme_options',
+        'section' => 'custom_theme_header',
     ));
 
     // Suchleiste
@@ -193,10 +193,10 @@ function custom_theme_settings($wp_customize)
     $wp_customize->add_control('searchbar', array(
         'type' => 'checkbox',
         'label' => __('Zeige Suchleiste', 'dein-theme-textdomain'),
-        'section' => 'custom_theme_options',
+        'section' => 'custom_theme_header',
     ));
 }
-add_action('customize_register', 'custom_theme_settings');
+add_action('customize_register', 'custom_theme_header');
 
 function custom_theme_colors($wp_customize)
 {
@@ -224,7 +224,7 @@ function custom_theme_colors($wp_customize)
 
 
     $wp_customize->add_setting('dark_mode', array(
-        'default' => 'system', // Standardwert "System"
+        'default' => 'dark',
         'transport' => 'refresh',
         'sanitize_callback' => 'sanitize_dark_mode_option',
     ));
@@ -241,6 +241,102 @@ function custom_theme_colors($wp_customize)
     ));
 }
 add_action('customize_register', 'custom_theme_colors');
+
+function custom_theme_article($wp_customize)
+{
+    // Sektionen
+    // ######################################################################
+
+    // Füge eine neue Sektion zum Customizer hinzu
+    $wp_customize->add_section('custom_theme_article', array(
+        'title' => __('Article', 'dein-theme-textdomain'),
+        'priority' => 30,
+    ));
+
+    // Optionen
+    // ######################################################################
+
+    // Author Details
+    $wp_customize->add_setting('author_details', array(
+        'default' => true,
+        'transport' => 'refresh',
+        'sanitize_callback' => 'sanitize_checkbox',
+    ));
+
+    $wp_customize->add_control('author_details', array(
+        'type' => 'checkbox',
+        'label' => __('Zeige Autor Details', 'dein-theme-textdomain'),
+        'section' => 'custom_theme_article',
+    ));
+
+    // Share Options
+    $wp_customize->add_setting('share_options', array(
+        'default' => true,
+        'transport' => 'refresh',
+        'sanitize_callback' => 'sanitize_checkbox',
+    ));
+
+    $wp_customize->add_control('share_options', array(
+        'type' => 'checkbox',
+        'label' => __('Zeige Teilenbereich', 'dein-theme-textdomain'),
+        'section' => 'custom_theme_article',
+    ));
+
+
+    // Share Options
+    $wp_customize->add_setting('post_pagination', array(
+        'default' => true,
+        'transport' => 'refresh',
+        'sanitize_callback' => 'sanitize_checkbox',
+    ));
+
+    $wp_customize->add_control('post_pagination', array(
+        'type' => 'checkbox',
+        'label' => __('Zeige Post Pagination', 'dein-theme-textdomain'),
+        'section' => 'custom_theme_article',
+    ));
+
+    // Tags
+    $wp_customize->add_setting('tags', array(
+        'default' => true,
+        'transport' => 'refresh',
+        'sanitize_callback' => 'sanitize_checkbox',
+    ));
+
+    $wp_customize->add_control('tags', array(
+        'type' => 'checkbox',
+        'label' => __('Zeige Tags', 'dein-theme-textdomain'),
+        'section' => 'custom_theme_article',
+    ));
+
+    // Kategorien
+    $wp_customize->add_setting('post_categories', array(
+        'default' => true,
+        'transport' => 'refresh',
+        'sanitize_callback' => 'sanitize_checkbox',
+    ));
+
+    $wp_customize->add_control('post_categories', array(
+        'type' => 'checkbox',
+        'label' => __('Zeige Kategorien', 'dein-theme-textdomain'),
+        'section' => 'custom_theme_article',
+    ));
+
+    // Datum
+    $wp_customize->add_setting('post_date', array(
+        'default' => true,
+        'transport' => 'refresh',
+        'sanitize_callback' => 'sanitize_checkbox',
+    ));
+
+    $wp_customize->add_control('post_date', array(
+        'type' => 'checkbox',
+        'label' => __('Zeige Datum', 'dein-theme-textdomain'),
+        'section' => 'custom_theme_article',
+    ));
+}
+add_action('customize_register', 'custom_theme_article');
+
 
 function sanitize_dark_mode_option($input)
 {

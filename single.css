@@ -177,7 +177,7 @@ tbody tr:nth-of-type(even) {
   line-height: 24px;
 }
 .articlearea img {
-  margin: 1em 0;
+  margin: 0.6em 0;
 }
 .articlearea .page-links {
   margin-top: 2em;
@@ -236,7 +236,7 @@ tbody tr:nth-of-type(even) {
 .post-pagination {
   display: flex;
   justify-content: space-between;
-  margin-top: 0.5em;
+  margin-top: 1em;
 }
 
 .post-password-form {
