@@ -308,28 +308,22 @@
     }
 }
 
-.darkmode #sidebar {
-    .widget_recent_entries {
-        a:hover {
-            background-color: var(--body);
-            color: var(--schrift);
+.darkmode {
+    #sidebar{
+        .widget_recent_entries {
+            a:hover {
+                background-color: var(--body);
+                color: var(--schrift);
+            }
         }
-    }
-    .wp-block-latest-posts {
-        a {
+        
+        .wp-block-latest-posts a, .wp-block-archives li {
             box-shadow: inset 0px 0px 20px 0px var(--primary-variant-much-brighter);
         }
     }
-
     .wp-block-latest-comments {
         li {
             box-shadow: inset 0px 0px 50px 0px var(--primary-variant-much-brighter);
-        }
-    }
-
-    .wp-block-archives {
-        li {
-            box-shadow: inset 0px 0px 20px 0px var(--primary-variant-much-brighter);
         }
     }
 }

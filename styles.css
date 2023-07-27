@@ -17,8 +17,8 @@ body {
   background: var(--body);
 }
 
-input {
-  background-color: var(--hintergrund-input);
+input, textarea {
+  background-color: var(--hintergrund-inputfeld);
 }
 
 h1,
@@ -100,7 +100,11 @@ a {
 }
 
 #authorPageComments {
-  background-color: white;
+  background-color: var(--hintergrund);
+}
+
+.archive-h3 {
+  margin: 1em;
 }
 
 .postCard {
@@ -181,7 +185,7 @@ a {
   margin-left: 0.5em;
 }
 .postCard .textDiv .buttomDiv .commentscount:hover {
-  background-color: #f8f8f8;
+  background-color: var(--hintergrund);
 }
 .postCard .textDiv .buttomDiv .readMore {
   text-decoration: none;
@@ -192,8 +196,7 @@ a {
 }
 .postCard .textDiv .buttomDiv .readMore:hover {
   background-color: transparent;
-  outline: 1px solid black;
-  color: black;
+  outline: 1px solid var(--schrift);
   transition: all 200ms;
 }
 .postCard h2 {
@@ -320,7 +323,7 @@ html body ::-webkit-scrollbar {
 .social-sharing-links a:hover {
   background-color: unset;
   outline: 3px solid;
-  color: #000000;
+  color: var(--schrift);
 }
 .social-sharing-links .Facebook {
   background-color: #3b5998;

@@ -19,12 +19,12 @@
   font-weight: bold;
 }
 .comments-area .comment-body {
-  background-color: var(--body);
+  background-color: var(--hintergrund);
   border-radius: 12px;
   padding: 1em;
   margin-top: 1em;
-  border: 1px solid var(--hintergrund);
-  box-shadow: inset 0px 0px 50px 0px var(--primary-variant-much-brighter);
+  border: 1px solid var(--primary-variant-darker);
+  box-shadow: inset 0px 0px 50px 0px var(--hintergrund-variant);
   overflow-wrap: anywhere;
   word-wrap: break-word;
   overflow: hidden;
@@ -65,14 +65,14 @@
 }
 .comments-area .reply .comment-reply-link {
   text-decoration: none;
-  background-color: var(--hintergrund-variant);
+  background-color: var(--primary-variant-much-brighter);
   padding: 0.5rem 1rem;
   border-radius: 12px;
-  color: black;
-  border: 1px solid;
+  color: var(--schrift);
+  border: 1px solid var(--hintergrund);
 }
-.comments-area .reply a:hover {
-  background-color: var(--primary-variant-much-brighter);
+.comments-area .reply .comment-reply-link:hover {
+  background-color: unset;
 }
 .comments-area .bypostauthor .comment-body {
   background-color: var(--body);
@@ -110,7 +110,7 @@
   background-color: var(--primary-color);
   padding: 0.5rem 1rem;
   border-radius: 12px;
-  color: black;
+  color: var(--schrift);
   border: none;
   cursor: pointer;
   font-size: 1.2em;
@@ -150,6 +150,7 @@
   position: absolute;
   top: 8px;
   left: 5px;
+  color: black;
 }
 .comments-area .comment-respond .comment-form-author input:not(:placeholder-shown) + label,
 .comments-area .comment-respond .comment-form-author input:focus + label,
@@ -163,4 +164,11 @@
   transform: scale(0.8) translateY(-0.8em);
   height: auto;
   font-size: 0.8em;
+}
+
+.darkmode .comments-area .comment-body {
+  box-shadow: inset 0px 0px 50px 0px var(--primary-variant-much-brighter);
+}
+.darkmode .comments-area .bypostauthor .comment-body {
+  box-shadow: inset 0px 0px 50px 0px rgba(216, 221, 167, 0.41);
 }/*# sourceMappingURL=comments.css.map */

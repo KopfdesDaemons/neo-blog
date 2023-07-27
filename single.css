@@ -23,6 +23,11 @@ blockquote cite {
   justify-content: flex-end;
 }
 
+.darkmode .wp-block-quote,
+blockquote {
+  background-color: rgb(37, 38, 39);
+}
+
 dt {
   font-size: 1.2em;
   margin: 0.5em;
@@ -34,11 +39,11 @@ hr {
 
 pre {
   overflow-y: auto;
-  background-color: white;
+  background-color: var(--hintergrund);
   margin: 0;
   box-sizing: border-box;
   white-space: pre-wrap;
-  color: black;
+  color: var(--schrift);
 }
 
 code {
@@ -114,7 +119,7 @@ tbody tr:nth-of-type(even) {
   padding: 1em;
   display: flex;
   margin: 1em 5% 0em 5%;
-  background-color: white;
+  background-color: var(--hintergrund);
 }
 @media only screen and (max-width: 600px) {
   .author-info {
@@ -172,23 +177,26 @@ tbody tr:nth-of-type(even) {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  background-color: white;
+  background-color: var(--hintergrund);
   padding: 0.5em;
   border-radius: 18px;
 }
 .articlearea .page-links .page-links-title {
   margin-right: 0.5em;
 }
-.articlearea .page-links a,
 .articlearea .page-links span {
+  color: var(--schrift);
+}
+.articlearea .page-links .post-page-numbers {
   color: #000000;
   border-radius: 12px;
   text-decoration: none;
-}
-.articlearea .page-links .post-page-numbers {
   background-color: aquamarine;
   margin: 0.2em;
   padding: 0.5em 1em;
+}
+.articlearea .page-links .post-page-numbers span {
+  color: #000000;
 }
 .articlearea .page-links .current {
   outline: 2px solid;

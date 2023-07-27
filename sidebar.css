@@ -251,12 +251,9 @@
   background-color: var(--body);
   color: var(--schrift);
 }
-.darkmode #sidebar .wp-block-latest-posts a {
+.darkmode #sidebar .wp-block-latest-posts a, .darkmode #sidebar .wp-block-archives li {
   box-shadow: inset 0px 0px 20px 0px var(--primary-variant-much-brighter);
 }
-.darkmode #sidebar .wp-block-latest-comments li {
+.darkmode .wp-block-latest-comments li {
   box-shadow: inset 0px 0px 50px 0px var(--primary-variant-much-brighter);
-}
-.darkmode #sidebar .wp-block-archives li {
-  box-shadow: inset 0px 0px 20px 0px var(--primary-variant-much-brighter);
 }/*# sourceMappingURL=sidebar.css.map */

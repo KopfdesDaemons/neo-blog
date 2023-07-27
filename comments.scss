@@ -24,12 +24,12 @@
     }
 
     .comment-body {
-        background-color: var(--body);
+        background-color: var(--hintergrund);
         border-radius: 12px;
         padding: 1em;
         margin-top: 1em;
-        border: 1px solid var(--hintergrund);
-        box-shadow: inset 0px 0px 50px 0px var(--primary-variant-much-brighter);
+        border: 1px solid var(--primary-variant-darker);
+        box-shadow: inset 0px 0px 50px 0px var(--hintergrund-variant);
         overflow-wrap: anywhere;
         word-wrap: break-word;
         overflow: hidden;
@@ -76,24 +76,26 @@
         }
     }
 
-        // Zeile mit Antworten-Link
-        .reply {
-            display: flex;
-            margin-top: 1em;
-    
-            .comment-reply-link {
-                text-decoration: none;
-                background-color: var(--hintergrund-variant);
-                padding: 0.5rem 1rem;
-                border-radius: 12px;
-                color: black;
-                border: 1px solid;
-            }
-    
-            a:hover {
-                background-color: var(--primary-variant-much-brighter);
-            }
+    // Zeile mit Antworten-Link
+    .reply {
+        display: flex;
+        margin-top: 1em;
+
+        .comment-reply-link {
+            text-decoration: none;
+            background-color: var(--primary-variant-much-brighter);
+            padding: 0.5rem 1rem;
+            border-radius: 12px;
+            color: var(--schrift);
+            border: 1px solid var(--hintergrund);
         }
+
+        .comment-reply-link:hover {
+            // background-color: var(--hintergrund-variant);
+            background-color: unset;
+            // border: 1px solid var(--primary-variant-much-brighter);
+        }
+    }
 
     // Autor-Kommentar
     .bypostauthor {
@@ -145,7 +147,7 @@
                 background-color: var(--primary-color);
                 padding: 0.5rem 1rem;
                 border-radius: 12px;
-                color: black;
+                color: var(--schrift);
                 border: none;
                 cursor: pointer;
                 font-size: 1.2em;
@@ -191,6 +193,7 @@
                 position: absolute;
                 top: 8px;
                 left: 5px;
+                color: black;
             }
 
             input:not(:placeholder-shown)+label,
@@ -200,6 +203,18 @@
                 height: auto;
                 font-size: 0.8em;
             }
+        }
+    }
+}
+
+.darkmode .comments-area {
+    .comment-body {
+        box-shadow: inset 0px 0px 50px 0px var(--primary-variant-much-brighter);
+    }
+
+    .bypostauthor {
+        .comment-body {
+            box-shadow: inset 0px 0px 50px 0px rgba(216, 221, 167, 0.41);
         }
     }
 }

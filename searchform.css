@@ -24,10 +24,9 @@
   height: 45px;
   font-size: 1.3em;
   border: none;
-  background-color: white;
 }
 #searchform #searchsubmit:hover {
   font-size: 1em;
   cursor: pointer;
-  background-color: #f8f8f8;
+  background-color: var(--hintergrund-variant-darker);
 }/*# sourceMappingURL=searchform.css.map */

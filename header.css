@@ -94,7 +94,7 @@
   font-size: 1.2rem;
 }
 .header .headerDiv .headerMenuColumn ul li ul {
-  background-color: var(--primary-variant-brighter);
+  background-color: var(--primary-variant-much-brighter);
   position: absolute;
   flex-direction: column;
   top: 100%;
@@ -103,11 +103,14 @@
   display: none;
   padding: 0;
 }
+.header .headerDiv .headerMenuColumn ul li ul a {
+  color: var(--schrift);
+}
 .header .headerDiv .headerMenuColumn ul li ul li {
   position: relative;
 }
 .header .headerDiv .headerMenuColumn ul li ul ul {
-  background-color: var(--primary-variant-much-brighter);
+  background-color: var(--primary-variant-brighter);
   position: absolute;
   left: 100%;
   top: 0;

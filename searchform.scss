@@ -9,7 +9,6 @@
     width: 80%;
     max-width: 20em;
     border: none;
-    // border-bottom: 1px solid;
     font-size: 1.5em;
     padding-left: 0.8em;
     margin: 5px 0;
@@ -27,12 +26,11 @@
     height: 45px;
     font-size: 1.3em;
     border: none;
-    background-color: white;
   }
 
   #searchsubmit:hover {
     font-size: 1em;
     cursor: pointer;
-    background-color: #f8f8f8;
+    background-color: var(--hintergrund-variant-darker);
   }
 }

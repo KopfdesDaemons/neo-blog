@@ -5,7 +5,7 @@
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <?php if (is_singular() && pings_open()) { ?>
-        <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
+    <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
     <?php }
 
     wp_head(); ?>
@@ -66,41 +66,41 @@
     ?>
 
     <style>
-        :root {
-            --primary-color: <?php echo $primary_color;
-                                ?>;
-            --primary-variant-darker: <?php echo $primary_variant_darker;
-                                        ?>;
-            --primary-variant-brighter: <?php echo $primary_variant_brighter;
-                                        ?>;
-            --primary-variant-much-brighter: <?php echo $primary_variant_much_brighter;
-                                                ?>;
-            --body: rgb(240, 240, 240);
-            --hintergrund: rgb(255, 255, 255);
-            --schrift: rgb(10, 10, 10);
-            --hintergrund-inputfeld: <?php echo $hintergrund_inputfeld;
-                                        ?>;
-            --hintergrund-variant: <?php echo $hintergrund_variant;
-                                    ?>;
-            --hintergrund-variant-darker: <?php echo $hintergrund_variant_darker;
-                                            ?>;
-        }
+    :root {
+        --primary-color: <?php echo $primary_color;
+        ?>;
+        --primary-variant-darker: <?php echo $primary_variant_darker;
+        ?>;
+        --primary-variant-brighter: <?php echo $primary_variant_brighter;
+        ?>;
+        --primary-variant-much-brighter: <?php echo $primary_variant_much_brighter;
+        ?>;
+        --body: rgb(240, 240, 240);
+        --hintergrund: rgb(255, 255, 255);
+        --schrift: rgb(10, 10, 10);
+        --hintergrund-inputfeld: <?php echo $hintergrund_inputfeld;
+        ?>;
+        --hintergrund-variant: <?php echo $hintergrund_variant;
+        ?>;
+        --hintergrund-variant-darker: <?php echo $hintergrund_variant_darker;
+        ?>;
+    }
 
-        .darkmode {
-            --primary-variant-darker: <?php echo $primary_variant_much_brighter;
-                                        ?>;
-            --primary-variant-much-brighter: <?php echo $primary_variant_darker;
-                                                ?>;
-            --body: rgb(15, 15, 15);
-            --hintergrund: rgb(22, 24, 28);
-            --schrift: rgb(238, 238, 238);
-            --hintergrund-inputfeld: <?php echo $hintergrund_inputfeld;
-                                        ?>;
-            --hintergrund-variant: <?php echo $hintergrund_variant;
-                                    ?>;
-            --hintergrund-variant-darker: <?php echo $hintergrund_variant_darker;
-                                            ?>;
-        }
+    .darkmode {
+        --primary-variant-darker: <?php echo $primary_variant_much_brighter;
+        ?>;
+        --primary-variant-much-brighter: <?php echo $primary_variant_darker;
+        ?>;
+        --body: rgb(15, 15, 15);
+        --hintergrund: rgb(22, 24, 28);
+        --schrift: rgb(238, 238, 238);
+        --hintergrund-inputfeld: <?php echo $hintergrund_inputfeld;
+        ?>;
+        --hintergrund-variant: <?php echo $hintergrund_variant;
+        ?>;
+        --hintergrund-variant-darker: <?php echo $hintergrund_variant_darker;
+        ?>;
+    }
     </style>
 </head>
 
@@ -108,7 +108,7 @@
 
     <header id="header" class="clearfix header" role="banner">
         <div class="headerDiv">
-            <div class="farbpalettenDiv">
+            <!-- <div class="farbpalettenDiv">
                 <ul>
                     <li title="primary-color"></li>
                     <li title="primary-variant-darker"></li>
@@ -117,7 +117,7 @@
                     <li title="hintergrund-variant"></li>
                     <li title="hintergrund-variant-darker"></li>
                 </ul>
-            </div>
+            </div> -->
             <div class="titleDiv">
                 <a href="<?php echo esc_url(home_url('/')); ?>">
                     <span class="site-title"><?php bloginfo('title'); ?></span>
