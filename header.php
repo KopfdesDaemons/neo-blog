@@ -5,7 +5,7 @@
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <?php if (is_singular() && pings_open()) { ?>
-        <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
+    <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
     <?php }
 
     wp_head(); ?>
@@ -66,54 +66,77 @@
     ?>
 
     <style>
-        :root {
-            --primary-color: <?php echo $primary_color;
-                                ?>;
-            --primary-variant-darker: <?php echo $primary_variant_darker;
-                                        ?>;
-            --primary-variant-brighter: <?php echo $primary_variant_brighter;
-                                        ?>;
-            --primary-variant-much-brighter: <?php echo $primary_variant_much_brighter;
-                                                ?>;
-            --body: rgb(240, 240, 240);
-            --hintergrund: rgb(255, 255, 255);
-            --schrift: rgb(10, 10, 10);
-            --hintergrund-inputfeld: <?php echo $hintergrund_inputfeld;
-                                        ?>;
-            --hintergrund-variant: <?php echo $hintergrund_variant;
-                                    ?>;
-            --hintergrund-variant-darker: <?php echo $hintergrund_variant_darker;
-                                            ?>;
-        }
+    :root {
+        --primary-color: <?php echo $primary_color;
+        ?>;
+        --primary-variant-darker: <?php echo $primary_variant_darker;
+        ?>;
+        --primary-variant-brighter: <?php echo $primary_variant_brighter;
+        ?>;
+        --primary-variant-much-brighter: <?php echo $primary_variant_much_brighter;
+        ?>;
+        --body: rgb(240, 240, 240);
+        --hintergrund: rgb(255, 255, 255);
+        --schrift: rgb(10, 10, 10);
+        --hintergrund-inputfeld: <?php echo $hintergrund_inputfeld;
+        ?>;
+        --hintergrund-variant: <?php echo $hintergrund_variant;
+        ?>;
+        --hintergrund-variant-darker: <?php echo $hintergrund_variant_darker;
+        ?>;
+    }
 
-        .darkmode {
-            --primary-variant-darker: <?php echo $primary_variant_much_brighter;
-                                        ?>;
-            --primary-variant-much-brighter: <?php echo $primary_variant_darker;
-                                                ?>;
-            --body: rgb(15, 15, 15);
-            --hintergrund: rgb(22, 24, 28);
-            --schrift: rgb(200, 200, 200);
-            --hintergrund-inputfeld: <?php echo $hintergrund_inputfeld;
-                                        ?>;
-            --hintergrund-variant: <?php echo $hintergrund_variant;
-                                    ?>;
-            --hintergrund-variant-darker: <?php echo $hintergrund_variant_darker;
-                                            ?>;
-        }
+    .darkmode {
+        --primary-variant-darker: <?php echo $primary_variant_much_brighter;
+        ?>;
+        --primary-variant-much-brighter: <?php echo $primary_variant_darker;
+        ?>;
+        --body: rgb(15, 15, 15);
+        --hintergrund: rgb(22, 24, 28);
+        --schrift: rgb(200, 200, 200);
+        --hintergrund-inputfeld: <?php echo $hintergrund_inputfeld;
+        ?>;
+        --hintergrund-variant: <?php echo $hintergrund_variant;
+        ?>;
+        --hintergrund-variant-darker: <?php echo $hintergrund_variant_darker;
+        ?>;
+    }
     </style>
+
+
     <script>
-        function toggleMenu() {
-            var menu = document.querySelector('.mobileExpandedMenu');
-            console.log(menu);
-            menu.classList.toggle('headerMenuOpen');
-        }
+    function toggleMenu() {
+        var menu = document.querySelector('.mobileExpandedMenu');
+        menu.classList.toggle('headerMenuOpen');
+    }
+
+    function addMarginToBody() {
+        const header = document.querySelector('.header');
+        if (!header.classList.contains('fixedHeader')) return;
+        const height = header.offsetHeight;
+        const main = document.querySelector('main');
+        main.style.marginTop = height + 15 + 'px';
+    }
+
+    window.addEventListener("DOMContentLoaded", function() {
+        const header = document.querySelector('.header');
+        if (!header.classList.contains('fixedHeader')) return;
+        addMarginToBody()
+        window.addEventListener('resize', function(event) {
+            addMarginToBody()
+        }, true);
+    }, false);
     </script>
+
+
 </head>
 
 <body <?php body_class(); ?>>
 
-    <header id="header" class="clearfix header" role="banner">
+    <?php
+    $fixedHeader = get_theme_mod('fixed_header', false);
+    ?>
+    <header id="header" class="clearfix header <?php if ($fixedHeader) echo 'fixedHeader' ?>" role="banner">
         <div class="headerDiv">
             <!-- <div class="farbpalettenDiv">
                 <ul>
@@ -125,34 +148,54 @@
                     <li title="hintergrund-variant-darker"></li>
                 </ul>
             </div> -->
-            <div class="titleDiv">
-                <a href="<?php echo esc_url(home_url('/')); ?>">
-                    <span class="site-title"><?php bloginfo('title'); ?></span>
-                </a>
-            </div>
 
-            <button id="headerMenuBtn" onclick="toggleMenu()"><i class="fa-solid fa-bars"></i></button>
-            <div class="mobileExpandedMenu">
+
+            <!-- Title -->
+            <?php
+            $title = get_theme_mod('title', false);
+            if ($title) {
+                $title = get_bloginfo('title');
+                echo '<div class="titleDiv"><a href="' . esc_url(home_url('/')) . '">
+                    <span class="site-title">' . esc_html($title) . '</span>
+                </a>
+            </div>';
+            }
+            ?>
+
+
+            <!-- Slogan -->
+            <?php
+            $tagline = get_theme_mod('tagline', false);
+            if ($tagline) {
+                $description = get_bloginfo('description');
+                echo '<div class="sloganDiv"><span>' . esc_html($description) . '</span></div>';
+            }
+            ?>
+
+            <div class="toggleDiv">
+                <button id="headerMenuBtn" onclick="toggleMenu()"><i class="fa-solid fa-bars"></i></button>
 
                 <?php
                 $searchbar = get_theme_mod('searchbar', false);
                 if ($searchbar) {
-                    echo '
-            <div class="SearchColumn">
-                <div class="searchDiv">
-                    ';
+                    echo '<div class="SearchColumn"><div class="searchDiv">';
                     get_search_form(array('button_text' => 's'));
-                    echo '
-                </div>
-            </div>
-            ';
+                    echo '</div></div>';
                 }
                 ?>
+            </div>
+            <div class="mobileExpandedMenu">
+
+
                 <nav class="headerMenuColumn">
                     <?php
                     $header_menu = get_theme_mod('header_menu', false);
-                    if ($header_menu) wp_nav_menu(array('theme_location' => 'header-menu')); ?>
+                    if ($header_menu) {
+                        wp_nav_menu(array('theme_location' => 'header-menu'));
+                    }
+                    ?>
                 </nav>
             </div>
         </div>
     </header>
+</body>

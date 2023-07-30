@@ -51,6 +51,13 @@
   margin: 0 0.5em;
   color: var(--schrift);
 }
+.header .headerDiv .sloganDiv {
+  text-align: center;
+  padding: 0 1em;
+}
+.header .headerDiv .toggleDiv {
+  display: flex;
+}
 .header .headerDiv .mobileExpandedMenu {
   width: 100%;
   display: flex;
@@ -167,6 +174,10 @@
   left: 0;
   height: auto;
   display: none;
+}
+
+.fixedHeader {
+  position: fixed;
 }
 
 .farbpalettenDiv ul {

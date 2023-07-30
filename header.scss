@@ -59,7 +59,16 @@
                 color: var(--schrift);
             }
         }
+
+        .sloganDiv {
+            text-align: center;
+            padding: 0 1em;
+        }
         
+        .toggleDiv {
+            display: flex;
+        }
+
         .mobileExpandedMenu {
             width: 100%;
             display: flex;
@@ -189,6 +198,11 @@
         }
     }
 }
+
+.fixedHeader {
+    position: fixed;
+}
+
 .farbpalettenDiv {
     ul {
         display: flex;

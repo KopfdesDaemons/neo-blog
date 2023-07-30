@@ -158,6 +158,19 @@ function custom_theme_header($wp_customize)
     // ######################################################################
 
     // Header Menü 
+    $wp_customize->add_setting('fixed_header', array(
+        'default' => true,
+        'transport' => 'refresh',
+        'sanitize_callback' => 'sanitize_checkbox',
+    ));
+
+    $wp_customize->add_control('fixed_header', array(
+        'type' => 'checkbox',
+        'label' => __('Fixiere Header', 'dein-theme-textdomain'),
+        'section' => 'custom_theme_header',
+    ));
+
+    // Header Menü 
     $wp_customize->add_setting('header_menu', array(
         'default' => true,
         'transport' => 'refresh',
@@ -193,6 +206,32 @@ function custom_theme_header($wp_customize)
     $wp_customize->add_control('searchbar', array(
         'type' => 'checkbox',
         'label' => __('Zeige Suchleiste', 'dein-theme-textdomain'),
+        'section' => 'custom_theme_header',
+    ));
+
+    // Title
+    $wp_customize->add_setting('title', array(
+        'default' => true,
+        'transport' => 'refresh',
+        'sanitize_callback' => 'sanitize_checkbox',
+    ));
+
+    $wp_customize->add_control('title', array(
+        'type' => 'checkbox',
+        'label' => __('Zeige Titel', 'dein-theme-textdomain'),
+        'section' => 'custom_theme_header',
+    ));
+
+    // Slogan
+    $wp_customize->add_setting('tagline', array(
+        'default' => true,
+        'transport' => 'refresh',
+        'sanitize_callback' => 'sanitize_checkbox',
+    ));
+
+    $wp_customize->add_control('tagline', array(
+        'type' => 'checkbox',
+        'label' => __('Zeige Slogan', 'dein-theme-textdomain'),
         'section' => 'custom_theme_header',
     ));
 }
