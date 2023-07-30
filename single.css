@@ -151,7 +151,6 @@ tbody tr:nth-of-type(even) {
   width: 100%;
 }
 .articlearea .content {
-  max-width: 45em;
   padding: 2em;
   padding-top: 0;
   border-radius: 16px;

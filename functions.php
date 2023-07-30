@@ -281,14 +281,14 @@ function custom_theme_colors($wp_customize)
 }
 add_action('customize_register', 'custom_theme_colors');
 
-function custom_theme_article($wp_customize)
+function custom_theme_posts($wp_customize)
 {
     // Sektionen
     // ######################################################################
 
     // Füge eine neue Sektion zum Customizer hinzu
     $wp_customize->add_section('custom_theme_article', array(
-        'title' => __('Article', 'dein-theme-textdomain'),
+        'title' => __('Posts', 'dein-theme-textdomain'),
         'priority' => 30,
     ));
 
@@ -373,9 +373,50 @@ function custom_theme_article($wp_customize)
         'label' => __('Zeige Datum', 'dein-theme-textdomain'),
         'section' => 'custom_theme_article',
     ));
-}
-add_action('customize_register', 'custom_theme_article');
 
+    // Sidebar
+    $wp_customize->add_setting('post_sidebar', array(
+        'default' => true,
+        'transport' => 'refresh',
+        'sanitize_callback' => 'sanitize_checkbox',
+    ));
+
+    $wp_customize->add_control('post_sidebar', array(
+        'type' => 'checkbox',
+        'label' => __('Zeige Sidebar', 'dein-theme-textdomain'),
+        'section' => 'custom_theme_article',
+    ));
+}
+add_action('customize_register', 'custom_theme_posts');
+
+function custom_theme_pages($wp_customize)
+{
+    // Sektionen
+    // ######################################################################
+
+    // Füge eine neue Sektion zum Customizer hinzu
+    $wp_customize->add_section('custom_theme_pages', array(
+        'title' => __('Pages', 'dein-theme-textdomain'),
+        'priority' => 30,
+    ));
+
+    // Optionen
+    // ######################################################################
+
+    // Sidebar
+    $wp_customize->add_setting('pages_sidebar', array(
+        'default' => true,
+        'transport' => 'refresh',
+        'sanitize_callback' => 'sanitize_checkbox',
+    ));
+
+    $wp_customize->add_control('pages_sidebar', array(
+        'type' => 'checkbox',
+        'label' => __('Zeige Sidebar', 'dein-theme-textdomain'),
+        'section' => 'custom_theme_pages',
+    ));
+}
+add_action('customize_register', 'custom_theme_pages');
 
 function sanitize_dark_mode_option($input)
 {

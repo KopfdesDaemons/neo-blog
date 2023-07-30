@@ -130,7 +130,9 @@
                     </footer>
                 </div>
 
-                <?php get_sidebar(); ?>
+                <?php
+                $post_sidebar = get_theme_mod('post_sidebar', false);
+                if ($post_sidebar) get_sidebar(); ?>
             </div>
         </article>
 </main>
