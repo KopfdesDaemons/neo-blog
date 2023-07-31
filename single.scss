@@ -331,3 +331,27 @@ tbody tr:nth-of-type(even) {
         background-color: rgb(236, 244, 248);
     }
 }
+
+
+@media print {
+
+    * {
+        color: #000000 !important;
+    }
+
+    body, p {
+        font-size: 12px !important;
+    }
+    
+    #header, #footer, #sidebar, #comments, .author-info, .post-pagination, .post-tags {
+        display: none;
+    }
+
+    main {
+        margin-top: 0 !important;
+    }
+
+    img {
+        max-height: 5cm;
+    }
+ }

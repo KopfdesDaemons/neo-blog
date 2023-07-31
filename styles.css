@@ -75,6 +75,12 @@ main {
   position: relative;
 }
 
+@media only screen and (max-width: 600px) {
+  .feed {
+    margin: 0.5em;
+  }
+}
+
 a {
   color: var(--primary-variant-darker);
 }
@@ -190,7 +196,7 @@ a {
 .postCard .textDiv .buttomDiv .readMore {
   text-decoration: none;
   background-color: var(--primary-color);
-  color: white;
+  color: #000000;
   border-radius: 8px;
   padding: 0.8em 1.2em;
   border: 1px solid transparent;
@@ -199,6 +205,7 @@ a {
   background-color: transparent;
   border: 1px solid var(--schrift);
   transition: all 200ms;
+  color: var(--primary-color);
 }
 .postCard h2 {
   margin: 0 0 0.5em 0;

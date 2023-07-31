@@ -6,17 +6,20 @@ get_header();
 
     <?php
     while (have_posts()) {
-        the_post(); // Ruft den nächsten Beitrag (in diesem Fall die Seite) ab und bereitet ihn vor
+        the_post();
     ?>
 
-        <!-- Hier beginnt das HTML-Markup für die Seite -->
-        <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+        <div id="post-<?php the_ID(); ?>" class="articleArea" <?php post_class(); ?>>
 
-            <!-- Hier kommt der Titel der Seite -->
             <h1><?php the_title(); ?></h1>
-
-            <!-- Hier kommen die Inhalte der Seite -->
             <?php the_content(); ?>
+
+            <!-- Kommentare -->
+            <?php
+            if (comments_open() || get_comments_number()) {
+                comments_template();
+            }
+            ?>
 
         </div>
 
