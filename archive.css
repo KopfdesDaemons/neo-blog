@@ -1,0 +1,10 @@
+#author-bio ul {
+  list-style: none;
+  padding: 0;
+}
+#author-bio ul li {
+  margin-top: 0.5em;
+}
+#author-bio ul li b {
+  margin-right: 0.5em;
+}/*# sourceMappingURL=archive.css.map */
