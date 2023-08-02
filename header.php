@@ -84,6 +84,8 @@
                                     ?>;
             --hintergrund-variant-darker: <?php echo $hintergrund_variant_darker;
                                             ?>;
+
+            --title-size: <?php echo get_theme_mod('title_size_setting') . 'px;' ?>
         }
 
         .darkmode {

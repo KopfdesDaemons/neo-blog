@@ -104,6 +104,7 @@
                         <?php
                         $share_options = get_theme_mod('share_options', false);
                         if ($share_options) {
+                            require_once get_template_directory() . '/template-parts/social-sharing.php';
                             echo theme_slug_social_sharing();
                         };
                         ?>

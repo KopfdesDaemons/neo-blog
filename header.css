@@ -46,10 +46,11 @@
   color: black;
 }
 .header .headerDiv .titleDiv .site-title {
-  font-size: 1.5em;
+  font-size: clamp(10px, 5vw, var(--title-size));
   word-break: keep-all;
   margin: 0 0.5em;
   color: var(--schrift);
+  text-align: center;
 }
 .header .headerDiv .sloganDiv {
   text-align: center;
