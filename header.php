@@ -5,7 +5,7 @@
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <?php if (is_singular() && pings_open()) { ?>
-        <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
+    <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
     <?php }
 
     wp_head(); ?>
@@ -66,73 +66,78 @@
     ?>
 
     <style>
-        :root {
-            --primary-color: <?php echo $primary_color;
-                                ?>;
-            --primary-variant-darker: <?php echo $primary_variant_darker;
-                                        ?>;
-            --primary-variant-brighter: <?php echo $primary_variant_brighter;
-                                        ?>;
-            --primary-variant-much-brighter: <?php echo $primary_variant_much_brighter;
-                                                ?>;
-            --body: rgb(240, 240, 240);
-            --hintergrund: rgb(255, 255, 255);
-            --schrift: rgb(10, 10, 10);
-            --hintergrund-inputfeld: <?php echo $hintergrund_inputfeld;
-                                        ?>;
-            --hintergrund-variant: <?php echo $hintergrund_variant;
-                                    ?>;
-            --hintergrund-variant-darker: <?php echo $hintergrund_variant_darker;
-                                            ?>;
+    :root {
+        /* Colors */
+        --primary-color: <?php echo $primary_color;
+        ?>;
+        --primary-variant-darker: <?php echo $primary_variant_darker;
+        ?>;
+        --primary-variant-brighter: <?php echo $primary_variant_brighter;
+        ?>;
+        --primary-variant-much-brighter: <?php echo $primary_variant_much_brighter;
+        ?>;
+        --body: rgb(240, 240, 240);
+        --hintergrund: rgb(255, 255, 255);
+        --schrift: <?php echo get_theme_mod('font_color_light_mode');
+        ?>;
+        --hintergrund-inputfeld: <?php echo $hintergrund_inputfeld;
+        ?>;
+        --hintergrund-variant: <?php echo $hintergrund_variant;
+        ?>;
+        --hintergrund-variant-darker: <?php echo $hintergrund_variant_darker;
+        ?>;
 
-            --title-size: <?php echo get_theme_mod('title_size_setting') . 'px;' ?>
-        }
+        /* Font Settings */
+        --title-size: <?php echo get_theme_mod('title_size_setting') . 'px;'?>;
+        --line-height: <?php echo get_theme_mod('line_heigt') . 'px;'?>;
+    }
 
-        .darkmode {
-            --primary-variant-darker: <?php echo $primary_variant_much_brighter;
-                                        ?>;
-            --primary-variant-much-brighter: <?php echo $primary_variant_darker;
-                                                ?>;
-            --body: rgb(15, 15, 15);
-            --hintergrund: rgb(22, 24, 28);
-            --schrift: rgb(200, 200, 200);
-            --hintergrund-inputfeld: <?php echo $hintergrund_inputfeld;
-                                        ?>;
-            --hintergrund-variant: <?php echo $hintergrund_variant;
-                                    ?>;
-            --hintergrund-variant-darker: <?php echo $hintergrund_variant_darker;
-                                            ?>;
-        }
+    .darkmode {
+        --primary-variant-darker: <?php echo $primary_variant_much_brighter;
+        ?>;
+        --primary-variant-much-brighter: <?php echo $primary_variant_darker;
+        ?>;
+        --body: rgb(15, 15, 15);
+        --hintergrund: rgb(22, 24, 28);
+        --schrift: <?php echo get_theme_mod('font_color_dark_mode');
+        ?>;
+        --hintergrund-inputfeld: <?php echo $hintergrund_inputfeld;
+        ?>;
+        --hintergrund-variant: <?php echo $hintergrund_variant;
+        ?>;
+        --hintergrund-variant-darker: <?php echo $hintergrund_variant_darker;
+        ?>;
+    }
 
-        body {
-            font-family: <?php echo get_theme_mod('body_font', '"Quicksand"');
-                            ?>;
-        }
+    body {
+        font-family: <?php echo get_theme_mod('body_font', '"Quicksand"');
+        ?>;
+    }
     </style>
 
 
     <script>
-        function toggleMenu() {
-            var menu = document.querySelector('.mobileExpandedMenu');
-            menu.classList.toggle('headerMenuOpen');
-        }
+    function toggleMenu() {
+        var menu = document.querySelector('.mobileExpandedMenu');
+        menu.classList.toggle('headerMenuOpen');
+    }
 
-        function addMarginToBody() {
-            const header = document.querySelector('.header');
-            if (!header.classList.contains('fixedHeader')) return;
-            const height = header.offsetHeight;
-            const main = document.querySelector('main');
-            main.style.marginTop = height + 15 + 'px';
-        }
+    function addMarginToBody() {
+        const header = document.querySelector('.header');
+        if (!header.classList.contains('fixedHeader')) return;
+        const height = header.offsetHeight;
+        const main = document.querySelector('main');
+        main.style.marginTop = height + 15 + 'px';
+    }
 
-        window.addEventListener("DOMContentLoaded", function() {
-            const header = document.querySelector('.header');
-            if (!header.classList.contains('fixedHeader')) return;
+    window.addEventListener("DOMContentLoaded", function() {
+        const header = document.querySelector('.header');
+        if (!header.classList.contains('fixedHeader')) return;
+        addMarginToBody()
+        window.addEventListener('resize', function(event) {
             addMarginToBody()
-            window.addEventListener('resize', function(event) {
-                addMarginToBody()
-            }, true);
-        }, false);
+        }, true);
+    }, false);
     </script>
 
 

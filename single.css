@@ -173,7 +173,7 @@ tbody tr:nth-of-type(even) {
   margin: 0;
 }
 .articlearea p {
-  line-height: 24px;
+  line-height: var(--line-height);
 }
 .articlearea img {
   margin: 0.6em 0;
