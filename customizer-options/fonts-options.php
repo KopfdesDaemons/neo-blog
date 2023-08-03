@@ -4,7 +4,7 @@ function theme_customiz_fonts($wp_customize)
     // Schriftarten hinzufügen
     $wp_customize->add_section('theme_fonts_section', array(
         'title'      => __('Font', 'textdomain'),
-        'description' => __('Alle Schriftarten werden lokal gehostet. Eine Zustimmung gemäß der DSGVO ist für dises Theme nicht erforderlich (Cookie-Banner).', 'textdomain'),
+        'description' => __('Alle Schriftarten werden lokal gehostet. Eine Zustimmung gemäß der DSGVO ist für dieses Theme nicht erforderlich (Cookie-Banner).', 'textdomain'),
         'priority'   => 30,
     ));
 
@@ -38,7 +38,7 @@ function theme_customiz_fonts($wp_customize)
 
     // Line height
     $wp_customize->add_setting('line_heigt', array(
-        'default' => '24', // Standardmäßige Bildgröße in Pixel
+        'default' => '24',
         'transport' => 'refresh',
         'sanitize_callback' => 'absint', // Nur positive Ganzzahlen erlauben
     ));

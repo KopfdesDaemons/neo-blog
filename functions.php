@@ -99,6 +99,7 @@ require_once get_template_directory() . '/customizer-options/colors-options.php'
 require_once get_template_directory() . '/customizer-options/posts-options.php';
 require_once get_template_directory() . '/customizer-options/fonts-options.php';
 require_once get_template_directory() . '/customizer-options/author-page-options.php';
+require_once get_template_directory() . '/customizer-options/feed-options.php';
 
 // Sanitize-Funktion zum Überprüfen des Checkbox-Werts (true/false)
 function sanitize_checkbox($input)
