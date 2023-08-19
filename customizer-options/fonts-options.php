@@ -4,7 +4,7 @@ function theme_customiz_fonts($wp_customize)
     // Schriftarten hinzufügen
     $wp_customize->add_section('theme_fonts_section', array(
         'title'      => __('Font', 'textdomain'),
-        'description' => __('Alle Schriftarten werden lokal gehostet. Eine Zustimmung gemäß der DSGVO ist für dieses Theme nicht erforderlich (Cookie-Banner).', 'textdomain'),
+        'description' => __('All fonts are hosted locally. Consent according to the GDPR is not required for this theme (cookie banner).', 'my-theme'),
         'priority'   => 30,
     ));
 
@@ -14,7 +14,7 @@ function theme_customiz_fonts($wp_customize)
     ));
 
     $wp_customize->add_control('body_font', array(
-        'label'      => __('Haupttext Schriftart', 'textdomain'),
+        'label'      => __('Main text font', 'my-theme'),
         'section'    => 'theme_fonts_section',
         'type'       => 'select',
         'choices'    => array(
@@ -46,7 +46,7 @@ function theme_customiz_fonts($wp_customize)
     $wp_customize->add_control('line_heigt', array(
         'type' => 'range',
         'section' => 'title_tagline', // Hier kannst du eine andere Sektion wählen, in der du die Einstellung platzieren möchtest
-        'label' => 'Line height in paragraphs',
+        'label' => __('Line height in paragraphs', 'my-theme'),
         'section' => 'theme_fonts_section',
         'input_attrs' => array(
             'min' => 15, // Mindestgröße in Pixel
@@ -61,7 +61,7 @@ function theme_customiz_fonts($wp_customize)
     ));
 
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'font_color_light_mode', array(
-        'label' => 'Font color light mode',
+        'label' => __('Font color light mode', 'my-theme'),
         'section' => 'theme_fonts_section',
         'settings' => 'font_color_light_mode'
     )));
@@ -72,7 +72,7 @@ function theme_customiz_fonts($wp_customize)
     ));
 
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'font_color_dark_mode', array(
-        'label' => 'Font color dark mode',
+        'label' => __('Font color dark mode', 'my-theme'),
         'section' => 'theme_fonts_section',
         'settings' => 'font_color_dark_mode'
     )));

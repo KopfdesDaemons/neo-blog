@@ -3,9 +3,9 @@ function custom_theme_posts($wp_customize)
 {
     // Sektionen
     $wp_customize->add_section('custom_theme_article', array(
-        'title' => __('Posts', 'dein-theme-textdomain'),
+        'title' => __('Posts', 'my-theme'),
         'priority' => 30,
-        'description' => 'Einstellungen der einzelnen Beiträge.'
+        'description' => __('Settings of the individual posts.', 'my-theme')
     ));
 
     // Optionen ######################################################################
@@ -19,7 +19,7 @@ function custom_theme_posts($wp_customize)
 
     $wp_customize->add_control('post_date', array(
         'type' => 'checkbox',
-        'label' => __('Zeige Datum', 'dein-theme-textdomain'),
+        'label' => __('Show date', 'my-theme'),
         'section' => 'custom_theme_article',
     ));
 
@@ -32,7 +32,7 @@ function custom_theme_posts($wp_customize)
 
     $wp_customize->add_control('post_categories', array(
         'type' => 'checkbox',
-        'label' => __('Zeige Kategorien', 'dein-theme-textdomain'),
+        'label' => __('Show categories', 'my-theme'),
         'section' => 'custom_theme_article',
     ));
 
@@ -45,7 +45,7 @@ function custom_theme_posts($wp_customize)
 
     $wp_customize->add_control('tags', array(
         'type' => 'checkbox',
-        'label' => __('Zeige Tags', 'dein-theme-textdomain'),
+        'label' => __('Show tags', 'my-theme'),
         'section' => 'custom_theme_article',
     ));
 
@@ -58,7 +58,7 @@ function custom_theme_posts($wp_customize)
 
     $wp_customize->add_control('author_details', array(
         'type' => 'checkbox',
-        'label' => __('Zeige Autor Details', 'dein-theme-textdomain'),
+        'label' => __('Show author details', 'my-theme'),
         'section' => 'custom_theme_article',
     ));
 
@@ -71,7 +71,7 @@ function custom_theme_posts($wp_customize)
 
     $wp_customize->add_control('share_options', array(
         'type' => 'checkbox',
-        'label' => __('Zeige Teilenbereich', 'dein-theme-textdomain'),
+        'label' => __('Show share area', 'my-theme'),
         'section' => 'custom_theme_article',
     ));
 
@@ -84,7 +84,7 @@ function custom_theme_posts($wp_customize)
 
     $wp_customize->add_control('post_pagination', array(
         'type' => 'checkbox',
-        'label' => __('Zeige Post Pagination', 'dein-theme-textdomain'),
+        'label' => __('Show post pagination', 'my-theme'),
         'section' => 'custom_theme_article',
     ));
 
@@ -97,7 +97,7 @@ function custom_theme_posts($wp_customize)
 
     $wp_customize->add_control('post_sidebar', array(
         'type' => 'checkbox',
-        'label' => __('Zeige Sidebar', 'dein-theme-textdomain'),
+        'label' => __('Show sidebar', 'my-theme'),
         'section' => 'custom_theme_article',
     ));
 }

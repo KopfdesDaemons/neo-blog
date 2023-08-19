@@ -2,9 +2,9 @@
 <main role="main">
     <section class="spacer grid">
         <div class="content error">
-            <h1>File not found</h1>
+            <h1><?php esc_html_e('File not found', 'my-theme'); ?></h1>
             <span>😥</span>
-            <a href="<?php echo esc_url(home_url('/')); ?>">Go to the home page</a>
+            <a href="<?php echo esc_url(home_url('/')); ?>"><?php esc_html_e('Go to the home page', 'my-theme'); ?></a>
         </div>
         <?php get_sidebar(); ?>
     </section>

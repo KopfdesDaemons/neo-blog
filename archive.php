@@ -10,24 +10,24 @@
 
                 // Avatar des Autors
                 $image_size = get_theme_mod('image_size_setting', '150');
-                $author_avatar = get_avatar($author_id, $image_size); // 96 ist die Größe des Avatars in Pixeln
+                $author_avatar = get_avatar($author_id, $image_size);
 
             ?>
-                <div class="author-info" id="author-bio">
-                    <div class="author-avatar">
-                        <?php echo $author_avatar; ?>
+            <div class="author-info" id="author-bio">
+                <div class="author-avatar">
+                    <?php echo $author_avatar; ?>
+                </div>
+                <div class="author-details">
+                    <div class="author-row">
+                        <h3><a href="<?php echo get_author_posts_url($author_id); ?>"><?php echo $author_name; ?></a>
+                        </h3>
+                        <?php if ($author_website && get_theme_mod('author_website')) : ?>
+                        <a href="<?php echo $author_website; ?>" target="_blank">🌐</a>
+                        <?php endif; ?>
                     </div>
-                    <div class="author-details">
-                        <div class="author-row">
-                            <h3><a href="<?php echo get_author_posts_url($author_id); ?>"><?php echo $author_name; ?></a>
-                            </h3>
-                            <?php if ($author_website && get_theme_mod('author_website')) : ?>
-                                <a href="<?php echo $author_website; ?>" target="_blank">🌐</a>
-                            <?php endif; ?>
-                        </div>
-                        <p><?php echo $author_description; ?></p>
-                        <ul>
-                            <?php $author_roles = get_the_author_meta('roles');
+                    <p><?php echo $author_description; ?></p>
+                    <ul>
+                        <?php $author_roles = get_the_author_meta('roles');
                             if (!empty($author_roles) & get_theme_mod('author_page_role')) {
                                 echo '<li><b>Role: </b><span>' . $author_roles[0] . '</span></li>';
                             }
@@ -47,22 +47,22 @@
 
                             if (get_theme_mod('author_website')) echo '<li><b>Website:</b><a href="' . $author_website . '" target="_blank">' . $author_website . '</a></li>'
                             ?>
-                        </ul>
-                    </div>
+                    </ul>
                 </div>
+            </div>
 
-                <!-- Zeige die letzten Kommentare des Autors -->
+            <!-- Zeige die letzten Kommentare des Autors -->
 
-                <?php
+            <?php
                 if (get_theme_mod('author_page_latest_comments')) {
                     $args = array(
                         'user_id' => $author_id,
                         'number' => 5, // Anzahl der anzuzeigenden Kommentare
                     );
                     $author_comments = get_comments($args); ?>
-                    <h3 class="archive-h3">Last comments from <?php echo $author_name; ?></h3>
-                    <ol class="has-avatars has-dates has-excerpts wp-block-latest-comments">
-                        <?php
+            <h3 class="archive-h3"><?php echo __('Last comments from', 'my-theme') . ' ' . $author_name; ?></h3>
+            <ol class="has-avatars has-dates has-excerpts wp-block-latest-comments">
+                <?php
 
                         if ($author_comments) {
                             foreach ($author_comments as $comment) {
@@ -81,31 +81,31 @@
                                 echo '</li>';
                             }
                         } else {
-                            echo 'No comments found.';
+                            echo __('No comments found.', 'my-theme');
                         }
                         ?>
-                    </ol>
+            </ol>
             <?php }
             } ?>
 
             <h1>
                 <?php
                 if (is_category()) {
-                    single_cat_title(); // Anzeigen des Kategorienamens für Kategorie-Archive
+                    echo esc_html__('Category:', 'my-theme') . ' ' . single_cat_title(); // Anzeigen des Kategorienamens für Kategorie-Archive
                 } elseif (is_tag()) {
-                    single_tag_title(); // Anzeigen des Schlagwortnamens für Schlagwort-Archive
+                    echo esc_html__('Tag:', 'my-theme') . ' ' . single_tag_title(); // Anzeigen des Schlagwortnamens für Schlagwort-Archive
                 } elseif (is_author()) {
                     the_post();
-                    echo 'Beiträge von ' . get_the_author(); // Anzeigen des Autorennamens für Autoren-Archive
+                    echo esc_html__('Posts by', 'my-theme') . ' ' . get_the_author(); // Anzeigen des Autorennamens für Autoren-Archive
                     rewind_posts(); // Schleife zurücksetzen, um die restlichen Schleifenfunktionen zu verwenden
                 } elseif (is_day()) {
-                    echo 'Archiv für ' . get_the_date(); // Anzeigen des Datums für tägliche Archive
+                    echo esc_html__('Archive for', 'my-theme') . ' ' . get_the_date(); // Anzeigen des Datums für tägliche Archive
                 } elseif (is_month()) {
-                    echo 'Archiv für ' . get_the_date('F Y'); // Anzeigen des Monats und Jahres für monatliche Archive
+                    echo esc_html__('Archive for', 'my-theme') . ' ' . get_the_date('F Y'); // Anzeigen des Monats und Jahres für monatliche Archive
                 } elseif (is_year()) {
-                    echo 'Archiv für ' . get_the_date('Y'); // Anzeigen des Jahres für jährliche Archive
+                    echo esc_html__('Archive for', 'my-theme') . ' ' . get_the_date('Y'); // Anzeigen des Jahres für jährliche Archive
                 } else {
-                    echo 'Archiv'; // Standardtext für andere Archive
+                    echo esc_html__('Archive', 'my-theme'); // Standardtext für andere Archive
                 }
                 ?>
             </h1>
@@ -138,7 +138,7 @@
                     echo '</div>';
                 }
             } else {
-                echo 'Keine Beiträge gefunden.';
+                echo esc_html__('No posts found.', 'my-theme');
             }
             ?>
         </div>

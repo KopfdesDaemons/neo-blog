@@ -1,0 +1,283 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: my-theme\n"
+"POT-Creation-Date: 2023-08-19 16:33+0200\n"
+"PO-Revision-Date: 2023-08-19 16:34+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.3.2\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: gettext;gettext_noop;__;_e;_n:1,2;_x:1,2c;_ex:1,2c;"
+"esc_html__\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: archive.php:63
+msgid "Last comments from"
+msgstr "Letzte Kommentare von"
+
+#: archive.php:84
+msgid "No comments found."
+msgstr "Keine Kommentare gefunden."
+
+#: archive.php:94
+msgid "Category:"
+msgstr "Kategorie:"
+
+#: archive.php:96
+msgid "Tag:"
+msgstr "Tag:"
+
+#: archive.php:99
+msgid "Posts by"
+msgstr "Beiträge von"
+
+#: archive.php:102 archive.php:104 archive.php:106
+msgid "Archive for"
+msgstr "Archive für"
+
+#: archive.php:108
+msgid "Archive"
+msgstr "Archive"
+
+#: archive.php:135 home.php:33 index.php:24 search.php:35
+msgid "« Previous"
+msgstr "« Zurück"
+
+#: archive.php:136 home.php:34 index.php:25 search.php:36
+msgid "Next »"
+msgstr "Weiter »"
+
+#: archive.php:141 home.php:40 index.php:31
+msgid "No posts found."
+msgstr "Keine Beiträge gefunden."
+
+#: comments.php:16
+msgid "One Comment"
+msgstr "Ein Kommentar"
+
+#: comments.php:18
+#, php-format
+msgid "%d Comments"
+msgstr "%d Kommentare"
+
+#: comments.php:37
+msgid "Older Comments"
+msgstr "Ältere Kommentare"
+
+#: comments.php:38
+msgid "Newer Comments"
+msgstr "Neuere Kommentare"
+
+#: comments.php:45
+msgid "Comments are closed."
+msgstr "Kommentare geschlossen."
+
+#: customizer-options/author-page-options.php:6
+msgid "Author Page"
+msgstr "Autorenseite"
+
+#: customizer-options/author-page-options.php:21
+#: customizer-options/posts-options.php:100
+msgid "Show sidebar"
+msgstr "Seitenleiste anzeigen"
+
+#: customizer-options/author-page-options.php:34
+msgid "Show recent comments"
+msgstr "Aktuelle Kommentare anzeigen"
+
+#: customizer-options/author-page-options.php:47
+msgid "Show author role"
+msgstr "Autorenrolle anzeigen"
+
+#: customizer-options/author-page-options.php:60
+msgid "Show number of posts"
+msgstr "Anzahl der Beiträge anzeigen"
+
+#: customizer-options/author-page-options.php:73
+msgid "Show registration date"
+msgstr "Registrierungsdatum anzeigen"
+
+#: customizer-options/author-page-options.php:86
+msgid "Show author website"
+msgstr "Website des Autors anzeigen"
+
+#: customizer-options/author-page-options.php:100
+msgid "Image size"
+msgstr "Bildgröße"
+
+#: customizer-options/colors-options.php:7
+msgid "Colors"
+msgstr "Farben"
+
+#: customizer-options/colors-options.php:32
+msgid "Dark Mode"
+msgstr "Dark Mode"
+
+#: customizer-options/colors-options.php:35
+msgid "Dark"
+msgstr "Dunkel"
+
+#: customizer-options/colors-options.php:36
+msgid "Light"
+msgstr "Hell"
+
+#: customizer-options/colors-options.php:37
+msgid "System"
+msgstr "System"
+
+#: customizer-options/feed-options.php:6
+msgid "Feed"
+msgstr "Feed"
+
+#: customizer-options/feed-options.php:21
+#: customizer-options/posts-options.php:48
+msgid "Show tags"
+msgstr "Tags anzeigen"
+
+#: customizer-options/feed-options.php:34
+msgid "Show read more button"
+msgstr "Schaltfläche „Mehr lesen“ anzeigen"
+
+#: customizer-options/feed-options.php:47
+msgid "Show comments"
+msgstr "Kommentare anzeigen"
+
+#: customizer-options/feed-options.php:61
+msgid "Line height in text snippet"
+msgstr "Zeilenhöhe im Textausschnitt"
+
+#: customizer-options/feed-options.php:80
+msgid "Border radius"
+msgstr "Rahmenradius"
+
+#: customizer-options/feed-options.php:99
+msgid "Padding"
+msgstr "Innenabstand (Padding)"
+
+#: customizer-options/fonts-options.php:6
+msgid "Font"
+msgstr "Schriftart"
+
+#: customizer-options/fonts-options.php:7
+msgid ""
+"All fonts are hosted locally. Consent according to the GDPR is not required "
+"for this theme (cookie banner)."
+msgstr ""
+"Alle Schriftarten werden lokal gehostet. Eine Einwilligung gemäß DSGVO ist "
+"für dieses Theme nicht erforderlich (Cookie-Banner)."
+
+#: customizer-options/fonts-options.php:17
+msgid "Main text font"
+msgstr "Haupttextschriftart"
+
+#: customizer-options/fonts-options.php:49
+msgid "Line height in paragraphs"
+msgstr "Zeilenhöhe in Absätzen"
+
+#: customizer-options/fonts-options.php:64
+msgid "Font color light mode"
+msgstr "Schriftfarbe im hellen Modus"
+
+#: customizer-options/fonts-options.php:75
+msgid "Font color dark mode"
+msgstr "Schriftfarbe im dunklen Modus"
+
+#: customizer-options/header-options.php:8
+msgid "Header"
+msgstr "Header"
+
+#: customizer-options/header-options.php:23
+msgid "Fix Header"
+msgstr "Header fixieren"
+
+#: customizer-options/header-options.php:36
+msgid "Show menu in header"
+msgstr "Menü im Header anzeigen"
+
+#: customizer-options/header-options.php:49
+msgid "Show search bar"
+msgstr "Suchleiste anzeigen"
+
+#: customizer-options/header-options.php:62
+msgid "Show search button"
+msgstr "Suchschaltfläche anzeigen"
+
+#: customizer-options/header-options.php:76
+msgid "Show title"
+msgstr "Titel anzeigen"
+
+#: customizer-options/header-options.php:90
+msgid "Title size"
+msgstr "Titelgröße"
+
+#: customizer-options/header-options.php:109
+msgid "Show slogan"
+msgstr "Slogan anzeigen"
+
+#: customizer-options/pages-options.php:6
+msgid "Pages"
+msgstr "Seiten"
+
+#: customizer-options/pages-options.php:21
+msgid "Show Sidebar"
+msgstr "Seitenleiste anzeigen"
+
+#: customizer-options/posts-options.php:6
+msgid "Posts"
+msgstr "Beiträge"
+
+#: customizer-options/posts-options.php:8
+msgid "Settings of the individual posts."
+msgstr "Einstellungen der einzelnen Beträge."
+
+#: customizer-options/posts-options.php:22
+msgid "Show date"
+msgstr "Datum anzeigen"
+
+#: customizer-options/posts-options.php:35
+msgid "Show categories"
+msgstr "Kategorien anzeigen"
+
+#: customizer-options/posts-options.php:61
+msgid "Show author details"
+msgstr "Autorendetails anzeigen"
+
+#: customizer-options/posts-options.php:74
+msgid "Show share area"
+msgstr "Teilen-Bereich anzeigen"
+
+#: customizer-options/posts-options.php:87
+msgid "Show post pagination"
+msgstr "Post-Paginierung anzeigen"
+
+#: functions.php:46
+msgid "Header Menu"
+msgstr "Kopfzeilenmenü"
+
+#: functions.php:47
+msgid "Footer Menu"
+msgstr "Fußzeilenmenü"
+
+#: functions.php:56
+msgid "Sidebar"
+msgstr "Sidebar"
+
+#: functions.php:75
+msgid "Your Name"
+msgstr "Dein Name"
+
+#: functions.php:82
+msgid "Your Email"
+msgstr "Deine E-Mail"
+
+#: functions.php:89
+msgid "Your Website"
+msgstr "Deine Website"
+
+#: template-parts/feed.php:47
+msgid "read more"
+msgstr "Mehr lesen"

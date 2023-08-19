@@ -4,7 +4,7 @@ function custom_theme_colors($wp_customize)
 {
     // Sektionen
     $wp_customize->add_section('custom_theme_colors', array(
-        'title' => __('Colors', 'dein-theme-textdomain'),
+        'title' => __('Colors', 'my-theme'),
         'priority' => 30,
     ));
 
@@ -29,12 +29,12 @@ function custom_theme_colors($wp_customize)
 
     $wp_customize->add_control('dark_mode', array(
         'type' => 'select',
-        'label' => __('Dark Mode', 'dein-theme-textdomain'),
+        'label' => __('Dark Mode', 'my-theme'),
         'section' => 'custom_theme_colors',
         'choices' => array(
-            'dark' => __('Dark', 'dein-theme-textdomain'),
-            'light' => __('Light', 'dein-theme-textdomain'),
-            'system' => __('System', 'dein-theme-textdomain'),
+            'dark' => __('Dark', 'my-theme'),
+            'light' => __('Light', 'my-theme'),
+            'system' => __('System', 'my-theme'),
         ),
     ));
 }

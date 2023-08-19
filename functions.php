@@ -33,6 +33,12 @@ function custom_comment_reply_script()
 }
 add_action('wp_enqueue_scripts', 'custom_comment_reply_script');
 
+function my_theme_load_theme_textdomain()
+{
+    load_theme_textdomain('my-theme', get_template_directory() . '/languages');
+}
+add_action('after_setup_theme', 'my_theme_load_theme_textdomain');
+
 function register_my_menus()
 {
     register_nav_menus(
@@ -66,21 +72,21 @@ function custom_comment_form_fields($fields)
     $fields['author'] = '<p class="comment-form-author">' .
         '<input id="author" name="author" placeholder="&nbsp;" type="text" value="' . esc_attr($commenter['comment_author']) .
         '" size="30" ' . 'aria-required="true" required />' .
-        '<label for="author">' . __('Your Name', 'domain') . '<span class="required">*</span></label>' .
+        '<label for="author">' . __('Your Name', 'my-theme') . '<span class="required">*</span></label>' .
         '</p>';
 
     // Change the label and input for the Email field
     $fields['email'] = '<p class="comment-form-email">' .
         '<input id="email" name="email" placeholder="&nbsp;" type="text" value="' . esc_attr($commenter['comment_author_email']) .
         '" size="30" ' . 'aria-required="true" required />' .
-        '<label for="email">' . __('Your Email', 'domain') . '<span class="required">*</span></label>' .
+        '<label for="email">' . __('Your Email', 'my-theme') . '<span class="required">*</span></label>' .
         '</p>';
 
     // Add the URL field back with its label and input
     $fields['url'] = '<p class="comment-form-url">' .
         '<input id="url" name="url" placeholder="&nbsp;" type="text" value="' . esc_attr($commenter['comment_author_url']) .
         '" size="30" />' .
-        '<label for="url">' . __('Your Website', 'domain') . '</label>' .
+        '<label for="url">' . __('Your Website', 'my-theme') . '</label>' .
         '</p>';
 
     // Add more custom fields here if desired

@@ -5,7 +5,7 @@ function custom_theme_header($wp_customize)
 {
     // Sektionen
     $wp_customize->add_section('custom_theme_header', array(
-        'title' => __('Header', 'dein-theme-textdomain'),
+        'title' => __('Header', 'my-theme'),
         'priority' => 30,
     ));
 
@@ -20,7 +20,7 @@ function custom_theme_header($wp_customize)
 
     $wp_customize->add_control('fixed_header', array(
         'type' => 'checkbox',
-        'label' => __('Fixiere Header', 'dein-theme-textdomain'),
+        'label' => __('Fix Header', 'my-theme'),
         'section' => 'custom_theme_header',
     ));
 
@@ -33,22 +33,22 @@ function custom_theme_header($wp_customize)
 
     $wp_customize->add_control('header_menu', array(
         'type' => 'checkbox',
-        'label' => __('Zeige Menü im Header', 'dein-theme-textdomain'),
+        'label' => __('Show menu in header', 'my-theme'),
         'section' => 'custom_theme_header',
     ));
-    
-        // Suchleiste
-        $wp_customize->add_setting('searchbar', array(
-            'default' => true,
-            'transport' => 'refresh',
-            'sanitize_callback' => 'sanitize_checkbox',
-        ));
-    
-        $wp_customize->add_control('searchbar', array(
-            'type' => 'checkbox',
-            'label' => __('Zeige Suchleiste', 'dein-theme-textdomain'),
-            'section' => 'custom_theme_header',
-        ));
+
+    // Suchleiste
+    $wp_customize->add_setting('searchbar', array(
+        'default' => true,
+        'transport' => 'refresh',
+        'sanitize_callback' => 'sanitize_checkbox',
+    ));
+
+    $wp_customize->add_control('searchbar', array(
+        'type' => 'checkbox',
+        'label' => __('Show search bar', 'my-theme'),
+        'section' => 'custom_theme_header',
+    ));
 
     // Suchbutton
     $wp_customize->add_setting('search_button', array(
@@ -59,7 +59,7 @@ function custom_theme_header($wp_customize)
 
     $wp_customize->add_control('search_button', array(
         'type' => 'checkbox',
-        'label' => __('Zeige Suchbutton', 'dein-theme-textdomain'),
+        'label' => __('Show search button', 'my-theme'),
         'section' => 'custom_theme_header',
         'active_callback' => 'searchbar_active_callback'
     ));
@@ -73,7 +73,7 @@ function custom_theme_header($wp_customize)
 
     $wp_customize->add_control('title', array(
         'type' => 'checkbox',
-        'label' => __('Zeige Titel', 'dein-theme-textdomain'),
+        'label' => __('Show title', 'my-theme'),
         'section' => 'custom_theme_header',
     ));
 
@@ -87,7 +87,7 @@ function custom_theme_header($wp_customize)
     $wp_customize->add_control('title_size_setting', array(
         'type' => 'range',
         'section' => 'title_tagline', // Hier kannst du eine andere Sektion wählen, in der du die Einstellung platzieren möchtest
-        'label' => 'Titlegröße',
+        'label' => __('Title size', 'my-theme'),
         'section' => 'custom_theme_header',
         'input_attrs' => array(
             'min' => 8, // Mindestgröße in Pixel
@@ -106,7 +106,7 @@ function custom_theme_header($wp_customize)
 
     $wp_customize->add_control('tagline', array(
         'type' => 'checkbox',
-        'label' => __('Zeige Slogan', 'dein-theme-textdomain'),
+        'label' => __('Show slogan', 'my-theme'),
         'section' => 'custom_theme_header',
     ));
 

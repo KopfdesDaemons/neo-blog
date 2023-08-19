@@ -7,10 +7,10 @@
                 while (have_posts()) {
                     the_post();
             ?>
-            <article <?php post_class(); ?>>
-                <h2><?php the_title(); ?></h2>
-                <?php the_content(); ?>
-            </article>
+                    <article <?php post_class(); ?>>
+                        <h2><?php the_title(); ?></h2>
+                        <?php the_content(); ?>
+                    </article>
             <?php
                 }
 
@@ -28,7 +28,7 @@
                 }
             } else {
                 // Wenn keine Beiträge gefunden werden
-                echo 'Keine Beiträge gefunden.';
+                echo esc_html__('No posts found.', 'my-theme');
             }
             ?>
         </div>

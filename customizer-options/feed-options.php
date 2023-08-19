@@ -3,7 +3,7 @@ function custom_feed($wp_customize)
 {
     // Sektionen
     $wp_customize->add_section('custom_feed', array(
-        'title' => __('Feed', 'dein-theme-textdomain'),
+        'title' => __('Feed', 'my-theme'),
         'priority' => 30,
     ));
 
@@ -18,7 +18,7 @@ function custom_feed($wp_customize)
 
     $wp_customize->add_control('feed_post_card_tags', array(
         'type' => 'checkbox',
-        'label' => __('Zeige Tags', 'dein-theme-textdomain'),
+        'label' => __('Show tags', 'my-theme'),
         'section' => 'custom_feed',
     ));
 
@@ -31,7 +31,7 @@ function custom_feed($wp_customize)
 
     $wp_customize->add_control('feed_post_card_read_more', array(
         'type' => 'checkbox',
-        'label' => __('Zeige Weiterlesen Button', 'dein-theme-textdomain'),
+        'label' => __('Show read more button', 'my-theme'),
         'section' => 'custom_feed',
     ));
 
@@ -44,7 +44,7 @@ function custom_feed($wp_customize)
 
     $wp_customize->add_control('feed_post_card_comments', array(
         'type' => 'checkbox',
-        'label' => __('Zeige Kommentare', 'dein-theme-textdomain'),
+        'label' => __('Show comments', 'my-theme'),
         'section' => 'custom_feed',
     ));
 
@@ -58,7 +58,7 @@ function custom_feed($wp_customize)
     $wp_customize->add_control('feed_post_card_line_heigt', array(
         'type' => 'range',
         'section' => 'title_tagline',
-        'label' => 'Line height in text snippet',
+        'label' => __('Line height in text snippet', 'my-theme'),
         'section' => 'custom_feed',
         'input_attrs' => array(
             'min' => 15, // Mindestgröße in Pixel
@@ -77,7 +77,7 @@ function custom_feed($wp_customize)
     $wp_customize->add_control('feed_post_card_border_radius', array(
         'type' => 'range',
         'section' => 'title_tagline',
-        'label' => 'Border radius',
+        'label' => __('Border radius', 'my-theme'),
         'section' => 'custom_feed',
         'input_attrs' => array(
             'min' => 0, // Mindestgröße in Pixel
@@ -96,7 +96,7 @@ function custom_feed($wp_customize)
     $wp_customize->add_control('feed_post_card_padding', array(
         'type' => 'range',
         'section' => 'title_tagline',
-        'label' => 'Padding',
+        'label' => __('Padding', 'my_theme'),
         'section' => 'custom_feed',
         'input_attrs' => array(
             'min' => 0, // Mindestgröße
