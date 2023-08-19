@@ -285,7 +285,7 @@ a {
   text-decoration: none;
 }
 .pagination span {
-  outline: 2px solid;
+  outline: 2px solid var(--schrift);
 }
 .pagination a:hover {
   background-color: aliceblue;

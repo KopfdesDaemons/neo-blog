@@ -12,6 +12,7 @@
         justify-content: center;
         flex-direction: column;
         align-items: center;
+        background-size: cover;
 
         .SearchColumn {
             display: flex;
@@ -56,7 +57,7 @@
                 font-size: clamp(10px, 5vw, var(--title-size));
                 word-break: keep-all;
                 margin: 0 0.5em;
-                color: var(--schrift);
+                color: var(--header-font-color);
                 text-align: center;
             }
         }
@@ -64,6 +65,19 @@
         .sloganDiv {
             text-align: center;
             padding: 0 1em;
+
+            span {
+                color: var(--header-font-color);
+            }
+        }
+
+        .headerBanner {
+            max-height: 400px;
+            width: 100%;
+            object-fit: cover;
+            max-width: 90em;
+            margin-top: 0.5em;
+            // margin-bottom: -100px;
         }
         
         .toggleDiv {

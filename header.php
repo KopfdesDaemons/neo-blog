@@ -5,7 +5,7 @@
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <?php if (is_singular() && pings_open()) { ?>
-        <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
+    <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
     <?php }
 
     wp_head(); ?>
@@ -66,67 +66,83 @@
     ?>
 
     <style>
-        :root {
-            /* Colors */
-            --primary-color: <?php echo $primary_color ?>;
-            --primary-variant-darker: <?php echo $primary_variant_darker ?>;
-            --primary-variant-brighter: <?php echo $primary_variant_brighter ?>;
-            --primary-variant-much-brighter: <?php echo $primary_variant_much_brighter ?>;
-            --body: rgb(240, 240, 240);
-            --hintergrund: rgb(255, 255, 255);
-            --schrift: <?php echo get_theme_mod('font_color_light_mode') ?>;
-            --hintergrund-inputfeld: <?php echo $hintergrund_inputfeld ?>;
-            --hintergrund-variant: <?php echo $hintergrund_variant ?>;
-            --hintergrund-variant-darker: <?php echo $hintergrund_variant_darker ?>;
+    <?php $font_color_light_mode=get_theme_mod('font_color_light_mode');
+    $header_font_color_light_mode=get_theme_mod('header_font_color_light_mode');
 
-            /* Font Settings */
-            --title-size: <?php echo get_theme_mod('title_size_setting') . 'px;' ?>;
-            --line-height: <?php echo get_theme_mod('line_heigt') . 'px;' ?>;
-            --feed_post_card_line_heigt: <?php echo get_theme_mod('feed_post_card_line_heigt') . 'px;' ?>;
-            --feed_post_card_border_radius: <?php echo get_theme_mod('feed_post_card_border_radius') . 'px;' ?>;
-            --feed_post_card_padding: <?php echo get_theme_mod('feed_post_card_padding') . 'em;' ?>;
-        }
+    if (empty($header_font_color_light_mode)) {
+        $header_font_color_light_mode=$font_color_light_mode;
+    }
 
-        .darkmode {
-            --primary-variant-darker: <?php echo $primary_variant_much_brighter ?>;
-            --primary-variant-much-brighter: <?php echo $primary_variant_darker ?>;
-            --body: rgb(15, 15, 15);
-            --hintergrund: rgb(22, 24, 28);
-            --schrift: <?php echo get_theme_mod('font_color_dark_mode') ?>;
-            --hintergrund-inputfeld: <?php echo $hintergrund_inputfeld ?>;
-            --hintergrund-variant: <?php echo $hintergrund_variant ?>;
-            --hintergrund-variant-darker: <?php echo $hintergrund_variant_darker ?>;
-        }
+    ?>:root {
+        /* Colors */
+        --primary-color: <?php echo $primary_color ?>;
+        --primary-variant-darker: <?php echo $primary_variant_darker ?>;
+        --primary-variant-brighter: <?php echo $primary_variant_brighter ?>;
+        --primary-variant-much-brighter: <?php echo $primary_variant_much_brighter ?>;
+        --body: rgb(240, 240, 240);
+        --hintergrund: rgb(255, 255, 255);
+        --schrift: <?php echo $font_color_light_mode ?>;
+        --header-font-color: <?php echo $header_font_color_light_mode ?>;
+        --hintergrund-inputfeld: <?php echo $hintergrund_inputfeld ?>;
+        --hintergrund-variant: <?php echo $hintergrund_variant ?>;
+        --hintergrund-variant-darker: <?php echo $hintergrund_variant_darker ?>;
 
-        body {
-            font-family: <?php echo get_theme_mod('body_font', '"Quicksand"');
-                            ?>;
-        }
+        /* Font Settings */
+        --title-size: <?php echo get_theme_mod('title_size_setting') . 'px;'?>;
+        --line-height: <?php echo get_theme_mod('line_heigt') . 'px;'?>;
+        --feed_post_card_line_heigt: <?php echo get_theme_mod('feed_post_card_line_heigt') . 'px;'?>;
+        --feed_post_card_border_radius: <?php echo get_theme_mod('feed_post_card_border_radius') . 'px;'?>;
+        --feed_post_card_padding: <?php echo get_theme_mod('feed_post_card_padding') . 'em;'?>;
+    }
+
+    <?php $font_color_dark_mode=get_theme_mod('font_color_dark_mode');
+    $header_font_color_dark_mode=get_theme_mod('header_font_color_dark_mode');
+
+    if (empty($header_font_color_dark_mode)) {
+        $header_font_color_dark_mode=$font_color_dark_mode;
+    }
+
+    ?>.darkmode {
+        --primary-variant-darker: <?php echo $primary_variant_much_brighter ?>;
+        --primary-variant-much-brighter: <?php echo $primary_variant_darker ?>;
+        --body: rgb(15, 15, 15);
+        --hintergrund: rgb(22, 24, 28);
+        --schrift: <?php echo $font_color_dark_mode ?>;
+        --header-font-color: <?php echo $header_font_color_dark_mode ?>;
+        --hintergrund-inputfeld: <?php echo $hintergrund_inputfeld ?>;
+        --hintergrund-variant: <?php echo $hintergrund_variant ?>;
+        --hintergrund-variant-darker: <?php echo $hintergrund_variant_darker ?>;
+    }
+
+    body {
+        font-family: <?php echo get_theme_mod('body_font', '"Quicksand"');
+        ?>;
+    }
     </style>
 
 
     <script>
-        function toggleMenu() {
-            var menu = document.querySelector('.mobileExpandedMenu');
-            menu.classList.toggle('headerMenuOpen');
-        }
+    function toggleMenu() {
+        var menu = document.querySelector('.mobileExpandedMenu');
+        menu.classList.toggle('headerMenuOpen');
+    }
 
-        function addMarginToBody() {
-            const header = document.querySelector('.header');
-            if (!header.classList.contains('fixedHeader')) return;
-            const height = header.offsetHeight;
-            const main = document.querySelector('main');
-            main.style.marginTop = height + 15 + 'px';
-        }
+    function addMarginToBody() {
+        const header = document.querySelector('.header');
+        if (!header.classList.contains('fixedHeader')) return;
+        const height = header.offsetHeight;
+        const main = document.querySelector('main');
+        main.style.marginTop = height + 15 + 'px';
+    }
 
-        window.addEventListener("DOMContentLoaded", function() {
-            const header = document.querySelector('.header');
-            if (!header.classList.contains('fixedHeader')) return;
+    window.addEventListener("DOMContentLoaded", function() {
+        const header = document.querySelector('.header');
+        if (!header.classList.contains('fixedHeader')) return;
+        addMarginToBody()
+        window.addEventListener('resize', function(event) {
             addMarginToBody()
-            window.addEventListener('resize', function(event) {
-                addMarginToBody()
-            }, true);
-        }, false);
+        }, true);
+    }, false);
     </script>
 
 
@@ -136,9 +152,12 @@
 
     <?php
     $fixedHeader = get_theme_mod('fixed_header', false);
+    $backgroung_image = get_theme_mod('header_background_image');
+
     ?>
     <header id="header" class="clearfix header <?php if ($fixedHeader) echo 'fixedHeader' ?>" role="banner">
-        <div class="headerDiv">
+        <div class="headerDiv" style="background-image: url('<?php echo esc_url($backgroung_image); ?>')">
+
             <!-- <div class="farbpalettenDiv">
                 <ul>
                     <li title="primary-color"></li>
@@ -170,6 +189,14 @@
             if ($tagline) {
                 $description = get_bloginfo('description');
                 echo '<div class="sloganDiv"><span>' . esc_html($description) . '</span></div>';
+            }
+            ?>
+
+            <?php
+            $image_url = get_theme_mod('header_banner');
+
+            if ($image_url) {
+                echo '<img class="headerBanner" src="' . esc_url($image_url) . '" alt="Header Banner">';
             }
             ?>
 

@@ -12,6 +12,7 @@
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  background-size: cover;
 }
 .header .headerDiv .SearchColumn {
   display: flex;
@@ -49,12 +50,23 @@
   font-size: clamp(10px, 5vw, var(--title-size));
   word-break: keep-all;
   margin: 0 0.5em;
-  color: var(--schrift);
+  color: var(--header-font-color);
   text-align: center;
 }
 .header .headerDiv .sloganDiv {
   text-align: center;
   padding: 0 1em;
+}
+.header .headerDiv .sloganDiv span {
+  color: var(--header-font-color);
+}
+.header .headerDiv .headerBanner {
+  max-height: 400px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  max-width: 90em;
+  margin-top: 0.5em;
 }
 .header .headerDiv .toggleDiv {
   display: flex;

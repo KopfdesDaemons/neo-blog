@@ -122,5 +122,51 @@ function custom_theme_header($wp_customize)
         $menu_option_a_value = $control->manager->get_setting('searchbar')->value();
         return $menu_option_a_value; // If Menu Option A is checked, show Menu Option B
     }
+
+    // Background Image
+    $wp_customize->add_setting('header_background_image', array(
+        'default' => '',
+        'sanitize_callback' => 'esc_url_raw', // Um sicherzustellen, dass es eine URL ist
+    ));
+
+    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'image_control2', array(
+        'label' => __('Banner background image', 'my-theme'),
+        'section' => 'custom_theme_header',
+        'settings' => 'header_background_image',
+    )));
+
+    // Banner Image
+    $wp_customize->add_setting('header_banner', array(
+        'default' => '',
+        'sanitize_callback' => 'esc_url_raw', // Um sicherzustellen, dass es eine URL ist
+    ));
+
+    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'image_control', array(
+        'label' => __('Banner image', 'my-theme'),
+        'section' => 'custom_theme_header',
+        'settings' => 'header_banner',
+    )));
+
+    // Font color light mode
+    $wp_customize->add_setting('header_font_color_light_mode', array(
+        'default' => '',
+    ));
+
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'font_color_light_mode2', array(
+        'label' => __('Font color light mode', 'my-theme'),
+        'section' => 'custom_theme_header',
+        'settings' => 'header_font_color_light_mode'
+    )));
+
+    // Font color dark mode
+    $wp_customize->add_setting('header_font_color_dark_mode', array(
+        'default' => '',
+    ));
+
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'font_color_dark_mode2', array(
+        'label' => __('Font color dark mode', 'my-theme'),
+        'section' => 'custom_theme_header',
+        'settings' => 'header_font_color_dark_mode'
+    )));
 }
 add_action('customize_register', 'custom_theme_header');
