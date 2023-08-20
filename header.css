@@ -1,18 +1,29 @@
+.header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+
 .header {
   margin-bottom: 1em;
+  position: relative;
   z-index: 10;
   width: 100%;
   box-sizing: border-box;
   border-bottom: 1px solid gray;
+  background-color: var(--hintergrund);
 }
 .header .headerDiv {
-  background-color: var(--hintergrund);
   width: 100%;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  background-size: cover;
+  position: relative;
 }
 .header .headerDiv .SearchColumn {
   display: flex;
@@ -136,7 +147,7 @@
   flex-flow: row wrap;
 }
 .header .headerDiv .headerMenuColumn ul a {
-  color: var(--primary-variant-darker);
+  color: var(--header-menu-font-color);
   text-decoration: none;
   padding: 0.8rem;
 }

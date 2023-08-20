@@ -66,11 +66,19 @@
     ?>
 
     <style>
-    <?php $font_color_light_mode=get_theme_mod('font_color_light_mode');
+    <?php // Variablen aus Settings
+    $font_color_light_mode=get_theme_mod('font_color_light_mode');
     $header_font_color_light_mode=get_theme_mod('header_font_color_light_mode');
+    $header_meu_font_color=get_theme_mod('header_menu_font_color');
 
+    // Automatische Schriftfarbe für den Header, wenn keine eigene Farbe
     if (empty($header_font_color_light_mode)) {
         $header_font_color_light_mode=$font_color_light_mode;
+    }
+
+    // primary-variant-darker für Headermenü, wenn keine eigene Farbe
+    if (empty($header_meu_font_color)) {
+        $header_meu_font_color="var(--primary-variant-darker)";
     }
 
     ?>:root {
@@ -83,6 +91,7 @@
         --hintergrund: rgb(255, 255, 255);
         --schrift: <?php echo $font_color_light_mode ?>;
         --header-font-color: <?php echo $header_font_color_light_mode ?>;
+        --header-menu-font-color: <?php echo $header_meu_font_color ?>;
         --hintergrund-inputfeld: <?php echo $hintergrund_inputfeld ?>;
         --hintergrund-variant: <?php echo $hintergrund_variant ?>;
         --hintergrund-variant-darker: <?php echo $hintergrund_variant_darker ?>;
@@ -95,9 +104,13 @@
         --feed_post_card_padding: <?php echo get_theme_mod('feed_post_card_padding') . 'em;'?>;
     }
 
-    <?php $font_color_dark_mode=get_theme_mod('font_color_dark_mode');
+
+
+    <?php // Variablen aus Settings
+    $font_color_dark_mode=get_theme_mod('font_color_dark_mode');
     $header_font_color_dark_mode=get_theme_mod('header_font_color_dark_mode');
 
+    // Automatische Schriftfarbe für den Header, wenn keine eigene Farbe
     if (empty($header_font_color_dark_mode)) {
         $header_font_color_dark_mode=$font_color_dark_mode;
     }
@@ -115,8 +128,14 @@
     }
 
     body {
-        font-family: <?php echo get_theme_mod('body_font', '"Quicksand"');
-        ?>;
+        font-family: <?php echo get_theme_mod('body_font', '"Quicksand"') ?>;
+    }
+
+    <?php $backgroung_image=get_theme_mod('header_background_image');
+
+    ?>.header::before {
+        background-image: url('<?php echo esc_url($backgroung_image); ?>');
+        filter: <?php echo 'saturate('. get_theme_mod('header_background_saturation') . '%)'?>;
     }
     </style>
 
@@ -152,11 +171,11 @@
 
     <?php
     $fixedHeader = get_theme_mod('fixed_header', false);
-    $backgroung_image = get_theme_mod('header_background_image');
+
 
     ?>
     <header id="header" class="clearfix header <?php if ($fixedHeader) echo 'fixedHeader' ?>" role="banner">
-        <div class="headerDiv" style="background-image: url('<?php echo esc_url($backgroung_image); ?>')">
+        <div class="headerDiv">
 
             <!-- <div class="farbpalettenDiv">
                 <ul>
@@ -192,14 +211,17 @@
             }
             ?>
 
+
+            <!-- Banner -->
             <?php
             $image_url = get_theme_mod('header_banner');
-
             if ($image_url) {
                 echo '<img class="headerBanner" src="' . esc_url($image_url) . '" alt="Header Banner">';
             }
             ?>
 
+
+            <!-- Togglebutton, Menü und Suche -->
             <div class="toggleDiv">
                 <button id="headerMenuBtn" onclick="toggleMenu()"><i class="fa-solid fa-bars"></i></button>
 
@@ -213,8 +235,6 @@
                 ?>
             </div>
             <div class="mobileExpandedMenu">
-
-
                 <nav class="headerMenuColumn">
                     <?php
                     $header_menu = get_theme_mod('header_menu', false);

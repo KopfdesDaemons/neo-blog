@@ -123,6 +123,12 @@ function custom_theme_header($wp_customize)
         return $menu_option_a_value; // If Menu Option A is checked, show Menu Option B
     }
 
+    function background_image_callback($control)
+    {
+        $backgound_image = $control->manager->get_setting('header_background_image')->value();
+        return $backgound_image;
+    }
+
     // Background Image
     $wp_customize->add_setting('header_background_image', array(
         'default' => '',
@@ -133,7 +139,29 @@ function custom_theme_header($wp_customize)
         'label' => __('Banner background image', 'my-theme'),
         'section' => 'custom_theme_header',
         'settings' => 'header_background_image',
+        'type' => 'image', // Setze den Steuerungstyp auf Bild
+        'mime_type' => 'image', // Beschränke den Dateityp auf Bilder
     )));
+
+    // Backgoundimage saturation
+    $wp_customize->add_setting('header_background_saturation', array(
+        'default' => '80',
+        'transport' => 'refresh',
+        'sanitize_callback' => 'absint', // Nur positive Ganzzahlen erlauben
+    ));
+
+    $wp_customize->add_control('header_background_saturation', array(
+        'type' => 'range',
+        'section' => 'title_tagline', // Hier kannst du eine andere Sektion wählen, in der du die Einstellung platzieren möchtest
+        'label' => __('Background image saturation', 'my-theme'),
+        'section' => 'custom_theme_header',
+        'input_attrs' => array(
+            'min' => 0,
+            'max' => 100,
+            'step' => 1,
+        ),
+        'active_callback' => 'background_image_callback'
+    ));
 
     // Banner Image
     $wp_customize->add_setting('header_banner', array(
@@ -167,6 +195,17 @@ function custom_theme_header($wp_customize)
         'label' => __('Font color dark mode', 'my-theme'),
         'section' => 'custom_theme_header',
         'settings' => 'header_font_color_dark_mode'
+    )));
+
+    // Font color menu
+    $wp_customize->add_setting('header_menu_font_color', array(
+        'default' => '',
+    ));
+
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'font_color_header_menu', array(
+        'label' => __('Font color menu', 'my-theme'),
+        'section' => 'custom_theme_header',
+        'settings' => 'header_menu_font_color'
     )));
 }
 add_action('customize_register', 'custom_theme_header');
