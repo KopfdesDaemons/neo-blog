@@ -110,6 +110,25 @@ function custom_theme_header($wp_customize)
         'section' => 'custom_theme_header',
     ));
 
+    // Header gap / Spacing
+    $wp_customize->add_setting('header_gap', array(
+        'default' => '0',
+        'transport' => 'refresh',
+        'sanitize_callback' => 'absint', // Nur positive Ganzzahlen erlauben
+    ));
+
+    $wp_customize->add_control('header_gap', array(
+        'type' => 'range',
+        'section' => 'title_tagline', // Hier kannst du eine andere Sektion wählen, in der du die Einstellung platzieren möchtest
+        'label' => __('Element spacing', 'my-theme'),
+        'section' => 'custom_theme_header',
+        'input_attrs' => array(
+            'min' => 0,
+            'max' => 15,
+            'step' => 0.1,
+        ),
+    ));
+
     // actice callbacks
     function title_active_callback($control)
     {
@@ -129,6 +148,12 @@ function custom_theme_header($wp_customize)
         return $backgound_image;
     }
 
+    function header_menu_callback($control)
+    {
+        $header_menu = $control->manager->get_setting('header_menu')->value();
+        return $header_menu;
+    }
+
     // Background Image
     $wp_customize->add_setting('header_background_image', array(
         'default' => '',
@@ -136,7 +161,7 @@ function custom_theme_header($wp_customize)
     ));
 
     $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'image_control2', array(
-        'label' => __('Banner background image', 'my-theme'),
+        'label' => __('Background image', 'my-theme'),
         'section' => 'custom_theme_header',
         'settings' => 'header_background_image',
         'type' => 'image', // Setze den Steuerungstyp auf Bild
@@ -205,7 +230,20 @@ function custom_theme_header($wp_customize)
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'font_color_header_menu', array(
         'label' => __('Font color menu', 'my-theme'),
         'section' => 'custom_theme_header',
-        'settings' => 'header_menu_font_color'
+        'settings' => 'header_menu_font_color',
+        'active_callback' => 'header_menu_callback'
+    )));
+
+    // Mneu backgound color
+    $wp_customize->add_setting('header_menu_background_color', array(
+        'default' => '',
+    ));
+
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'header_menu_background_color', array(
+        'label' => __('Menu backgound color', 'my-theme'),
+        'section' => 'custom_theme_header',
+        'settings' => 'header_menu_background_color',
+        'active_callback' => 'header_menu_callback'
     )));
 }
 add_action('customize_register', 'custom_theme_header');

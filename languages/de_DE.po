@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: my-theme\n"
-"POT-Creation-Date: 2023-08-19 21:18+0200\n"
-"PO-Revision-Date: 2023-08-19 21:19+0200\n"
+"POT-Creation-Date: 2023-08-20 13:38+0200\n"
+"PO-Revision-Date: 2023-08-20 13:38+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de\n"
@@ -179,10 +179,12 @@ msgid "Line height in paragraphs"
 msgstr "Zeilenhöhe in Absätzen"
 
 #: customizer-options/fonts-options.php:64
+#: customizer-options/header-options.php:209
 msgid "Font color light mode"
 msgstr "Schriftfarbe im hellen Modus"
 
 #: customizer-options/fonts-options.php:75
+#: customizer-options/header-options.php:220
 msgid "Font color dark mode"
 msgstr "Schriftfarbe im dunklen Modus"
 
@@ -204,7 +206,7 @@ msgstr "Suchleiste anzeigen"
 
 #: customizer-options/header-options.php:62
 msgid "Show search button"
-msgstr "Suchschaltfläche anzeigen"
+msgstr "Suchbutton anzeigen"
 
 #: customizer-options/header-options.php:76
 msgid "Show title"
@@ -218,9 +220,29 @@ msgstr "Titelgröße"
 msgid "Show slogan"
 msgstr "Slogan anzeigen"
 
-#: customizer-options/header-options.php:134
+#: customizer-options/header-options.php:123
+msgid "Element spacing"
+msgstr "Abstand der Elemente"
+
+#: customizer-options/header-options.php:164
+msgid "Background image"
+msgstr "Hintergrundbild"
+
+#: customizer-options/header-options.php:181
+msgid "Background image saturation"
+msgstr "Sättigung des Hintergundbildes"
+
+#: customizer-options/header-options.php:198
 msgid "Banner image"
 msgstr "Bannerbild"
+
+#: customizer-options/header-options.php:231
+msgid "Font color menu"
+msgstr "Schriftfarbe des Menüs"
+
+#: customizer-options/header-options.php:243
+msgid "Menu backgound color"
+msgstr "Hintergrundfarbe des Menüs"
 
 #: customizer-options/pages-options.php:6
 msgid "Pages"

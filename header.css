@@ -24,6 +24,7 @@
   flex-direction: column;
   align-items: center;
   position: relative;
+  gap: var(--header-gap);
 }
 .header .headerDiv .SearchColumn {
   display: flex;
@@ -67,6 +68,7 @@
 .header .headerDiv .sloganDiv {
   text-align: center;
   padding: 0 1em;
+  margin-bottom: 0.3em;
 }
 .header .headerDiv .sloganDiv span {
   color: var(--header-font-color);
@@ -77,7 +79,7 @@
   -o-object-fit: cover;
      object-fit: cover;
   max-width: 90em;
-  margin-top: 0.5em;
+  margin: 0.5em 0;
 }
 .header .headerDiv .toggleDiv {
   display: flex;
@@ -139,6 +141,10 @@
   justify-content: center;
   flex-direction: column;
   align-items: center;
+}
+.header .headerDiv .headerMenuColumn div {
+  background-color: var(--header-menu-backgound-color);
+  border-radius: 8px;
 }
 .header .headerDiv .headerMenuColumn ul {
   display: flex;
