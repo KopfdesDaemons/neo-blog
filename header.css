@@ -56,7 +56,6 @@
 }
 .header .headerDiv .titleDiv a {
   text-decoration: none;
-  color: black;
 }
 .header .headerDiv .titleDiv .site-title {
   font-size: clamp(10px, 5vw, var(--title-size));
@@ -64,6 +63,7 @@
   margin: 0 0.5em;
   color: var(--header-font-color);
   text-align: center;
+  background-color: var(--header-text-background-color);
 }
 .header .headerDiv .sloganDiv {
   text-align: center;
@@ -72,6 +72,7 @@
 }
 .header .headerDiv .sloganDiv span {
   color: var(--header-font-color);
+  background-color: var(--header-text-background-color);
 }
 .header .headerDiv .headerBanner {
   max-height: 400px;

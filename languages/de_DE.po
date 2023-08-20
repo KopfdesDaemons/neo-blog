@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: my-theme\n"
-"POT-Creation-Date: 2023-08-20 13:38+0200\n"
-"PO-Revision-Date: 2023-08-20 13:38+0200\n"
+"POT-Creation-Date: 2023-08-20 23:03+0200\n"
+"PO-Revision-Date: 2023-08-20 23:04+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de\n"
@@ -22,14 +22,6 @@ msgstr "Letzte Kommentare von"
 #: archive.php:84
 msgid "No comments found."
 msgstr "Keine Kommentare gefunden."
-
-#: archive.php:94
-msgid "Category:"
-msgstr "Kategorie:"
-
-#: archive.php:96
-msgid "Tag:"
-msgstr "Tag:"
 
 #: archive.php:99
 msgid "Posts by"
@@ -113,19 +105,19 @@ msgstr "Bildgröße"
 msgid "Colors"
 msgstr "Farben"
 
-#: customizer-options/colors-options.php:32
+#: customizer-options/colors-options.php:76
 msgid "Dark Mode"
 msgstr "Dark Mode"
 
-#: customizer-options/colors-options.php:35
+#: customizer-options/colors-options.php:79
 msgid "Dark"
 msgstr "Dunkel"
 
-#: customizer-options/colors-options.php:36
+#: customizer-options/colors-options.php:80
 msgid "Light"
 msgstr "Hell"
 
-#: customizer-options/colors-options.php:37
+#: customizer-options/colors-options.php:81
 msgid "System"
 msgstr "System"
 
@@ -179,12 +171,12 @@ msgid "Line height in paragraphs"
 msgstr "Zeilenhöhe in Absätzen"
 
 #: customizer-options/fonts-options.php:64
-#: customizer-options/header-options.php:209
+#: customizer-options/header-options.php:222
 msgid "Font color light mode"
 msgstr "Schriftfarbe im hellen Modus"
 
 #: customizer-options/fonts-options.php:75
-#: customizer-options/header-options.php:220
+#: customizer-options/header-options.php:233
 msgid "Font color dark mode"
 msgstr "Schriftfarbe im dunklen Modus"
 
@@ -220,27 +212,31 @@ msgstr "Titelgröße"
 msgid "Show slogan"
 msgstr "Slogan anzeigen"
 
-#: customizer-options/header-options.php:123
+#: customizer-options/header-options.php:122
+msgid "Text background"
+msgstr "Hintergrundfarbe des Textes"
+
+#: customizer-options/header-options.php:136
 msgid "Element spacing"
 msgstr "Abstand der Elemente"
 
-#: customizer-options/header-options.php:164
+#: customizer-options/header-options.php:177
 msgid "Background image"
 msgstr "Hintergrundbild"
 
-#: customizer-options/header-options.php:181
+#: customizer-options/header-options.php:194
 msgid "Background image saturation"
 msgstr "Sättigung des Hintergundbildes"
 
-#: customizer-options/header-options.php:198
+#: customizer-options/header-options.php:211
 msgid "Banner image"
 msgstr "Bannerbild"
 
-#: customizer-options/header-options.php:231
+#: customizer-options/header-options.php:244
 msgid "Font color menu"
 msgstr "Schriftfarbe des Menüs"
 
-#: customizer-options/header-options.php:243
+#: customizer-options/header-options.php:256
 msgid "Menu backgound color"
 msgstr "Hintergrundfarbe des Menüs"
 
@@ -307,3 +303,9 @@ msgstr "Deine Website"
 #: template-parts/feed.php:47
 msgid "read more"
 msgstr "Mehr lesen"
+
+#~ msgid "Category:"
+#~ msgstr "Kategorie:"
+
+#~ msgid "Tag:"
+#~ msgstr "Tag:"

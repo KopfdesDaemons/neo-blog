@@ -94,7 +94,8 @@
         --header-font-color: <?php echo $header_font_color_light_mode ?>;
         --header-menu-font-color: <?php echo $header_meu_font_color ?>;
         --header-menu-backgound-color: <?php echo get_theme_mod('header_menu_background_color') ?>;
-
+        --header-text-background-color: <?php if (get_theme_mod('header_text_background')) echo '#00000057';
+        else echo 'transparent'?>;
         --hintergrund-inputfeld: <?php echo $hintergrund_inputfeld ?>;
         --hintergrund-variant: <?php echo $hintergrund_variant ?>;
         --hintergrund-variant-darker: <?php echo $hintergrund_variant_darker ?>;

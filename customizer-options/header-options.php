@@ -110,6 +110,19 @@ function custom_theme_header($wp_customize)
         'section' => 'custom_theme_header',
     ));
 
+    // Background für Titel und Slogan
+    $wp_customize->add_setting('header_text_background', array(
+        'default' => true,
+        'transport' => 'refresh',
+        'sanitize_callback' => 'sanitize_checkbox',
+    ));
+
+    $wp_customize->add_control('header_text_background', array(
+        'type' => 'checkbox',
+        'label' => __('Text background', 'my-theme'),
+        'section' => 'custom_theme_header',
+    ));
+
     // Header gap / Spacing
     $wp_customize->add_setting('header_gap', array(
         'default' => '0',
