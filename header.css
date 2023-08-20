@@ -26,6 +26,11 @@
   position: relative;
   gap: var(--header-gap);
 }
+@media only screen and (max-width: 600px) {
+  .header .headerDiv {
+    gap: 0;
+  }
+}
 .header .headerDiv .SearchColumn {
   display: flex;
   align-items: center;

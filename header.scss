@@ -26,6 +26,10 @@
         position: relative;
         gap: var(--header-gap);
 
+        @media only screen and (max-width: 600px) {
+            gap: 0;
+        }
+
         .SearchColumn {
             display: flex;
             align-items: center;
