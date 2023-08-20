@@ -91,9 +91,9 @@
             <h1>
                 <?php
                 if (is_category()) {
-                    echo esc_html__('Category:', 'my-theme') . ' ' . single_cat_title(); // Anzeigen des Kategorienamens für Kategorie-Archive
+                    echo single_cat_title(); // Anzeigen des Kategorienamens für Kategorie-Archive
                 } elseif (is_tag()) {
-                    echo esc_html__('Tag:', 'my-theme') . ' ' . single_tag_title(); // Anzeigen des Schlagwortnamens für Schlagwort-Archive
+                    echo single_tag_title(); // Anzeigen des Schlagwortnamens für Schlagwort-Archive
                 } elseif (is_author()) {
                     the_post();
                     echo esc_html__('Posts by', 'my-theme') . ' ' . get_the_author(); // Anzeigen des Autorennamens für Autoren-Archive
