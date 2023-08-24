@@ -71,6 +71,7 @@ table thead tr {
 th,
 td {
     padding: 12px 15px;
+    border: none !important;
 }
 
 th {
@@ -163,6 +164,7 @@ tbody tr:nth-of-type(even) {
 
 .articlearea {
     width: 100%;
+    overflow: hidden;
 
     .content {
         // max-width: 45em;
@@ -176,7 +178,7 @@ tbody tr:nth-of-type(even) {
 
     .content {
         @media only screen and (max-width: 600px) {
-            padding: 1em;
+            padding: 0.5em;
         }
     }
 

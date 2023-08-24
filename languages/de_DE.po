@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: my-theme\n"
-"POT-Creation-Date: 2023-08-24 23:20+0200\n"
-"PO-Revision-Date: 2023-08-24 23:23+0200\n"
+"POT-Creation-Date: 2023-08-25 00:12+0200\n"
+"PO-Revision-Date: 2023-08-25 00:12+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de\n"
@@ -14,6 +14,10 @@ msgstr ""
 "X-Poedit-KeywordsList: gettext;gettext_noop;__;_e;_n:1,2;_x:1,2c;_ex:1,2c;"
 "esc_html__\n"
 "X-Poedit-SearchPath-0: .\n"
+
+#: 404.php:7
+msgid "Go to the home page"
+msgstr "Gehe zur Startseite"
 
 #: archive.php:63
 msgid "Last comments from"
