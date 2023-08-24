@@ -96,6 +96,12 @@ function custom_comment_form_fields($fields)
 
 add_filter('comment_form_default_fields', 'custom_comment_form_fields');
 
+function custom_excerpt_more($more)
+{
+    return '...';
+}
+add_filter('excerpt_more', 'custom_excerpt_more');
+
 // #########################################
 // Costum Settings
 // #########################################

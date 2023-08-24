@@ -104,5 +104,79 @@ function custom_feed($wp_customize)
             'step' => 0.1, // Schrittgröße für den Zähler
         ),
     ));
+
+    // Show image
+    $wp_customize->add_setting('feed_post_card_image', array(
+        'default' => true,
+        'transport' => 'refresh',
+        'sanitize_callback' => 'sanitize_checkbox',
+    ));
+
+    $wp_customize->add_control('feed_post_card_image', array(
+        'type' => 'checkbox',
+        'label' => __('Show image', 'my-theme'),
+        'section' => 'custom_feed',
+    ));
+
+    $wp_customize->add_setting('feed_image_postion', array(
+        'default' => 'imageLeft',
+        'transport' => 'refresh'
+    ));
+
+    $wp_customize->add_control('feed_image_postion', array(
+        'type' => 'select',
+        'label' => __('Image postion', 'my-theme'),
+        'section' => 'custom_feed',
+        'active_callback' => 'image_active_callback',
+        'choices' => array(
+            'imageLeft' => __('left', 'my-theme'),
+            'imageTop' => __('top', 'my-theme'),
+        ),
+    ));
+
+    // Border radius image
+    $wp_customize->add_setting('feed_post_card_border_radius_image', array(
+        'default' => '10',
+        'transport' => 'refresh',
+        'sanitize_callback' => 'absint', // Nur positive Ganzzahlen erlauben
+    ));
+
+    $wp_customize->add_control('feed_post_card_border_radius_image', array(
+        'type' => 'range',
+        'section' => 'title_tagline',
+        'label' => __('Image radius', 'my-theme'),
+        'section' => 'custom_feed',
+        'active_callback' => 'image_active_callback',
+        'input_attrs' => array(
+            'min' => 0, // Mindestgröße in Pixel
+            'max' => 150, // Maximale Größe in Pixel
+            'step' => 1, // Schrittgröße für den Zähler
+        ),
+    ));
+
+    function image_active_callback($control)
+    {
+        $image = $control->manager->get_setting('feed_post_card_image')->value();
+        return $image;
+    }
+
+    // Posts Spacing
+    $wp_customize->add_setting('feed_post_card_spacing', array(
+        'default' => '2',
+        'transport' => 'refresh',
+        'sanitize_callback' => 'absint', // Nur positive Ganzzahlen erlauben
+    ));
+
+    $wp_customize->add_control('feed_post_card_spacing', array(
+        'type' => 'range',
+        'section' => 'title_tagline',
+        'label' => __('Spacing between posts', 'my-theme'),
+        'section' => 'custom_feed',
+        'input_attrs' => array(
+            'min' => 0, // Mindestgröße in Pixel
+            'max' => 10, // Maximale Größe in Pixel
+            'step' => 0.1, // Schrittgröße für den Zähler
+        ),
+    ));
 }
 add_action('customize_register', 'custom_feed');

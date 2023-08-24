@@ -146,13 +146,13 @@ function custom_theme_header($wp_customize)
     function title_active_callback($control)
     {
         $menu_option_a_value = $control->manager->get_setting('title')->value();
-        return $menu_option_a_value; // If Menu Option A is checked, show Menu Option B
+        return $menu_option_a_value;
     }
 
     function searchbar_active_callback($control)
     {
         $menu_option_a_value = $control->manager->get_setting('searchbar')->value();
-        return $menu_option_a_value; // If Menu Option A is checked, show Menu Option B
+        return $menu_option_a_value;
     }
 
     function background_image_callback($control)

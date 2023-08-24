@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: my-theme\n"
-"POT-Creation-Date: 2023-08-20 23:03+0200\n"
-"PO-Revision-Date: 2023-08-20 23:04+0200\n"
+"POT-Creation-Date: 2023-08-24 23:20+0200\n"
+"PO-Revision-Date: 2023-08-24 23:23+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de\n"
@@ -150,6 +150,30 @@ msgstr "Rahmenradius"
 msgid "Padding"
 msgstr "Innenabstand (Padding)"
 
+#: customizer-options/feed-options.php:117
+msgid "Show image"
+msgstr "Bild anzeigen"
+
+#: customizer-options/feed-options.php:128
+msgid "Image postion"
+msgstr "Bildposition"
+
+#: customizer-options/feed-options.php:132
+msgid "left"
+msgstr "links"
+
+#: customizer-options/feed-options.php:133
+msgid "top"
+msgstr "oben"
+
+#: customizer-options/feed-options.php:147
+msgid "Image radius"
+msgstr "Bildradius"
+
+#: customizer-options/feed-options.php:173
+msgid "Spacing between posts"
+msgstr "Abstand zwischen Beiträgen"
+
 #: customizer-options/fonts-options.php:6
 msgid "Font"
 msgstr "Schriftart"
@@ -214,7 +238,7 @@ msgstr "Slogan anzeigen"
 
 #: customizer-options/header-options.php:122
 msgid "Text background"
-msgstr "Hintergrundfarbe des Textes"
+msgstr "Hintergrundfarbe der Texte"
 
 #: customizer-options/header-options.php:136
 msgid "Element spacing"
@@ -246,7 +270,7 @@ msgstr "Seiten"
 
 #: customizer-options/pages-options.php:21
 msgid "Show Sidebar"
-msgstr "Seitenleiste anzeigen"
+msgstr "Sidebar anzeigen"
 
 #: customizer-options/posts-options.php:6
 msgid "Posts"
