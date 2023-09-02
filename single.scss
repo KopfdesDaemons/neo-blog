@@ -1,6 +1,10 @@
 h1 {
-    font-size: clamp(25px, 4vw, 35px);
+    font-size: clamp(24px, 4vw, var(--heading_font_size));
     margin-bottom: 0.5em;
+}
+
+.postSpacer {
+    max-width: var(--max_posts_width);
 }
 
 // Zitate
@@ -162,12 +166,15 @@ tbody tr:nth-of-type(even) {
     }
 }
 
+.darkmode .articlearea {
+    background-color: var(--dark_mode_background_color_posts);
+}
 .articlearea {
     width: 100%;
     overflow: hidden;
+    background-color: var(--background_color_posts);
 
     .content {
-        // max-width: 45em;
         padding: 2em;
         padding-top: 0;
         border-radius: 16px;
@@ -217,30 +224,30 @@ tbody tr:nth-of-type(even) {
         .page-links-title {
             margin-right: 0.5em;
         }
-
-        span {
-            color: var(--schrift);
-        }
-
+        
         .post-page-numbers {
-            color: #000000;
-            border-radius: 12px;
+            border-radius: 8px;
             text-decoration: none;
-            background-color: aquamarine;
+            background-color: var(--hintergrund-variant-darker);
             margin: 0.2em;
             padding: 0.5em 1em;
+            
+            span {
+                color: var(--primary-color);
+            }
+        }
+        
+        .current {
+            border: 1px solid var(--schrift);
+            background-color: unset;
 
             span {
-                color: #000000;
+                color: var(--schrift);
             }
         }
 
-        .current {
-            outline: 2px solid;
-        }
-
         a:hover {
-            background-color: aliceblue;
+            background-color: var(--primary-variant-much-brighter);
         }
     }
 

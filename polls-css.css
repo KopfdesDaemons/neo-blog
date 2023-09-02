@@ -14,6 +14,7 @@
 .articleArea .wp-polls-ans {
   margin-bottom: 2em;
   border: 1px solid var(--primary-color);
+  background-color: var(--hintergrund);
 }
 .articleArea .wp-polls-ans ul {
   list-style: none;

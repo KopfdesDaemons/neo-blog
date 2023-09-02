@@ -1,6 +1,10 @@
 h1 {
-  font-size: clamp(25px, 4vw, 35px);
+  font-size: clamp(24px, 4vw, var(--heading_font_size));
   margin-bottom: 0.5em;
+}
+
+.postSpacer {
+  max-width: var(--max_posts_width);
 }
 
 .wp-block-quote,
@@ -148,9 +152,14 @@ tbody tr:nth-of-type(even) {
   transform: scale(1.5);
 }
 
+.darkmode .articlearea {
+  background-color: var(--dark_mode_background_color_posts);
+}
+
 .articlearea {
   width: 100%;
   overflow: hidden;
+  background-color: var(--background_color_posts);
 }
 .articlearea .content {
   padding: 2em;
@@ -193,25 +202,25 @@ tbody tr:nth-of-type(even) {
 .articlearea .page-links .page-links-title {
   margin-right: 0.5em;
 }
-.articlearea .page-links span {
-  color: var(--schrift);
-}
 .articlearea .page-links .post-page-numbers {
-  color: #000000;
-  border-radius: 12px;
+  border-radius: 8px;
   text-decoration: none;
-  background-color: aquamarine;
+  background-color: var(--hintergrund-variant-darker);
   margin: 0.2em;
   padding: 0.5em 1em;
 }
 .articlearea .page-links .post-page-numbers span {
-  color: #000000;
+  color: var(--primary-color);
 }
 .articlearea .page-links .current {
-  outline: 2px solid;
+  border: 1px solid var(--schrift);
+  background-color: unset;
+}
+.articlearea .page-links .current span {
+  color: var(--schrift);
 }
 .articlearea .page-links a:hover {
-  background-color: aliceblue;
+  background-color: var(--primary-variant-much-brighter);
 }
 .articlearea .gallery .gallery-item {
   font-size: 0.8em;

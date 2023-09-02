@@ -45,6 +45,25 @@ function custom_feed($wp_customize)
         ),
     ));
 
+    // Posts Spacing
+    $wp_customize->add_setting('feed_post_card_spacing', array(
+        'default' => '2',
+        'transport' => 'refresh',
+        'sanitize_callback' => 'absint', // Nur positive Ganzzahlen erlauben
+    ));
+
+    $wp_customize->add_control('feed_post_card_spacing', array(
+        'type' => 'range',
+        'section' => 'title_tagline',
+        'label' => __('Spacing between posts', 'my-theme'),
+        'section' => 'custom_feed',
+        'input_attrs' => array(
+            'min' => 0, // Mindestgröße in Pixel
+            'max' => 10, // Maximale Größe in Pixel
+            'step' => 0.1, // Schrittgröße für den Zähler
+        ),
+    ));
+
     $wp_customize->add_setting('words_in_snippet', array(
         'default' => 30, // Standardmäßig 5 Beiträge im Feed
         'sanitize_callback' => 'absint', // Sicherheitsfunktion, um sicherzustellen, dass die Eingabe eine ganze Zahl ist
@@ -275,24 +294,5 @@ function custom_feed($wp_customize)
     {
         return $control->manager->get_setting('feed_post_card_tags')->value();
     }
-
-    // Posts Spacing
-    $wp_customize->add_setting('feed_post_card_spacing', array(
-        'default' => '2',
-        'transport' => 'refresh',
-        'sanitize_callback' => 'absint', // Nur positive Ganzzahlen erlauben
-    ));
-
-    $wp_customize->add_control('feed_post_card_spacing', array(
-        'type' => 'range',
-        'section' => 'title_tagline',
-        'label' => __('Spacing between posts', 'my-theme'),
-        'section' => 'custom_feed',
-        'input_attrs' => array(
-            'min' => 0, // Mindestgröße in Pixel
-            'max' => 10, // Maximale Größe in Pixel
-            'step' => 0.1, // Schrittgröße für den Zähler
-        ),
-    ));
 }
 add_action('customize_register', 'custom_feed');

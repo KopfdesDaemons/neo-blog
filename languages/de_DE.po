@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: my-theme\n"
-"POT-Creation-Date: 2023-09-02 17:44+0200\n"
-"PO-Revision-Date: 2023-09-02 17:45+0200\n"
+"POT-Creation-Date: 2023-09-02 22:35+0200\n"
+"PO-Revision-Date: 2023-09-02 22:35+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de\n"
@@ -19,35 +19,51 @@ msgstr ""
 msgid "Go to the home page"
 msgstr "Gehe zur Startseite"
 
-#: archive.php:63
+#: archive.php:34
+msgid "Role"
+msgstr "Rolle"
+
+#: archive.php:40 customizer-options/feed-options.php:38
+msgid "Number of posts"
+msgstr "Anzahl der Beiträge"
+
+#: archive.php:52
+msgid "Registration Date"
+msgstr "Registrierungsdatum"
+
+#: archive.php:57
+msgid "Website"
+msgstr "Webseite"
+
+#: archive.php:74
 msgid "Last comments from"
 msgstr "Letzte Kommentare von"
 
-#: archive.php:84
+#: archive.php:95
 msgid "No comments found."
 msgstr "Keine Kommentare gefunden."
 
-#: archive.php:99
+#: archive.php:110
 msgid "Posts by"
 msgstr "Beiträge von"
 
-#: archive.php:102 archive.php:104 archive.php:106
+#: archive.php:113 archive.php:115 archive.php:117
 msgid "Archive for"
 msgstr "Archive für"
 
-#: archive.php:108
+#: archive.php:119
 msgid "Archive"
 msgstr "Archive"
 
-#: archive.php:135 home.php:33 index.php:24 search.php:35
+#: archive.php:146 home.php:33 index.php:24 search.php:35
 msgid "« Previous"
 msgstr "« Zurück"
 
-#: archive.php:136 home.php:34 index.php:25 search.php:36
+#: archive.php:147 home.php:34 index.php:25 search.php:36
 msgid "Next »"
 msgstr "Weiter »"
 
-#: archive.php:141 home.php:40 index.php:31
+#: archive.php:152 home.php:40 index.php:31
 msgid "No posts found."
 msgstr "Keine Beiträge gefunden."
 
@@ -77,7 +93,7 @@ msgid "Author Page"
 msgstr "Autorenseite"
 
 #: customizer-options/author-page-options.php:21
-#: customizer-options/posts-options.php:100
+#: customizer-options/posts-options.php:141
 msgid "Show sidebar"
 msgstr "Seitenleiste anzeigen"
 
@@ -133,74 +149,70 @@ msgstr "Feed"
 msgid "Maximum width of the feed"
 msgstr "Maximale Breite des Feeds"
 
-#: customizer-options/feed-options.php:38
-msgid "Number of posts"
-msgstr "Anzahl der Beiträge"
+#: customizer-options/feed-options.php:58
+msgid "Spacing between posts"
+msgstr "Abstand zwischen Beiträgen"
 
-#: customizer-options/feed-options.php:55
+#: customizer-options/feed-options.php:74
 msgid "Number of words in the snippet"
 msgstr "Anzahl der Wörter in der Vorschau"
 
-#: customizer-options/feed-options.php:75
-#: customizer-options/posts-options.php:48
+#: customizer-options/feed-options.php:94
+#: customizer-options/posts-options.php:89
 msgid "Show tags"
 msgstr "Tags anzeigen"
 
-#: customizer-options/feed-options.php:89
+#: customizer-options/feed-options.php:108
 msgid "Tags border radius"
 msgstr "Radius der Tags"
 
-#: customizer-options/feed-options.php:108
+#: customizer-options/feed-options.php:127
 msgid "Show read more button"
 msgstr "Schaltfläche „Mehr lesen“ anzeigen"
 
-#: customizer-options/feed-options.php:121
+#: customizer-options/feed-options.php:140
 msgid "Show comments"
 msgstr "Kommentare anzeigen"
 
-#: customizer-options/feed-options.php:135
+#: customizer-options/feed-options.php:154
 msgid "Line height in text snippet"
 msgstr "Zeilenhöhe im Textausschnitt"
 
-#: customizer-options/feed-options.php:154
+#: customizer-options/feed-options.php:173
 msgid "Border radius"
 msgstr "Rahmenradius"
 
-#: customizer-options/feed-options.php:173
+#: customizer-options/feed-options.php:192
 msgid "Padding"
 msgstr "Innenabstand (Padding)"
 
-#: customizer-options/feed-options.php:191
+#: customizer-options/feed-options.php:210
 msgid "Show image"
 msgstr "Bild anzeigen"
 
-#: customizer-options/feed-options.php:202
+#: customizer-options/feed-options.php:221
 msgid "Image postion"
 msgstr "Bildposition"
 
-#: customizer-options/feed-options.php:206
+#: customizer-options/feed-options.php:225
 msgid "left"
 msgstr "links"
 
-#: customizer-options/feed-options.php:207
+#: customizer-options/feed-options.php:226
 msgid "top"
 msgstr "oben"
 
-#: customizer-options/feed-options.php:218
+#: customizer-options/feed-options.php:237
 msgid "Image display behavior"
 msgstr "Bild-Anzeige-Verhalten"
 
-#: customizer-options/feed-options.php:239
+#: customizer-options/feed-options.php:258
 msgid "Image radius"
 msgstr "Bildradius"
 
-#: customizer-options/feed-options.php:259
+#: customizer-options/feed-options.php:278
 msgid "Image height"
 msgstr "Bildhöhe"
-
-#: customizer-options/feed-options.php:289
-msgid "Spacing between posts"
-msgstr "Abstand zwischen Beiträgen"
 
 #: customizer-options/fonts-options.php:6
 msgid "Font"
@@ -316,25 +328,33 @@ msgstr "Beiträge"
 msgid "Settings of the individual posts."
 msgstr "Einstellungen der einzelnen Beträge."
 
-#: customizer-options/posts-options.php:22
+#: customizer-options/posts-options.php:23
+msgid "Maximum width of posts"
+msgstr "Maximale Breite des Beitrags"
+
+#: customizer-options/posts-options.php:63
 msgid "Show date"
 msgstr "Datum anzeigen"
 
-#: customizer-options/posts-options.php:35
+#: customizer-options/posts-options.php:76
 msgid "Show categories"
 msgstr "Kategorien anzeigen"
 
-#: customizer-options/posts-options.php:61
+#: customizer-options/posts-options.php:102
 msgid "Show author details"
 msgstr "Autorendetails anzeigen"
 
-#: customizer-options/posts-options.php:74
+#: customizer-options/posts-options.php:115
 msgid "Show share area"
 msgstr "Teilen-Bereich anzeigen"
 
-#: customizer-options/posts-options.php:87
+#: customizer-options/posts-options.php:128
 msgid "Show post pagination"
 msgstr "Post-Paginierung anzeigen"
+
+#: customizer-options/posts-options.php:155
+msgid "Heading font size"
+msgstr "Überschrift Schriftgröße"
 
 #: functions.php:46
 msgid "Header Menu"
@@ -360,13 +380,18 @@ msgstr "Deine E-Mail"
 msgid "Your Website"
 msgstr "Deine Website"
 
-#: header.php:260 header.php:280
+#: header.php:266 header.php:286
 msgid "Home page"
 msgstr "Startseite"
 
 #: template-parts/feed.php:47
 msgid "read more"
 msgstr "Mehr lesen"
+
+#, fuzzy
+#~| msgid "Number of posts"
+#~ msgid "Number of posts:"
+#~ msgstr "Anzahl der Beiträge"
 
 #~ msgid "Category:"
 #~ msgstr "Kategorie:"

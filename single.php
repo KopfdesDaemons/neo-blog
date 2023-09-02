@@ -5,7 +5,7 @@
     while (have_posts()) :
         the_post();
     ?>
-        <article class="spacer" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+        <article class="spacer postSpacer" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
             <div class="grid">
                 <div class="articlearea">
                     <div class="content">

@@ -10,6 +10,47 @@ function custom_theme_posts($wp_customize)
 
     // Optionen ######################################################################
 
+    // maximum width of the post
+    $wp_customize->add_setting('maximum_width_of_posts', array(
+        'default' => '70',
+        'transport' => 'refresh',
+        'sanitize_callback' => 'absint', // Nur positive Ganzzahlen erlauben
+    ));
+
+    $wp_customize->add_control('maximum_width_of_posts', array(
+        'type' => 'range',
+        'section' => 'title_tagline',
+        'label' => __('Maximum width of posts', 'my-theme'),
+        'section' => 'custom_theme_article',
+        'input_attrs' => array(
+            'min' => 50, // Mindestgröße in Pixel
+            'max' => 150, // Maximale Größe in Pixel
+            'step' => 1, // Schrittgröße für den Zähler
+        ),
+    ));
+
+    // Background color
+    $wp_customize->add_setting('background_color_posts', array(
+        'default' => '#0A0A0A00',
+    ));
+
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'Posts_background_color', array(
+        'label' => 'Background color light mode',
+        'section' => 'custom_theme_article',
+        'settings' => 'background_color_posts'
+    )));
+
+    // Background color darkmode
+    $wp_customize->add_setting('dark_mode_background_color_posts', array(
+        'default' => '#0A0A0A00',
+    ));
+
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'Post_background_color_dark_mode', array(
+        'label' => 'Background color dark mode',
+        'section' => 'custom_theme_article',
+        'settings' => 'dark_mode_background_color_posts'
+    )));
+
     // Datum
     $wp_customize->add_setting('post_date', array(
         'default' => true,
@@ -99,6 +140,26 @@ function custom_theme_posts($wp_customize)
         'type' => 'checkbox',
         'label' => __('Show sidebar', 'my-theme'),
         'section' => 'custom_theme_article',
+    ));
+
+    // Heading font size
+    $wp_customize->add_setting('heading_font_size', array(
+        'default' => '35',
+        'transport' => 'refresh',
+        'sanitize_callback' => 'absint', // Nur positive Ganzzahlen erlauben
+    ));
+
+    $wp_customize->add_control('heading_font_size', array(
+        'type' => 'range',
+        'section' => 'title_tagline',
+        'label' => __('Heading font size', 'my-theme'),
+        'section' => 'custom_theme_article',
+        'input_attrs' => array(
+            'min' => 24,
+            'max' => 50,
+            'step' => 1,
+        ),
+        'active_callback' => 'slogan_active_callback'
     ));
 }
 add_action('customize_register', 'custom_theme_posts');

@@ -27,26 +27,37 @@
                     </div>
                     <p><?php echo $author_description; ?></p>
                     <ul>
-                        <?php $author_roles = get_the_author_meta('roles');
-                            if (!empty($author_roles) & get_theme_mod('author_page_role')) {
-                                echo '<li><b>Role: </b><span>' . $author_roles[0] . '</span></li>';
-                            }
-                            $author_posts_count = count_user_posts($author_id);
-                            if (get_theme_mod('author_number_of_posts')) echo '<li><b>Number of posts: </b><span>' . $author_posts_count . '</span></li>';
+                        <?php
+    $author_roles = get_the_author_meta('roles');
+    
+    if (!empty($author_roles) && get_theme_mod('author_page_role')) {
+        echo '<li><b>' . __('Role', 'my-theme') . ':</b> <span>' . $author_roles[0] . '</span></li>';
+    }
+    
+    $author_posts_count = count_user_posts($author_id);
+    
+    if (get_theme_mod('author_number_of_posts')) {
+        echo '<li><b>' . __('Number of posts', 'my-theme') . ':</b> <span>' . $author_posts_count . '</span></li>';
+    }
+    
+    if (get_theme_mod('author_registration_date')) {
+        $user_registered = get_the_author_meta('user_registered');
+        
+        // Convert the date to a timestamp
+        $timestamp = strtotime($user_registered);
+        
+        // Format the date using date_i18n() into the national representation
+        $formatted_date = date_i18n(get_option('date_format'), $timestamp);
+        
+        echo '<li><b>' . __('Registration Date', 'my-theme') . ':</b> <span>' . $formatted_date . '</span></li>';
+    }
+    
+    if (get_theme_mod('author_website')) {
+        $author_website = get_the_author_meta('user_url');
+        echo '<li><b>' . __('Website', 'my-theme') . ':</b> <a href="' . $author_website . '" target="_blank">' . $author_website . '</a></li>';
+    }
+?>
 
-                            if (get_theme_mod('author_registration_date')) {
-                                $user_registered = get_the_author_meta('user_registered');
-
-                                // Konvertiere das Datum in einen timestamp
-                                $timestamp = strtotime($user_registered);
-
-                                // Formatieren des Datums mit date_i18n() in die nationale Darstellung
-                                $formatted_date = date_i18n(get_option('date_format'), $timestamp);
-                                echo '<li><b>Registration Date: </b><span>' . $formatted_date . '</span></li>';
-                            }
-
-                            if (get_theme_mod('author_website')) echo '<li><b>Website:</b><a href="' . $author_website . '" target="_blank">' . $author_website . '</a></li>'
-                            ?>
                     </ul>
                 </div>
             </div>
