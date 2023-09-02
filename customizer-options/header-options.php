@@ -37,6 +37,19 @@ function custom_theme_header($wp_customize)
         'section' => 'custom_theme_header',
     ));
 
+    // Home page link
+    $wp_customize->add_setting('home_page_link', array(
+        'default' => true,
+        'transport' => 'refresh',
+        'sanitize_callback' => 'sanitize_checkbox',
+    ));
+
+    $wp_customize->add_control('home_page_link', array(
+        'type' => 'checkbox',
+        'label' => __('Show link to home page', 'my-theme'),
+        'section' => 'custom_theme_header',
+    ));
+
     // Suchleiste
     $wp_customize->add_setting('searchbar', array(
         'default' => true,
@@ -247,7 +260,7 @@ function custom_theme_header($wp_customize)
         'active_callback' => 'header_menu_callback'
     )));
 
-    // Mneu backgound color
+    // Menu backgound color
     $wp_customize->add_setting('header_menu_background_color', array(
         'default' => '',
     ));

@@ -24,6 +24,10 @@ function theme_slug_social_sharing()
         'reddit' => array(
             'url'  => 'https://reddit.com/submit?url=' . $page_url . '&title=' . $page_title,
             'text' => 'Reddit',
+        ),
+        'email' => array(
+            'url'  => 'mailto:?subject=' . $page_title . '&body=' . $page_url,
+            'text' => 'E-Mail',
         )
     );
 

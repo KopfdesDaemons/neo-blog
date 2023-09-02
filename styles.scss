@@ -18,6 +18,14 @@ body {
     background: var(--body)
 }
 
+.darkmode #wpadminbar {
+    background-color: var(--hintergrund);
+}
+
+#wpadminbar span {
+    color: unset;
+}
+
 input, textarea {
     background-color: var(--hintergrund-inputfeld);
 }
@@ -93,7 +101,7 @@ a {
 
 .grid {
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: 70fr auto;
     align-items: flex-start;
     margin-bottom: 2em;
 
@@ -306,25 +314,25 @@ a {
     justify-content: flex-end;
     background-color: var(--hintergrund);
     padding: 0.5em;
-    border-radius: 18px;
-    font-size: clamp(14px, 2vw, 1em);
+    font-size: clamp(14px, 2vw, 1rem);
 
     a,
     span {
-        color: #000000;
-        background-color: aquamarine;
-        border-radius: 12px;
+        background-color: var(--hintergrund-variant-darker);
+        border-radius: 8px;
         margin: 0.2em;
         padding: 0.5em 1em;
         text-decoration: none;
+        vertical-align: middle;
     }
 
     span {
-        outline: 2px solid var(--schrift);
+        border: 1px solid var(--schrift);
+        background-color: var(--body);
     }
 
     a:hover {
-        background-color: aliceblue;
+        background-color: var(--primary-variant-much-brighter);
     }
 }
 
@@ -386,6 +394,7 @@ html {
         padding: 0.8em;
         text-decoration: none;
         color: rgb(248, 248, 248);
+        font-size: clamp(14px, 2vw, 1rem)
     }
 
     a:hover {
@@ -404,5 +413,9 @@ html {
 
     .Reddit {
         background-color: #FF5700;
+    }
+
+    .E-Mail {
+        background-color: #888;
     }
 }

@@ -1,0 +1,57 @@
+
+.wp-polls-archive code {
+    font-family: inherit;
+    background-color: unset;
+}
+
+.wp-polls-loading {
+    display: none;
+}
+
+.wp-polls-ans + p {
+    display: none;
+}
+
+.articleArea .wp-polls-ans {
+    margin-bottom: 2em;
+    border: 1px solid var(--primary-color);
+
+    ul {
+        list-style: none;
+
+        li {
+            margin-bottom: 1em;
+        }
+    }
+}
+
+.wp-polls-archive + code {
+    background-color: var(--hintergrund);
+}
+
+.wp-polls-paging {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: clamp(14px, 2vw, 1rem);
+    
+    .pages {
+        margin-right: auto;
+    }
+
+    a {
+        text-decoration: none;
+        background-color: var(--hintergrund-variant-darker);
+        margin: 0.2em;
+        padding: 0.5em;
+        border-radius: 8px;
+    }
+
+    a:hover {
+        background-color: var(--primary-variant-much-brighter);
+    }
+}
+
+p code {
+    display: none;
+}
