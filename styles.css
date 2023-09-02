@@ -150,9 +150,9 @@ a {
 .postCard .imgA img {
   width: 100%;
   max-width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  height: 15em;
+  -o-object-fit: var(--image_display_behavior);
+     object-fit: var(--image_display_behavior);
+  height: var(--feed_image_height);
   transition: all 500ms;
 }
 .postCard .imgA:hover img {
@@ -224,6 +224,9 @@ a {
   color: var(--schrift);
   font-size: 1.4em;
 }
+.postCard h2:hover {
+  text-decoration: underline;
+}
 .postCard .tagsDiv ul {
   display: flex;
   flex-wrap: wrap;
@@ -241,7 +244,7 @@ a {
   color: var(--schrift);
   text-align: center;
   padding: 0.6em 1em;
-  border-radius: 32px;
+  border-radius: var(--tags_border_radius);
   font-size: 0.7em;
   min-width: 2em;
   background-color: var(--hintergrund-variant);

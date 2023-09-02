@@ -18,7 +18,7 @@ add_action('wp_enqueue_scripts', 'enqueue_custom_styles');
 // Anzahl der Wörter in der Vorschau im Feed
 function mytheme_custom_excerpt_length($length)
 {
-    return 30;
+    return get_theme_mod('words_in_snippet');
 }
 add_filter('excerpt_length', 'mytheme_custom_excerpt_length', 999);
 

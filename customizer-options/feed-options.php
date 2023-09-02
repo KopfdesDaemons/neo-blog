@@ -9,6 +9,60 @@ function custom_feed($wp_customize)
 
     // Optionen ######################################################################
 
+    // maximum width of the feed
+    $wp_customize->add_setting('maximum_width_of_the_feed', array(
+        'default' => '70',
+        'transport' => 'refresh',
+        'sanitize_callback' => 'absint', // Nur positive Ganzzahlen erlauben
+    ));
+
+    $wp_customize->add_control('maximum_width_of_the_feed', array(
+        'type' => 'range',
+        'section' => 'title_tagline',
+        'label' => __('Maximum width of the feed', 'my-theme'),
+        'section' => 'custom_feed',
+        'input_attrs' => array(
+            'min' => 50, // Mindestgröße in Pixel
+            'max' => 150, // Maximale Größe in Pixel
+            'step' => 1, // Schrittgröße für den Zähler
+        ),
+    ));
+
+    $wp_customize->add_setting('feed_posts_count', array(
+        'default' => 10, // Standardmäßig 5 Beiträge im Feed
+        'sanitize_callback' => 'absint', // Sicherheitsfunktion, um sicherzustellen, dass die Eingabe eine ganze Zahl ist
+    ));
+
+    $wp_customize->add_control('feed_posts_count', array(
+        'type' => 'number',
+        'label' => __('Number of posts', 'my-theme'),
+        'section' => 'custom_feed',
+        'priority' => 10, // Priorität der Option im Customizer
+        'input_attrs' => array(
+            'min' => 1, // Mindestwert für die Anzahl der Beiträge
+            'max' => 20, // Maximalwert für die Anzahl der Beiträge
+            'step' => 1, // Schrittgröße für die Anzahl der Beiträge
+        ),
+    ));
+
+    $wp_customize->add_setting('words_in_snippet', array(
+        'default' => 30, // Standardmäßig 5 Beiträge im Feed
+        'sanitize_callback' => 'absint', // Sicherheitsfunktion, um sicherzustellen, dass die Eingabe eine ganze Zahl ist
+    ));
+
+    $wp_customize->add_control('words_in_snippet', array(
+        'type' => 'number',
+        'label' => __('Number of words in the snippet', 'my-theme'),
+        'section' => 'custom_feed',
+        'priority' => 10, // Priorität der Option im Customizer
+        'input_attrs' => array(
+            'min' => 1, // Mindestwert für die Anzahl der Beiträge
+            'max' => 100, // Maximalwert für die Anzahl der Beiträge
+            'step' => 1, // Schrittgröße für die Anzahl der Beiträge
+        ),
+    ));
+
+
     // Tags
     $wp_customize->add_setting('feed_post_card_tags', array(
         'default' => true,
@@ -20,6 +74,26 @@ function custom_feed($wp_customize)
         'type' => 'checkbox',
         'label' => __('Show tags', 'my-theme'),
         'section' => 'custom_feed',
+    ));
+
+    // Tags border radius
+    $wp_customize->add_setting('tags_border_radius', array(
+        'default' => '32',
+        'transport' => 'refresh',
+        'sanitize_callback' => 'absint', // Nur positive Ganzzahlen erlauben
+    ));
+
+    $wp_customize->add_control('tags_border_radius', array(
+        'type' => 'range',
+        'section' => 'title_tagline',
+        'label' => __('Tags border radius', 'my-theme'),
+        'section' => 'custom_feed',
+        'active_callback' => 'tags_active_callback',
+        'input_attrs' => array(
+            'min' => 0, // Mindestgröße in Pixel
+            'max' => 50, // Maximale Größe in Pixel
+            'step' => 1, // Schrittgröße für den Zähler
+        ),
     ));
 
     // Read more Link
@@ -134,6 +208,24 @@ function custom_feed($wp_customize)
         ),
     ));
 
+    $wp_customize->add_setting('image_display_behavior', array(
+        'default' => 'cover',
+        'transport' => 'refresh'
+    ));
+
+    $wp_customize->add_control('image_display_behavior', array(
+        'type' => 'select',
+        'label' => __('Image display behavior', 'my-theme'),
+        'section' => 'custom_feed',
+        'active_callback' => 'image_active_callback',
+        'choices' => array(
+            'cover' => 'cover',
+            'contain' => 'contain',
+            'fill' => 'fill',
+            'scale-down' => 'scale-down',
+        ),
+    ));
+
     // Border radius image
     $wp_customize->add_setting('feed_post_card_border_radius_image', array(
         'default' => '10',
@@ -154,10 +246,34 @@ function custom_feed($wp_customize)
         ),
     ));
 
+    // Image size
+    $wp_customize->add_setting('feed_image_height', array(
+        'default' => '15em',
+        'transport' => 'refresh',
+        'sanitize_callback' => 'absint', // Nur positive Ganzzahlen erlauben
+    ));
+
+    $wp_customize->add_control('feed_image_height', array(
+        'type' => 'range',
+        'section' => 'title_tagline',
+        'label' => __('Image height', 'my-theme'),
+        'section' => 'custom_feed',
+        'active_callback' => 'image_active_callback',
+        'input_attrs' => array(
+            'min' => 0, // Mindestgröße in Pixel
+            'max' => 30, // Maximale Größe in Pixel
+            'step' => 1, // Schrittgröße für den Zähler
+        ),
+    ));
+
     function image_active_callback($control)
     {
-        $image = $control->manager->get_setting('feed_post_card_image')->value();
-        return $image;
+        return $control->manager->get_setting('feed_post_card_image')->value();
+    }
+
+    function tags_active_callback($control)
+    {
+        return $control->manager->get_setting('feed_post_card_tags')->value();
     }
 
     // Posts Spacing
@@ -176,25 +292,6 @@ function custom_feed($wp_customize)
             'min' => 0, // Mindestgröße in Pixel
             'max' => 10, // Maximale Größe in Pixel
             'step' => 0.1, // Schrittgröße für den Zähler
-        ),
-    ));
-
-    // maximum width of the feed
-    $wp_customize->add_setting('maximum_width_of_the_feed', array(
-        'default' => '70',
-        'transport' => 'refresh',
-        'sanitize_callback' => 'absint', // Nur positive Ganzzahlen erlauben
-    ));
-
-    $wp_customize->add_control('maximum_width_of_the_feed', array(
-        'type' => 'range',
-        'section' => 'title_tagline',
-        'label' => __('Maximum width of the feed', 'my-theme'),
-        'section' => 'custom_feed',
-        'input_attrs' => array(
-            'min' => 50, // Mindestgröße in Pixel
-            'max' => 150, // Maximale Größe in Pixel
-            'step' => 1, // Schrittgröße für den Zähler
         ),
     ));
 }

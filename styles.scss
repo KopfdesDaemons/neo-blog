@@ -150,8 +150,8 @@ a {
         img {
             width: 100%;
             max-width: 100%;
-            object-fit: cover;
-            height: 15em;
+            object-fit: var(--image_display_behavior);
+            height: var(--feed_image_height);
             transition: all 500ms;
         }
     }
@@ -237,6 +237,10 @@ a {
         color: var(--schrift);
         font-size: 1.4em;
     }
+
+    h2:hover {
+        text-decoration: underline;
+    }
     
     .tagsDiv ul {
         display: flex;
@@ -256,7 +260,7 @@ a {
             color: var(--schrift);
             text-align: center;
             padding: 0.6em 1em;
-            border-radius: 32px;
+            border-radius: var(--tags_border_radius);
             font-size: 0.7em;
             min-width: 2em;
             background-color: var(--hintergrund-variant);

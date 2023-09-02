@@ -6,7 +6,7 @@
             $paged = (get_query_var('paged')) ? get_query_var('paged') : 1; // Aktuelle Seite abrufen
             $args = array(
                 'post_type' => 'post', // Beitragstyp
-                'posts_per_page' => 10, // Anzahl der Beiträge pro Seite
+                'posts_per_page' => get_theme_mod('feed_posts_count'), // Anzahl der Beiträge pro Seite
                 'paged' => $paged // Aktuelle Seite übergeben
             );
 

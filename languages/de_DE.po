@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: my-theme\n"
-"POT-Creation-Date: 2023-09-02 15:46+0200\n"
-"PO-Revision-Date: 2023-09-02 15:46+0200\n"
+"POT-Creation-Date: 2023-09-02 17:44+0200\n"
+"PO-Revision-Date: 2023-09-02 17:45+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de\n"
@@ -129,52 +129,76 @@ msgstr "System"
 msgid "Feed"
 msgstr "Feed"
 
-#: customizer-options/feed-options.php:21
+#: customizer-options/feed-options.php:22
+msgid "Maximum width of the feed"
+msgstr "Maximale Breite des Feeds"
+
+#: customizer-options/feed-options.php:38
+msgid "Number of posts"
+msgstr "Anzahl der Beiträge"
+
+#: customizer-options/feed-options.php:55
+msgid "Number of words in the snippet"
+msgstr "Anzahl der Wörter in der Vorschau"
+
+#: customizer-options/feed-options.php:75
 #: customizer-options/posts-options.php:48
 msgid "Show tags"
 msgstr "Tags anzeigen"
 
-#: customizer-options/feed-options.php:34
+#: customizer-options/feed-options.php:89
+msgid "Tags border radius"
+msgstr "Radius der Tags"
+
+#: customizer-options/feed-options.php:108
 msgid "Show read more button"
 msgstr "Schaltfläche „Mehr lesen“ anzeigen"
 
-#: customizer-options/feed-options.php:47
+#: customizer-options/feed-options.php:121
 msgid "Show comments"
 msgstr "Kommentare anzeigen"
 
-#: customizer-options/feed-options.php:61
+#: customizer-options/feed-options.php:135
 msgid "Line height in text snippet"
 msgstr "Zeilenhöhe im Textausschnitt"
 
-#: customizer-options/feed-options.php:80
+#: customizer-options/feed-options.php:154
 msgid "Border radius"
 msgstr "Rahmenradius"
 
-#: customizer-options/feed-options.php:99
+#: customizer-options/feed-options.php:173
 msgid "Padding"
 msgstr "Innenabstand (Padding)"
 
-#: customizer-options/feed-options.php:117
+#: customizer-options/feed-options.php:191
 msgid "Show image"
 msgstr "Bild anzeigen"
 
-#: customizer-options/feed-options.php:128
+#: customizer-options/feed-options.php:202
 msgid "Image postion"
 msgstr "Bildposition"
 
-#: customizer-options/feed-options.php:132
+#: customizer-options/feed-options.php:206
 msgid "left"
 msgstr "links"
 
-#: customizer-options/feed-options.php:133
+#: customizer-options/feed-options.php:207
 msgid "top"
 msgstr "oben"
 
-#: customizer-options/feed-options.php:147
+#: customizer-options/feed-options.php:218
+msgid "Image display behavior"
+msgstr "Bild-Anzeige-Verhalten"
+
+#: customizer-options/feed-options.php:239
 msgid "Image radius"
 msgstr "Bildradius"
 
-#: customizer-options/feed-options.php:173
+#: customizer-options/feed-options.php:259
+msgid "Image height"
+msgstr "Bildhöhe"
+
+#: customizer-options/feed-options.php:289
 msgid "Spacing between posts"
 msgstr "Abstand zwischen Beiträgen"
 
@@ -336,7 +360,7 @@ msgstr "Deine E-Mail"
 msgid "Your Website"
 msgstr "Deine Website"
 
-#: header.php:256 header.php:276
+#: header.php:260 header.php:280
 msgid "Home page"
 msgstr "Startseite"
 
