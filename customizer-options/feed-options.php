@@ -178,5 +178,24 @@ function custom_feed($wp_customize)
             'step' => 0.1, // Schrittgröße für den Zähler
         ),
     ));
+
+    // maximum width of the feed
+    $wp_customize->add_setting('maximum_width_of_the_feed', array(
+        'default' => '70',
+        'transport' => 'refresh',
+        'sanitize_callback' => 'absint', // Nur positive Ganzzahlen erlauben
+    ));
+
+    $wp_customize->add_control('maximum_width_of_the_feed', array(
+        'type' => 'range',
+        'section' => 'title_tagline',
+        'label' => __('Maximum width of the feed', 'my-theme'),
+        'section' => 'custom_feed',
+        'input_attrs' => array(
+            'min' => 50, // Mindestgröße in Pixel
+            'max' => 150, // Maximale Größe in Pixel
+            'step' => 1, // Schrittgröße für den Zähler
+        ),
+    ));
 }
 add_action('customize_register', 'custom_feed');

@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: my-theme\n"
-"POT-Creation-Date: 2023-09-02 13:45+0200\n"
-"PO-Revision-Date: 2023-09-02 13:46+0200\n"
+"POT-Creation-Date: 2023-09-02 15:46+0200\n"
+"PO-Revision-Date: 2023-09-02 15:46+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de\n"
@@ -199,12 +199,12 @@ msgid "Line height in paragraphs"
 msgstr "Zeilenhöhe in Absätzen"
 
 #: customizer-options/fonts-options.php:64
-#: customizer-options/header-options.php:222
+#: customizer-options/header-options.php:256
 msgid "Font color light mode"
 msgstr "Schriftfarbe im hellen Modus"
 
 #: customizer-options/fonts-options.php:75
-#: customizer-options/header-options.php:233
+#: customizer-options/header-options.php:267
 msgid "Font color dark mode"
 msgstr "Schriftfarbe im dunklen Modus"
 
@@ -221,56 +221,60 @@ msgid "Show menu in header"
 msgstr "Menü im Header anzeigen"
 
 #: customizer-options/header-options.php:49
+msgid "Show link to home page"
+msgstr "Zeige Link zur Startseite"
+
+#: customizer-options/header-options.php:62
 msgid "Show search bar"
 msgstr "Suchleiste anzeigen"
 
-#: customizer-options/header-options.php:62
+#: customizer-options/header-options.php:75
 msgid "Show search button"
 msgstr "Suchbutton anzeigen"
 
-#: customizer-options/header-options.php:76
+#: customizer-options/header-options.php:89
 msgid "Show title"
 msgstr "Titel anzeigen"
 
-#: customizer-options/header-options.php:90
+#: customizer-options/header-options.php:103
 msgid "Title size"
 msgstr "Titelgröße"
 
-#: customizer-options/header-options.php:109
+#: customizer-options/header-options.php:122
 msgid "Show slogan"
 msgstr "Slogan anzeigen"
 
-#: customizer-options/header-options.php:122
+#: customizer-options/header-options.php:136
+msgid "Slogan size"
+msgstr "Slogan Größe"
+
+#: customizer-options/header-options.php:155
 msgid "Text background"
 msgstr "Hintergrundfarbe der Texte"
 
-#: customizer-options/header-options.php:136
+#: customizer-options/header-options.php:169
 msgid "Element spacing"
 msgstr "Abstand der Elemente"
 
-#: customizer-options/header-options.php:177
+#: customizer-options/header-options.php:211
 msgid "Background image"
 msgstr "Hintergrundbild"
 
-#: customizer-options/header-options.php:194
+#: customizer-options/header-options.php:228
 msgid "Background image saturation"
 msgstr "Sättigung des Hintergundbildes"
 
-#: customizer-options/header-options.php:211
+#: customizer-options/header-options.php:245
 msgid "Banner image"
 msgstr "Bannerbild"
 
-#: customizer-options/header-options.php:244
+#: customizer-options/header-options.php:278
 msgid "Font color menu"
 msgstr "Schriftfarbe des Menüs"
 
-#: customizer-options/header-options.php:256
+#: customizer-options/header-options.php:290
 msgid "Menu backgound color"
 msgstr "Hintergrundfarbe des Menüs"
-
-#: customizer-options/header-options.php:271
-msgid "Show link to home page"
-msgstr "Zeige Link zur Startseite"
 
 #: customizer-options/pages-options.php:6
 msgid "Pages"
@@ -332,7 +336,7 @@ msgstr "Deine E-Mail"
 msgid "Your Website"
 msgstr "Deine Website"
 
-#: header.php:268
+#: header.php:256 header.php:276
 msgid "Home page"
 msgstr "Startseite"
 

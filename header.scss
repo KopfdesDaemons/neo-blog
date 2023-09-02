@@ -83,11 +83,12 @@
         .sloganDiv {
             text-align: center;
             padding: 0 1em;
-            margin-bottom: 0.3em;
+            margin: 0.3em 0;
 
             span {
                 color: var(--header-font-color);
                 background-color: var(--header-text-background-color);
+                font-size: clamp(10px, 5vw, var(--slogan-size));
             }
         }
 
@@ -182,7 +183,7 @@
                 background-color: var(--body);
                 padding: 1em;
 
-                @media only screen and (max-width: 600px) {
+                @media only screen and (max-width: 1300px) {
                     display: none;
                 }
             }

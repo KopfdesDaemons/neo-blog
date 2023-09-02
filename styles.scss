@@ -85,6 +85,10 @@ main {
     position: relative;
 }
 
+.spacerFeed {
+    max-width: var(--max_feed_width);
+}
+
 .feed {
     @media only screen and (max-width: 600px) {
         margin: 0.5em;

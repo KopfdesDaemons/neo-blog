@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 <main role="main">
-    <section class="spacer grid">
+    <section class="spacer grid spacerFeed">
         <div class="feed">
             <?php
             $paged = (get_query_var('paged')) ? get_query_var('paged') : 1; // Aktuelle Seite abrufen

@@ -123,6 +123,26 @@ function custom_theme_header($wp_customize)
         'section' => 'custom_theme_header',
     ));
 
+    // Slogan size setting
+    $wp_customize->add_setting('slogan_size_setting', array(
+        'default' => '14', // Standardmäßige Bildgröße in Pixel
+        'transport' => 'refresh',
+        'sanitize_callback' => 'absint', // Nur positive Ganzzahlen erlauben
+    ));
+
+    $wp_customize->add_control('slogan_size_setting', array(
+        'type' => 'range',
+        'section' => 'title_tagline', // Hier kannst du eine andere Sektion wählen, in der du die Einstellung platzieren möchtest
+        'label' => __('Slogan size', 'my-theme'),
+        'section' => 'custom_theme_header',
+        'input_attrs' => array(
+            'min' => 8, // Mindestgröße in Pixel
+            'max' => 50, // Maximale Größe in Pixel
+            'step' => 1, // Schrittgröße für den Zähler
+        ),
+        'active_callback' => 'slogan_active_callback'
+    ));
+
     // Background für Titel und Slogan
     $wp_customize->add_setting('header_text_background', array(
         'default' => true,
@@ -158,26 +178,27 @@ function custom_theme_header($wp_customize)
     // actice callbacks
     function title_active_callback($control)
     {
-        $menu_option_a_value = $control->manager->get_setting('title')->value();
-        return $menu_option_a_value;
+        return $control->manager->get_setting('title')->value();
+    }
+
+    function slogan_active_callback($control)
+    {
+        return $control->manager->get_setting('tagline')->value();
     }
 
     function searchbar_active_callback($control)
     {
-        $menu_option_a_value = $control->manager->get_setting('searchbar')->value();
-        return $menu_option_a_value;
+        return $control->manager->get_setting('searchbar')->value();
     }
 
     function background_image_callback($control)
     {
-        $backgound_image = $control->manager->get_setting('header_background_image')->value();
-        return $backgound_image;
+        return $control->manager->get_setting('header_background_image')->value();
     }
 
     function header_menu_callback($control)
     {
-        $header_menu = $control->manager->get_setting('header_menu')->value();
-        return $header_menu;
+        return $control->manager->get_setting('header_menu')->value();
     }
 
     // Background Image
