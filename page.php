@@ -1,7 +1,7 @@
 <?php
 get_header();
 ?>
-<main class="spacer grid">
+<main class="spacer postSpacer grid">
 
 
     <?php

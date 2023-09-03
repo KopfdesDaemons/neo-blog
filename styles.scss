@@ -220,14 +220,13 @@ a {
                 color: #000000;
                 border-radius: 8px;
                 padding: 0.8em 1.2em;
-                border: 1px solid transparent;
             }
 
             .readMore:hover {
                 background-color: transparent;
-                border: 1px solid var(--schrift);
+                outline: 1px solid var(--primary-color);
                 transition: all 200ms;
-                color: var(--primary-color);
+                color: var(--schrift);
             }
         }
     }

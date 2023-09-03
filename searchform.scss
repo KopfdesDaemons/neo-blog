@@ -2,28 +2,31 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 80%;
+  gap: 0.3em;
+  width: 100%;
 
   #searchinput {
-    height: 40px;
+    height: 100%;
     width: 80%;
     max-width: 20em;
     border: none;
     font-size: 1.5em;
     padding: 0;
-    padding-left: 0.8em;
     margin: 5px 0;
     border-radius: 8px;
+    text-align: center;
   }
 
   #searchinput:focus {
-    outline: none;
+    outline: 2px solid var(--primary-color);
   }
 
   #searchsubmit {
-    margin: 5px;
     border-radius: 8px;
-    height: 40px;
+    // height: 40px;
+    height: 100%;
+    padding: 0 0.4em;
+
     font-size: 1.3em;
     border: none;
     color: rgb(248, 248, 248);
@@ -32,6 +35,8 @@
 
   #searchsubmit:hover {
     cursor: pointer;
-    background-color: var(--hintergrund-variant-darker);
+    background-color: var(--hintergrund);
+    outline: 1px solid var(--primary-color);
+    transition: all 200ms;
   }
 }

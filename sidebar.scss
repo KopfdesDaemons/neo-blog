@@ -58,7 +58,6 @@
 
         li {
             padding: 0.8em 1em;
-            background-color: var(--hintergrund);
             border: 1px solid var(--hintergrund-variant-darker);
             box-shadow: inset 0px 0px 20px 0px var(--hintergrund-variant);
 
@@ -127,7 +126,8 @@
         }
 
         button:hover {
-            background-color: var(--hintergrund-variant-darker);
+            background-color: var(--primary-color);
+            transition: all 200ms;
         }
     }
 
@@ -198,7 +198,7 @@
 
         a {
             padding: 0.8em 1em;
-            border-radius: 12px;
+            border-radius: 8px;
             background-color: var(--primary-color);
             text-decoration: none;
             color: unset;
@@ -206,12 +206,15 @@
 
         a:hover {
             background-color: var(--hintergrund);
+            outline: 1px solid var(--primary-color);
+            transition: all 200ms;
         }
     }
 
     .wp-block-page-list,
     .widget_rss {
         li {
+            background-color: var(--hintergrund);
             padding: 0.5rem;
             margin-top: 0.5rem;
         }

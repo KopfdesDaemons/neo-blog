@@ -29,6 +29,26 @@ function custom_theme_posts($wp_customize)
         ),
     ));
 
+    // Heading font size
+    $wp_customize->add_setting('heading_font_size', array(
+        'default' => '35',
+        'transport' => 'refresh',
+        'sanitize_callback' => 'absint', // Nur positive Ganzzahlen erlauben
+    ));
+
+    $wp_customize->add_control('heading_font_size', array(
+        'type' => 'range',
+        'section' => 'title_tagline',
+        'label' => __('Heading font size', 'my-theme'),
+        'section' => 'custom_theme_article',
+        'input_attrs' => array(
+            'min' => 24,
+            'max' => 50,
+            'step' => 1,
+        ),
+        'active_callback' => 'slogan_active_callback'
+    ));
+
     // Background color
     $wp_customize->add_setting('background_color_posts', array(
         'default' => '#0A0A0A00',
@@ -140,26 +160,6 @@ function custom_theme_posts($wp_customize)
         'type' => 'checkbox',
         'label' => __('Show sidebar', 'my-theme'),
         'section' => 'custom_theme_article',
-    ));
-
-    // Heading font size
-    $wp_customize->add_setting('heading_font_size', array(
-        'default' => '35',
-        'transport' => 'refresh',
-        'sanitize_callback' => 'absint', // Nur positive Ganzzahlen erlauben
-    ));
-
-    $wp_customize->add_control('heading_font_size', array(
-        'type' => 'range',
-        'section' => 'title_tagline',
-        'label' => __('Heading font size', 'my-theme'),
-        'section' => 'custom_theme_article',
-        'input_attrs' => array(
-            'min' => 24,
-            'max' => 50,
-            'step' => 1,
-        ),
-        'active_callback' => 'slogan_active_callback'
     ));
 }
 add_action('customize_register', 'custom_theme_posts');

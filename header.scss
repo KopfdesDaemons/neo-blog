@@ -35,7 +35,6 @@
 
         .SearchColumn {
             display: flex;
-            align-items: center;
 
             img {
                 max-width: 3em;
@@ -50,7 +49,7 @@
             .searchDiv {
                 display: flex;
                 justify-content: center;
-                width: 70vw;
+                width: 100%;
                 max-width: 60em;
             }
             
@@ -105,6 +104,9 @@
         
         .toggleDiv {
             display: flex;
+            gap: 0.1em;
+            height: 3em;
+            margin: 0.3em;
 
             .home-link {
                 margin-right: auto;
@@ -112,8 +114,8 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                margin: 0.5em;
-                padding: 0.5em 0.8em;
+                // margin: 0.5em;
+                padding: 0.5em 1.8em;
                 border: 1px solid var(--schrift);
                 border-radius: 6px;
                 text-decoration: none;
@@ -166,7 +168,7 @@
             width: 5em;
             border-radius: 4px;
             font-size: 1.5em;
-            margin: 0.3em;
+            // margin: 0.3em;
             background-color: var(--primary-variant-much-brighter);
             border: 1px solid var(--schrift);
             display: none;

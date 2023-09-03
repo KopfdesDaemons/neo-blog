@@ -51,7 +51,6 @@
 }
 #sidebar .widget_archive li {
   padding: 0.8em 1em;
-  background-color: var(--hintergrund);
   border: 1px solid var(--hintergrund-variant-darker);
   box-shadow: inset 0px 0px 20px 0px var(--hintergrund-variant);
 }
@@ -103,7 +102,8 @@
   background-color: var(--body);
 }
 #sidebar .widget_search button:hover {
-  background-color: var(--hintergrund-variant-darker);
+  background-color: var(--primary-color);
+  transition: all 200ms;
 }
 #sidebar .widget_categories,
 #sidebar .wp-block-categories {
@@ -164,16 +164,19 @@
 }
 #sidebar .wp-block-loginout a {
   padding: 0.8em 1em;
-  border-radius: 12px;
+  border-radius: 8px;
   background-color: var(--primary-color);
   text-decoration: none;
   color: unset;
 }
 #sidebar .wp-block-loginout a:hover {
   background-color: var(--hintergrund);
+  outline: 1px solid var(--primary-color);
+  transition: all 200ms;
 }
 #sidebar .wp-block-page-list li,
 #sidebar .widget_rss li {
+  background-color: var(--hintergrund);
   padding: 0.5rem;
   margin-top: 0.5rem;
 }

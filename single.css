@@ -1,6 +1,7 @@
 h1 {
-  font-size: clamp(24px, 4vw, var(--heading_font_size));
+  font-size: clamp(16px, 8vw, var(--heading_font_size));
   margin-bottom: 0.5em;
+  margin-left: 0;
 }
 
 .postSpacer {

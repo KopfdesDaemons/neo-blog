@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 <main role="main">
-    <section class="spacer grid">
+    <section class="spacerPost grid">
         <div class="content">
             <?php
             if (have_posts()) {
