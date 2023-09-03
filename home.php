@@ -3,11 +3,11 @@
     <section class="spacer grid spacerFeed">
         <div class="feed">
             <?php
-            $paged = (get_query_var('paged')) ? get_query_var('paged') : 1; // Aktuelle Seite abrufen
+            $paged = (get_query_var('paged')) ? get_query_var('paged') : 1; // Query current page
             $args = array(
-                'post_type' => 'post', // Beitragstyp
-                'posts_per_page' => get_theme_mod('feed_posts_count'), // Anzahl der Beiträge pro Seite
-                'paged' => $paged // Aktuelle Seite übergeben
+                'post_type' => 'post',
+                'posts_per_page' => get_theme_mod('feed_posts_count'), // Number of posts per page
+                'paged' => $paged
             );
 
             $query = new WP_Query($args);
@@ -20,10 +20,11 @@
                         $post_classes[] = 'stickyPost';
                     }
 
-                    // Zeige Kachel mit Beitrag
+                    // Show Cards
                     require_once get_template_directory() . '/template-parts/feed.php';
                     echo display_post_card($post_classes);
                 }
+
                 // Pagination
                 echo '<div class="pagination shadow">';
                 echo paginate_links(array(

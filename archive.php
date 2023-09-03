@@ -8,7 +8,7 @@
                 $author_description = get_the_author_meta('description');
                 $author_website = get_the_author_meta('user_url');
 
-                // Avatar des Autors
+                // Avatar
                 $image_size = get_theme_mod('image_size_setting', '150');
                 $author_avatar = get_avatar($author_id, $image_size);
 
@@ -57,18 +57,16 @@
                                 echo '<li><b>' . __('Website', 'my-theme') . ':</b> <a href="' . $author_website . '" target="_blank">' . $author_website . '</a></li>';
                             }
                             ?>
-
                         </ul>
                     </div>
                 </div>
 
-                <!-- Zeige die letzten Kommentare des Autors -->
-
+                <!-- Show latest comments -->
                 <?php
                 if (get_theme_mod('author_page_latest_comments')) {
                     $args = array(
                         'user_id' => $author_id,
-                        'number' => 5, // Anzahl der anzuzeigenden Kommentare
+                        'number' => 5, // Number of comments
                     );
                     $author_comments = get_comments($args); ?>
                     <h3 class="archive-h3"><?php echo __('Last comments from', 'my-theme') . ' ' . $author_name; ?></h3>
@@ -86,7 +84,7 @@
                                 echo '<time datetime="' . esc_attr(get_comment_date('c', $comment)) . '" class="wp-block-latest-comments__comment-date">' . get_comment_date('j. F Y', $comment) . '</time>';
                                 echo '</footer>';
                                 echo '<div class="wp-block-latest-comments__comment-excerpt">';
-                                echo '<p>' . get_comment_excerpt($comment) . '</p>'; // Kommentar-Auszug
+                                echo '<p>' . get_comment_excerpt($comment) . '</p>'; // Comment snippet
                                 echo '</div>';
                                 echo '</article>';
                                 echo '</li>';
@@ -102,21 +100,21 @@
             <h1>
                 <?php
                 if (is_category()) {
-                    echo single_cat_title(); // Anzeigen des Kategorienamens für Kategorie-Archive
+                    echo single_cat_title(); // Category name
                 } elseif (is_tag()) {
-                    echo single_tag_title(); // Anzeigen des Schlagwortnamens für Schlagwort-Archive
+                    echo single_tag_title(); // Tag
                 } elseif (is_author()) {
                     the_post();
-                    echo esc_html__('Posts by', 'my-theme') . ' ' . get_the_author(); // Anzeigen des Autorennamens für Autoren-Archive
-                    rewind_posts(); // Schleife zurücksetzen, um die restlichen Schleifenfunktionen zu verwenden
+                    echo esc_html__('Posts by', 'my-theme') . ' ' . get_the_author(); // Author name
+                    rewind_posts();
                 } elseif (is_day()) {
-                    echo esc_html__('Archive for', 'my-theme') . ' ' . get_the_date(); // Anzeigen des Datums für tägliche Archive
+                    echo esc_html__('Archive for', 'my-theme') . ' ' . get_the_date(); // Archive for day
                 } elseif (is_month()) {
-                    echo esc_html__('Archive for', 'my-theme') . ' ' . get_the_date('F Y'); // Anzeigen des Monats und Jahres für monatliche Archive
+                    echo esc_html__('Archive for', 'my-theme') . ' ' . get_the_date('F Y'); // Archive for month
                 } elseif (is_year()) {
-                    echo esc_html__('Archive for', 'my-theme') . ' ' . get_the_date('Y'); // Anzeigen des Jahres für jährliche Archive
+                    echo esc_html__('Archive for', 'my-theme') . ' ' . get_the_date('Y'); // Archive for year
                 } else {
-                    echo esc_html__('Archive', 'my-theme'); // Standardtext für andere Archive
+                    echo esc_html__('Archive', 'my-theme'); // default
                 }
                 ?>
             </h1>
@@ -130,12 +128,12 @@
                         $post_classes[] = 'stickyPost';
                     }
 
-                    // Zeige Kachel mit Beitrag
+                    // Show cards
                     require_once get_template_directory() . '/template-parts/feed.php';
                     echo display_post_card($post_classes);
                 }
 
-                // Pagination (nur anzeigen, wenn es mehr als eine Seite gibt)
+                // Pagination 
                 global $wp_query;
                 $total_pages = $wp_query->max_num_pages;
                 if ($total_pages > 1) {

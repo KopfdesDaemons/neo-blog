@@ -3,7 +3,6 @@ get_header();
 ?>
 <main class="spacer postSpacer grid">
 
-
     <?php
     while (have_posts()) {
         the_post();
@@ -14,7 +13,7 @@ get_header();
             <h1><?php the_title(); ?></h1>
             <?php the_content(); ?>
 
-            <!-- Kommentare -->
+            <!-- Comments -->
             <?php
             if (comments_open() || get_comments_number()) {
                 comments_template();

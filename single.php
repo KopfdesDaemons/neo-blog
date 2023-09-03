@@ -41,7 +41,7 @@
                     </div>
 
                     <footer>
-                        <!-- Pagination für paginierte Beiträge -->
+                        <!-- Pagination-->
                         <?php
                         wp_link_pages(
                             array(
@@ -72,14 +72,11 @@
                         <?php
                         $author_info = get_theme_mod('author_details', false);
                         if ($author_info) {
-                            // Autorendaten abrufen
                             $author_id = get_the_author_meta('ID');
                             $author_name = get_the_author_meta('display_name');
                             $author_description = get_the_author_meta('description');
                             $author_website = get_the_author_meta('user_url');
-
-                            // Avatar des Autors
-                            $author_avatar = get_avatar($author_id, 80); // 96 ist die Größe des Avatars in Pixeln
+                            $author_avatar = get_avatar($author_id, 80);
 
 
                         ?>
@@ -121,7 +118,7 @@
                             </div>
                         <?php } ?>
 
-                        <!-- Kommentare -->
+                        <!-- Comments -->
                     <?php
                     if (comments_open() || get_comments_number()) {
                         comments_template();

@@ -1,8 +1,5 @@
 <?php
-// #########################################
 // Share Buttons
-// #########################################
-
 function theme_slug_social_sharing()
 {
     // Get current page URL.

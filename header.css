@@ -181,7 +181,7 @@
   background-color: var(--hintergrund);
 }
 .header .headerDiv .headerMenuColumn div {
-  background-color: var(--header-menu-backgound-color);
+  background-color: var(--header-menu-background-color);
 }
 .header .headerDiv .headerMenuColumn ul {
   display: flex;

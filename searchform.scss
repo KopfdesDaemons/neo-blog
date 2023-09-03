@@ -15,18 +15,21 @@
     margin: 5px 0;
     border-radius: 8px;
     text-align: center;
+    outline: 1px solid var(--primary-variant-darker);
   }
 
   #searchinput:focus {
     outline: 2px solid var(--primary-color);
   }
 
+  #searchinput:focus::-webkit-input-placeholder {
+    opacity: 0;
+}
+
   #searchsubmit {
     border-radius: 8px;
-    // height: 40px;
     height: 100%;
     padding: 0 0.4em;
-
     font-size: 1.3em;
     border: none;
     color: rgb(248, 248, 248);

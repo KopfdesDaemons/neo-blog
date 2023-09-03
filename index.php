@@ -27,7 +27,7 @@
                     echo '</div>';
                 }
             } else {
-                // Wenn keine Beiträge gefunden werden
+                // If no posts are found
                 echo esc_html__('No posts found.', 'my-theme');
             }
             ?>

@@ -5,7 +5,7 @@
         dynamic_sidebar('my-sidebar');
     } else { ?>
 
-        <!-- Widgets wenn der Nutzer keine Widgets in der Sidebar hat -->
+        <!-- Widgets if the user has no widgets in the sidebar -->
         <div id="block-40" class="widget widget_block" title="Shift-Klick, um dieses Widget zu bearbeiten.">
             <ul class="wp-block-social-links aligncenter is-layout-flex">
                 <li class="wp-social-link wp-social-link-facebook wp-block-social-link"><a href="https://Facebook.com" class="wp-block-social-link-anchor customize-unpreviewable"><svg width="24" height="24" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">

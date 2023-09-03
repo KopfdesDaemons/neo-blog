@@ -2,15 +2,13 @@
 
 function custom_theme_colors($wp_customize)
 {
-    // Sektionen
+    // Section
     $wp_customize->add_section('custom_theme_colors', array(
         'title' => __('Colors', 'my-theme'),
         'priority' => 30,
     ));
 
-    // Optionen ######################################################################
-
-    // primary-color
+    // Primary color
     $wp_customize->add_setting('primary_color', array(
         'default' => '#0076e5',
     ));
@@ -65,6 +63,7 @@ function custom_theme_colors($wp_customize)
         'settings' => 'background_color_dark_mode'
     )));
 
+    // Design scheme
     $wp_customize->add_setting('dark_mode', array(
         'default' => 'dark',
         'transport' => 'refresh',
@@ -73,7 +72,7 @@ function custom_theme_colors($wp_customize)
 
     $wp_customize->add_control('dark_mode', array(
         'type' => 'select',
-        'label' => __('Dark Mode', 'my-theme'),
+        'label' => __('Design scheme', 'my-theme'),
         'section' => 'custom_theme_colors',
         'choices' => array(
             'dark' => __('Dark', 'my-theme'),
@@ -93,7 +92,7 @@ function sanitize_dark_mode_option($input)
         return $input;
     }
 
-    return 'system'; // Standardwert "System", falls eine ungültige Option übergeben wird.
+    return 'system';
 }
 
 function add_darkmode_class_to_html()

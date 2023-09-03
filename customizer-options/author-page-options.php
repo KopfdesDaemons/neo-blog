@@ -1,13 +1,11 @@
 <?php
 function custom_author_page($wp_customize)
 {
-    // Sektionen
+    // Section
     $wp_customize->add_section('custom_author_page', array(
         'title' => __('Author Page', 'my-theme'),
         'priority' => 30,
     ));
-
-    // Optionen ######################################################################
 
     // Sidebar
     $wp_customize->add_setting('author_page_sidebar', array(
@@ -48,7 +46,7 @@ function custom_author_page($wp_customize)
         'section' => 'custom_author_page',
     ));
 
-    // Role
+    // Number of posts
     $wp_customize->add_setting('author_number_of_posts', array(
         'default' => true,
         'transport' => 'refresh',
@@ -61,7 +59,7 @@ function custom_author_page($wp_customize)
         'section' => 'custom_author_page',
     ));
 
-    // Registraiton Date
+    // Registration date
     $wp_customize->add_setting('author_registration_date', array(
         'default' => true,
         'transport' => 'refresh',
@@ -87,22 +85,22 @@ function custom_author_page($wp_customize)
         'section' => 'custom_author_page',
     ));
 
-    // Image size setting
+    // Image size
     $wp_customize->add_setting('image_size_setting', array(
-        'default' => '150', // Standardmäßige Bildgröße in Pixel
+        'default' => '150',
         'transport' => 'refresh',
-        'sanitize_callback' => 'absint', // Nur positive Ganzzahlen erlauben
+        'sanitize_callback' => 'absint',
     ));
 
     $wp_customize->add_control('image_size_setting', array(
         'type' => 'range',
-        'section' => 'title_tagline', // Hier kannst du eine andere Sektion wählen, in der du die Einstellung platzieren möchtest
+        'section' => 'title_tagline',
         'label' => __('Image size', 'my-theme'),
         'section' => 'custom_author_page',
         'input_attrs' => array(
-            'min' => 50, // Mindestgröße in Pixel
-            'max' => 300, // Maximale Größe in Pixel
-            'step' => 10, // Schrittgröße für den Zähler
+            'min' => 50,
+            'max' => 300,
+            'step' => 10,
         ),
     ));
 }

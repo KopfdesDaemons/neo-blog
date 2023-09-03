@@ -1,9 +1,7 @@
 .comments-area {
     margin-top: 1em;
-    // background-color: rgb(225, 245, 245);
     border-radius: 12px;
     padding: 1em;
-    // max-width: 50em;
 
     .comment-list {
         padding: 0;
@@ -37,7 +35,7 @@
         overflow-y: auto;
     }
 
-    // Zeile mit Bild und Namen
+    // Image and name row
     .vcard {
         display: flex;
         align-items: center;
@@ -59,13 +57,13 @@
             margin: 0 1em 0 0;
         }
 
-        // "sagt:"
+        // "says:"
         span {
             display: none;
         }
     }
 
-    // Zeile mit Datum und Bearbeiten-Button
+    // Row with date and edit button
     .comment-meta {
         display: flex;
         justify-content: space-between;
@@ -76,7 +74,7 @@
         }
     }
 
-    // Zeile mit Antworten-Link
+    // Row with reply link
     .reply {
         display: flex;
         margin-top: 1em;
@@ -91,13 +89,11 @@
         }
 
         .comment-reply-link:hover {
-            // background-color: var(--hintergrund-variant);
             background-color: unset;
-            // border: 1px solid var(--primary-variant-much-brighter);
         }
     }
 
-    // Autor-Kommentar
+    // Author comment
     .bypostauthor {
         .comment-body {
             background-color: var(--body);
@@ -106,7 +102,7 @@
         }
     }
 
-    // Liste mit Antworten auf Kommentar
+    // List of replies to the comment
     .children {
         grid-column-end: 3;
         padding: 0;
@@ -122,11 +118,11 @@
         }
     }
 
-    // Antwortformular Container
+    // Answer form container
     .comment-respond {
         padding: 1em;
 
-        // P-Tag mit Label + Textarea zum Antworten
+        // P-tag with label + textarea to answer
         .comment-form-comment {
             display: flex;
             flex-direction: column;
@@ -137,7 +133,7 @@
             }
         }
 
-        // Zeile mit "Kommentar abschicken"
+        // Row with "send comment"
         .form-submit {
             margin: 0.5rem;
 
@@ -159,7 +155,7 @@
             }
         }
 
-        // h2 "Schreib einen Kommentar"
+        // h2 "Write a comment"
         .comment-reply-title {
             display: flex;
             justify-content: space-between;
@@ -187,7 +183,6 @@
             flex-direction: column-reverse;
             align-items: flex-start;
 
-            // Label als Placeholder in Textfeldern
             label {
                 pointer-events: none;
                 position: absolute;

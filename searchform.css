@@ -15,9 +15,13 @@
   margin: 5px 0;
   border-radius: 8px;
   text-align: center;
+  outline: 1px solid var(--primary-variant-darker);
 }
 #searchform #searchinput:focus {
   outline: 2px solid var(--primary-color);
+}
+#searchform #searchinput:focus::-webkit-input-placeholder {
+  opacity: 0;
 }
 #searchform #searchsubmit {
   border-radius: 8px;

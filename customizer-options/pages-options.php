@@ -1,13 +1,12 @@
 <?php
 function custom_theme_pages($wp_customize)
 {
-    // Sektionen
+    // Section
     $wp_customize->add_section('custom_theme_pages', array(
         'title' => __('Pages', 'my-theme'),
         'priority' => 30,
+        'description' => __('Options for WordPress "Pages".'),
     ));
-
-    // Optionen ######################################################################
 
     // Sidebar
     $wp_customize->add_setting('pages_sidebar', array(

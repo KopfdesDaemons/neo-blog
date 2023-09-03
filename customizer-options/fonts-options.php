@@ -1,13 +1,14 @@
 <?php
 function theme_customiz_fonts($wp_customize)
 {
-    // Schriftarten hinzufügen
+    // Section
     $wp_customize->add_section('theme_fonts_section', array(
         'title'      => __('Font', 'textdomain'),
         'description' => __('All fonts are hosted locally. Consent according to the GDPR is not required for this theme (cookie banner).', 'my-theme'),
         'priority'   => 30,
     ));
 
+    // Fonts
     $wp_customize->add_setting('body_font', array(
         'default'   => 'Quicksand, sans-serif',
         'transport' => 'refresh',
@@ -40,18 +41,18 @@ function theme_customiz_fonts($wp_customize)
     $wp_customize->add_setting('line_heigt', array(
         'default' => '24',
         'transport' => 'refresh',
-        'sanitize_callback' => 'absint', // Nur positive Ganzzahlen erlauben
+        'sanitize_callback' => 'absint',
     ));
 
     $wp_customize->add_control('line_heigt', array(
         'type' => 'range',
-        'section' => 'title_tagline', // Hier kannst du eine andere Sektion wählen, in der du die Einstellung platzieren möchtest
+        'section' => 'title_tagline',
         'label' => __('Line height in paragraphs', 'my-theme'),
         'section' => 'theme_fonts_section',
         'input_attrs' => array(
-            'min' => 15, // Mindestgröße in Pixel
-            'max' => 50, // Maximale Größe in Pixel
-            'step' => 1, // Schrittgröße für den Zähler
+            'min' => 15,
+            'max' => 50,
+            'step' => 1,
         ),
     ));
 

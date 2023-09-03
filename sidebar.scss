@@ -113,10 +113,12 @@
         input[type=search] {
             height: 3em;
             border-radius: 8px;
+            outline: 1px solid var(--primary-variant-darker);
         }
 
         input[type=search]:focus {
             outline: none;
+            outline: 1px solid var(--primary-color);
         }
 
         button {
@@ -220,7 +222,7 @@
         }
     }
 
-    // Beitragsvorschläge
+    // Post suggestions
     .wp-block-latest-posts {
         li {
             margin-top: 0.5rem;
@@ -266,7 +268,7 @@
     }
 }
 
-// Auch auf Authorpage
+// Also on author page
 .widget_recent_comments ol,
 .wp-block-latest-comments {
     margin: 0;

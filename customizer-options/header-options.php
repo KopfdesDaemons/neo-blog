@@ -1,17 +1,13 @@
 <?php
-
-// Funktion zum Hinzufügen einer benutzerdefinierten Einstellung im Customizer
 function custom_theme_header($wp_customize)
 {
-    // Sektionen
+    // Section
     $wp_customize->add_section('custom_theme_header', array(
         'title' => __('Header', 'my-theme'),
         'priority' => 30,
     ));
 
-    // Optionen ######################################################################
-
-    // Header Menü 
+    // Fix header
     $wp_customize->add_setting('fixed_header', array(
         'default' => true,
         'transport' => 'refresh',
@@ -24,7 +20,7 @@ function custom_theme_header($wp_customize)
         'section' => 'custom_theme_header',
     ));
 
-    // Header Menü 
+    // Header menu
     $wp_customize->add_setting('header_menu', array(
         'default' => true,
         'transport' => 'refresh',
@@ -50,7 +46,7 @@ function custom_theme_header($wp_customize)
         'section' => 'custom_theme_header',
     ));
 
-    // Suchleiste
+    // Searchbar
     $wp_customize->add_setting('searchbar', array(
         'default' => true,
         'transport' => 'refresh',
@@ -63,7 +59,7 @@ function custom_theme_header($wp_customize)
         'section' => 'custom_theme_header',
     ));
 
-    // Suchbutton
+    // Search button
     $wp_customize->add_setting('search_button', array(
         'default' => true,
         'transport' => 'refresh',
@@ -92,20 +88,20 @@ function custom_theme_header($wp_customize)
 
     // Title size setting
     $wp_customize->add_setting('title_size_setting', array(
-        'default' => '25', // Standardmäßige Bildgröße in Pixel
+        'default' => '25',
         'transport' => 'refresh',
-        'sanitize_callback' => 'absint', // Nur positive Ganzzahlen erlauben
+        'sanitize_callback' => 'absint',
     ));
 
     $wp_customize->add_control('title_size_setting', array(
         'type' => 'range',
-        'section' => 'title_tagline', // Hier kannst du eine andere Sektion wählen, in der du die Einstellung platzieren möchtest
+        'section' => 'title_tagline',
         'label' => __('Title size', 'my-theme'),
         'section' => 'custom_theme_header',
         'input_attrs' => array(
-            'min' => 8, // Mindestgröße in Pixel
-            'max' => 50, // Maximale Größe in Pixel
-            'step' => 1, // Schrittgröße für den Zähler
+            'min' => 8,
+            'max' => 50,
+            'step' => 1,
         ),
         'active_callback' => 'title_active_callback'
     ));
@@ -125,25 +121,25 @@ function custom_theme_header($wp_customize)
 
     // Slogan size setting
     $wp_customize->add_setting('slogan_size_setting', array(
-        'default' => '14', // Standardmäßige Bildgröße in Pixel
+        'default' => '14',
         'transport' => 'refresh',
-        'sanitize_callback' => 'absint', // Nur positive Ganzzahlen erlauben
+        'sanitize_callback' => 'absint',
     ));
 
     $wp_customize->add_control('slogan_size_setting', array(
         'type' => 'range',
-        'section' => 'title_tagline', // Hier kannst du eine andere Sektion wählen, in der du die Einstellung platzieren möchtest
+        'section' => 'title_tagline',
         'label' => __('Slogan size', 'my-theme'),
         'section' => 'custom_theme_header',
         'input_attrs' => array(
-            'min' => 8, // Mindestgröße in Pixel
-            'max' => 50, // Maximale Größe in Pixel
-            'step' => 1, // Schrittgröße für den Zähler
+            'min' => 8,
+            'max' => 50,
+            'step' => 1,
         ),
         'active_callback' => 'slogan_active_callback'
     ));
 
-    // Background für Titel und Slogan
+    // Background for titel and slogan
     $wp_customize->add_setting('header_text_background', array(
         'default' => true,
         'transport' => 'refresh',
@@ -156,16 +152,16 @@ function custom_theme_header($wp_customize)
         'section' => 'custom_theme_header',
     ));
 
-    // Header gap / Spacing
+    // Header gap / spacing
     $wp_customize->add_setting('header_gap', array(
         'default' => '0',
         'transport' => 'refresh',
-        'sanitize_callback' => 'absint', // Nur positive Ganzzahlen erlauben
+        'sanitize_callback' => 'absint',
     ));
 
     $wp_customize->add_control('header_gap', array(
         'type' => 'range',
-        'section' => 'title_tagline', // Hier kannst du eine andere Sektion wählen, in der du die Einstellung platzieren möchtest
+        'section' => 'title_tagline',
         'label' => __('Element spacing', 'my-theme'),
         'section' => 'custom_theme_header',
         'input_attrs' => array(
@@ -201,30 +197,30 @@ function custom_theme_header($wp_customize)
         return $control->manager->get_setting('header_menu')->value();
     }
 
-    // Background Image
+    // Background image
     $wp_customize->add_setting('header_background_image', array(
         'default' => '',
-        'sanitize_callback' => 'esc_url_raw', // Um sicherzustellen, dass es eine URL ist
+        'sanitize_callback' => 'esc_url_raw',
     ));
 
     $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'image_control2', array(
         'label' => __('Background image', 'my-theme'),
         'section' => 'custom_theme_header',
         'settings' => 'header_background_image',
-        'type' => 'image', // Setze den Steuerungstyp auf Bild
-        'mime_type' => 'image', // Beschränke den Dateityp auf Bilder
+        'type' => 'image',
+        'mime_type' => 'image',
     )));
 
     // Backgoundimage saturation
     $wp_customize->add_setting('header_background_saturation', array(
         'default' => '80',
         'transport' => 'refresh',
-        'sanitize_callback' => 'absint', // Nur positive Ganzzahlen erlauben
+        'sanitize_callback' => 'absint',
     ));
 
     $wp_customize->add_control('header_background_saturation', array(
         'type' => 'range',
-        'section' => 'title_tagline', // Hier kannst du eine andere Sektion wählen, in der du die Einstellung platzieren möchtest
+        'section' => 'title_tagline',
         'label' => __('Background image saturation', 'my-theme'),
         'section' => 'custom_theme_header',
         'input_attrs' => array(
@@ -235,10 +231,10 @@ function custom_theme_header($wp_customize)
         'active_callback' => 'background_image_callback'
     ));
 
-    // Banner Image
+    // Banner image
     $wp_customize->add_setting('header_banner', array(
         'default' => '',
-        'sanitize_callback' => 'esc_url_raw', // Um sicherzustellen, dass es eine URL ist
+        'sanitize_callback' => 'esc_url_raw',
     ));
 
     $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'image_control', array(

@@ -1,20 +1,18 @@
 <?php
 function custom_theme_posts($wp_customize)
 {
-    // Sektionen
+    // Section
     $wp_customize->add_section('custom_theme_article', array(
         'title' => __('Posts', 'my-theme'),
         'priority' => 30,
         'description' => __('Settings of the individual posts.', 'my-theme')
     ));
 
-    // Optionen ######################################################################
-
-    // maximum width of the post
+    // Maximum width of the post
     $wp_customize->add_setting('maximum_width_of_posts', array(
         'default' => '70',
         'transport' => 'refresh',
-        'sanitize_callback' => 'absint', // Nur positive Ganzzahlen erlauben
+        'sanitize_callback' => 'absint',
     ));
 
     $wp_customize->add_control('maximum_width_of_posts', array(
@@ -23,9 +21,9 @@ function custom_theme_posts($wp_customize)
         'label' => __('Maximum width of posts', 'my-theme'),
         'section' => 'custom_theme_article',
         'input_attrs' => array(
-            'min' => 50, // Mindestgröße in Pixel
-            'max' => 150, // Maximale Größe in Pixel
-            'step' => 1, // Schrittgröße für den Zähler
+            'min' => 50,
+            'max' => 150,
+            'step' => 1,
         ),
     ));
 
@@ -33,7 +31,7 @@ function custom_theme_posts($wp_customize)
     $wp_customize->add_setting('heading_font_size', array(
         'default' => '35',
         'transport' => 'refresh',
-        'sanitize_callback' => 'absint', // Nur positive Ganzzahlen erlauben
+        'sanitize_callback' => 'absint',
     ));
 
     $wp_customize->add_control('heading_font_size', array(
@@ -71,7 +69,7 @@ function custom_theme_posts($wp_customize)
         'settings' => 'dark_mode_background_color_posts'
     )));
 
-    // Datum
+    // Date
     $wp_customize->add_setting('post_date', array(
         'default' => true,
         'transport' => 'refresh',
@@ -84,7 +82,7 @@ function custom_theme_posts($wp_customize)
         'section' => 'custom_theme_article',
     ));
 
-    // Kategorien
+    // Categories
     $wp_customize->add_setting('post_categories', array(
         'default' => true,
         'transport' => 'refresh',
@@ -110,7 +108,7 @@ function custom_theme_posts($wp_customize)
         'section' => 'custom_theme_article',
     ));
 
-    // Author Details
+    // Author details
     $wp_customize->add_setting('author_details', array(
         'default' => true,
         'transport' => 'refresh',
@@ -123,7 +121,7 @@ function custom_theme_posts($wp_customize)
         'section' => 'custom_theme_article',
     ));
 
-    // Share Options
+    // Share options
     $wp_customize->add_setting('share_options', array(
         'default' => true,
         'transport' => 'refresh',

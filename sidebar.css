@@ -92,9 +92,11 @@
 #sidebar .widget_search input[type=search] {
   height: 3em;
   border-radius: 8px;
+  outline: 1px solid var(--primary-variant-darker);
 }
 #sidebar .widget_search input[type=search]:focus {
   outline: none;
+  outline: 1px solid var(--primary-color);
 }
 #sidebar .widget_search button {
   height: 3em;

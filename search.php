@@ -3,11 +3,11 @@
     <section class="spacer grid">
         <div class="feed">
             <?php
-            $paged = (get_query_var('paged')) ? get_query_var('paged') : 1; // Aktuelle Seite abrufen
+            $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
             $args = array(
-                'post_type' => 'post', // Beitragstyp
-                'posts_per_page' => 10, // Anzahl der Beiträge pro Seite
-                'paged' => $paged // Aktuelle Seite übergeben
+                'post_type' => 'post',
+                'posts_per_page' => 10,
+                'paged' => $paged
             );
 
             if (have_posts()) {
@@ -20,7 +20,7 @@
                     if (is_sticky()) {
                         $post_classes[] = 'stickyPost';
                     }
-                    // Zeige Kachel mit Beitrag
+                    // Show cards
                     require_once get_template_directory() . '/template-parts/feed.php';
                     echo display_post_card($post_classes);
                 }
