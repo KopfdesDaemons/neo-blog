@@ -188,7 +188,7 @@ function custom_feed($wp_customize)
     $wp_customize->add_control('feed_post_card_padding', array(
         'type' => 'range',
         'section' => 'title_tagline',
-        'label' => __('Padding', 'my_theme'),
+        'label' => __('Padding', 'my-theme'),
         'section' => 'custom_feed',
         'input_attrs' => array(
             'min' => 0,
@@ -213,7 +213,8 @@ function custom_feed($wp_customize)
     // Image position
     $wp_customize->add_setting('feed_image_postion', array(
         'default' => 'imageLeft',
-        'transport' => 'refresh'
+        'transport' => 'refresh',
+        'sanitize_callback' => 'sanitize_text_field',
     ));
 
     $wp_customize->add_control('feed_image_postion', array(
@@ -230,7 +231,8 @@ function custom_feed($wp_customize)
     // Image display behavior
     $wp_customize->add_setting('image_display_behavior', array(
         'default' => 'cover',
-        'transport' => 'refresh'
+        'transport' => 'refresh',
+        'sanitize_callback' => 'sanitize_text_field',
     ));
 
     $wp_customize->add_control('image_display_behavior', array(

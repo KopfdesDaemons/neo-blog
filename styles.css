@@ -1,13 +1,18 @@
 /*
 Theme Name: Classic Neon Blog
-Author: Rico Angenvoort
+Author: Rico
 Author URI: https://ricoswebsite.com/
 Text Domain: my-theme
 Description: Classic Neon Blog is a timeless WordPress theme that effortlessly combines classic aesthetics with modern functionality. Enjoy the versatility of dark and light modes, extensive color customization, and locally hosted fonts. Designed for bloggers, this theme boasts a classic feed layout, customizable headers, and a translation-ready interface. Elevate your blogging experience with Classic Neon Blog.
-Tags: custom colors, custom font, blog, neon, minimalistic, dark mode, light mode, black, neon, custom header, translation ready, classic, feed, right sidebar, local fonts
+Tags:
 Version: 1.0
 Requires at least: 5.0
 Tested up to: 6.2.2
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Font Awesome License: Font Awesome Free License (https://fontawesome.com/license/free)
+Google Fonts License: Open Font License (https://scripts.sil.org/OFL)
+Copyright: Classic Neon Blog, Copyright 2023
 */
 body {
   margin: 0;
@@ -15,14 +20,6 @@ body {
   flex-direction: column;
   min-height: 100vh;
   background: var(--body);
-}
-
-.darkmode #wpadminbar {
-  background-color: var(--hintergrund);
-}
-
-#wpadminbar span {
-  color: unset;
 }
 
 input, textarea {

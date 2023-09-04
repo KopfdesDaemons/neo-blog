@@ -246,6 +246,7 @@ function custom_theme_header($wp_customize)
     // Font color light mode
     $wp_customize->add_setting('header_font_color_light_mode', array(
         'default' => '',
+        'sanitize_callback' => 'sanitize_hex_color',
     ));
 
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'font_color_light_mode2', array(
@@ -257,6 +258,7 @@ function custom_theme_header($wp_customize)
     // Font color dark mode
     $wp_customize->add_setting('header_font_color_dark_mode', array(
         'default' => '',
+        'sanitize_callback' => 'sanitize_hex_color',
     ));
 
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'font_color_dark_mode2', array(
@@ -268,6 +270,7 @@ function custom_theme_header($wp_customize)
     // Font color menu
     $wp_customize->add_setting('header_menu_font_color', array(
         'default' => '',
+        'sanitize_callback' => 'sanitize_hex_color',
     ));
 
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'font_color_header_menu', array(
@@ -280,6 +283,7 @@ function custom_theme_header($wp_customize)
     // Menu backgound color
     $wp_customize->add_setting('header_menu_background_color', array(
         'default' => '',
+        'sanitize_callback' => 'sanitize_hex_color',
     ));
 
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'header_menu_background_color', array(

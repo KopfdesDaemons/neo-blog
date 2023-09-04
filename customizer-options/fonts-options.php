@@ -3,7 +3,7 @@ function theme_customiz_fonts($wp_customize)
 {
     // Section
     $wp_customize->add_section('theme_fonts_section', array(
-        'title'      => __('Font', 'textdomain'),
+        'title'      => __('Font', 'my-theme'),
         'description' => __('All fonts are hosted locally. Consent according to the GDPR is not required for this theme (cookie banner).', 'my-theme'),
         'priority'   => 30,
     ));
@@ -12,6 +12,7 @@ function theme_customiz_fonts($wp_customize)
     $wp_customize->add_setting('body_font', array(
         'default'   => 'Quicksand, sans-serif',
         'transport' => 'refresh',
+        'sanitize_callback' => 'sanitize_text_field',
     ));
 
     $wp_customize->add_control('body_font', array(
@@ -59,6 +60,7 @@ function theme_customiz_fonts($wp_customize)
     // Font color light mode
     $wp_customize->add_setting('font_color_light_mode', array(
         'default' => '#0a0a0a',
+        'sanitize_callback' => 'sanitize_hex_color',
     ));
 
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'font_color_light_mode', array(
@@ -70,6 +72,7 @@ function theme_customiz_fonts($wp_customize)
     // Font color dark mode
     $wp_customize->add_setting('font_color_dark_mode', array(
         'default' => '#c8c8c8',
+        'sanitize_callback' => 'sanitize_hex_color',
     ));
 
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'font_color_dark_mode', array(

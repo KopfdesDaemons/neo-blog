@@ -25,6 +25,9 @@ add_action('wp_enqueue_scripts', 'enqueue_custom_styles');
 
 // Theme Support
 add_theme_support('post-thumbnails');
+add_theme_support("title-tag");
+add_theme_support('automatic-feed-links');
+
 
 function custom_comment_reply_script()
 {
@@ -44,8 +47,8 @@ function register_my_menus()
 {
     register_nav_menus(
         array(
-            'header-menu' => __('Header Menu'),
-            'footer-menu' => __('Footer Menu')
+            'header-menu' => __('Header Menu', 'my-theme'),
+            'footer-menu' => __('Footer Menu', 'my-theme')
         )
     );
 }
@@ -54,7 +57,7 @@ add_action('init', 'register_my_menus');
 function sidebar()
 {
     register_sidebar(array(
-        'name' => __('Sidebar'),
+        'name' => __('Sidebar', 'my-theme'),
         'id' => 'my-sidebar',
         'before_widget' => '<div id="%1$s" class="widget %2$s">',
         'after_widget' => '</div>',

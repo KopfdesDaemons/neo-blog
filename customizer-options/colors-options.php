@@ -11,6 +11,7 @@ function custom_theme_colors($wp_customize)
     // Primary color
     $wp_customize->add_setting('primary_color', array(
         'default' => '#0076e5',
+        'sanitize_callback' => 'sanitize_hex_color',
     ));
 
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'diwp_background_color', array(
@@ -22,6 +23,7 @@ function custom_theme_colors($wp_customize)
     // Element background color light mode
     $wp_customize->add_setting('element_background_color_light_mode', array(
         'default' => '#f7f7f7',
+        'sanitize_callback' => 'sanitize_hex_color',
     ));
 
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'element_background_color_light_mode', array(
@@ -33,6 +35,7 @@ function custom_theme_colors($wp_customize)
     // Element background color dark mode
     $wp_customize->add_setting('element_background_color_dark_mode', array(
         'default' => '#16181c',
+        'sanitize_callback' => 'sanitize_hex_color',
     ));
 
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'element_background_color_dark_mode', array(
@@ -44,6 +47,7 @@ function custom_theme_colors($wp_customize)
     // Background color light mode
     $wp_customize->add_setting('background_color_light_mode', array(
         'default' => '#F0F0F0',
+        'sanitize_callback' => 'sanitize_hex_color',
     ));
 
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'Background_color_light_mode', array(
@@ -55,6 +59,7 @@ function custom_theme_colors($wp_customize)
     // Background color dark mode
     $wp_customize->add_setting('background_color_dark_mode', array(
         'default' => '#0a0a0a',
+        'sanitize_callback' => 'sanitize_hex_color',
     ));
 
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'Background_color_dark_mode', array(

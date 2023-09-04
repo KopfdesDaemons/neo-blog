@@ -18,7 +18,7 @@
     <meta name="description" content="<?php echo esc_attr(get_the_excerpt()); ?>">
 
     <?php if (is_singular() && pings_open()) { ?>
-    <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
+        <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
     <?php }
 
     wp_head(); ?>
@@ -79,126 +79,142 @@
     ?>
 
     <style>
-    <?php // Variables from Settings
-    $font_color_light_mode=get_theme_mod('font_color_light_mode');
-    $header_font_color_light_mode=get_theme_mod('header_font_color_light_mode');
-    $header_menu_font_color=get_theme_mod('header_menu_font_color');
+        <?php // Variables from Settings
+        $font_color_light_mode = get_theme_mod('font_color_light_mode');
+        $header_font_color_light_mode = get_theme_mod('header_font_color_light_mode');
+        $header_menu_font_color = get_theme_mod('header_menu_font_color');
 
-    // Automatic font color for the header if none specified
-    if (empty($header_font_color_light_mode)) {
-        $header_font_color_light_mode=$font_color_light_mode;
-    }
+        // Automatic font color for the header if none specified
+        if (empty($header_font_color_light_mode)) {
+            $header_font_color_light_mode = $font_color_light_mode;
+        }
 
-    // primary-variant-darker for header menu if none specified
-    if (empty($header_menu_font_color)) {
-        $header_menu_font_color="var(--primary-variant-darker)";
-    }
+        // primary-variant-darker for header menu if none specified
+        if (empty($header_menu_font_color)) {
+            $header_menu_font_color = "var(--primary-variant-darker)";
+        }
 
-    ?>:root {
-        /* Colors */
-        --primary-color: <?php echo $primary_color ?>;
-        --primary-variant-darker: <?php echo $primary_variant_darker ?>;
-        --primary-variant-brighter: <?php echo $primary_variant_brighter ?>;
-        --primary-variant-much-brighter: <?php echo $primary_variant_much_brighter ?>;
-        --body: <?php echo get_theme_mod('background_color_light_mode') ?>;
-        --hintergrund: <?php echo get_theme_mod('element_background_color_light_mode') ?>;
-        --schrift: <?php echo $font_color_light_mode ?>;
+        ?>:root {
+            /* Colors */
+            --primary-color: <?php echo esc_attr(get_theme_mod('primary_color')) ?>;
+            --primary-variant-darker: <?php echo esc_attr(get_theme_mod('primary_variant_darker')) ?>;
+            --primary-variant-brighter: <?php echo esc_attr(get_theme_mod('primary_variant_brighter')) ?>;
+            --primary-variant-much-brighter: <?php echo esc_attr(get_theme_mod('primary_variant_much_brighter')) ?>;
+            --body: <?php echo esc_attr(get_theme_mod('background_color_light_mode')) ?>;
+            --hintergrund: <?php echo esc_attr(get_theme_mod('element_background_color_light_mode')) ?>;
+            --schrift: <?php echo esc_attr(get_theme_mod('font_color_light_mode')) ?>;
+            --hintergrund-inputfeld: <?php echo esc_attr(get_theme_mod('hintergrund_inputfeld')) ?>;
+            --hintergrund-variant: <?php echo esc_attr(get_theme_mod('hintergrund_variant')) ?>;
+            --hintergrund-variant-darker: <?php echo esc_attr(get_theme_mod('hintergrund_variant_darker')) ?>;
 
-        --hintergrund-inputfeld: <?php echo $hintergrund_inputfeld ?>;
-        --hintergrund-variant: <?php echo $hintergrund_variant ?>;
-        --hintergrund-variant-darker: <?php echo $hintergrund_variant_darker ?>;
+            /* Header Settings */
+            --header-font-color: <?php echo esc_attr(get_theme_mod('header_font_color_light_mode')) ?>;
+            --title-size: <?php echo esc_attr(get_theme_mod('title_size_setting')) . 'px;'
+                            ?>;
+            --slogan-size: <?php echo esc_attr(get_theme_mod('slogan_size_setting')) . 'px;'
+                            ?>;
+            --header-menu-font-color: <?php echo esc_attr(get_theme_mod('header_menu_font_color')) ?>;
+            --header-menu-background-color: <?php echo esc_attr(get_theme_mod('header_menu_background_color')) ?>;
+            --header-text-background-color: <?php if (get_theme_mod('header_text_background')) echo esc_attr('#00000057');
+                                            else echo esc_attr('transparent') ?>;
+            --header-gap: <?php echo esc_attr(get_theme_mod('header_gap')) . 'em';
+                            ?>
+                /* Font Settings */
+                --line-height: <?php echo esc_attr(get_theme_mod('line_heigt')) . 'px;';
+                                ?>;
 
-        /* Header Settings */
-        --header-font-color: <?php echo $header_font_color_light_mode ?>;
-        --title-size: <?php echo get_theme_mod('title_size_setting') . 'px;'?>;
-        --slogan-size: <?php echo get_theme_mod('slogan_size_setting') . 'px;'?>;
-        --header-menu-font-color: <?php echo $header_menu_font_color ?>;
-        --header-menu-background-color: <?php echo get_theme_mod('header_menu_background_color') ?>;
-        --header-text-background-color: <?php if (get_theme_mod('header_text_background')) echo '#00000057';
-        else echo 'transparent'?>;
-        --header-gap: <?php echo get_theme_mod('header_gap') . 'em'?>;
+            /* Feed Setting */
+            --feed_post_card_line_height: <?php echo esc_attr(get_theme_mod('feed_post_card_line_heigt')) . 'px;';
+                                            ?>;
+            --feed_post_card_border_radius: <?php echo esc_attr(get_theme_mod('feed_post_card_border_radius')) . 'px;';
+                                            ?>;
+            --feed_post_card_padding: <?php echo esc_attr(get_theme_mod('feed_post_card_padding')) . 'em;';
+                                        ?>;
+            --feed_post_card_border_radius_image: <?php echo esc_attr(get_theme_mod('feed_post_card_border_radius_image')) . 'px;';
+                                                    ?>;
+            --feed_post_card_spacing: <?php echo esc_attr(get_theme_mod('feed_post_card_spacing')) . 'em;';
+                                        ?>;
+            --feed_image_height: <?php echo esc_attr(get_theme_mod('feed_image_height')) . 'em;';
+                                    ?>;
+            --image_display_behavior: <?php echo esc_attr(get_theme_mod('image_display_behavior'));
+                                        ?>;
+            --tags_border_radius: <?php echo esc_attr(get_theme_mod('tags_border_radius')) . 'px;';
+                                    ?>;
+            --max_feed_width: <?php echo esc_attr(get_theme_mod('maximum_width_of_the_feed')) . 'em';
+                                ?>;
+            --max_posts_width: <?php echo esc_attr(get_theme_mod('maximum_width_of_posts')) . 'em';
+                                ?>;
 
-        /* Font Settings */
-        --line-height: <?php echo get_theme_mod('line_heigt') . 'px;'?>;
+            /* Posts Settings */
+            --background_color_posts: <?php echo esc_attr(get_theme_mod('background_color_posts'));
+                                        ?>;
+            --dark_mode_background_color_posts: <?php echo esc_attr(get_theme_mod('dark_mode_background_color_posts'));
+                                                ?>;
+            --heading_font_size: <?php echo esc_attr(get_theme_mod('heading_font_size')) . 'px;';
+                                    ?>;
+        }
 
-        /* Feed Setting*/
-        --feed_post_card_line_height: <?php echo get_theme_mod('feed_post_card_line_heigt') . 'px;'?>;
-        --feed_post_card_border_radius: <?php echo get_theme_mod('feed_post_card_border_radius') . 'px;'?>;
-        --feed_post_card_padding: <?php echo get_theme_mod('feed_post_card_padding') . 'em;'?>;
-        --feed_post_card_border_radius_image: <?php echo get_theme_mod('feed_post_card_border_radius_image') . 'px;'?>;
-        --feed_post_card_spacing: <?php echo get_theme_mod('feed_post_card_spacing') . 'em;'?>;
-        --feed_image_height: <?php echo get_theme_mod('feed_image_height') . 'em;'?>;
-        --image_display_behavior: <?php echo get_theme_mod('image_display_behavior') ?>;
-        --tags_border_radius: <?php echo get_theme_mod('tags_border_radius') . 'px;'?>;
-        --max_feed_width: <?php echo get_theme_mod('maximum_width_of_the_feed') . 'em'?>;
-        --max_posts_width: <?php echo get_theme_mod('maximum_width_of_posts') . 'em'?>;
 
-        /* Posts Settings */
-        --background_color_posts: <?php echo get_theme_mod('background_color_posts') ?>;
-        --dark_mode_background_color_posts: <?php echo get_theme_mod('dark_mode_background_color_posts') ?>;
-        --heading_font_size: <?php echo get_theme_mod('heading_font_size') . 'px;'?>;
-    }
+        <?php // Variables from Settings
+        $font_color_dark_mode = esc_attr(get_theme_mod('font_color_dark_mode'));
+        $header_font_color_dark_mode = esc_attr(get_theme_mod('header_font_color_dark_mode'));
 
-    <?php // Variables from Settings
-    $font_color_dark_mode=get_theme_mod('font_color_dark_mode');
-    $header_font_color_dark_mode=get_theme_mod('header_font_color_dark_mode');
+        // Automatic font color for the header if none specified
+        if (empty($header_font_color_dark_mode)) {
+            $header_font_color_dark_mode = $font_color_dark_mode;
+        }
 
-    // Automatic font color for the header if none specified
-    if (empty($header_font_color_dark_mode)) {
-        $header_font_color_dark_mode=$font_color_dark_mode;
-    }
+        ?>.darkmode {
+            --primary-variant-darker: <?php echo $primary_variant_much_brighter ?>;
+            --primary-variant-much-brighter: <?php echo $primary_variant_darker ?>;
+            --body: <?php echo esc_attr(get_theme_mod('background_color_dark_mode')) ?>;
+            --hintergrund: <?php echo esc_attr(get_theme_mod('element_background_color_dark_mode')) ?>;
+            --schrift: <?php echo $font_color_dark_mode ?>;
+            --header-font-color: <?php echo $header_font_color_dark_mode ?>;
+            --hintergrund-inputfeld: <?php echo $hintergrund_inputfeld ?>;
+            --hintergrund-variant: <?php echo $hintergrund_variant ?>;
+            --hintergrund-variant-darker: <?php echo $hintergrund_variant_darker ?>;
+        }
 
-    ?>.darkmode {
-        --primary-variant-darker: <?php echo $primary_variant_much_brighter ?>;
-        --primary-variant-much-brighter: <?php echo $primary_variant_darker ?>;
-        --body: <?php echo get_theme_mod('background_color_dark_mode') ?>;
-        --hintergrund: <?php echo get_theme_mod('element_background_color_dark_mode') ?>;
-        --schrift: <?php echo $font_color_dark_mode ?>;
-        --header-font-color: <?php echo $header_font_color_dark_mode ?>;
-        --hintergrund-inputfeld: <?php echo $hintergrund_inputfeld ?>;
-        --hintergrund-variant: <?php echo $hintergrund_variant ?>;
-        --hintergrund-variant-darker: <?php echo $hintergrund_variant_darker ?>;
-    }
+        body {
+            font-family: <?php echo esc_attr(get_theme_mod('body_font', '"Quicksand"')) ?>;
+        }
 
-    body {
-        font-family: <?php echo get_theme_mod('body_font', '"Quicksand"') ?>;
-    }
-
-    .header::before {
-        background-image: url('<?php echo get_theme_mod('header_background_image'); ?>');
-        filter: <?php echo 'saturate('. get_theme_mod('header_background_saturation') . '%)'?>;
-    }
+        .header::before {
+            background-image: url('<?php echo esc_attr(get_theme_mod('header_background_image')); ?>');
+            filter: <?php echo 'saturate(' . esc_attr(get_theme_mod('header_background_saturation')) . '%)' ?>;
+        }
     </style>
 
 
     <script>
-    function toggleMenu() {
-        var menu = document.querySelector('.mobileExpandedMenu');
-        menu.classList.toggle('headerMenuOpen');
-    }
+        function toggleMenu() {
+            var menu = document.querySelector('.mobileExpandedMenu');
+            menu.classList.toggle('headerMenuOpen');
+        }
 
-    function addMarginToBody() {
-        const header = document.querySelector('.header');
-        if (!header.classList.contains('fixedHeader')) return;
-        const height = header.offsetHeight;
-        const main = document.querySelector('main');
-        main.style.marginTop = height + 15 + 'px';
-    }
+        function addMarginToBody() {
+            const header = document.querySelector('.header');
+            if (!header.classList.contains('fixedHeader')) return;
+            const height = header.offsetHeight;
+            const main = document.querySelector('main');
+            main.style.marginTop = height + 15 + 'px';
+        }
 
-    window.addEventListener("DOMContentLoaded", function() {
-        const header = document.querySelector('.header');
-        if (!header.classList.contains('fixedHeader')) return;
-        addMarginToBody()
-        window.addEventListener('resize', function(event) {
+        window.addEventListener("DOMContentLoaded", function() {
+            const header = document.querySelector('.header');
+            if (!header.classList.contains('fixedHeader')) return;
             addMarginToBody()
-        }, true);
-    }, false);
+            window.addEventListener('resize', function(event) {
+                addMarginToBody()
+            }, true);
+        }, false);
     </script>
 
 </head>
 
 <body <?php body_class(); ?>>
-
+    <?php wp_body_open(); ?>
     <?php $fixedHeader = get_theme_mod('fixed_header', false); ?>
     <header id="header" class="clearfix header <?php if ($fixedHeader) echo 'fixedHeader' ?>" role="banner">
         <div class="headerDiv">
@@ -237,9 +253,9 @@
                 <?php
                 $home_page_link = get_theme_mod('home_page_link');
                 if ($home_page_link) { ?>
-                <a href="/" class="home-link" title="<?php echo __('Home page', 'my-theme') ?>">
-                    <i class="fa-solid fa-house"></i>
-                </a>
+                    <a href="/" class="home-link" title="<?php echo __('Home page', 'my-theme') ?>">
+                        <i class="fa-solid fa-house"></i>
+                    </a>
                 <?php } ?>
                 <button id="headerMenuBtn" onclick="toggleMenu()"><i class="fa-solid fa-bars"></i></button>
 
@@ -257,9 +273,9 @@
                     <?php
                     $home_page_link = get_theme_mod('home_page_link');
                     if ($home_page_link) { ?>
-                    <a href="/" class="home-link" title="<?php echo __('Home page', 'my-theme') ?>">
-                        <i class="fa-solid fa-house"></i>
-                    </a>
+                        <a href="/" class="home-link" title="<?php echo __('Home page', 'my-theme') ?>">
+                            <i class="fa-solid fa-house"></i>
+                        </a>
                     <?php } ?>
                     <?php
                     $header_menu = get_theme_mod('header_menu', false);

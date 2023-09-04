@@ -32,8 +32,8 @@
                         'total' => $wp_query->max_num_pages,
                         'current' => $paged,
                         'prev_next' => true,
-                        'prev_text' => __('« Previous'),
-                        'next_text' => __('Next »'),
+                        'prev_text' => __('« Previous', 'my-theme'),
+                        'next_text' => __('Next »', 'my-theme'),
                     ));
                     echo '</div>';
                 }

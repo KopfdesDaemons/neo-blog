@@ -13,21 +13,21 @@
                 $author_avatar = get_avatar($author_id, $image_size);
 
             ?>
-                <div class="author-info" id="author-bio">
-                    <div class="author-avatar">
-                        <?php echo $author_avatar; ?>
+            <div class="author-info" id="author-bio">
+                <div class="author-avatar">
+                    <?php echo $author_avatar; ?>
+                </div>
+                <div class="author-details">
+                    <div class="author-row">
+                        <h3><a href="<?php echo get_author_posts_url($author_id); ?>"><?php echo $author_name; ?></a>
+                        </h3>
+                        <?php if ($author_website && get_theme_mod('author_website')) : ?>
+                        <a href="<?php echo $author_website; ?>" target="_blank">🌐</a>
+                        <?php endif; ?>
                     </div>
-                    <div class="author-details">
-                        <div class="author-row">
-                            <h3><a href="<?php echo get_author_posts_url($author_id); ?>"><?php echo $author_name; ?></a>
-                            </h3>
-                            <?php if ($author_website && get_theme_mod('author_website')) : ?>
-                                <a href="<?php echo $author_website; ?>" target="_blank">🌐</a>
-                            <?php endif; ?>
-                        </div>
-                        <p><?php echo $author_description; ?></p>
-                        <ul>
-                            <?php
+                    <p><?php echo $author_description; ?></p>
+                    <ul>
+                        <?php
                             $author_roles = get_the_author_meta('roles');
 
                             if (!empty($author_roles) && get_theme_mod('author_page_role')) {
@@ -57,21 +57,21 @@
                                 echo '<li><b>' . __('Website', 'my-theme') . ':</b> <a href="' . $author_website . '" target="_blank">' . $author_website . '</a></li>';
                             }
                             ?>
-                        </ul>
-                    </div>
+                    </ul>
                 </div>
+            </div>
 
-                <!-- Show latest comments -->
-                <?php
+            <!-- Show latest comments -->
+            <?php
                 if (get_theme_mod('author_page_latest_comments')) {
                     $args = array(
                         'user_id' => $author_id,
                         'number' => 5, // Number of comments
                     );
                     $author_comments = get_comments($args); ?>
-                    <h3 class="archive-h3"><?php echo __('Last comments from', 'my-theme') . ' ' . $author_name; ?></h3>
-                    <ol class="has-avatars has-dates has-excerpts wp-block-latest-comments">
-                        <?php
+            <h3 class="archive-h3"><?php echo __('Last comments from', 'my-theme') . ' ' . $author_name; ?></h3>
+            <ol class="has-avatars has-dates has-excerpts wp-block-latest-comments">
+                <?php
 
                         if ($author_comments) {
                             foreach ($author_comments as $comment) {
@@ -93,7 +93,7 @@
                             echo __('No comments found.', 'my-theme');
                         }
                         ?>
-                    </ol>
+            </ol>
             <?php }
             } ?>
 
@@ -141,8 +141,8 @@
                     echo paginate_links(array(
                         'total' => $total_pages,
                         'prev_next' => true,
-                        'prev_text' => __('« Previous'),
-                        'next_text' => __('Next »'),
+                        'prev_text' => __('« Previous', 'my-theme'),
+                        'next_text' => __('Next »', 'my-theme'),
                     ));
                     echo '</div>';
                 }
