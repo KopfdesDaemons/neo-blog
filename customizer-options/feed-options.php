@@ -3,7 +3,7 @@ function custom_feed($wp_customize)
 {
     // Section
     $wp_customize->add_section('custom_feed', array(
-        'title' => __('Feed', 'my-theme'),
+        'title' => __('Feed', 'neo'),
         'priority' => 30,
     ));
 
@@ -17,7 +17,7 @@ function custom_feed($wp_customize)
     $wp_customize->add_control('maximum_width_of_the_feed', array(
         'type' => 'range',
         'section' => 'title_tagline',
-        'label' => __('Maximum width of the feed', 'my-theme'),
+        'label' => __('Maximum width of the feed', 'neo'),
         'section' => 'custom_feed',
         'input_attrs' => array(
             'min' => 50,
@@ -34,7 +34,7 @@ function custom_feed($wp_customize)
 
     $wp_customize->add_control('feed_posts_count', array(
         'type' => 'number',
-        'label' => __('Number of posts', 'my-theme'),
+        'label' => __('Number of posts', 'neo'),
         'section' => 'custom_feed',
         'priority' => 10,
         'input_attrs' => array(
@@ -54,7 +54,7 @@ function custom_feed($wp_customize)
     $wp_customize->add_control('feed_post_card_spacing', array(
         'type' => 'range',
         'section' => 'title_tagline',
-        'label' => __('Spacing between posts', 'my-theme'),
+        'label' => __('Spacing between posts', 'neo'),
         'section' => 'custom_feed',
         'input_attrs' => array(
             'min' => 0,
@@ -71,7 +71,7 @@ function custom_feed($wp_customize)
 
     $wp_customize->add_control('words_in_snippet', array(
         'type' => 'number',
-        'label' => __('Number of words in the snippet', 'my-theme'),
+        'label' => __('Number of words in the snippet', 'neo'),
         'section' => 'custom_feed',
         'priority' => 10,
         'input_attrs' => array(
@@ -90,7 +90,7 @@ function custom_feed($wp_customize)
 
     $wp_customize->add_control('feed_post_card_tags', array(
         'type' => 'checkbox',
-        'label' => __('Show tags', 'my-theme'),
+        'label' => __('Show tags', 'neo'),
         'section' => 'custom_feed',
     ));
 
@@ -104,7 +104,7 @@ function custom_feed($wp_customize)
     $wp_customize->add_control('tags_border_radius', array(
         'type' => 'range',
         'section' => 'title_tagline',
-        'label' => __('Tags border radius', 'my-theme'),
+        'label' => __('Tags border radius', 'neo'),
         'section' => 'custom_feed',
         'active_callback' => 'tags_active_callback',
         'input_attrs' => array(
@@ -123,7 +123,7 @@ function custom_feed($wp_customize)
 
     $wp_customize->add_control('feed_post_card_read_more', array(
         'type' => 'checkbox',
-        'label' => __('Show read more button', 'my-theme'),
+        'label' => __('Show read more button', 'neo'),
         'section' => 'custom_feed',
     ));
 
@@ -136,7 +136,7 @@ function custom_feed($wp_customize)
 
     $wp_customize->add_control('feed_post_card_comments', array(
         'type' => 'checkbox',
-        'label' => __('Show comments', 'my-theme'),
+        'label' => __('Show comments', 'neo'),
         'section' => 'custom_feed',
     ));
 
@@ -150,7 +150,7 @@ function custom_feed($wp_customize)
     $wp_customize->add_control('feed_post_card_line_heigt', array(
         'type' => 'range',
         'section' => 'title_tagline',
-        'label' => __('Line height in text snippet', 'my-theme'),
+        'label' => __('Line height in text snippet', 'neo'),
         'section' => 'custom_feed',
         'input_attrs' => array(
             'min' => 15,
@@ -169,7 +169,7 @@ function custom_feed($wp_customize)
     $wp_customize->add_control('feed_post_card_border_radius', array(
         'type' => 'range',
         'section' => 'title_tagline',
-        'label' => __('Border radius', 'my-theme'),
+        'label' => __('Border radius', 'neo'),
         'section' => 'custom_feed',
         'input_attrs' => array(
             'min' => 0,
@@ -188,7 +188,7 @@ function custom_feed($wp_customize)
     $wp_customize->add_control('feed_post_card_padding', array(
         'type' => 'range',
         'section' => 'title_tagline',
-        'label' => __('Padding', 'my-theme'),
+        'label' => __('Padding', 'neo'),
         'section' => 'custom_feed',
         'input_attrs' => array(
             'min' => 0,
@@ -206,7 +206,7 @@ function custom_feed($wp_customize)
 
     $wp_customize->add_control('feed_post_card_image', array(
         'type' => 'checkbox',
-        'label' => __('Show image', 'my-theme'),
+        'label' => __('Show image', 'neo'),
         'section' => 'custom_feed',
     ));
 
@@ -219,12 +219,12 @@ function custom_feed($wp_customize)
 
     $wp_customize->add_control('feed_image_postion', array(
         'type' => 'select',
-        'label' => __('Image postion', 'my-theme'),
+        'label' => __('Image postion', 'neo'),
         'section' => 'custom_feed',
         'active_callback' => 'image_active_callback',
         'choices' => array(
-            'imageLeft' => __('left', 'my-theme'),
-            'imageTop' => __('top', 'my-theme'),
+            'imageLeft' => __('left', 'neo'),
+            'imageTop' => __('top', 'neo'),
         ),
     ));
 
@@ -237,7 +237,7 @@ function custom_feed($wp_customize)
 
     $wp_customize->add_control('image_display_behavior', array(
         'type' => 'select',
-        'label' => __('Image display behavior', 'my-theme'),
+        'label' => __('Image display behavior', 'neo'),
         'section' => 'custom_feed',
         'active_callback' => 'image_active_callback',
         'choices' => array(
@@ -258,7 +258,7 @@ function custom_feed($wp_customize)
     $wp_customize->add_control('feed_post_card_border_radius_image', array(
         'type' => 'range',
         'section' => 'title_tagline',
-        'label' => __('Image radius', 'my-theme'),
+        'label' => __('Image radius', 'neo'),
         'section' => 'custom_feed',
         'active_callback' => 'image_active_callback',
         'input_attrs' => array(
@@ -278,7 +278,7 @@ function custom_feed($wp_customize)
     $wp_customize->add_control('feed_image_height', array(
         'type' => 'range',
         'section' => 'title_tagline',
-        'label' => __('Image height', 'my-theme'),
+        'label' => __('Image height', 'neo'),
         'section' => 'custom_feed',
         'active_callback' => 'image_active_callback',
         'input_attrs' => array(

@@ -12,9 +12,9 @@ if (post_password_required()) {
             <?php
             $comments_number = get_comments_number();
             if ($comments_number === 1) {
-                printf(__('One Comment', 'my-theme'));
+                printf(__('One Comment', 'neo'));
             } else {
-                printf(__('%d Comments', 'my-theme'), $comments_number);
+                printf(__('%d Comments', 'neo'), $comments_number);
             }
             ?>
         </h2>
@@ -31,15 +31,15 @@ if (post_password_required()) {
 
         <?php if (get_comment_pages_count() > 1 && get_option('page_comments')) : ?>
             <nav class="comment-navigation" role="navigation">
-                <div class="nav-previous"><?php previous_comments_link(__('Older Comments', 'my-theme')); ?></div>
-                <div class="nav-next"><?php next_comments_link(__('Newer Comments', 'my-theme')); ?></div>
+                <div class="nav-previous"><?php previous_comments_link(__('Older Comments', 'neo')); ?></div>
+                <div class="nav-next"><?php next_comments_link(__('Newer Comments', 'neo')); ?></div>
             </nav>
         <?php endif; ?>
 
     <?php endif; ?>
 
     <?php if (!comments_open() && get_comments_number() && post_type_supports(get_post_type(), 'comments')) : ?>
-        <p class="no-comments"><?php _e('Comments are closed.', 'my-theme'); ?></p>
+        <p class="no-comments"><?php _e('Comments are closed.', 'neo'); ?></p>
     <?php endif; ?>
 
     <?php

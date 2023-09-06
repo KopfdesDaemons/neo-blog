@@ -3,7 +3,7 @@ function custom_theme_header($wp_customize)
 {
     // Section
     $wp_customize->add_section('custom_theme_header', array(
-        'title' => __('Header', 'my-theme'),
+        'title' => __('Header', 'neo'),
         'priority' => 30,
     ));
 
@@ -16,7 +16,7 @@ function custom_theme_header($wp_customize)
 
     $wp_customize->add_control('fixed_header', array(
         'type' => 'checkbox',
-        'label' => __('Fix Header', 'my-theme'),
+        'label' => __('Fix Header', 'neo'),
         'section' => 'custom_theme_header',
     ));
 
@@ -29,7 +29,7 @@ function custom_theme_header($wp_customize)
 
     $wp_customize->add_control('header_menu', array(
         'type' => 'checkbox',
-        'label' => __('Show menu in header', 'my-theme'),
+        'label' => __('Show menu in header', 'neo'),
         'section' => 'custom_theme_header',
     ));
 
@@ -42,7 +42,7 @@ function custom_theme_header($wp_customize)
 
     $wp_customize->add_control('home_page_link', array(
         'type' => 'checkbox',
-        'label' => __('Show link to home page', 'my-theme'),
+        'label' => __('Show link to home page', 'neo'),
         'section' => 'custom_theme_header',
     ));
 
@@ -55,7 +55,7 @@ function custom_theme_header($wp_customize)
 
     $wp_customize->add_control('searchbar', array(
         'type' => 'checkbox',
-        'label' => __('Show search bar', 'my-theme'),
+        'label' => __('Show search bar', 'neo'),
         'section' => 'custom_theme_header',
     ));
 
@@ -68,7 +68,7 @@ function custom_theme_header($wp_customize)
 
     $wp_customize->add_control('search_button', array(
         'type' => 'checkbox',
-        'label' => __('Show search button', 'my-theme'),
+        'label' => __('Show search button', 'neo'),
         'section' => 'custom_theme_header',
         'active_callback' => 'searchbar_active_callback'
     ));
@@ -82,7 +82,7 @@ function custom_theme_header($wp_customize)
 
     $wp_customize->add_control('title', array(
         'type' => 'checkbox',
-        'label' => __('Show title', 'my-theme'),
+        'label' => __('Show title', 'neo'),
         'section' => 'custom_theme_header',
     ));
 
@@ -96,7 +96,7 @@ function custom_theme_header($wp_customize)
     $wp_customize->add_control('title_size_setting', array(
         'type' => 'range',
         'section' => 'title_tagline',
-        'label' => __('Title size', 'my-theme'),
+        'label' => __('Title size', 'neo'),
         'section' => 'custom_theme_header',
         'input_attrs' => array(
             'min' => 8,
@@ -115,7 +115,7 @@ function custom_theme_header($wp_customize)
 
     $wp_customize->add_control('tagline', array(
         'type' => 'checkbox',
-        'label' => __('Show slogan', 'my-theme'),
+        'label' => __('Show slogan', 'neo'),
         'section' => 'custom_theme_header',
     ));
 
@@ -129,7 +129,7 @@ function custom_theme_header($wp_customize)
     $wp_customize->add_control('slogan_size_setting', array(
         'type' => 'range',
         'section' => 'title_tagline',
-        'label' => __('Slogan size', 'my-theme'),
+        'label' => __('Slogan size', 'neo'),
         'section' => 'custom_theme_header',
         'input_attrs' => array(
             'min' => 8,
@@ -148,7 +148,7 @@ function custom_theme_header($wp_customize)
 
     $wp_customize->add_control('header_text_background', array(
         'type' => 'checkbox',
-        'label' => __('Text background', 'my-theme'),
+        'label' => __('Text background', 'neo'),
         'section' => 'custom_theme_header',
     ));
 
@@ -162,7 +162,7 @@ function custom_theme_header($wp_customize)
     $wp_customize->add_control('header_gap', array(
         'type' => 'range',
         'section' => 'title_tagline',
-        'label' => __('Element spacing', 'my-theme'),
+        'label' => __('Element spacing', 'neo'),
         'section' => 'custom_theme_header',
         'input_attrs' => array(
             'min' => 0,
@@ -204,7 +204,7 @@ function custom_theme_header($wp_customize)
     ));
 
     $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'image_control2', array(
-        'label' => __('Background image', 'my-theme'),
+        'label' => __('Background image', 'neo'),
         'section' => 'custom_theme_header',
         'settings' => 'header_background_image',
         'type' => 'image',
@@ -221,7 +221,7 @@ function custom_theme_header($wp_customize)
     $wp_customize->add_control('header_background_saturation', array(
         'type' => 'range',
         'section' => 'title_tagline',
-        'label' => __('Background image saturation', 'my-theme'),
+        'label' => __('Background image saturation', 'neo'),
         'section' => 'custom_theme_header',
         'input_attrs' => array(
             'min' => 0,
@@ -238,7 +238,7 @@ function custom_theme_header($wp_customize)
     ));
 
     $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'image_control', array(
-        'label' => __('Banner image', 'my-theme'),
+        'label' => __('Banner image', 'neo'),
         'section' => 'custom_theme_header',
         'settings' => 'header_banner',
     )));
@@ -250,7 +250,7 @@ function custom_theme_header($wp_customize)
     ));
 
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'font_color_light_mode2', array(
-        'label' => __('Font color light mode', 'my-theme'),
+        'label' => __('Font color light mode', 'neo'),
         'section' => 'custom_theme_header',
         'settings' => 'header_font_color_light_mode'
     )));
@@ -262,7 +262,7 @@ function custom_theme_header($wp_customize)
     ));
 
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'font_color_dark_mode2', array(
-        'label' => __('Font color dark mode', 'my-theme'),
+        'label' => __('Font color dark mode', 'neo'),
         'section' => 'custom_theme_header',
         'settings' => 'header_font_color_dark_mode'
     )));
@@ -274,7 +274,7 @@ function custom_theme_header($wp_customize)
     ));
 
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'font_color_header_menu', array(
-        'label' => __('Font color menu', 'my-theme'),
+        'label' => __('Font color menu', 'neo'),
         'section' => 'custom_theme_header',
         'settings' => 'header_menu_font_color',
         'active_callback' => 'header_menu_callback'
@@ -287,7 +287,7 @@ function custom_theme_header($wp_customize)
     ));
 
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'header_menu_background_color', array(
-        'label' => __('Menu backgound color', 'my-theme'),
+        'label' => __('Menu backgound color', 'neo'),
         'section' => 'custom_theme_header',
         'settings' => 'header_menu_background_color',
         'active_callback' => 'header_menu_callback'

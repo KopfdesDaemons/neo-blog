@@ -3,7 +3,7 @@ function custom_author_page($wp_customize)
 {
     // Section
     $wp_customize->add_section('custom_author_page', array(
-        'title' => __('Author Page', 'my-theme'),
+        'title' => __('Author Page', 'neo'),
         'priority' => 30,
     ));
 
@@ -16,7 +16,7 @@ function custom_author_page($wp_customize)
 
     $wp_customize->add_control('author_page_sidebar', array(
         'type' => 'checkbox',
-        'label' => __('Show sidebar', 'my-theme'),
+        'label' => __('Show sidebar', 'neo'),
         'section' => 'custom_author_page',
     ));
 
@@ -29,7 +29,7 @@ function custom_author_page($wp_customize)
 
     $wp_customize->add_control('author_page_latest_comments', array(
         'type' => 'checkbox',
-        'label' => __('Show recent comments', 'my-theme'),
+        'label' => __('Show recent comments', 'neo'),
         'section' => 'custom_author_page',
     ));
 
@@ -42,7 +42,7 @@ function custom_author_page($wp_customize)
 
     $wp_customize->add_control('author_page_role', array(
         'type' => 'checkbox',
-        'label' => __('Show author role', 'my-theme'),
+        'label' => __('Show author role', 'neo'),
         'section' => 'custom_author_page',
     ));
 
@@ -55,7 +55,7 @@ function custom_author_page($wp_customize)
 
     $wp_customize->add_control('author_number_of_posts', array(
         'type' => 'checkbox',
-        'label' => __('Show number of posts', 'my-theme'),
+        'label' => __('Show number of posts', 'neo'),
         'section' => 'custom_author_page',
     ));
 
@@ -68,7 +68,7 @@ function custom_author_page($wp_customize)
 
     $wp_customize->add_control('author_registration_date', array(
         'type' => 'checkbox',
-        'label' => __('Show registration date', 'my-theme'),
+        'label' => __('Show registration date', 'neo'),
         'section' => 'custom_author_page',
     ));
 
@@ -81,7 +81,7 @@ function custom_author_page($wp_customize)
 
     $wp_customize->add_control('author_website', array(
         'type' => 'checkbox',
-        'label' => __('Show author website', 'my-theme'),
+        'label' => __('Show author website', 'neo'),
         'section' => 'custom_author_page',
     ));
 
@@ -95,7 +95,7 @@ function custom_author_page($wp_customize)
     $wp_customize->add_control('image_size_setting', array(
         'type' => 'range',
         'section' => 'title_tagline',
-        'label' => __('Image size', 'my-theme'),
+        'label' => __('Image size', 'neo'),
         'section' => 'custom_author_page',
         'input_attrs' => array(
             'min' => 50,

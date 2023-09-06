@@ -4,7 +4,7 @@ function custom_theme_colors($wp_customize)
 {
     // Section
     $wp_customize->add_section('custom_theme_colors', array(
-        'title' => __('Colors', 'my-theme'),
+        'title' => __('Colors', 'neo'),
         'priority' => 30,
     ));
 
@@ -15,7 +15,7 @@ function custom_theme_colors($wp_customize)
     ));
 
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'diwp_background_color', array(
-        'label' => 'Primary Color',
+        'label' => __('Primary Color', 'neo'),
         'section' => 'custom_theme_colors',
         'settings' => 'primary_color'
     )));
@@ -27,7 +27,7 @@ function custom_theme_colors($wp_customize)
     ));
 
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'element_background_color_light_mode', array(
-        'label' => 'Element background color light mode',
+        'label' => __('Element background color light mode', 'neo'),
         'section' => 'custom_theme_colors',
         'settings' => 'element_background_color_light_mode'
     )));
@@ -39,7 +39,7 @@ function custom_theme_colors($wp_customize)
     ));
 
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'element_background_color_dark_mode', array(
-        'label' => 'Element background color dark mode',
+        'label' => __('Element background color dark mode', 'neo'),
         'section' => 'custom_theme_colors',
         'settings' => 'element_background_color_dark_mode'
     )));
@@ -51,7 +51,7 @@ function custom_theme_colors($wp_customize)
     ));
 
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'Background_color_light_mode', array(
-        'label' => 'Background color light mode',
+        'label' => __('Background color light mode', 'neo'),
         'section' => 'custom_theme_colors',
         'settings' => 'background_color_light_mode'
     )));
@@ -63,7 +63,7 @@ function custom_theme_colors($wp_customize)
     ));
 
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'Background_color_dark_mode', array(
-        'label' => 'Background color dark mode',
+        'label' => __('Background color dark mode', 'neo'),
         'section' => 'custom_theme_colors',
         'settings' => 'background_color_dark_mode'
     )));
@@ -77,12 +77,12 @@ function custom_theme_colors($wp_customize)
 
     $wp_customize->add_control('dark_mode', array(
         'type' => 'select',
-        'label' => __('Design scheme', 'my-theme'),
+        'label' => __('Design scheme', 'neo'),
         'section' => 'custom_theme_colors',
         'choices' => array(
-            'dark' => __('Dark', 'my-theme'),
-            'light' => __('Light', 'my-theme'),
-            'system' => __('System', 'my-theme'),
+            'dark' => __('Dark', 'neo'),
+            'light' => __('Light', 'neo'),
+            'system' => __('System', 'neo'),
         ),
     ));
 }

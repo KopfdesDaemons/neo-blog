@@ -3,8 +3,8 @@ function theme_customiz_fonts($wp_customize)
 {
     // Section
     $wp_customize->add_section('theme_fonts_section', array(
-        'title'      => __('Font', 'my-theme'),
-        'description' => __('All fonts are hosted locally. Consent according to the GDPR is not required for this theme (cookie banner).', 'my-theme'),
+        'title'      => __('Font', 'neo'),
+        'description' => __('All fonts are hosted locally. Consent according to the GDPR is not required for this theme (cookie banner).', 'neo'),
         'priority'   => 30,
     ));
 
@@ -16,7 +16,7 @@ function theme_customiz_fonts($wp_customize)
     ));
 
     $wp_customize->add_control('body_font', array(
-        'label'      => __('Main text font', 'my-theme'),
+        'label'      => __('Main text font', 'neo'),
         'section'    => 'theme_fonts_section',
         'type'       => 'select',
         'choices'    => array(
@@ -48,7 +48,7 @@ function theme_customiz_fonts($wp_customize)
     $wp_customize->add_control('line_heigt', array(
         'type' => 'range',
         'section' => 'title_tagline',
-        'label' => __('Line height in paragraphs', 'my-theme'),
+        'label' => __('Line height in paragraphs', 'neo'),
         'section' => 'theme_fonts_section',
         'input_attrs' => array(
             'min' => 15,
@@ -64,7 +64,7 @@ function theme_customiz_fonts($wp_customize)
     ));
 
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'font_color_light_mode', array(
-        'label' => __('Font color light mode', 'my-theme'),
+        'label' => __('Font color light mode', 'neo'),
         'section' => 'theme_fonts_section',
         'settings' => 'font_color_light_mode'
     )));
@@ -76,7 +76,7 @@ function theme_customiz_fonts($wp_customize)
     ));
 
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'font_color_dark_mode', array(
-        'label' => __('Font color dark mode', 'my-theme'),
+        'label' => __('Font color dark mode', 'neo'),
         'section' => 'theme_fonts_section',
         'settings' => 'font_color_dark_mode'
     )));

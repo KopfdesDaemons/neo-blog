@@ -3,9 +3,9 @@ function custom_theme_posts($wp_customize)
 {
     // Section
     $wp_customize->add_section('custom_theme_article', array(
-        'title' => __('Posts', 'my-theme'),
+        'title' => __('Posts', 'neo'),
         'priority' => 30,
-        'description' => __('Settings of the individual posts.', 'my-theme')
+        'description' => __('Settings of the individual posts.', 'neo')
     ));
 
     // Maximum width of the post
@@ -18,7 +18,7 @@ function custom_theme_posts($wp_customize)
     $wp_customize->add_control('maximum_width_of_posts', array(
         'type' => 'range',
         'section' => 'title_tagline',
-        'label' => __('Maximum width of posts', 'my-theme'),
+        'label' => __('Maximum width of posts', 'neo'),
         'section' => 'custom_theme_article',
         'input_attrs' => array(
             'min' => 50,
@@ -37,7 +37,7 @@ function custom_theme_posts($wp_customize)
     $wp_customize->add_control('heading_font_size', array(
         'type' => 'range',
         'section' => 'title_tagline',
-        'label' => __('Heading font size', 'my-theme'),
+        'label' => __('Heading font size', 'neo'),
         'section' => 'custom_theme_article',
         'input_attrs' => array(
             'min' => 24,
@@ -80,7 +80,7 @@ function custom_theme_posts($wp_customize)
 
     $wp_customize->add_control('post_date', array(
         'type' => 'checkbox',
-        'label' => __('Show date', 'my-theme'),
+        'label' => __('Show date', 'neo'),
         'section' => 'custom_theme_article',
     ));
 
@@ -93,7 +93,7 @@ function custom_theme_posts($wp_customize)
 
     $wp_customize->add_control('post_categories', array(
         'type' => 'checkbox',
-        'label' => __('Show categories', 'my-theme'),
+        'label' => __('Show categories', 'neo'),
         'section' => 'custom_theme_article',
     ));
 
@@ -106,7 +106,7 @@ function custom_theme_posts($wp_customize)
 
     $wp_customize->add_control('tags', array(
         'type' => 'checkbox',
-        'label' => __('Show tags', 'my-theme'),
+        'label' => __('Show tags', 'neo'),
         'section' => 'custom_theme_article',
     ));
 
@@ -119,7 +119,7 @@ function custom_theme_posts($wp_customize)
 
     $wp_customize->add_control('author_details', array(
         'type' => 'checkbox',
-        'label' => __('Show author details', 'my-theme'),
+        'label' => __('Show author details', 'neo'),
         'section' => 'custom_theme_article',
     ));
 
@@ -132,7 +132,7 @@ function custom_theme_posts($wp_customize)
 
     $wp_customize->add_control('share_options', array(
         'type' => 'checkbox',
-        'label' => __('Show share area', 'my-theme'),
+        'label' => __('Show share area', 'neo'),
         'section' => 'custom_theme_article',
     ));
 
@@ -145,7 +145,7 @@ function custom_theme_posts($wp_customize)
 
     $wp_customize->add_control('post_pagination', array(
         'type' => 'checkbox',
-        'label' => __('Show post pagination', 'my-theme'),
+        'label' => __('Show post pagination', 'neo'),
         'section' => 'custom_theme_article',
     ));
 
@@ -158,7 +158,7 @@ function custom_theme_posts($wp_customize)
 
     $wp_customize->add_control('post_sidebar', array(
         'type' => 'checkbox',
-        'label' => __('Show sidebar', 'my-theme'),
+        'label' => __('Show sidebar', 'neo'),
         'section' => 'custom_theme_article',
     ));
 }

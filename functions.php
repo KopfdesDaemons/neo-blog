@@ -23,10 +23,19 @@ function enqueue_custom_styles()
 }
 add_action('wp_enqueue_scripts', 'enqueue_custom_styles');
 
+function neo_custom_script()
+{
+    wp_enqueue_script('headerlogic', get_template_directory_uri() . '/js/headerlogic.js', array('jquery'), '1.0', true);
+}
+
+add_action('wp_enqueue_scripts', 'neo_custom_script');
+
+
 // Theme Support
 add_theme_support('post-thumbnails');
 add_theme_support("title-tag");
 add_theme_support('automatic-feed-links');
+add_theme_support("custom-header");
 
 
 function custom_comment_reply_script()
@@ -39,7 +48,7 @@ add_action('wp_enqueue_scripts', 'custom_comment_reply_script');
 
 function my_theme_load_theme_textdomain()
 {
-    load_theme_textdomain('my-theme', get_template_directory() . '/languages');
+    load_theme_textdomain('neo', get_template_directory() . '/languages');
 }
 add_action('after_setup_theme', 'my_theme_load_theme_textdomain');
 
@@ -47,8 +56,8 @@ function register_my_menus()
 {
     register_nav_menus(
         array(
-            'header-menu' => __('Header Menu', 'my-theme'),
-            'footer-menu' => __('Footer Menu', 'my-theme')
+            'header-menu' => __('Header Menu', 'neo'),
+            'footer-menu' => __('Footer Menu', 'neo')
         )
     );
 }
@@ -57,7 +66,7 @@ add_action('init', 'register_my_menus');
 function sidebar()
 {
     register_sidebar(array(
-        'name' => __('Sidebar', 'my-theme'),
+        'name' => __('Sidebar', 'neo'),
         'id' => 'my-sidebar',
         'before_widget' => '<div id="%1$s" class="widget %2$s">',
         'after_widget' => '</div>',
@@ -76,21 +85,21 @@ function custom_comment_form_fields($fields)
     $fields['author'] = '<p class="comment-form-author">' .
         '<input id="author" name="author" placeholder="&nbsp;" type="text" value="' . esc_attr($commenter['comment_author']) .
         '" size="30" ' . 'aria-required="true" required />' .
-        '<label for="author">' . __('Your Name', 'my-theme') . '<span class="required">*</span></label>' .
+        '<label for="author">' . __('Your Name', 'neo') . '<span class="required">*</span></label>' .
         '</p>';
 
     // Modify the Email field
     $fields['email'] = '<p class="comment-form-email">' .
         '<input id="email" name="email" placeholder="&nbsp;" type="text" value="' . esc_attr($commenter['comment_author_email']) .
         '" size="30" ' . 'aria-required="true" required />' .
-        '<label for="email">' . __('Your Email', 'my-theme') . '<span class="required">*</span></label>' .
+        '<label for="email">' . __('Your Email', 'neo') . '<span class="required">*</span></label>' .
         '</p>';
 
     // Add the URL field back with its label and input
     $fields['url'] = '<p class="comment-form-url">' .
         '<input id="url" name="url" placeholder="&nbsp;" type="text" value="' . esc_attr($commenter['comment_author_url']) .
         '" size="30" />' .
-        '<label for="url">' . __('Your Website', 'my-theme') . '</label>' .
+        '<label for="url">' . __('Your Website', 'neo') . '</label>' .
         '</p>';
 
     return $fields;

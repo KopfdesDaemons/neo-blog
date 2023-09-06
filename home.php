@@ -31,14 +31,14 @@
                     'total' => $query->max_num_pages,
                     'current' => $paged,
                     'prev_next' => true,
-                    'prev_text' => __('« Previous', 'my-theme'),
-                    'next_text' => __('Next »', 'my-theme'),
+                    'prev_text' => __('« Previous', 'neo'),
+                    'next_text' => __('Next »', 'neo'),
                 ));
                 echo '</div>';
 
                 wp_reset_postdata();
             } else {
-                echo esc_html__('No posts found.', 'my-theme');
+                echo esc_html__('No posts found.', 'neo');
             }
             ?>
         </div>
