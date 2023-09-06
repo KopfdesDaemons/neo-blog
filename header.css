@@ -93,7 +93,6 @@
 .header .headerDiv .toggleDiv {
   display: flex;
   gap: 0.1em;
-  height: 3em;
   margin: 0.3em;
 }
 .header .headerDiv .toggleDiv .home-link {

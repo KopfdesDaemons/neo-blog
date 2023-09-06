@@ -1,65 +1,173 @@
 /*
-Theme Name: Material Blog
-Author: Rico Angenvoort
+Theme Name: Neo
+Author: Rico
 Author URI: https://ricoswebsite.com/
-Description: Ein schlichtes einfaches Theme. Es ist minimalistisch und modern.
-Tags: blog, material design, minimalistic
+Text Domain: my-theme
+Description: Neo is a timeless WordPress theme that effortlessly combines classic aesthetics with modern functionality. Enjoy the versatility of dark and light modes, extensive color customization, and locally hosted fonts. Designed for bloggers, this theme boasts a classic feed layout, customizable headers, and a translation-ready interface. Elevate your blogging experience with Neo.
+Tags: blog, one-column, two-columns, right-sidebar, custom-colors, custom-header, custom-menu, flexible-header, full-width-template, sticky-post, theme-options, threaded-comments, translation-ready
 Version: 1.0
 Requires at least: 5.0
 Tested up to: 6.2.2
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Font Awesome License: Font Awesome Free License (https://fontawesome.com/license/free)
+Google Fonts License: Open Font License (https://scripts.sil.org/OFL)
+Copyright: Neo Theme, Copyright 2023
 */
 body {
   margin: 0;
-  font-family: "Quicksand";
-  background-color: rgb(245, 247, 255);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: var(--body);
+}
+
+input, textarea {
+  background-color: var(--hintergrund-inputfeld);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  word-wrap: break-word;
+  overflow-wrap: anywhere;
+  margin: 0.2em;
+}
+
+h1,
+h2,
+h3,
+a,
+p,
+span,
+table,
+label,
+div,
+button {
+  color: var(--schrift);
+}
+
+h2,
+h3,
+.darkmode h2,
+.darkmode h3 {
+  color: var(--primary-variant-darker);
+}
+
+.darkmode .rot,
+.rot {
+  color: red;
+}
+
+.variantColor {
+  color: var(--primary-variant-darker);
 }
 
 main {
   display: flex;
   flex-direction: column;
+  position: relative;
+  align-items: center;
 }
 
 .spacer {
   margin: 0 auto;
-  max-width: 80em;
+  max-width: 70em;
+  width: 95vw;
+  z-index: 5;
+  position: relative;
+}
+
+.spacerFeed {
+  max-width: var(--max_feed_width);
+}
+
+@media only screen and (max-width: 600px) {
+  .feed {
+    margin: 0.5em;
+  }
+}
+
+a {
+  color: var(--primary-variant-darker);
+}
+
+.darkmode a {
+  color: var(--primary-color);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 70fr auto;
+  align-items: flex-start;
+  margin-bottom: 2em;
+}
+@media only screen and (max-width: 600px) {
+  .grid {
+    display: flex;
+  }
+}
+
+.shadow {
+  box-shadow: 1px 1px 8px -6px #000000;
+}
+
+#authorPageComments {
+  background-color: var(--hintergrund);
+}
+
+.archive-h3 {
+  margin: 1em;
 }
 
 .postCard {
-  background-color: rgb(205, 243, 243);
-  box-shadow: 1px 1px 5px -4px #000000;
-  border-radius: 25px;
-  padding: 2em;
-  margin-top: 2em;
+  background-color: var(--hintergrund);
+  border: 1px solid rgb(221, 221, 221);
+  border-radius: var(--feed_post_card_border_radius);
+  padding: var(--feed_post_card_padding);
+  margin-bottom: var(--feed_post_card_spacing);
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: 40% 1fr;
+  grid-auto-flow: column;
   width: 50rem;
   justify-content: flex-start;
   align-items: center;
   gap: 0.5em;
+  width: 100%;
+  box-sizing: border-box;
 }
 .postCard .imgA {
-  width: auto;
   overflow: hidden;
   display: flex;
-  border-radius: 15px;
+  border-radius: var(--feed_post_card_border_radius_image);
 }
 .postCard .imgA img {
-  width: auto;
+  width: 100%;
   max-width: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
-  max-height: 25em;
+  -o-object-fit: var(--image_display_behavior);
+     object-fit: var(--image_display_behavior);
+  height: var(--feed_image_height);
   transition: all 500ms;
 }
 .postCard .imgA:hover img {
   transform: scale(1.2);
 }
 .postCard .textDiv {
-  padding: 1em;
+  padding: 0.5em;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  height: 100%;
+  font-size: 0.9em;
+  grid-column: span 2;
+}
+.postCard .textDiv a {
+  text-decoration: none;
+}
+.postCard .textDiv p {
+  line-height: var(--feed_post_card_line_heigt);
 }
 .postCard .textDiv .date {
   font-size: 0.8em;
@@ -71,23 +179,49 @@ main {
   justify-content: space-between;
   align-items: center;
 }
+.postCard .textDiv .buttomDiv .postLinks {
+  display: flex;
+  margin-left: auto;
+}
+.postCard .textDiv .buttomDiv .pin {
+  display: none;
+}
+.postCard .textDiv .buttomDiv .commentscount {
+  display: flex;
+  align-items: center;
+  background-color: var(--body);
+  border: 1px solid rgb(226, 226, 226);
+  text-decoration: none;
+  padding: 0.8em 1.2em;
+  border-radius: 8px;
+  margin-right: 0.5em;
+}
+.postCard .textDiv .buttomDiv .commentscount :nth-child(2) {
+  margin-left: 0.5em;
+}
+.postCard .textDiv .buttomDiv .commentscount:hover {
+  background-color: var(--hintergrund);
+}
 .postCard .textDiv .buttomDiv .readMore {
   text-decoration: none;
-  background-color: rgb(119, 162, 202);
-  color: white;
+  background-color: var(--primary-color);
+  color: #000000;
   border-radius: 8px;
   padding: 0.8em 1.2em;
 }
 .postCard .textDiv .buttomDiv .readMore:hover {
   background-color: transparent;
-  outline: 1px solid black;
-  color: black;
+  outline: 1px solid var(--primary-color);
   transition: all 200ms;
+  color: var(--schrift);
 }
 .postCard h2 {
   margin: 0 0 0.5em 0;
-  word-wrap: break-word;
-  max-width: 23em;
+  color: var(--schrift);
+  font-size: 1.4em;
+}
+.postCard h2:hover {
+  text-decoration: underline;
 }
 .postCard .tagsDiv ul {
   display: flex;
@@ -95,24 +229,156 @@ main {
   list-style: none;
   margin: 0;
   padding: 0;
+  font-size: 1.2em;
+  margin-bottom: 0.5em;
 }
 .postCard .tagsDiv ul li {
   margin: 0.4em 0.2em;
 }
 .postCard .tagsDiv ul a {
   text-decoration: none;
-  color: black;
+  color: var(--schrift);
   text-align: center;
-  background-color: aliceblue;
   padding: 0.6em 1em;
-  border-radius: 32px;
+  border-radius: var(--tags_border_radius);
   font-size: 0.7em;
   min-width: 2em;
+  background-color: var(--hintergrund-variant);
 }
 .postCard .tagsDiv ul a:hover {
   outline: 1px solid rgb(97, 97, 97);
 }
 
-.stickyPost {
-  border: 1px solid;
+.imageTop {
+  grid-template-columns: auto;
+  grid-auto-flow: row;
+}
+.imageTop .textDiv {
+  grid-column: span 1;
+}
+
+@media only screen and (max-width: 600px) {
+  .imageLeft {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.9em;
+    padding: 0.75em;
+  }
+  .imageLeft .imgA {
+    width: 100%;
+  }
+}
+.darkmode .postCard {
+  border: none;
+}
+.darkmode .postCard img {
+  filter: brightness(0.8);
+}
+.darkmode .postCard .tagsDiv a {
+  background-color: var(--primary-variant-much-brighter);
+}
+@media only screen and (max-width: 600px) {
+  .darkmode .postCard {
+    border: 1px solid rgb(49, 49, 49);
+  }
+}
+
+.stickyPost .textDiv .buttomDiv .pin {
+  display: block;
+}
+
+.pagination {
+  margin-top: 2em;
+  margin-bottom: 3em;
+  display: flex;
+  justify-content: flex-end;
+  background-color: var(--hintergrund);
+  padding: 0.5em;
+  font-size: clamp(14px, 2vw, 1rem);
+}
+.pagination a,
+.pagination span {
+  background-color: var(--hintergrund-variant-darker);
+  border-radius: 8px;
+  margin: 0.2em;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  vertical-align: middle;
+}
+.pagination span {
+  border: 1px solid var(--schrift);
+  background-color: var(--body);
+}
+.pagination a:hover {
+  background-color: var(--primary-variant-much-brighter);
+}
+
+html ::-webkit-scrollbar {
+  width: 15px;
+  height: 10px;
+}
+html body ::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.social-sharing-links {
+  margin-top: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.social-sharing-links span {
+  margin: 0.5em;
+  margin-top: 0;
+}
+.social-sharing-links ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+}
+.social-sharing-links ul li {
+  display: flex;
+}
+.social-sharing-links a {
+  margin: 0.5em;
+  padding: 0.8em;
+  text-decoration: none;
+  color: rgb(248, 248, 248);
+  font-size: clamp(14px, 2vw, 1rem);
+}
+.social-sharing-links a:hover {
+  background-color: unset;
+  outline: 3px solid;
+  color: var(--schrift);
+}
+.social-sharing-links .Facebook {
+  background-color: #3b5998;
+}
+.social-sharing-links .Twitter {
+  background-color: #00acee;
+}
+.social-sharing-links .Reddit {
+  background-color: #FF5700;
+}
+.social-sharing-links .E-Mail {
+  background-color: #888;
 }/*# sourceMappingURL=style.css.map */

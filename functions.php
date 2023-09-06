@@ -5,7 +5,7 @@ function enqueue_custom_styles()
 
     $styles = array(
         'custom-font' => '/fonts/fonts.css',
-        'custom-styles' => '/styles.css',
+        'custom-styles' => '/style.css',
         'searchform-styles' => '/searchform.css',
         'header-styles' => '/header.css',
         'footer-styles' => '/footer.css',

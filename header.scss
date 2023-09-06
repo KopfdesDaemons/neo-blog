@@ -100,7 +100,7 @@
         .toggleDiv {
             display: flex;
             gap: 0.1em;
-            height: 3em;
+            // height: 3em;
             margin: 0.3em;
 
             .home-link {
@@ -113,7 +113,7 @@
                 border: 1px solid var(--schrift);
                 border-radius: 6px;
                 text-decoration: none;
-
+                
                 @media only screen and (min-width: 600px) {
                     display: none;
                 }

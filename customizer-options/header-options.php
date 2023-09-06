@@ -9,7 +9,7 @@ function custom_theme_header($wp_customize)
 
     // Fix header
     $wp_customize->add_setting('fixed_header', array(
-        'default' => true,
+        'default' => false,
         'transport' => 'refresh',
         'sanitize_callback' => 'sanitize_checkbox',
     ));
@@ -48,7 +48,7 @@ function custom_theme_header($wp_customize)
 
     // Searchbar
     $wp_customize->add_setting('searchbar', array(
-        'default' => true,
+        'default' => false,
         'transport' => 'refresh',
         'sanitize_callback' => 'sanitize_checkbox',
     ));
@@ -141,7 +141,7 @@ function custom_theme_header($wp_customize)
 
     // Background for titel and slogan
     $wp_customize->add_setting('header_text_background', array(
-        'default' => true,
+        'default' => false,
         'transport' => 'refresh',
         'sanitize_callback' => 'sanitize_checkbox',
     ));

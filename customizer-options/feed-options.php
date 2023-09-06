@@ -270,7 +270,7 @@ function custom_feed($wp_customize)
 
     // Image size
     $wp_customize->add_setting('feed_image_height', array(
-        'default' => '15em',
+        'default' => '15',
         'transport' => 'refresh',
         'sanitize_callback' => 'absint',
     ));
@@ -303,7 +303,7 @@ add_action('customize_register', 'custom_feed');
 // Number of words previewed in the feed
 function mytheme_custom_excerpt_length($length)
 {
-    return get_theme_mod('words_in_snippet');
+    return get_theme_mod('words_in_snippet', 30);
 }
 add_filter('excerpt_length', 'mytheme_custom_excerpt_length', 999);
 

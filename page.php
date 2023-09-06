@@ -23,7 +23,7 @@ get_header();
         </div>
 
         <?php
-        $pages_sidebar = get_theme_mod('pages_sidebar', false);
+        $pages_sidebar = get_theme_mod('pages_sidebar', true);
         if ($pages_sidebar) get_sidebar(); ?>
 </main>
 <?php
