@@ -167,8 +167,6 @@ tbody tr:nth-of-type(even) {
   padding-top: 0;
   border-radius: 16px;
   overflow: hidden;
-  display: flex;
-  flex-direction: column;
 }
 @media only screen and (max-width: 600px) {
   .articlearea .content {
@@ -189,6 +187,20 @@ tbody tr:nth-of-type(even) {
 }
 .articlearea img {
   margin: 0.6em 0;
+}
+.articlearea .alignnone {
+  display: contents;
+}
+.articlearea .alignleft {
+  float: left;
+  margin: 0 1.5em 1.5em 0;
+}
+.articlearea .alignright {
+  float: right;
+  margin: 0 0 1.5em 1.5em;
+}
+.articlearea .aligncenter {
+  clear: both;
 }
 .articlearea .page-links {
   margin-top: 2em;

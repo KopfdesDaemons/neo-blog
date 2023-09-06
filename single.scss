@@ -180,8 +180,8 @@ tbody tr:nth-of-type(even) {
         padding-top: 0;
         border-radius: 16px;
         overflow: hidden;
-        display: flex;
-        flex-direction: column;
+        // display: flex;
+        // flex-direction: column;
     }
 
     .content {
@@ -208,6 +208,25 @@ tbody tr:nth-of-type(even) {
 
     img {
         margin: 0.6em 0;
+    }
+    
+    .alignnone {
+        display: contents;
+    }
+
+    $ImageSpacing: 1.5em;
+    .alignleft {
+        float: left;
+        margin: 0 $ImageSpacing $ImageSpacing 0;
+    }
+
+    .alignright {
+        float: right;
+        margin: 0 0 $ImageSpacing $ImageSpacing;
+    }
+
+    .aligncenter {
+        clear: both;
     }
 
     // Pagination
