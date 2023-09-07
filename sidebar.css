@@ -92,7 +92,7 @@
 #sidebar .widget_search input[type=search] {
   height: 3em;
   border-radius: 8px;
-  outline: 1px solid var(--primary-variant-darker);
+  outline: 1px solid var(--neo_primary_variant_darker);
 }
 #sidebar .widget_search input[type=search]:focus {
   outline: none;
@@ -126,7 +126,7 @@
   background-color: var(--neo_body);
   color: var(--neo_font_color);
   text-decoration: none;
-  border: 1px solid var(--primary-variant-darker);
+  border: 1px solid var(--neo_primary_variant_darker);
   box-shadow: inset 0px 0px 20px 0px var(--neo_primary_variant_much_brighter);
 }
 #sidebar .widget_categories li a:hover,
@@ -140,7 +140,7 @@
 }
 #sidebar .wp-block-page-list li {
   background-color: var(--neo_body);
-  border: 1px solid var(--primary-variant-darker);
+  border: 1px solid var(--neo_primary_variant_darker);
   box-shadow: inset 0px 0px 20px 0px var(--neo_primary_variant_much_brighter);
 }
 #sidebar .wp-block-page-list a {
@@ -228,7 +228,7 @@
   border-radius: 12px;
   margin-bottom: 0.5em;
   background-color: var(--neo_element_background);
-  border: 1px solid var(--primary-variant-darker);
+  border: 1px solid var(--neo_primary_variant_darker);
   box-shadow: inset 0px 0px 50px 0px var(--neo_element_background-variant);
 }
 .widget_recent_comments ol p,

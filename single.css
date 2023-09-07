@@ -79,7 +79,7 @@ td {
 }
 
 th {
-  color: var(--primary-variant-darker);
+  color: var(--neo_primary_variant_darker);
 }
 
 tbody tr:nth-of-type(even) {

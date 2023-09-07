@@ -55,7 +55,7 @@ h2,
 h3,
 .darkmode h2,
 .darkmode h3 {
-  color: var(--primary-variant-darker);
+  color: var(--neo_primary_variant_darker);
 }
 
 .darkmode .rot,
@@ -64,7 +64,7 @@ h3,
 }
 
 .variantColor {
-  color: var(--primary-variant-darker);
+  color: var(--neo_primary_variant_darker);
 }
 
 main {
@@ -93,7 +93,7 @@ main {
 }
 
 a {
-  color: var(--primary-variant-darker);
+  color: var(--neo_primary_variant_darker);
 }
 
 .darkmode a {

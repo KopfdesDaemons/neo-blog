@@ -259,7 +259,7 @@
   background-color: var(--neo_primary_color);
 }
 .farbpalettenDiv li:nth-child(2) {
-  background-color: var(--primary-variant-darker);
+  background-color: var(--neo_primary_variant_darker);
 }
 .farbpalettenDiv li:nth-child(3) {
   background-color: var(--neo_primary_variant_brighter);

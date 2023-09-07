@@ -80,7 +80,7 @@ td {
 }
 
 th {
-    color: var(--primary-variant-darker);
+    color: var(--neo_primary_variant_darker);
 }
 
 tbody tr:nth-of-type(even) {
@@ -358,7 +358,6 @@ tbody tr:nth-of-type(even) {
         background-color: rgb(236, 244, 248);
     }
 }
-
 
 @media print {
 
