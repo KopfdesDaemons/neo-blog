@@ -121,7 +121,7 @@
         --neo_header-gap: <?php echo esc_attr(get_theme_mod('header_gap', '0')) . 'em';
         ?>;
         /* Font Settings */
-        --neo_line-height: <?php echo esc_attr(get_theme_mod('line_heigt', '24')) . 'px;';
+        --neo_line_height: <?php echo esc_attr(get_theme_mod('line_heigt', '24')) . 'px;';
         ?>;
 
         /* Feed Setting */

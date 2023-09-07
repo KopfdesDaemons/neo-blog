@@ -168,7 +168,7 @@ a {
   text-decoration: none;
 }
 .postCard .textDiv p {
-  line-height: var(--feed_post_card_line_heigt);
+  line-height: var(--neo_feed_post_card_line_height);
 }
 .postCard .textDiv .date {
   font-size: 0.8em;

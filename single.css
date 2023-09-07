@@ -183,7 +183,7 @@ tbody tr:nth-of-type(even) {
   margin: 0;
 }
 .articlearea p {
-  line-height: var(--neo_line-height);
+  line-height: var(--neo_line_height);
 }
 .articlearea img {
   margin: 0.6em 0;

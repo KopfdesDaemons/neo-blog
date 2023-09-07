@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: neo\n"
 "POT-Creation-Date: 2023-09-06 19:02+0200\n"
-"PO-Revision-Date: 2023-09-06 19:04+0200\n"
+"PO-Revision-Date: 2023-09-07 21:28+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de\n"
@@ -236,7 +236,7 @@ msgstr "Bildhöhe"
 
 #: customizer-options/fonts-options.php:6
 msgid "Font"
-msgstr "Schriftart"
+msgstr "Schrift"
 
 #: customizer-options/fonts-options.php:7
 msgid ""
