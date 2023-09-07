@@ -65,17 +65,17 @@
     }
 
     // Get the primary color from the Customizer
-    $primary_color = get_theme_mod('primary_color', '#1C28C4');
+    $neo_primary_color = get_theme_mod('primary_color', '#1C28C4');
     // Convert the primary color to HSL
-    list($primary_hue, $saturation, $lightness) = hex2hsl($primary_color);
+    list($primary_hue, $saturation, $lightness) = hex2hsl($neo_primary_color);
 
     // Define other colors based on the primary color
-    $primary_variant_darker = "hsl($primary_hue, " . (max(0, $saturation - 20)) . "%, " . (max(0, $lightness - 20)) . "%)";
-    $primary_variant_brighter = "hsl($primary_hue, " . (min(100, $saturation + 20)) . "%, " . (min(100, $lightness + 20)) . "%)";
-    $primary_variant_much_brighter = "hsl($primary_hue, " . (min(100, $saturation + 25)) . "%, " . (min(100, $lightness + 25)) . "%)";
-    $hintergrund_inputfeld = "hsl($primary_hue, " . (min(100, $saturation + 45)) . "%, " . (min(100, $lightness + 45)) . "%)";
-    $hintergrund_variant = "hsl($primary_hue, " . (min(100, $saturation + 45)) . "%, " . (min(100, $lightness + 45)) . "%)";
-    $hintergrund_variant_darker = "hsl($primary_hue, " . (min(100, $saturation + 35)) . "%, " . (min(100, $lightness + 35)) . "%)";
+    $neo_primary_variant_darker = "hsl($primary_hue, " . (max(0, $saturation - 20)) . "%, " . (max(0, $lightness - 20)) . "%)";
+    $neo_primary_variant_brighter = "hsl($primary_hue, " . (min(100, $saturation + 20)) . "%, " . (min(100, $lightness + 20)) . "%)";
+    $neo_primary_variant_much_brighter = "hsl($primary_hue, " . (min(100, $saturation + 25)) . "%, " . (min(100, $lightness + 25)) . "%)";
+    $neo_background_inputfield = "hsl($primary_hue, " . (min(100, $saturation + 45)) . "%, " . (min(100, $lightness + 45)) . "%)";
+    $neo_background_variant = "hsl($primary_hue, " . (min(100, $saturation + 45)) . "%, " . (min(100, $lightness + 45)) . "%)";
+    $neo_background_variant_darker = "hsl($primary_hue, " . (min(100, $saturation + 35)) . "%, " . (min(100, $lightness + 35)) . "%)";
     ?>
 
     <style>
@@ -96,85 +96,85 @@
 
     ?>:root {
         /* Colors */
-        --primary-color: <?php echo $primary_color ?>;
-        --primary-variant-darker: <?php echo $primary_variant_darker ?>;
-        --primary-variant-brighter: <?php echo $primary_variant_brighter ?>;
-        --primary-variant-much-brighter: <?php echo $primary_variant_much_brighter ?>;
-        --body: <?php echo esc_attr(get_theme_mod('background_color_light_mode', '#F0F0F0')) ?>;
-        --hintergrund: <?php echo esc_attr(get_theme_mod('element_background_color_light_mode', '#f7f7f7')) ?>;
-        --schrift: <?php echo $font_color_light_mode ?>;
+        --neo_primary_color: <?php echo $neo_primary_color ?>;
+        --neo_primary_variant_darker: <?php echo $neo_primary_variant_darker ?>;
+        --neo_primary_variant_brighter: <?php echo $neo_primary_variant_brighter ?>;
+        --neo_primary_variant_much_brighter: <?php echo $neo_primary_variant_much_brighter ?>;
+        --neo_body: <?php echo esc_attr(get_theme_mod('background_color_light_mode', '#F0F0F0')) ?>;
+        --neo_element_background: <?php echo esc_attr(get_theme_mod('element_background_color_light_mode', '#f7f7f7')) ?>;
+        --neo_font_color: <?php echo $font_color_light_mode ?>;
 
-        --hintergrund-inputfeld: <?php echo $hintergrund_inputfeld ?>;
-        --hintergrund-variant: <?php echo $hintergrund_variant ?>;
-        --hintergrund-variant-darker: <?php echo $hintergrund_variant_darker ?>;
+        --neo_element_background-inputfeld: <?php echo $neo_background_inputfield ?>;
+        --neo_element_background-variant: <?php echo $neo_background_variant ?>;
+        --neo_element_background-variant-darker: <?php echo $neo_background_variant_darker ?>;
 
         /* Header Settings */
-        --header-font-color: <?php echo esc_attr(get_theme_mod('header_font_color_light_mode', '')) ?>;
-        --title-size: <?php echo esc_attr(get_theme_mod('title_size_setting', '25')) . 'px;'
+        --neo_header_font_color: <?php echo esc_attr(get_theme_mod('header_font_color_light_mode', '')) ?>;
+        --neo_title_size: <?php echo esc_attr(get_theme_mod('title_size_setting', '25')) . 'px;'
             ?>;
-        --slogan-size: <?php echo esc_attr(get_theme_mod('slogan_size_setting', '14')) . 'px;'
+        --neo_slogan-size: <?php echo esc_attr(get_theme_mod('slogan_size_setting', '14')) . 'px;'
             ?>;
-        --header-menu-font-color: <?php echo esc_attr(get_theme_mod('header_menu_font_color', '')) ?>;
-        --header-menu-background-color: <?php echo esc_attr(get_theme_mod('header_menu_background_color', '')) ?>;
-        --header-text-background-color: <?php if (get_theme_mod('header_text_background', '')) echo esc_attr('#00000057');
+        --neo_header_menu_font_color: <?php echo esc_attr(get_theme_mod('header_menu_font_color', '')) ?>;
+        --neo_header_menu_background_color: <?php echo esc_attr(get_theme_mod('header_menu_background_color', '')) ?>;
+        --neo_header_text-background_color: <?php if (get_theme_mod('header_text_background', '')) echo esc_attr('#00000057');
         else echo esc_attr('transparent') ?>;
-        --header-gap: <?php echo esc_attr(get_theme_mod('header_gap', '0')) . 'em';
+        --neo_header-gap: <?php echo esc_attr(get_theme_mod('header_gap', '0')) . 'em';
         ?>;
         /* Font Settings */
-        --line-height: <?php echo esc_attr(get_theme_mod('line_heigt', '24')) . 'px;';
+        --neo_line-height: <?php echo esc_attr(get_theme_mod('line_heigt', '24')) . 'px;';
         ?>;
 
         /* Feed Setting */
-        --feed_post_card_line_height: <?php echo esc_attr(get_theme_mod('feed_post_card_line_heigt', '24')) . 'px;';
+        --neo_feed_post_card_line_height: <?php echo esc_attr(get_theme_mod('feed_post_card_line_heigt', '24')) . 'px;';
         ?>;
-        --feed_post_card_border_radius: <?php echo esc_attr(get_theme_mod('feed_post_card_border_radius', '12')) . 'px;';
+        --neo_feed_post_card_border_radius: <?php echo esc_attr(get_theme_mod('feed_post_card_border_radius', '12')) . 'px;';
         ?>;
-        --feed_post_card_padding: <?php echo esc_attr(get_theme_mod('feed_post_card_padding', '1.5')) . 'em;';
+        --neo_feed_post_card_padding: <?php echo esc_attr(get_theme_mod('feed_post_card_padding', '1.5')) . 'em;';
         ?>;
-        --feed_post_card_border_radius_image: <?php echo esc_attr(get_theme_mod('feed_post_card_border_radius_image', '10')) . 'px;';
+        --neo_feed_post_card_border_radius_image: <?php echo esc_attr(get_theme_mod('feed_post_card_border_radius_image', '10')) . 'px;';
         ?>;
-        --feed_post_card_spacing: <?php echo esc_attr(get_theme_mod('feed_post_card_spacing', '2')) . 'em;';
+        --neo_feed_post_card_spacing: <?php echo esc_attr(get_theme_mod('feed_post_card_spacing', '2')) . 'em;';
         ?>;
-        --feed_image_height: <?php echo esc_attr(get_theme_mod('feed_image_height', '15')) . 'em;';
+        --neo_feed_image_height: <?php echo esc_attr(get_theme_mod('feed_image_height', '15')) . 'em;';
         ?>;
-        --image_display_behavior: <?php echo esc_attr(get_theme_mod('image_display_behavior', 'cover'));
+        --neo_image_display_behavior: <?php echo esc_attr(get_theme_mod('image_display_behavior', 'cover'));
         ?>;
-        --tags_border_radius: <?php echo esc_attr(get_theme_mod('tags_border_radius', '32')) . 'px;';
+        --neo_tags_border_radius: <?php echo esc_attr(get_theme_mod('tags_border_radius', '32')) . 'px;';
         ?>;
-        --max_feed_width: <?php echo esc_attr(get_theme_mod('maximum_width_of_the_feed', '70')) . 'em';
+        --neo_max_feed_width: <?php echo esc_attr(get_theme_mod('maximum_width_of_the_feed', '70')) . 'em';
         ?>;
 
         /* Posts Settings */
-        --max_posts_width: <?php echo esc_attr(get_theme_mod('maximum_width_of_posts', '70')) . 'em';
+        --neo_max_posts_width: <?php echo esc_attr(get_theme_mod('maximum_width_of_posts', '70')) . 'em';
         ?>;
-        --background_color_posts: <?php echo esc_attr(get_theme_mod('background_color_posts', '#0A0A0A00'));
+        --neo_background_color_posts: <?php echo esc_attr(get_theme_mod('background_color_posts', '#0A0A0A00'));
         ?>;
-        --dark_mode_background_color_posts: <?php echo esc_attr(get_theme_mod('dark_mode_background_color_posts', '#0A0A0A00'));
+        --neo_dark_mode_background_color_posts: <?php echo esc_attr(get_theme_mod('dark_mode_background_color_posts', '#0A0A0A00'));
         ?>;
-        --heading_font_size: <?php echo esc_attr(get_theme_mod('heading_font_size', '35')) . 'px;';
+        --neo_heading_font_size: <?php echo esc_attr(get_theme_mod('heading_font_size', '35')) . 'px;';
         ?>;
     }
 
 
     <?php // Variables from Settings
-    $font_color_dark_mode=esc_attr(get_theme_mod('font_color_dark_mode', '#c8c8c8'));
-    $header_font_color_dark_mode=esc_attr(get_theme_mod('header_font_color_dark_mode', ''));
+    $neo_font_color_dark_mode=esc_attr(get_theme_mod('font_color_dark_mode', '#c8c8c8'));
+    $neo_header_font_color_dark_mode=esc_attr(get_theme_mod('header_font_color_dark_mode', ''));
 
     // Automatic font color for the header if none specified
-    if (empty($header_font_color_dark_mode)) {
-        $header_font_color_dark_mode=$font_color_dark_mode;
+    if (empty($neo_header_font_color_dark_mode)) {
+        $neo_header_font_color_dark_mode=$neo_font_color_dark_mode;
     }
 
     ?>.darkmode {
-        --primary-variant-darker: <?php echo $primary_variant_much_brighter ?>;
-        --primary-variant-much-brighter: <?php echo $primary_variant_darker ?>;
-        --body: <?php echo esc_attr(get_theme_mod('background_color_dark_mode', '#0a0a0a')) ?>;
-        --hintergrund: <?php echo esc_attr(get_theme_mod('element_background_color_dark_mode', '#16181c')) ?>;
-        --schrift: <?php echo $font_color_dark_mode ?>;
-        --header-font-color: <?php echo $header_font_color_dark_mode ?>;
-        --hintergrund-inputfeld: <?php echo $hintergrund_inputfeld ?>;
-        --hintergrund-variant: <?php echo $hintergrund_variant ?>;
-        --hintergrund-variant-darker: <?php echo $hintergrund_variant_darker ?>;
+        --neo_primary_variant_darker: <?php echo $neo_primary_variant_much_brighter ?>;
+        --neo_primary_variant_much_brighter: <?php echo $neo_primary_variant_darker ?>;
+        --neo_body: <?php echo esc_attr(get_theme_mod('background_color_dark_mode', '#0a0a0a')) ?>;
+        --neo_element_background: <?php echo esc_attr(get_theme_mod('element_background_color_dark_mode', '#16181c')) ?>;
+        --neo_font_color: <?php echo $neo_font_color_dark_mode ?>;
+        --neo_header_font_color: <?php echo $neo_header_font_color_dark_mode ?>;
+        --neo_element_background-inputfeld: <?php echo $neo_background_inputfield ?>;
+        --neo_element_background-variant: <?php echo $neo_background_variant ?>;
+        --neo_element_background-variant-darker: <?php echo $neo_background_variant_darker ?>;
     }
 
     body {

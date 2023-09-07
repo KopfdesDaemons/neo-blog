@@ -1,6 +1,6 @@
 <?php
 
-function custom_theme_colors($wp_customize)
+function neo_custom_colors($wp_customize)
 {
     // Section
     $wp_customize->add_section('custom_theme_colors', array(
@@ -72,7 +72,7 @@ function custom_theme_colors($wp_customize)
     $wp_customize->add_setting('dark_mode', array(
         'default' => 'dark',
         'transport' => 'refresh',
-        'sanitize_callback' => 'sanitize_dark_mode_option',
+        'sanitize_callback' => 'neo_sanitize_dark_mode_option',
     ));
 
     $wp_customize->add_control('dark_mode', array(
@@ -86,10 +86,10 @@ function custom_theme_colors($wp_customize)
         ),
     ));
 }
-add_action('customize_register', 'custom_theme_colors');
+add_action('customize_register', 'neo_custom_colors');
 
 
-function sanitize_dark_mode_option($input)
+function neo_sanitize_dark_mode_option($input)
 {
     $valid_options = array('dark', 'light', 'system');
 
@@ -100,7 +100,7 @@ function sanitize_dark_mode_option($input)
     return 'system';
 }
 
-function add_darkmode_class_to_html()
+function neo_add_darkmode_class_to_html()
 {
     $dark_mode_option = get_theme_mod('dark_mode', 'system');
 
@@ -116,4 +116,4 @@ function add_darkmode_class_to_html()
         </script>';
     }
 }
-add_action('wp_head', 'add_darkmode_class_to_html', 999);
+add_action('wp_head', 'neo_add_darkmode_class_to_html', 999);

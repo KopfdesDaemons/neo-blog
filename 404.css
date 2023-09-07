@@ -9,14 +9,14 @@
 .error a {
   margin: 1em 2em 0 2em;
   text-decoration: none;
-  background-color: var(--primary-color);
+  background-color: var(--neo_primary_color);
   color: white;
   border-radius: 8px;
   padding: 0.8em 1.2em;
 }
 .error a:hover {
   background-color: transparent;
-  outline: 1px solid var(--schrift);
-  color: var(--schrift);
+  outline: 1px solid var(--neo_font_color);
+  color: var(--neo_font_color);
   transition: all 200ms;
 }/*# sourceMappingURL=404.css.map */

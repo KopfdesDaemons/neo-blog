@@ -16,7 +16,7 @@
     width: 100%;
     box-sizing: border-box;
     border-bottom: 1px solid gray;
-    background-color: var(--hintergrund);
+    background-color: var(--neo_element_background);
     
     .headerDiv {
         width: 100%;
@@ -25,7 +25,7 @@
         flex-direction: column;
         align-items: center;
         position: relative;
-        gap: var(--header-gap);
+        gap: var(--neo_header-gap);
 
         @media only screen and (max-width: 600px) {
             gap: 0;
@@ -68,12 +68,12 @@
             }
 
             .site-title {
-                font-size: clamp(10px, 5vw, var(--title-size));
+                font-size: clamp(10px, 5vw, var(--neo_title_size));
                 word-break: keep-all;
                 margin: 0 0.5em;
-                color: var(--header-font-color);
+                color: var(--neo_header_font_color);
                 text-align: center;
-                background-color: var(--header-text-background-color);
+                background-color: var(--neo_header_text-background_color);
             }
         }
 
@@ -83,9 +83,9 @@
             margin: 0.3em 0;
 
             span {
-                color: var(--header-font-color);
-                background-color: var(--header-text-background-color);
-                font-size: clamp(10px, 5vw, var(--slogan-size));
+                color: var(--neo_header_font_color);
+                background-color: var(--neo_header_text-background_color);
+                font-size: clamp(10px, 5vw, var(--neo_slogan-size));
             }
         }
 
@@ -105,12 +105,12 @@
 
             .home-link {
                 margin-right: auto;
-                background-color: var(--body);
+                background-color: var(--neo_body);
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 padding: 0.5em 1.8em;
-                border: 1px solid var(--schrift);
+                border: 1px solid var(--neo_font_color);
                 border-radius: 6px;
                 text-decoration: none;
                 
@@ -162,8 +162,8 @@
             width: 5em;
             border-radius: 4px;
             font-size: 1.5em;
-            background-color: var(--primary-variant-much-brighter);
-            border: 1px solid var(--schrift);
+            background-color: var(--neo_primary_variant_much_brighter);
+            border: 1px solid var(--neo_font_color);
             display: none;
             @media only screen and (max-width: 600px) {
                 display: block;
@@ -177,7 +177,7 @@
             align-items: center;
 
             .home-link {
-                background-color: var(--body);
+                background-color: var(--neo_body);
                 padding: 1em;
 
                 @media only screen and (max-width: 1300px) {
@@ -186,11 +186,11 @@
             }
 
             .home-link:hover {
-                background-color: var(--hintergrund);
+                background-color: var(--neo_element_background);
             }
 
             div {
-                background-color: var(--header-menu-background-color);
+                background-color: var(--neo_header_menu_background_color);
             }
 
             ul {
@@ -200,7 +200,7 @@
                 flex-flow: row wrap;
                 
                 a {
-                    color: var(--header-menu-font-color);
+                    color: var(--neo_header_menu_font_color);
                     text-decoration: none;
                     padding: 0.8rem;
                 }
@@ -215,7 +215,7 @@
 
                     
                     ul{
-                        background-color: var(--primary-variant-much-brighter);
+                        background-color: var(--neo_primary_variant_much_brighter);
                         position: absolute;
                         flex-direction: column;
                         top: 100%;
@@ -231,13 +231,13 @@
                         }
                         
                         a {
-                            color: var(--schrift);
+                            color: var(--neo_font_color);
                         }
                         li {
                             position: relative;
                         }
                         ul {
-                            background-color: var(--primary-variant-brighter);
+                            background-color: var(--neo_primary_variant_brighter);
                             position: absolute;
                             left: 100%;
                             top: 0;
@@ -280,7 +280,7 @@
     }
 
     li:nth-child(1) {
-        background-color: var(--primary-color);
+        background-color: var(--neo_primary_color);
     }
 
     li:nth-child(2) {
@@ -288,18 +288,18 @@
     }
 
     li:nth-child(3) {
-        background-color: var(--primary-variant-brighter);
+        background-color: var(--neo_primary_variant_brighter);
     }
 
     li:nth-child(4) {
-        background-color: var(--primary-variant-much-brighter);
+        background-color: var(--neo_primary_variant_much_brighter);
     }
 
     li:nth-child(5) {
-        background-color: var(--hintergrund-variant);
+        background-color: var(--neo_element_background-variant);
     }
 
     li:nth-child(6) {
-        background-color: var(--hintergrund-variant-darker);
+        background-color: var(--neo_element_background-variant-darker);
     }
 }

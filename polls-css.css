@@ -13,8 +13,8 @@
 
 .articleArea .wp-polls-ans {
   margin-bottom: 2em;
-  border: 1px solid var(--primary-color);
-  background-color: var(--hintergrund);
+  border: 1px solid var(--neo_primary_color);
+  background-color: var(--neo_element_background);
 }
 .articleArea .wp-polls-ans ul {
   list-style: none;
@@ -24,7 +24,7 @@
 }
 
 .wp-polls-archive + code {
-  background-color: var(--hintergrund);
+  background-color: var(--neo_element_background);
 }
 
 .wp-polls-paging {
@@ -38,13 +38,13 @@
 }
 .wp-polls-paging a {
   text-decoration: none;
-  background-color: var(--hintergrund-variant-darker);
+  background-color: var(--neo_element_background-variant-darker);
   margin: 0.2em;
   padding: 0.5em;
   border-radius: 8px;
 }
 .wp-polls-paging a:hover {
-  background-color: var(--primary-variant-much-brighter);
+  background-color: var(--neo_primary_variant_much_brighter);
 }
 
 p code {

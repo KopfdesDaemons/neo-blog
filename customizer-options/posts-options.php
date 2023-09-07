@@ -1,5 +1,5 @@
 <?php
-function custom_theme_posts($wp_customize)
+function neo_custom_posts($wp_customize)
 {
     // Section
     $wp_customize->add_section('custom_theme_article', array(
@@ -75,7 +75,7 @@ function custom_theme_posts($wp_customize)
     $wp_customize->add_setting('post_date', array(
         'default' => true,
         'transport' => 'refresh',
-        'sanitize_callback' => 'sanitize_checkbox',
+        'sanitize_callback' => 'neo_sanitize_checkbox',
     ));
 
     $wp_customize->add_control('post_date', array(
@@ -88,7 +88,7 @@ function custom_theme_posts($wp_customize)
     $wp_customize->add_setting('post_categories', array(
         'default' => true,
         'transport' => 'refresh',
-        'sanitize_callback' => 'sanitize_checkbox',
+        'sanitize_callback' => 'neo_sanitize_checkbox',
     ));
 
     $wp_customize->add_control('post_categories', array(
@@ -101,7 +101,7 @@ function custom_theme_posts($wp_customize)
     $wp_customize->add_setting('tags', array(
         'default' => true,
         'transport' => 'refresh',
-        'sanitize_callback' => 'sanitize_checkbox',
+        'sanitize_callback' => 'neo_sanitize_checkbox',
     ));
 
     $wp_customize->add_control('tags', array(
@@ -114,7 +114,7 @@ function custom_theme_posts($wp_customize)
     $wp_customize->add_setting('author_details', array(
         'default' => true,
         'transport' => 'refresh',
-        'sanitize_callback' => 'sanitize_checkbox',
+        'sanitize_callback' => 'neo_sanitize_checkbox',
     ));
 
     $wp_customize->add_control('author_details', array(
@@ -127,7 +127,7 @@ function custom_theme_posts($wp_customize)
     $wp_customize->add_setting('share_options', array(
         'default' => true,
         'transport' => 'refresh',
-        'sanitize_callback' => 'sanitize_checkbox',
+        'sanitize_callback' => 'neo_sanitize_checkbox',
     ));
 
     $wp_customize->add_control('share_options', array(
@@ -140,7 +140,7 @@ function custom_theme_posts($wp_customize)
     $wp_customize->add_setting('post_pagination', array(
         'default' => true,
         'transport' => 'refresh',
-        'sanitize_callback' => 'sanitize_checkbox',
+        'sanitize_callback' => 'neo_sanitize_checkbox',
     ));
 
     $wp_customize->add_control('post_pagination', array(
@@ -153,7 +153,7 @@ function custom_theme_posts($wp_customize)
     $wp_customize->add_setting('post_sidebar', array(
         'default' => true,
         'transport' => 'refresh',
-        'sanitize_callback' => 'sanitize_checkbox',
+        'sanitize_callback' => 'neo_sanitize_checkbox',
     ));
 
     $wp_customize->add_control('post_sidebar', array(
@@ -162,4 +162,4 @@ function custom_theme_posts($wp_customize)
         'section' => 'custom_theme_article',
     ));
 }
-add_action('customize_register', 'custom_theme_posts');
+add_action('customize_register', 'neo_custom_posts');

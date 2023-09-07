@@ -1,5 +1,5 @@
 <?php
-function theme_customiz_fonts($wp_customize)
+function neo_custom_fonts($wp_customize)
 {
     // Section
     $wp_customize->add_section('theme_fonts_section', array(
@@ -81,4 +81,4 @@ function theme_customiz_fonts($wp_customize)
         'settings' => 'font_color_dark_mode'
     )));
 }
-add_action('customize_register', 'theme_customiz_fonts');
+add_action('customize_register', 'neo_custom_fonts');

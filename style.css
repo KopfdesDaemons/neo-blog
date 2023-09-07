@@ -20,11 +20,11 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background: var(--body);
+  background: var(--neo_body);
 }
 
 input, textarea {
-  background-color: var(--hintergrund-inputfeld);
+  background-color: var(--neo_element_background-inputfeld);
 }
 
 h1,
@@ -48,7 +48,7 @@ table,
 label,
 div,
 button {
-  color: var(--schrift);
+  color: var(--neo_font_color);
 }
 
 h2,
@@ -83,7 +83,7 @@ main {
 }
 
 .spacerFeed {
-  max-width: var(--max_feed_width);
+  max-width: var(--neo_max_feed_width);
 }
 
 @media only screen and (max-width: 600px) {
@@ -97,7 +97,7 @@ a {
 }
 
 .darkmode a {
-  color: var(--primary-color);
+  color: var(--neo_primary_color);
 }
 
 .grid {
@@ -117,7 +117,7 @@ a {
 }
 
 #authorPageComments {
-  background-color: var(--hintergrund);
+  background-color: var(--neo_element_background);
 }
 
 .archive-h3 {
@@ -125,11 +125,11 @@ a {
 }
 
 .postCard {
-  background-color: var(--hintergrund);
+  background-color: var(--neo_element_background);
   border: 1px solid rgb(221, 221, 221);
-  border-radius: var(--feed_post_card_border_radius);
-  padding: var(--feed_post_card_padding);
-  margin-bottom: var(--feed_post_card_spacing);
+  border-radius: var(--neo_feed_post_card_border_radius);
+  padding: var(--neo_feed_post_card_padding);
+  margin-bottom: var(--neo_feed_post_card_spacing);
   display: grid;
   grid-template-columns: 40% 1fr;
   grid-auto-flow: column;
@@ -143,14 +143,14 @@ a {
 .postCard .imgA {
   overflow: hidden;
   display: flex;
-  border-radius: var(--feed_post_card_border_radius_image);
+  border-radius: var(--neo_feed_post_card_border_radius_image);
 }
 .postCard .imgA img {
   width: 100%;
   max-width: 100%;
-  -o-object-fit: var(--image_display_behavior);
-     object-fit: var(--image_display_behavior);
-  height: var(--feed_image_height);
+  -o-object-fit: var(--neo_image_display_behavior);
+     object-fit: var(--neo_image_display_behavior);
+  height: var(--neo_feed_image_height);
   transition: all 500ms;
 }
 .postCard .imgA:hover img {
@@ -190,7 +190,7 @@ a {
 .postCard .textDiv .buttomDiv .commentscount {
   display: flex;
   align-items: center;
-  background-color: var(--body);
+  background-color: var(--neo_body);
   border: 1px solid rgb(226, 226, 226);
   text-decoration: none;
   padding: 0.8em 1.2em;
@@ -201,24 +201,24 @@ a {
   margin-left: 0.5em;
 }
 .postCard .textDiv .buttomDiv .commentscount:hover {
-  background-color: var(--hintergrund);
+  background-color: var(--neo_element_background);
 }
 .postCard .textDiv .buttomDiv .readMore {
   text-decoration: none;
-  background-color: var(--primary-color);
+  background-color: var(--neo_primary_color);
   color: #000000;
   border-radius: 8px;
   padding: 0.8em 1.2em;
 }
 .postCard .textDiv .buttomDiv .readMore:hover {
   background-color: transparent;
-  outline: 1px solid var(--primary-color);
+  outline: 1px solid var(--neo_primary_color);
   transition: all 200ms;
-  color: var(--schrift);
+  color: var(--neo_font_color);
 }
 .postCard h2 {
   margin: 0 0 0.5em 0;
-  color: var(--schrift);
+  color: var(--neo_font_color);
   font-size: 1.4em;
 }
 .postCard h2:hover {
@@ -238,13 +238,13 @@ a {
 }
 .postCard .tagsDiv ul a {
   text-decoration: none;
-  color: var(--schrift);
+  color: var(--neo_font_color);
   text-align: center;
   padding: 0.6em 1em;
-  border-radius: var(--tags_border_radius);
+  border-radius: var(--neo_tags_border_radius);
   font-size: 0.7em;
   min-width: 2em;
-  background-color: var(--hintergrund-variant);
+  background-color: var(--neo_element_background-variant);
 }
 .postCard .tagsDiv ul a:hover {
   outline: 1px solid rgb(97, 97, 97);
@@ -276,7 +276,7 @@ a {
   filter: brightness(0.8);
 }
 .darkmode .postCard .tagsDiv a {
-  background-color: var(--primary-variant-much-brighter);
+  background-color: var(--neo_primary_variant_much_brighter);
 }
 @media only screen and (max-width: 600px) {
   .darkmode .postCard {
@@ -293,13 +293,13 @@ a {
   margin-bottom: 3em;
   display: flex;
   justify-content: flex-end;
-  background-color: var(--hintergrund);
+  background-color: var(--neo_element_background);
   padding: 0.5em;
   font-size: clamp(14px, 2vw, 1rem);
 }
 .pagination a,
 .pagination span {
-  background-color: var(--hintergrund-variant-darker);
+  background-color: var(--neo_element_background-variant-darker);
   border-radius: 8px;
   margin: 0.2em;
   padding: 0.5em 1em;
@@ -307,11 +307,11 @@ a {
   vertical-align: middle;
 }
 .pagination span {
-  border: 1px solid var(--schrift);
-  background-color: var(--body);
+  border: 1px solid var(--neo_font_color);
+  background-color: var(--neo_body);
 }
 .pagination a:hover {
-  background-color: var(--primary-variant-much-brighter);
+  background-color: var(--neo_primary_variant_much_brighter);
 }
 
 html ::-webkit-scrollbar {
@@ -369,7 +369,7 @@ html body ::-webkit-scrollbar {
 .social-sharing-links a:hover {
   background-color: unset;
   outline: 3px solid;
-  color: var(--schrift);
+  color: var(--neo_font_color);
 }
 .social-sharing-links .Facebook {
   background-color: #3b5998;

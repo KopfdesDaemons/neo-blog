@@ -130,7 +130,7 @@
 
                     // Show cards
                     require_once get_template_directory() . '/template-parts/feed.php';
-                    echo display_post_card($post_classes);
+                    echo neo_display_post_card($post_classes);
                 }
 
                 // Pagination 

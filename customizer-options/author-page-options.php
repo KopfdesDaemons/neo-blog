@@ -1,5 +1,5 @@
 <?php
-function custom_author_page($wp_customize)
+function neo_custom_author_page($wp_customize)
 {
     // Section
     $wp_customize->add_section('custom_author_page', array(
@@ -11,7 +11,7 @@ function custom_author_page($wp_customize)
     $wp_customize->add_setting('author_page_sidebar', array(
         'default' => true,
         'transport' => 'refresh',
-        'sanitize_callback' => 'sanitize_checkbox',
+        'sanitize_callback' => 'neo_sanitize_checkbox',
     ));
 
     $wp_customize->add_control('author_page_sidebar', array(
@@ -24,7 +24,7 @@ function custom_author_page($wp_customize)
     $wp_customize->add_setting('author_page_latest_comments', array(
         'default' => true,
         'transport' => 'refresh',
-        'sanitize_callback' => 'sanitize_checkbox',
+        'sanitize_callback' => 'neo_sanitize_checkbox',
     ));
 
     $wp_customize->add_control('author_page_latest_comments', array(
@@ -37,7 +37,7 @@ function custom_author_page($wp_customize)
     $wp_customize->add_setting('author_page_role', array(
         'default' => true,
         'transport' => 'refresh',
-        'sanitize_callback' => 'sanitize_checkbox',
+        'sanitize_callback' => 'neo_sanitize_checkbox',
     ));
 
     $wp_customize->add_control('author_page_role', array(
@@ -50,7 +50,7 @@ function custom_author_page($wp_customize)
     $wp_customize->add_setting('author_number_of_posts', array(
         'default' => true,
         'transport' => 'refresh',
-        'sanitize_callback' => 'sanitize_checkbox',
+        'sanitize_callback' => 'neo_sanitize_checkbox',
     ));
 
     $wp_customize->add_control('author_number_of_posts', array(
@@ -63,7 +63,7 @@ function custom_author_page($wp_customize)
     $wp_customize->add_setting('author_registration_date', array(
         'default' => true,
         'transport' => 'refresh',
-        'sanitize_callback' => 'sanitize_checkbox',
+        'sanitize_callback' => 'neo_sanitize_checkbox',
     ));
 
     $wp_customize->add_control('author_registration_date', array(
@@ -76,7 +76,7 @@ function custom_author_page($wp_customize)
     $wp_customize->add_setting('author_website', array(
         'default' => true,
         'transport' => 'refresh',
-        'sanitize_callback' => 'sanitize_checkbox',
+        'sanitize_callback' => 'neo_sanitize_checkbox',
     ));
 
     $wp_customize->add_control('author_website', array(
@@ -104,4 +104,4 @@ function custom_author_page($wp_customize)
         ),
     ));
 }
-add_action('customize_register', 'custom_author_page');
+add_action('customize_register', 'neo_custom_author_page');

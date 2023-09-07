@@ -1,5 +1,5 @@
 <?php
-function custom_theme_pages($wp_customize)
+function neo_custom_pages($wp_customize)
 {
     // Section
     $wp_customize->add_section('custom_theme_pages', array(
@@ -12,7 +12,7 @@ function custom_theme_pages($wp_customize)
     $wp_customize->add_setting('pages_sidebar', array(
         'default' => true,
         'transport' => 'refresh',
-        'sanitize_callback' => 'sanitize_checkbox',
+        'sanitize_callback' => 'neo_sanitize_checkbox',
     ));
 
     $wp_customize->add_control('pages_sidebar', array(
@@ -21,4 +21,4 @@ function custom_theme_pages($wp_customize)
         'section' => 'custom_theme_pages',
     ));
 }
-add_action('customize_register', 'custom_theme_pages');
+add_action('customize_register', 'neo_custom_pages');

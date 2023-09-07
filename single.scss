@@ -1,11 +1,11 @@
 h1 {
-    font-size: clamp(16px, 8vw, var(--heading_font_size));
+    font-size: clamp(16px, 8vw, var(--neo_heading_font_size));
     margin-bottom: 0.5em;
     margin-left: 0;
 }
 
 .postSpacer {
-    max-width: var(--max_posts_width);
+    max-width: var(--neo_max_posts_width);
 }
 
 // Zitate
@@ -45,11 +45,11 @@ hr {
 
 pre {
     overflow-y: auto;
-    background-color: var(--hintergrund);
+    background-color: var(--neo_element_background);
     margin: 0;
     box-sizing: border-box;
     white-space: pre-wrap;
-    color: var(--schrift);
+    color: var(--neo_font_color);
 }
 
 code {
@@ -65,7 +65,7 @@ table {
     margin-top: 25px;
     font-size: clamp(0.8rem, 4vw, 1rem);
     border-radius: 10px;
-    background-color: var(--hintergrund);
+    background-color: var(--neo_element_background);
 }
 
 table thead tr {
@@ -84,7 +84,7 @@ th {
 }
 
 tbody tr:nth-of-type(even) {
-    background-color: var(--hintergrund-variant-darker);
+    background-color: var(--neo_element_background-variant-darker);
 }
 
 .darkmode table {
@@ -121,7 +121,7 @@ tbody tr:nth-of-type(even) {
         a {
             text-decoration: none;
             text-align: center;
-            background-color: var(--primary-variant-much-brighter);
+            background-color: var(--neo_primary_variant_much_brighter);
             padding: 0.6em 1em;
             border-radius: 32px;
             font-size: 0.7em;
@@ -129,7 +129,7 @@ tbody tr:nth-of-type(even) {
         }
 
         a:hover {
-            outline: 1px solid var(--primary-variant-brighter);
+            outline: 1px solid var(--neo_primary_variant_brighter);
         }
     }
 }
@@ -139,7 +139,7 @@ tbody tr:nth-of-type(even) {
     padding: 1em;
     display: flex;
     margin: 1em 5% 0em 5%;
-    background-color: var(--hintergrund);
+    background-color: var(--neo_element_background);
 
     @media only screen and (max-width: 600px) {
         flex-direction: column;
@@ -168,12 +168,12 @@ tbody tr:nth-of-type(even) {
 }
 
 .darkmode .articlearea {
-    background-color: var(--dark_mode_background_color_posts);
+    background-color: var(--neo_dark_mode_background_color_posts);
 }
 .articlearea {
     width: 100%;
     overflow: hidden;
-    background-color: var(--background_color_posts);
+    background-color: var(--neo_background_color_posts);
 
     .content {
         padding: 2em;
@@ -203,7 +203,7 @@ tbody tr:nth-of-type(even) {
     }
 
     p {
-        line-height: var(--line-height);
+        line-height: var(--neo_line-height);
     }
 
     img {
@@ -236,7 +236,7 @@ tbody tr:nth-of-type(even) {
         display: flex;
         justify-content: flex-end;
         align-items: center;
-        background-color: var(--hintergrund);
+        background-color: var(--neo_element_background);
         padding: 0.5em;
         border-radius: 18px;
 
@@ -247,26 +247,26 @@ tbody tr:nth-of-type(even) {
         .post-page-numbers {
             border-radius: 8px;
             text-decoration: none;
-            background-color: var(--hintergrund-variant-darker);
+            background-color: var(--neo_element_background-variant-darker);
             margin: 0.2em;
             padding: 0.5em 1em;
             
             span {
-                color: var(--primary-color);
+                color: var(--neo_primary_color);
             }
         }
         
         .current {
-            border: 1px solid var(--schrift);
+            border: 1px solid var(--neo_font_color);
             background-color: unset;
 
             span {
-                color: var(--schrift);
+                color: var(--neo_font_color);
             }
         }
 
         a:hover {
-            background-color: var(--primary-variant-much-brighter);
+            background-color: var(--neo_primary_variant_much_brighter);
         }
     }
 

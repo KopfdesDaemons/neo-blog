@@ -1,5 +1,5 @@
 <?php
-function custom_feed($wp_customize)
+function neo_custom_feed($wp_customize)
 {
     // Section
     $wp_customize->add_section('custom_feed', array(
@@ -85,7 +85,7 @@ function custom_feed($wp_customize)
     $wp_customize->add_setting('feed_post_card_tags', array(
         'default' => true,
         'transport' => 'refresh',
-        'sanitize_callback' => 'sanitize_checkbox',
+        'sanitize_callback' => 'neo_sanitize_checkbox',
     ));
 
     $wp_customize->add_control('feed_post_card_tags', array(
@@ -118,7 +118,7 @@ function custom_feed($wp_customize)
     $wp_customize->add_setting('feed_post_card_read_more', array(
         'default' => true,
         'transport' => 'refresh',
-        'sanitize_callback' => 'sanitize_checkbox',
+        'sanitize_callback' => 'neo_sanitize_checkbox',
     ));
 
     $wp_customize->add_control('feed_post_card_read_more', array(
@@ -131,7 +131,7 @@ function custom_feed($wp_customize)
     $wp_customize->add_setting('feed_post_card_comments', array(
         'default' => true,
         'transport' => 'refresh',
-        'sanitize_callback' => 'sanitize_checkbox',
+        'sanitize_callback' => 'neo_sanitize_checkbox',
     ));
 
     $wp_customize->add_control('feed_post_card_comments', array(
@@ -201,7 +201,7 @@ function custom_feed($wp_customize)
     $wp_customize->add_setting('feed_post_card_image', array(
         'default' => true,
         'transport' => 'refresh',
-        'sanitize_callback' => 'sanitize_checkbox',
+        'sanitize_callback' => 'neo_sanitize_checkbox',
     ));
 
     $wp_customize->add_control('feed_post_card_image', array(
@@ -298,18 +298,18 @@ function custom_feed($wp_customize)
         return $control->manager->get_setting('feed_post_card_tags')->value();
     }
 }
-add_action('customize_register', 'custom_feed');
+add_action('customize_register', 'neo_custom_feed');
 
 // Number of words previewed in the feed
-function mytheme_custom_excerpt_length($length)
+function neo_custom_excerpt_length($length)
 {
     return get_theme_mod('words_in_snippet', 30);
 }
-add_filter('excerpt_length', 'mytheme_custom_excerpt_length', 999);
+add_filter('excerpt_length', 'neo_custom_excerpt_length', 999);
 
 // Characters after snippet
-function custom_excerpt_more($more)
+function neo_custom_excerpt_more($more)
 {
     return '...';
 }
-add_filter('excerpt_more', 'custom_excerpt_more');
+add_filter('excerpt_more', 'neo_custom_excerpt_more');

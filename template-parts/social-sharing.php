@@ -1,6 +1,6 @@
 <?php
 // Share Buttons
-function theme_slug_social_sharing()
+function neo_social_sharing()
 {
     // Get current page URL.
     $page_url = get_permalink();

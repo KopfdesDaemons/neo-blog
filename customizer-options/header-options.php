@@ -1,5 +1,5 @@
 <?php
-function custom_theme_header($wp_customize)
+function neo_header($wp_customize)
 {
     // Section
     $wp_customize->add_section('custom_theme_header', array(
@@ -11,7 +11,7 @@ function custom_theme_header($wp_customize)
     $wp_customize->add_setting('fixed_header', array(
         'default' => false,
         'transport' => 'refresh',
-        'sanitize_callback' => 'sanitize_checkbox',
+        'sanitize_callback' => 'neo_sanitize_checkbox',
     ));
 
     $wp_customize->add_control('fixed_header', array(
@@ -24,7 +24,7 @@ function custom_theme_header($wp_customize)
     $wp_customize->add_setting('header_menu', array(
         'default' => true,
         'transport' => 'refresh',
-        'sanitize_callback' => 'sanitize_checkbox',
+        'sanitize_callback' => 'neo_sanitize_checkbox',
     ));
 
     $wp_customize->add_control('header_menu', array(
@@ -37,7 +37,7 @@ function custom_theme_header($wp_customize)
     $wp_customize->add_setting('home_page_link', array(
         'default' => true,
         'transport' => 'refresh',
-        'sanitize_callback' => 'sanitize_checkbox',
+        'sanitize_callback' => 'neo_sanitize_checkbox',
     ));
 
     $wp_customize->add_control('home_page_link', array(
@@ -50,7 +50,7 @@ function custom_theme_header($wp_customize)
     $wp_customize->add_setting('searchbar', array(
         'default' => false,
         'transport' => 'refresh',
-        'sanitize_callback' => 'sanitize_checkbox',
+        'sanitize_callback' => 'neo_sanitize_checkbox',
     ));
 
     $wp_customize->add_control('searchbar', array(
@@ -63,7 +63,7 @@ function custom_theme_header($wp_customize)
     $wp_customize->add_setting('search_button', array(
         'default' => true,
         'transport' => 'refresh',
-        'sanitize_callback' => 'sanitize_checkbox',
+        'sanitize_callback' => 'neo_sanitize_checkbox',
     ));
 
     $wp_customize->add_control('search_button', array(
@@ -77,7 +77,7 @@ function custom_theme_header($wp_customize)
     $wp_customize->add_setting('title', array(
         'default' => true,
         'transport' => 'refresh',
-        'sanitize_callback' => 'sanitize_checkbox',
+        'sanitize_callback' => 'neo_sanitize_checkbox',
     ));
 
     $wp_customize->add_control('title', array(
@@ -110,7 +110,7 @@ function custom_theme_header($wp_customize)
     $wp_customize->add_setting('tagline', array(
         'default' => true,
         'transport' => 'refresh',
-        'sanitize_callback' => 'sanitize_checkbox',
+        'sanitize_callback' => 'neo_sanitize_checkbox',
     ));
 
     $wp_customize->add_control('tagline', array(
@@ -143,7 +143,7 @@ function custom_theme_header($wp_customize)
     $wp_customize->add_setting('header_text_background', array(
         'default' => false,
         'transport' => 'refresh',
-        'sanitize_callback' => 'sanitize_checkbox',
+        'sanitize_callback' => 'neo_sanitize_checkbox',
     ));
 
     $wp_customize->add_control('header_text_background', array(
@@ -293,4 +293,4 @@ function custom_theme_header($wp_customize)
         'active_callback' => 'header_menu_callback'
     )));
 }
-add_action('customize_register', 'custom_theme_header');
+add_action('customize_register', 'neo_header');

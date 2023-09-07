@@ -22,12 +22,12 @@
     }
 
     .comment-body {
-        background-color: var(--hintergrund);
+        background-color: var(--neo_element_background);
         border-radius: 12px;
         padding: 1em;
         margin-top: 1em;
         border: 1px solid var(--primary-variant-darker);
-        box-shadow: inset 0px 0px 50px 0px var(--hintergrund-variant);
+        box-shadow: inset 0px 0px 50px 0px var(--neo_element_background-variant);
         overflow-wrap: anywhere;
         word-wrap: break-word;
         overflow: hidden;
@@ -81,11 +81,11 @@
 
         .comment-reply-link {
             text-decoration: none;
-            background-color: var(--primary-variant-much-brighter);
+            background-color: var(--neo_primary_variant_much_brighter);
             padding: 0.5rem 1rem;
             border-radius: 12px;
-            color: var(--schrift);
-            border: 1px solid var(--hintergrund);
+            color: var(--neo_font_color);
+            border: 1px solid var(--neo_element_background);
         }
 
         .comment-reply-link:hover {
@@ -96,8 +96,8 @@
     // Author comment
     .bypostauthor {
         .comment-body {
-            background-color: var(--body);
-            border: 1px solid var(--schrift);
+            background-color: var(--neo_body);
+            border: 1px solid var(--neo_font_color);
             box-shadow: inset 0px 0px 50px 0px rgba(216, 221, 167, 0.41);
         }
     }
@@ -140,7 +140,7 @@
 
             .submit {
                 text-decoration: none;
-                background-color: var(--primary-color);
+                background-color: var(--neo_primary_color);
                 padding: 0.5rem 1rem;
                 border-radius: 12px;
                 color: black;
@@ -151,7 +151,7 @@
             }
 
             .submit:hover {
-                background-color: var(--primary-variant-brighter);
+                background-color: var(--neo_primary_variant_brighter);
             }
         }
 
@@ -171,8 +171,8 @@
         input {
             padding: 0.5em;
             height: 25px;
-            border: solid 1px var(--schrift);
-            background-color: var(--hintergrund-inputfeld);
+            border: solid 1px var(--neo_font_color);
+            background-color: var(--neo_element_background-inputfeld);
         }
 
         .comment-form-author,
@@ -204,7 +204,7 @@
 
 .darkmode .comments-area {
     .comment-body {
-        box-shadow: inset 0px 0px 50px 0px var(--primary-variant-much-brighter);
+        box-shadow: inset 0px 0px 50px 0px var(--neo_primary_variant_much_brighter);
     }
 
     .bypostauthor {
