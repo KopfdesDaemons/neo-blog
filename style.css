@@ -86,12 +86,6 @@ main {
   max-width: var(--neo_max_feed_width);
 }
 
-@media only screen and (max-width: 600px) {
-  .feed {
-    margin: 0.5em;
-  }
-}
-
 a {
   color: var(--neo_primary_variant_darker);
 }
@@ -163,6 +157,7 @@ a {
   align-items: flex-start;
   font-size: 0.9em;
   grid-column: span 2;
+  height: 100%;
 }
 .postCard .textDiv a {
   text-decoration: none;
@@ -206,7 +201,7 @@ a {
 .postCard .textDiv .buttomDiv .readMore {
   text-decoration: none;
   background-color: var(--neo_primary_color);
-  color: #000000;
+  color: var(--neo_font_color);
   border-radius: 8px;
   padding: 0.8em 1.2em;
 }

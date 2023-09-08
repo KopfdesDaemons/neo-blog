@@ -87,12 +87,6 @@ main {
     max-width: var(--neo_max_feed_width);
 }
 
-.feed {
-    @media only screen and (max-width: 600px) {
-        margin: 0.5em;
-    }
-}
-
 a {
     color: var(--neo_primary_variant_darker);
 }
@@ -165,6 +159,7 @@ a {
         align-items: flex-start;
         font-size: 0.9em;
         grid-column: span 2;
+        height: 100%;
         a {
             text-decoration: none;
         }
@@ -215,7 +210,7 @@ a {
             .readMore {
                 text-decoration: none;
                 background-color: var(--neo_primary_color);
-                color: #000000;
+                color: var(--neo_font_color);
                 border-radius: 8px;
                 padding: 0.8em 1.2em;
             }

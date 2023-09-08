@@ -46,7 +46,7 @@ function neo_custom_feed($wp_customize)
 
     // Posts Spacing
     $wp_customize->add_setting('feed_post_card_spacing', array(
-        'default' => '2',
+        'default' => '1',
         'transport' => 'refresh',
         'sanitize_callback' => 'absint',
     ));

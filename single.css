@@ -179,6 +179,10 @@ tbody tr:nth-of-type(even) {
 .articlearea .wp-block-columns p {
   margin: 0;
 }
+.articlearea .wp-caption {
+  font-size: 0.8em;
+  font-style: italic;
+}
 .articlearea figure {
   margin: 0;
 }
@@ -193,11 +197,11 @@ tbody tr:nth-of-type(even) {
 }
 .articlearea .alignleft {
   float: left;
-  margin: 0 1.5em 1.5em 0;
+  margin: 0 1.5em 1em 0;
 }
 .articlearea .alignright {
   float: right;
-  margin: 0 0 1.5em 1.5em;
+  margin: 0 0 1em 1.5em;
 }
 .articlearea .aligncenter {
   clear: both;
@@ -235,6 +239,9 @@ tbody tr:nth-of-type(even) {
 .articlearea .page-links a:hover {
   background-color: var(--neo_primary_variant_much_brighter);
 }
+.articlearea .gallery {
+  display: grid;
+}
 .articlearea .gallery .gallery-item {
   font-size: 0.8em;
   overflow: hidden;
@@ -250,6 +257,30 @@ tbody tr:nth-of-type(even) {
 .articlearea .gallery .landscape img {
   width: 95%;
   height: auto;
+}
+.articlearea .gallery-columns-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+.articlearea .gallery-columns-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+.articlearea .gallery-columns-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+.articlearea .gallery-columns-5 {
+  grid-template-columns: repeat(5, 1fr);
+}
+.articlearea .gallery-columns-6 {
+  grid-template-columns: repeat(6, 1fr);
+}
+.articlearea .gallery-columns-7 {
+  grid-template-columns: repeat(7, 1fr);
+}
+.articlearea .gallery-columns-8 {
+  grid-template-columns: repeat(8, 1fr);
+}
+.articlearea .gallery-columns-9 {
+  grid-template-columns: repeat(9, 1fr);
 }
 .articlearea .attachment img {
   width: 95%;

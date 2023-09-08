@@ -28,7 +28,14 @@ add_theme_support('post-thumbnails');
 add_theme_support("title-tag");
 add_theme_support('automatic-feed-links');
 // add_theme_support("custom-header");
-add_theme_support('html5');
+add_theme_support('html5', array(
+    // Any or all of these.
+    'comment-list',
+    'comment-form',
+    'search-form',
+    'gallery',
+    'caption',
+));
 // add_theme_support("custom-background");
 add_theme_support('align-wide');
 add_theme_support('responsive-embeds');

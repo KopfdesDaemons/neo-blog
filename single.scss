@@ -180,8 +180,6 @@ tbody tr:nth-of-type(even) {
         padding-top: 0;
         border-radius: 16px;
         overflow: hidden;
-        // display: flex;
-        // flex-direction: column;
     }
 
     .content {
@@ -196,6 +194,11 @@ tbody tr:nth-of-type(even) {
         p {
             margin: 0;
         }
+    }
+
+    .wp-caption {
+        font-size: 0.8em;
+        font-style: italic;
     }
 
     figure {
@@ -215,14 +218,15 @@ tbody tr:nth-of-type(even) {
     }
 
     $ImageSpacing: 1.5em;
+    $ImageSpacingButtom: 1em;
     .alignleft {
         float: left;
-        margin: 0 $ImageSpacing $ImageSpacing 0;
+        margin: 0 $ImageSpacing $ImageSpacingButtom 0;
     }
 
     .alignright {
         float: right;
-        margin: 0 0 $ImageSpacing $ImageSpacing;
+        margin: 0 0 $ImageSpacingButtom $ImageSpacing;
     }
 
     .aligncenter {
@@ -271,6 +275,7 @@ tbody tr:nth-of-type(even) {
     }
 
     .gallery {
+        display: grid;
         .gallery-item {
             font-size: 0.8em;
             overflow: hidden;
@@ -292,6 +297,38 @@ tbody tr:nth-of-type(even) {
                 height: auto;
             }
         }
+    }
+
+    .gallery-columns-2 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gallery-columns-3{
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .gallery-columns-4{
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .gallery-columns-5{
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    .gallery-columns-6{
+        grid-template-columns: repeat(6, 1fr);
+    }
+
+    .gallery-columns-7{
+        grid-template-columns: repeat(7, 1fr);
+    }
+
+    .gallery-columns-8{
+        grid-template-columns: repeat(8, 1fr);
+    }
+
+    .gallery-columns-9{
+        grid-template-columns: repeat(9, 1fr);
     }
 
     .attachment {
