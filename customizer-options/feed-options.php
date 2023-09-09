@@ -26,6 +26,19 @@ function neo_custom_feed($wp_customize)
         ),
     ));
 
+    // Sidebar
+    $wp_customize->add_setting('feed_sidebar', array(
+        'default' => true,
+        'transport' => 'refresh',
+        'sanitize_callback' => 'neo_sanitize_checkbox',
+    ));
+
+    $wp_customize->add_control('feed_sidebar', array(
+        'type' => 'checkbox',
+        'label' => __('Show sidebar', 'neo'),
+        'section' => 'custom_feed',
+    ));
+
     // Number of posts in feed
     $wp_customize->add_setting('feed_posts_count', array(
         'default' => 10,

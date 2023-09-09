@@ -1,14 +1,14 @@
 <?php
 get_header();
 ?>
-<main class="spacer postSpacer grid">
+<main class="spacer spacerPages grid">
 
     <?php
     while (have_posts()) {
         the_post();
     ?>
 
-        <div id="post-<?php the_ID(); ?>" class="articleArea" <?php post_class(); ?>>
+        <div id="post-<?php the_ID(); ?>" class="articlearea" <?php post_class(); ?>>
 
             <h1><?php the_title(); ?></h1>
             <?php the_content(); ?>

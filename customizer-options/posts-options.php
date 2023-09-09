@@ -47,6 +47,24 @@ function neo_custom_posts($wp_customize)
         'active_callback' => 'slogan_active_callback'
     ));
 
+    // Text Alignment Option
+    $wp_customize->add_setting('posts_title_alignment', array(
+        'default' => 'left', // Standardausrichtung auf links
+        'transport' => 'refresh',
+        'sanitize_callback' => 'sanitize_text_field', // Hier können Sie weitere Sanitizing-Funktionen hinzufügen, wenn nötig.
+    ));
+
+    $wp_customize->add_control('posts_title_alignment', array(
+        'type' => 'select',
+        'section' => 'custom_theme_article',
+        'label' => __('Page Title Alignment', 'neo'),
+        'choices' => array(
+            'left' => __('left', 'neo'),
+            'center' => __('center', 'neo'),
+            'right' => __('right', 'neo'),
+        ),
+    ));
+
     // Background color
     $wp_customize->add_setting('background_color_posts', array(
         'default' => '#0A0A0A00',
@@ -54,7 +72,7 @@ function neo_custom_posts($wp_customize)
     ));
 
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'Posts_background_color', array(
-        'label' => 'Background color light mode',
+        'label' => __('Background color light mode', 'neo'),
         'section' => 'custom_theme_article',
         'settings' => 'background_color_posts'
     )));
@@ -66,7 +84,7 @@ function neo_custom_posts($wp_customize)
     ));
 
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'Post_background_color_dark_mode', array(
-        'label' => 'Background color dark mode',
+        'label' => __('Background color dark mode', 'neo'),
         'section' => 'custom_theme_article',
         'settings' => 'dark_mode_background_color_posts'
     )));

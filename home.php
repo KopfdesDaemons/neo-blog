@@ -42,7 +42,7 @@
             }
             ?>
         </div>
-        <?php get_sidebar(); ?>
+        <?php if (get_theme_mod('feed_sidebar', true)) get_sidebar(); ?>
     </section>
 </main>
 <?php get_footer(); ?>

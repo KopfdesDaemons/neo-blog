@@ -117,13 +117,13 @@ function neo_custom_comment_form_fields($fields)
 add_filter('comment_form_default_fields', 'neo_custom_comment_form_fields');
 
 // Custom Settings
-require_once get_template_directory() . '/customizer-options/header-options.php';
 require_once get_template_directory() . '/customizer-options/colors-options.php';
+require_once get_template_directory() . '/customizer-options/fonts-options.php';
+require_once get_template_directory() . '/customizer-options/header-options.php';
+require_once get_template_directory() . '/customizer-options/feed-options.php';
 require_once get_template_directory() . '/customizer-options/posts-options.php';
 require_once get_template_directory() . '/customizer-options/pages-options.php';
-require_once get_template_directory() . '/customizer-options/fonts-options.php';
 require_once get_template_directory() . '/customizer-options/author-page-options.php';
-require_once get_template_directory() . '/customizer-options/feed-options.php';
 
 // Sanitize function to check checkbox value (true/false)
 function neo_sanitize_checkbox($input)

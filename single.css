@@ -4,8 +4,11 @@ h1 {
   margin-left: 0;
 }
 
-.postSpacer {
+.spacerPost {
   max-width: var(--neo_max_posts_width);
+}
+.spacerPost h1 {
+  text-align: var(--neo_posts_title_alignment);
 }
 
 .wp-block-quote,
@@ -161,6 +164,7 @@ tbody tr:nth-of-type(even) {
   width: 100%;
   overflow: hidden;
   background-color: var(--neo_background_color_posts);
+  padding: 5px;
 }
 .articlearea .content {
   padding: 2em;

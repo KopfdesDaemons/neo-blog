@@ -4,8 +4,12 @@ h1 {
     margin-left: 0;
 }
 
-.postSpacer {
+.spacerPost {
     max-width: var(--neo_max_posts_width);
+
+    h1 {
+        text-align: var(--neo_posts_title_alignment);
+    }
 }
 
 // Zitate
@@ -174,6 +178,7 @@ tbody tr:nth-of-type(even) {
     width: 100%;
     overflow: hidden;
     background-color: var(--neo_background_color_posts);
+    padding: 5px;
 
     .content {
         padding: 2em;

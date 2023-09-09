@@ -91,7 +91,6 @@
 }
 #sidebar .widget_search input[type=search] {
   height: 3em;
-  border-radius: 8px;
   outline: 1px solid var(--neo_primary_variant_darker);
 }
 #sidebar .widget_search input[type=search]:focus {

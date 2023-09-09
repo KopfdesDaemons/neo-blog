@@ -86,6 +86,10 @@ main {
   max-width: var(--neo_max_feed_width);
 }
 
+.spacerPages {
+  max-width: var(--neo_max_pages_width);
+}
+
 a {
   color: var(--neo_primary_variant_darker);
 }
@@ -377,4 +381,15 @@ html body ::-webkit-scrollbar {
 }
 .social-sharing-links .E-Mail {
   background-color: #888;
+}
+
+.spacerPages h1 {
+  text-align: var(--neo_page_title_alignment);
+}
+.spacerPages .articlearea {
+  background-color: var(--neo_background_color_pages);
+}
+
+.darkmode .spacerPages .articlearea {
+  background-color: var(--neo_dark_mode_background_color_pages);
 }/*# sourceMappingURL=style.css.map */
