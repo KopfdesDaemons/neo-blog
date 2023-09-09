@@ -141,19 +141,6 @@ function neo_custom_posts($wp_customize)
         'section' => 'custom_theme_article',
     ));
 
-    // Share options
-    $wp_customize->add_setting('share_options', array(
-        'default' => true,
-        'transport' => 'refresh',
-        'sanitize_callback' => 'neo_sanitize_checkbox',
-    ));
-
-    $wp_customize->add_control('share_options', array(
-        'type' => 'checkbox',
-        'label' => __('Show share area', 'neo'),
-        'section' => 'custom_theme_article',
-    ));
-
     // Pagination
     $wp_customize->add_setting('post_pagination', array(
         'default' => true,

@@ -97,15 +97,6 @@
                             </div>
                         <?php } ?>
 
-                        <!-- Social Sharing -->
-                        <?php
-                        $share_options = get_theme_mod('share_options', true);
-                        if ($share_options) {
-                            require_once get_template_directory() . '/template-parts/social-sharing.php';
-                            echo neo_social_sharing();
-                        };
-                        ?>
-
                         <?php
                         $post_pagination = get_theme_mod('post_pagination', true);
                         if ($post_pagination) { ?>
