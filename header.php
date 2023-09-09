@@ -105,8 +105,8 @@
         --neo_font_color: <?php echo $font_color_light_mode ?>;
 
         --neo_element_background-inputfeld: <?php echo $neo_background_inputfield ?>;
-        --neo_element_background-variant: <?php echo $neo_background_variant ?>;
-        --neo_element_background-variant-darker: <?php echo $neo_background_variant_darker ?>;
+        --neo_element_background_variant: <?php echo $neo_background_variant ?>;
+        --neo_element_background_variant-darker: <?php echo $neo_background_variant_darker ?>;
 
         /* Header Settings */
         --neo_header_font_color: <?php echo esc_attr(get_theme_mod('header_font_color_light_mode', '')) ?>;
@@ -151,7 +151,7 @@
         ?>;
         --neo_dark_mode_background_color_posts: <?php echo esc_attr(get_theme_mod('dark_mode_background_color_posts', '#0A0A0A00'));
         ?>;
-        --neo_heading_font_size: <?php echo esc_attr(get_theme_mod('heading_font_size', '35')) . 'px;';
+        --neo_heading_font_size: <?php echo esc_attr(get_theme_mod('heading_font_size', '28')) . 'px;';
         ?>;
     }
 
@@ -173,8 +173,8 @@
         --neo_font_color: <?php echo $neo_font_color_dark_mode ?>;
         --neo_header_font_color: <?php echo $neo_header_font_color_dark_mode ?>;
         --neo_element_background-inputfeld: <?php echo $neo_background_inputfield ?>;
-        --neo_element_background-variant: <?php echo $neo_background_variant ?>;
-        --neo_element_background-variant-darker: <?php echo $neo_background_variant_darker ?>;
+        --neo_element_background_variant: <?php echo $neo_background_variant_darker ?>;
+        --neo_element_background_variant-darker: <?php echo $neo_background_variant ?>;
     }
 
     body {

@@ -27,26 +27,26 @@ add_action('wp_enqueue_scripts', 'enqueue_custom_styles');
 add_theme_support('post-thumbnails');
 add_theme_support("title-tag");
 add_theme_support('automatic-feed-links');
-// add_theme_support("custom-header");
 add_theme_support('html5', array(
-    // Any or all of these.
     'comment-list',
     'comment-form',
     'search-form',
     'gallery',
     'caption',
 ));
-// add_theme_support("custom-background");
 add_theme_support('align-wide');
 add_theme_support('responsive-embeds');
 
-// Java Scripts
+// Header Script
 function neo_header_script()
 {
     wp_enqueue_script('neo-header-script', get_template_directory_uri() . '/js/neo-header-script.js', null, '1.0', true);
 }
 add_action('wp_enqueue_scripts', 'neo_header_script');
 
+/* Load the wordpress comment script from the “\wordpress\wp-includes\js” directory.
+This allows the comment response form to be located below the corresponding comment
+and not at the very bottom of the page. */
 function neo_enqueue_comments_reply()
 {
     if (is_singular() && comments_open() && get_option('thread_comments')) {
@@ -55,7 +55,7 @@ function neo_enqueue_comments_reply()
 }
 add_action('wp_enqueue_scripts', 'neo_enqueue_comments_reply');
 
-
+// For the translation
 function neo_load_theme_textdomain()
 {
     load_theme_textdomain('neo', get_template_directory() . '/languages');

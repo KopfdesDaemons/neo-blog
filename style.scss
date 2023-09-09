@@ -209,15 +209,16 @@ a {
 
             .readMore {
                 text-decoration: none;
-                background-color: var(--neo_primary_color);
+                // background-color: var(--neo_primary_color);
+                border: 1px solid rgb(226, 226, 226);
+                background-color: var(--neo_body);
                 color: var(--neo_font_color);
                 border-radius: 8px;
                 padding: 0.8em 1.2em;
             }
 
             .readMore:hover {
-                background-color: transparent;
-                outline: 1px solid var(--neo_primary_color);
+                background-color: var(--neo_element_background);
                 transition: all 200ms;
                 color: var(--neo_font_color);
             }
@@ -255,7 +256,7 @@ a {
             border-radius: var(--neo_tags_border_radius);
             font-size: 0.7em;
             min-width: 2em;
-            background-color: var(--neo_element_background-variant);
+            background-color: var(--neo_element_background_variant);
         }
         
         a:hover {
@@ -318,7 +319,7 @@ a {
 
     a,
     span {
-        background-color: var(--neo_element_background-variant-darker);
+        background-color: var(--neo_element_background_variant-darker);
         border-radius: 8px;
         margin: 0.2em;
         padding: 0.5em 1em;

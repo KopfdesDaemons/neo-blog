@@ -83,7 +83,7 @@ th {
 }
 
 tbody tr:nth-of-type(even) {
-  background-color: var(--neo_element_background-variant-darker);
+  background-color: var(--neo_element_background_variant-darker);
 }
 
 .darkmode table tbody tr:nth-of-type(even) {
@@ -222,7 +222,7 @@ tbody tr:nth-of-type(even) {
 .articlearea .page-links .post-page-numbers {
   border-radius: 8px;
   text-decoration: none;
-  background-color: var(--neo_element_background-variant-darker);
+  background-color: var(--neo_element_background_variant-darker);
   margin: 0.2em;
   padding: 0.5em 1em;
 }
@@ -294,10 +294,10 @@ tbody tr:nth-of-type(even) {
 }
 
 .post-password-form {
-  background-color: rgb(255, 218, 218);
-  border-radius: 8px;
+  background-color: var(--neo_element_background);
+  border: 2px solid var(--neo_font_color);
   padding: 1em 3em;
-  margin: 2em 3em;
+  margin: 2em 0em;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -305,30 +305,32 @@ tbody tr:nth-of-type(even) {
 }
 .post-password-form p {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
   margin: 0em;
-  color: #000000;
+  max-width: 100%;
 }
 .post-password-form p label {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   gap: 1em;
   margin: 1em;
-  color: #000000;
 }
 .post-password-form input[type=submit] {
   text-decoration: none;
-  background-color: rgb(240, 115, 93);
+  background-color: var(--neo_primary_variant_much_brighter);
   color: white;
-  border-radius: 8px;
+  border-radius: 6px;
   padding: 0.8em 1.2em;
   border: none;
+  max-width: 100px;
 }
 .post-password-form input[type=submit]:hover {
   background-color: transparent;
-  outline: 1px solid black;
-  color: black;
+  outline: 1px solid var(--neo_font_color);
   transition: all 200ms;
   cursor: pointer;
 }
@@ -355,4 +357,10 @@ tbody tr:nth-of-type(even) {
   img {
     max-height: 5cm;
   }
+}
+::-moz-selection {
+  background: var(--neo_primary_variant_much_brighter);
+}
+::selection {
+  background: var(--neo_primary_variant_much_brighter);
 }/*# sourceMappingURL=single.css.map */

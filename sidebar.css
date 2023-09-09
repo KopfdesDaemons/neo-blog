@@ -51,8 +51,8 @@
 }
 #sidebar .widget_archive li {
   padding: 0.8em 1em;
-  border: 1px solid var(--neo_element_background-variant-darker);
-  box-shadow: inset 0px 0px 20px 0px var(--neo_element_background-variant);
+  border: 1px solid var(--neo_element_background_variant-darker);
+  box-shadow: inset 0px 0px 20px 0px var(--neo_element_background_variant);
 }
 #sidebar .widget_archive li a {
   text-decoration: none;
@@ -101,11 +101,14 @@
 #sidebar .widget_search button {
   height: 3em;
   border-radius: 8px;
-  background-color: var(--neo_body);
+  color: white;
+  background-color: var(--neo_primary_variant_much_brighter);
+  border: none;
 }
 #sidebar .widget_search button:hover {
-  background-color: var(--neo_primary_color);
+  background-color: var(--neo_body);
   transition: all 200ms;
+  outline: 1px solid var(--neo_font_color);
 }
 #sidebar .widget_categories,
 #sidebar .wp-block-categories {
@@ -193,7 +196,7 @@
   background-color: var(--neo_body);
   background-color: var(--neo_element_background);
   border: 1px solid var(--neo_primary_variant_much_brighter);
-  box-shadow: inset 0px 0px 50px 0px var(--neo_element_background-variant);
+  box-shadow: inset 0px 0px 50px 0px var(--neo_element_background_variant);
   text-decoration: none;
 }
 #sidebar .wp-block-latest-posts li a:hover {
@@ -229,7 +232,7 @@
   margin-bottom: 0.5em;
   background-color: var(--neo_element_background);
   border: 1px solid var(--neo_primary_variant_darker);
-  box-shadow: inset 0px 0px 50px 0px var(--neo_element_background-variant);
+  box-shadow: inset 0px 0px 50px 0px var(--neo_element_background_variant);
 }
 .widget_recent_comments ol p,
 .wp-block-latest-comments p {
