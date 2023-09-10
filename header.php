@@ -164,7 +164,11 @@
         --neo_background_color_pages: <?php echo esc_attr(get_theme_mod('background_color_pages', '#0A0A0A00'));
         ?>;
         --neo_dark_mode_background_color_pages: <?php echo esc_attr(get_theme_mod('dark_mode_background_color_pages', '#0A0A0A00'));
-        ?>
+        ?>;
+
+        /* Mobile Settings */
+        --neo_content_padding: <?php echo esc_attr(get_theme_mod('content_padding', '10') . 'px');
+        ?>;
     }
 
 

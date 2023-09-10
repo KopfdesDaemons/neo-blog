@@ -10,11 +10,7 @@
   list-style: none;
   display: flex;
   align-items: flex-start;
-}
-@media only screen and (max-width: 600px) {
-  #footer nav ul {
-    flex-direction: column;
-  }
+  flex-wrap: wrap;
 }
 #footer nav ul li {
   margin: 1.5em;

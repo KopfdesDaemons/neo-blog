@@ -62,6 +62,14 @@ function neo_load_theme_textdomain()
 }
 add_action('after_setup_theme', 'neo_load_theme_textdomain');
 
+// defaults to the feed as the homepage
+function neo_set_default_front_page()
+{
+    update_option('show_on_front', 'posts');
+}
+
+add_action('after_setup_theme', 'neo_set_default_front_page');
+
 function neo_register_menus()
 {
     register_nav_menus(

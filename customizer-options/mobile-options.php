@@ -24,5 +24,18 @@ function neo_mobile_settings($wp_customize)
         ),
         'active_callback' => 'header_menu_callback'
     ));
+
+    // Content Padding
+    $wp_customize->add_setting('content_padding', array(
+        'default' => '10',
+        'transport' => 'refresh',
+        'sanitize_callback' => 'absint',
+    ));
+
+    $wp_customize->add_control('content_padding', array(
+        'type' => 'number',
+        'section' => 'neo_mobile_section',
+        'label' => __('Content Padding (in pixels)', 'neo'),
+    ));
 }
 add_action('customize_register', 'neo_mobile_settings');

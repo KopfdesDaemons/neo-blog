@@ -180,6 +180,7 @@ tbody tr:nth-of-type(even) {
     overflow: hidden;
     background-color: var(--neo_background_color_posts);
     padding: 5px;
+    box-sizing: border-box;
 
     .content {
         padding: 2em;
@@ -188,9 +189,11 @@ tbody tr:nth-of-type(even) {
         overflow: hidden;
     }
 
-    .content {
-        @media only screen and (max-width: 600px) {
-            padding: 0.2em;
+    @media only screen and (max-width: 600px) {
+        padding: var(--neo_content_padding);
+
+        .content {
+            padding: 0;
         }
     }
 

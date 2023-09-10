@@ -25,16 +25,18 @@
                     echo neo_display_post_card($post_classes);
                 }
 
-                // Pagination
-                echo '<div class="pagination shadow">';
-                echo paginate_links(array(
-                    'total' => $query->max_num_pages,
-                    'current' => $paged,
-                    'prev_next' => true,
-                    'prev_text' => __('« Previous', 'neo'),
-                    'next_text' => __('Next »', 'neo'),
-                ));
-                echo '</div>';
+                // Pagination only if needed
+                if ($query->max_num_pages > 1) {
+                    echo '<div class="pagination shadow">';
+                    echo paginate_links(array(
+                        'total' => $query->max_num_pages,
+                        'current' => $paged,
+                        'prev_next' => true,
+                        'prev_text' => __('« Previous', 'neo'),
+                        'next_text' => __('Next »', 'neo'),
+                    ));
+                    echo '</div>';
+                }
 
                 wp_reset_postdata();
             } else {
