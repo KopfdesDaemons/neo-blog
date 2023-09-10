@@ -67,7 +67,7 @@ function neo_custom_posts($wp_customize)
 
     // Background color
     $wp_customize->add_setting('background_color_posts', array(
-        'default' => '#0A0A0A00',
+        'default' => '',
         'sanitize_callback' => 'sanitize_hex_color',
     ));
 
@@ -79,7 +79,7 @@ function neo_custom_posts($wp_customize)
 
     // Background color darkmode
     $wp_customize->add_setting('dark_mode_background_color_posts', array(
-        'default' => '#0A0A0A00',
+        'default' => '',
         'sanitize_callback' => 'sanitize_hex_color',
     ));
 

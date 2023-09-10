@@ -109,7 +109,7 @@ function neo_custom_feed($wp_customize)
 
     // Tags border radius
     $wp_customize->add_setting('tags_border_radius', array(
-        'default' => '32',
+        'default' => '8',
         'transport' => 'refresh',
         'sanitize_callback' => 'absint',
     ));
@@ -174,7 +174,7 @@ function neo_custom_feed($wp_customize)
 
     // Border radius
     $wp_customize->add_setting('feed_post_card_border_radius', array(
-        'default' => '12',
+        'default' => '8',
         'transport' => 'refresh',
         'sanitize_callback' => 'absint',
     ));
@@ -225,7 +225,7 @@ function neo_custom_feed($wp_customize)
 
     // Image position
     $wp_customize->add_setting('feed_image_postion', array(
-        'default' => 'imageLeft',
+        'default' => 'imageTop',
         'transport' => 'refresh',
         'sanitize_callback' => 'sanitize_text_field',
     ));
@@ -263,7 +263,7 @@ function neo_custom_feed($wp_customize)
 
     // Border radius image
     $wp_customize->add_setting('feed_post_card_border_radius_image', array(
-        'default' => '10',
+        'default' => '6',
         'transport' => 'refresh',
         'sanitize_callback' => 'absint',
     ));

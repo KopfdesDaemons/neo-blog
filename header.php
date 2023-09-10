@@ -127,11 +127,11 @@
         /* Feed Setting */
         --neo_feed_post_card_line_height: <?php echo esc_attr(get_theme_mod('feed_post_card_line_heigt', '24')) . 'px;';
         ?>;
-        --neo_feed_post_card_border_radius: <?php echo esc_attr(get_theme_mod('feed_post_card_border_radius', '12')) . 'px;';
+        --neo_feed_post_card_border_radius: <?php echo esc_attr(get_theme_mod('feed_post_card_border_radius', '8')) . 'px;';
         ?>;
         --neo_feed_post_card_padding: <?php echo esc_attr(get_theme_mod('feed_post_card_padding', '1.5')) . 'em;';
         ?>;
-        --neo_feed_post_card_border_radius_image: <?php echo esc_attr(get_theme_mod('feed_post_card_border_radius_image', '10')) . 'px;';
+        --neo_feed_post_card_border_radius_image: <?php echo esc_attr(get_theme_mod('feed_post_card_border_radius_image', '6')) . 'px;';
         ?>;
         --neo_feed_post_card_spacing: <?php echo esc_attr(get_theme_mod('feed_post_card_spacing', '1')) . 'em;';
         ?>;
@@ -139,7 +139,7 @@
         ?>;
         --neo_image_display_behavior: <?php echo esc_attr(get_theme_mod('image_display_behavior', 'cover'));
         ?>;
-        --neo_tags_border_radius: <?php echo esc_attr(get_theme_mod('tags_border_radius', '32')) . 'px;';
+        --neo_tags_border_radius: <?php echo esc_attr(get_theme_mod('tags_border_radius', '8')) . 'px;';
         ?>;
         --neo_max_feed_width: <?php echo esc_attr(get_theme_mod('maximum_width_of_the_feed', '70')) . 'em';
         ?>;
