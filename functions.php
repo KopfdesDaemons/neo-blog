@@ -124,6 +124,8 @@ require_once get_template_directory() . '/customizer-options/feed-options.php';
 require_once get_template_directory() . '/customizer-options/posts-options.php';
 require_once get_template_directory() . '/customizer-options/pages-options.php';
 require_once get_template_directory() . '/customizer-options/author-page-options.php';
+require_once get_template_directory() . '/customizer-options/mobile-options.php';
+
 
 // Sanitize function to check checkbox value (true/false)
 function neo_sanitize_checkbox($input)

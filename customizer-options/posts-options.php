@@ -47,11 +47,11 @@ function neo_custom_posts($wp_customize)
         'active_callback' => 'slogan_active_callback'
     ));
 
-    // Text Alignment Option
+    // Title text alignment
     $wp_customize->add_setting('posts_title_alignment', array(
-        'default' => 'left', // Standardausrichtung auf links
+        'default' => 'left',
         'transport' => 'refresh',
-        'sanitize_callback' => 'sanitize_text_field', // Hier können Sie weitere Sanitizing-Funktionen hinzufügen, wenn nötig.
+        'sanitize_callback' => 'sanitize_text_field',
     ));
 
     $wp_customize->add_control('posts_title_alignment', array(

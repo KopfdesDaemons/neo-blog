@@ -130,8 +130,6 @@
             justify-content: center;
             flex-direction: column;
             align-items: center;
-            max-height: 0;
-            transition: all 500ms;
 
             @media only screen and (max-width: 600px) {
                 width: 100%;
@@ -174,11 +172,22 @@
             }
         }
 
+        .headerMenuColumn::-webkit-scrollbar {
+            width: 5px;
+            height: 1px;
+        }
         .headerMenuColumn {
             width: 100%;
             display: flex;
-            justify-content: center;
             align-items: center;
+            justify-content: center;
+            overflow-y: auto;
+
+
+            @media only screen and (max-width: 600px) {
+                justify-content: unset;
+                font-size: 0.8em;
+            }
 
             .home-link {
                 background-color: var(--neo_body);
@@ -197,11 +206,34 @@
                 background-color: var(--neo_header_menu_background_color);
             }
 
-            ul {
+            .neo_header_menu_horizontal{
+                @media only screen and (max-width: 600px) {
+                    width: 100%;
+                    display: flex;
+                    flex-wrap: nowrap;
+                    justify-content: unset;
+                }
+                flex-flow: row wrap;
                 display: flex;
+            }
+
+            .neo_header_menu_vertical{
+                @media only screen and (max-width: 600px) {
+                    max-height: 0;
+                    display: flex;
+                    flex-direction: column;
+                    flex-wrap: nowrap;
+                }
+                display: flex;
+                flex-flow: row wrap;
+                ul {
+                    flex-direction: row;
+                }
+            }
+
+            ul {
                 margin: 0;
                 padding: 0;
-                flex-flow: row wrap;
                 
                 a {
                     color: var(--neo_header_menu_font_color);
@@ -215,7 +247,7 @@
                     white-space: nowrap;
                     position: relative;
                     border-bottom: 1px solid transparent;
-                    font-size: 1.2rem;
+                    font-size: 1.2em;
 
                     
                     ul{
@@ -251,59 +283,30 @@
                 }
             }
         }
-        .headerMenuOpen {
-            transition: all 500ms;
-            max-height: 200px;
 
-            .menu-all-pages-container ul{
-
-                ul {
-                    top: 100%;
-                    left: 0;
-                    height: auto;
-                    display: none;
-                }
+        .headerMenuOpen{
+            .headerMenuColumn {
+                justify-content: center;
             }
+            .neo_header_menu_vertical {
+                transition: max-height 500ms;
+                max-height: 400px;
+                align-items: center;
+    
+                .menu-all-pages-container ul{
+    
+                    ul {
+                        top: 100%;
+                        left: 0;
+                        height: auto;
+                        display: none;
+                    }
+                }
+            } 
         }
     }
 }
 
 .fixedHeader {
     position: fixed;
-}
-
-.farbpalettenDiv {
-    ul {
-        display: flex;
-        list-style: none;
-    }
-    li {
-        height: 30px;
-        width: 30px;
-        border-radius: 8px
-    }
-
-    li:nth-child(1) {
-        background-color: var(--neo_primary_color);
-    }
-
-    li:nth-child(2) {
-        background-color: var(--neo_primary_variant_darker);
-    }
-
-    li:nth-child(3) {
-        background-color: var(--neo_primary_variant_brighter);
-    }
-
-    li:nth-child(4) {
-        background-color: var(--neo_primary_variant_much_brighter);
-    }
-
-    li:nth-child(5) {
-        background-color: var(--neo_element_background_variant);
-    }
-
-    li:nth-child(6) {
-        background-color: var(--neo_element_background_variant-darker);
-    }
 }
