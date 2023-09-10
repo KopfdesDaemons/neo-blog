@@ -36,7 +36,7 @@ h5,
 h6 {
     word-wrap: break-word;
     overflow-wrap: anywhere;
-    margin: 0.2em;
+    margin: 0.2em 0;
 }
 
 h1,
@@ -382,4 +382,12 @@ html {
 
 .darkmode .spacerPages .articlearea {
     background-color: var(--neo_dark_mode_background_color_pages);
+}
+
+::selection {
+    background: var(--neo_primary_variant_much_brighter);
+}
+
+input::selection {
+    background: initial;
 }

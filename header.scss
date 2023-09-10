@@ -17,6 +17,10 @@
     box-sizing: border-box;
     border-bottom: 1px solid gray;
     background-color: var(--neo_element_background);
+
+    @media only screen and (max-width: 600px) {
+        margin-bottom: 0;
+    }
     
     .headerDiv {
         width: 100%;

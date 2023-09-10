@@ -11,15 +11,15 @@
   display: none;
 }
 
-.articleArea .wp-polls-ans {
+.articlearea .wp-polls-ans {
   margin-bottom: 2em;
   border: 1px solid var(--neo_primary_color);
   background-color: var(--neo_element_background);
 }
-.articleArea .wp-polls-ans ul {
+.articlearea .wp-polls-ans ul {
   list-style: none;
 }
-.articleArea .wp-polls-ans ul li {
+.articlearea .wp-polls-ans ul li {
   margin-bottom: 1em;
 }
 

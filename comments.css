@@ -160,9 +160,10 @@
 .comments-area .comment-respond .comment-form-url input:not(:placeholder-shown) + label,
 .comments-area .comment-respond .comment-form-url input:focus + label,
 .comments-area .comment-respond .comment-form-url input:-webkit-autofill + label {
-  transform: scale(0.8) translateY(-0.8em);
+  transform: scale(0.8) translateY(-1.2em);
   height: auto;
   font-size: 0.8em;
+  left: 0;
 }
 
 .darkmode .comments-area .comment-body {

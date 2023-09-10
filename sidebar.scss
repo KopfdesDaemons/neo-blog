@@ -35,6 +35,12 @@
         }
     }
 
+    img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 6px;
+    }
+
     .widget {
         padding: 0 1rem 1rem 1rem;
     }
@@ -74,17 +80,17 @@
         }
     }
 
-    .wp-block-calendar {
-        table:where(:not(.has-text-color)) {
+    .wp-block-calendar,
+    .widget_calendar {
+        caption {
             color: var(--neo_font_color);
         }
 
         .wp-calendar-nav {
-            margin-top: 1rem;
+            margin-top: 0.5rem;
 
             a {
                 padding: 8px;
-                border-radius: 12px;
             }
         }
 
@@ -96,6 +102,27 @@
         tr,
         th {
             background-color: unset;
+            text-align: center;
+        }
+
+        tr {
+            color: var(--neo_font_color);
+        }
+    }
+
+    .calendar_wrap {
+        td {
+            padding: 4px;
+        }
+
+        .wp-calendar-nav {
+            margin-top: 0.5rem;
+            display: flex;
+            justify-content: space-between;
+
+            a {
+                padding: 8px;
+            }
         }
     }
 
@@ -128,11 +155,12 @@
             background-color: var(--neo_primary_variant_much_brighter);
             border: none;
         }
-        
+
         button:hover {
             background-color: var(--neo_body);
             transition: all 200ms;
             outline: 1px solid var(--neo_font_color);
+            color: var(--neo_font_color);
         }
     }
 
@@ -149,17 +177,16 @@
 
             a {
                 padding: 0.5em;
-                border-radius: 14px;
+                border-radius: 6px;
                 background-color: var(--neo_body);
                 color: var(--neo_font_color);
                 text-decoration: none;
                 border: 1px solid var(--neo_primary_variant_darker);
-                ;
                 box-shadow: inset 0px 0px 20px 0px var(--neo_primary_variant_much_brighter);
             }
 
             a:hover {
-                background-color: var(--neo_primary_color);
+                background-color: var(--neo_element_background_variant);
             }
         }
     }
@@ -172,7 +199,7 @@
         li {
             background-color: var(--neo_body);
             border: 1px solid var(--neo_primary_variant_darker);
-            box-shadow: inset 0px 0px 20px 0px var(--neo_primary_variant_much_brighter);
+            box-shadow: inset 0px 0px 20px 0px var(--neo_element_background_variant);
         }
 
         a {
@@ -206,7 +233,7 @@
             border-radius: 8px;
             background-color: var(--neo_primary_color);
             text-decoration: none;
-            color: unset;
+            color: white;
         }
 
         a:hover {
@@ -226,7 +253,8 @@
     }
 
     // Post suggestions
-    .wp-block-latest-posts {
+    .wp-block-latest-posts,
+    .widget_recent_entries {
         li {
             margin-top: 0.5rem;
             width: 100%;
@@ -243,12 +271,24 @@
             }
 
             a:hover {
-                background-color: var(--neo_primary_variant_brighter);
+                background-color: var(--neo_element_background_variant);
             }
         }
     }
 
-    .wp-block-tag-cloud {
+    .wp-block-latest-posts__post-excerpt {
+        a {
+            margin: 1em 0 0 0;
+        }
+    }
+
+    .tagcloud {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .wp-block-tag-cloud,
+    .tagcloud {
         p {
             margin: 0;
         }
@@ -258,7 +298,7 @@
             text-decoration: none;
             color: var(--neo_font_color);
             text-align: center;
-            background-color: var(--neo_primary_variant_much_brighter);
+            background-color: var(--neo_element_background_variant);
             padding: 0.6em 1em;
             border-radius: 32px;
             font-size: 0.7em !important;
@@ -273,7 +313,8 @@
 
 // Also on author page
 .widget_recent_comments ol,
-.wp-block-latest-comments {
+.wp-block-latest-comments,
+#recentcomments {
     margin: 0;
     padding: 0;
 
@@ -302,6 +343,13 @@
     }
 }
 
+#recentcomments {
+    li {
+        background-color: var(--neo_element_background);
+        border-radius: 6px;
+        box-shadow: none;
+    }
+}
 
 .widget_recent_entries {
     li {
@@ -310,28 +358,46 @@
 
     .has-dates {
         li {
-            padding: 1em;
+            padding: 0.5em;
             box-sizing: border-box;
         }
     }
 }
 
 .darkmode {
-    #sidebar{
+    #sidebar {
         .widget_recent_entries {
             a:hover {
                 background-color: var(--neo_body);
                 color: var(--neo_font_color);
             }
         }
-        
-        .wp-block-latest-posts a, .wp-block-archives li {
+
+        .wp-block-latest-posts a,
+        .wp-block-archives li,
+        .widget_recent_entries a {
             box-shadow: inset 0px 0px 20px 0px var(--neo_primary_variant_much_brighter);
         }
-    }
-    .wp-block-latest-comments {
-        li {
-            box-shadow: inset 0px 0px 50px 0px var(--neo_primary_variant_much_brighter);
+
+        .wp-block-latest-comments {
+            li {
+                box-shadow: inset 0px 0px 50px 0px var(--neo_primary_variant_much_brighter);
+            }
+        }
+
+        .wp-block-page-list {
+            li {
+                box-shadow: inset 0px 0px 20px 0px var(--neo_primary_variant_much_brighter);
+            }
+
+            ul li {
+                box-shadow: none;
+            }
+        }
+
+        .wp-block-tag-cloud a,
+        .tagcloud a {
+            background-color: var(--neo_primary_variant_much_brighter);
         }
     }
 }

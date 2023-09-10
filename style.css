@@ -35,7 +35,7 @@ h5,
 h6 {
   word-wrap: break-word;
   overflow-wrap: anywhere;
-  margin: 0.2em;
+  margin: 0.2em 0;
 }
 
 h1,
@@ -346,4 +346,20 @@ html body ::-webkit-scrollbar {
 
 .darkmode .spacerPages .articlearea {
   background-color: var(--neo_dark_mode_background_color_pages);
+}
+
+::-moz-selection {
+  background: var(--neo_primary_variant_much_brighter);
+}
+
+::selection {
+  background: var(--neo_primary_variant_much_brighter);
+}
+
+input::-moz-selection {
+  background: initial;
+}
+
+input::selection {
+  background: initial;
 }/*# sourceMappingURL=style.css.map */

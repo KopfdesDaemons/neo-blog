@@ -174,6 +174,7 @@ tbody tr:nth-of-type(even) {
 .darkmode .articlearea {
     background-color: var(--neo_dark_mode_background_color_posts);
 }
+
 .articlearea {
     width: 100%;
     overflow: hidden;
@@ -189,7 +190,7 @@ tbody tr:nth-of-type(even) {
 
     .content {
         @media only screen and (max-width: 600px) {
-            padding: 0.5em;
+            padding: 0.2em;
         }
     }
 
@@ -217,13 +218,14 @@ tbody tr:nth-of-type(even) {
     img {
         margin: 0.6em 0;
     }
-    
+
     .alignnone {
         display: contents;
     }
 
     $ImageSpacing: 1.5em;
     $ImageSpacingButtom: 1em;
+
     .alignleft {
         float: left;
         margin: 0 $ImageSpacing $ImageSpacingButtom 0;
@@ -252,19 +254,19 @@ tbody tr:nth-of-type(even) {
         .page-links-title {
             margin-right: 0.5em;
         }
-        
+
         .post-page-numbers {
             border-radius: 8px;
             text-decoration: none;
             background-color: var(--neo_element_background_variant-darker);
             margin: 0.2em;
             padding: 0.5em 1em;
-            
+
             span {
                 color: var(--neo_primary_color);
             }
         }
-        
+
         .current {
             border: 1px solid var(--neo_font_color);
             background-color: unset;
@@ -281,6 +283,7 @@ tbody tr:nth-of-type(even) {
 
     .gallery {
         display: grid;
+
         .gallery-item {
             font-size: 0.8em;
             overflow: hidden;
@@ -308,31 +311,31 @@ tbody tr:nth-of-type(even) {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .gallery-columns-3{
+    .gallery-columns-3 {
         grid-template-columns: repeat(3, 1fr);
     }
 
-    .gallery-columns-4{
+    .gallery-columns-4 {
         grid-template-columns: repeat(4, 1fr);
     }
 
-    .gallery-columns-5{
+    .gallery-columns-5 {
         grid-template-columns: repeat(5, 1fr);
     }
 
-    .gallery-columns-6{
+    .gallery-columns-6 {
         grid-template-columns: repeat(6, 1fr);
     }
 
-    .gallery-columns-7{
+    .gallery-columns-7 {
         grid-template-columns: repeat(7, 1fr);
     }
 
-    .gallery-columns-8{
+    .gallery-columns-8 {
         grid-template-columns: repeat(8, 1fr);
     }
 
-    .gallery-columns-9{
+    .gallery-columns-9 {
         grid-template-columns: repeat(9, 1fr);
     }
 
@@ -409,11 +412,18 @@ tbody tr:nth-of-type(even) {
         color: #000000 !important;
     }
 
-    body, p {
+    body,
+    p {
         font-size: 12px !important;
     }
-    
-    #header, #footer, #sidebar, #comments, .author-info, .post-pagination, .post-tags {
+
+    #header,
+    #footer,
+    #sidebar,
+    #comments,
+    .author-info,
+    .post-pagination,
+    .post-tags {
         display: none;
     }
 
@@ -424,8 +434,4 @@ tbody tr:nth-of-type(even) {
     img {
         max-height: 5cm;
     }
- }
-
- ::selection {
-    background: var(--neo_primary_variant_much_brighter);
-  }
+}

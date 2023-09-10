@@ -151,7 +151,7 @@
                                             ?>;
             --neo_dark_mode_background_color_posts: <?php echo esc_attr(get_theme_mod('dark_mode_background_color_posts', '#0A0A0A00'));
                                                     ?>;
-            --neo_heading_font_size: <?php echo esc_attr(get_theme_mod('heading_font_size', '28')) . 'px;';
+            --neo_heading_font_size: <?php echo esc_attr(get_theme_mod('heading_font_size', '24')) . 'px;';
                                         ?>;
             --neo_posts_title_alignment: <?php echo esc_attr(get_theme_mod('posts_title_alignment', 'left'));
                                             ?>;

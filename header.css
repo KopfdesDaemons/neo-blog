@@ -20,6 +20,11 @@
   border-bottom: 1px solid gray;
   background-color: var(--neo_element_background);
 }
+@media only screen and (max-width: 600px) {
+  .header {
+    margin-bottom: 0;
+  }
+}
 .header .headerDiv {
   width: 100%;
   display: flex;

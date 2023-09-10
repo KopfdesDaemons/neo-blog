@@ -29,7 +29,7 @@ function neo_custom_posts($wp_customize)
 
     // Heading font size
     $wp_customize->add_setting('heading_font_size', array(
-        'default' => '28',
+        'default' => '24',
         'transport' => 'refresh',
         'sanitize_callback' => 'absint',
     ));

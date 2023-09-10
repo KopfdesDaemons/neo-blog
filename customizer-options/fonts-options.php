@@ -21,6 +21,8 @@ function neo_custom_fonts($wp_customize)
         'type'       => 'select',
         'choices'    => array(
             'Arial, sans-serif' => 'Arial',
+            'monospace' => 'Monospace',
+            'Quicksand, sans-serif' => 'Quicksand',
             'Courier New, monospace' => 'Courier New',
             'Georgia, serif' => 'Georgia',
             'Lato, sans-serif' => 'Lato',
@@ -29,12 +31,11 @@ function neo_custom_fonts($wp_customize)
             'Noto Sans JP, sans-serif' => 'Noto Sans JP',
             'Open Sans, sans-serif' => 'Open Sans',
             'Poppins, sans-serif' => 'Poppins',
-            'Quicksand, sans-serif' => 'Quicksand',
             'Roboto, sans-serif' => 'Roboto',
             'Tahoma, sans-serif' => 'Tahoma',
             'Times New Roman, serif' => 'Times New Roman',
             'Trebuchet MS, sans-serif' => 'Trebuchet MS',
-            'Verdana, sans-serif' => 'Verdana'
+            'Verdana, sans-serif' => 'Verdana',
         ),
     ));
 

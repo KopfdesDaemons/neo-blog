@@ -174,7 +174,7 @@ tbody tr:nth-of-type(even) {
 }
 @media only screen and (max-width: 600px) {
   .articlearea .content {
-    padding: 0.5em;
+    padding: 0.2em;
   }
 }
 .articlearea .wp-block-columns {
@@ -349,10 +349,17 @@ tbody tr:nth-of-type(even) {
   * {
     color: #000000 !important;
   }
-  body, p {
+  body,
+  p {
     font-size: 12px !important;
   }
-  #header, #footer, #sidebar, #comments, .author-info, .post-pagination, .post-tags {
+  #header,
+  #footer,
+  #sidebar,
+  #comments,
+  .author-info,
+  .post-pagination,
+  .post-tags {
     display: none;
   }
   main {
@@ -361,10 +368,4 @@ tbody tr:nth-of-type(even) {
   img {
     max-height: 5cm;
   }
-}
-::-moz-selection {
-  background: var(--neo_primary_variant_much_brighter);
-}
-::selection {
-  background: var(--neo_primary_variant_much_brighter);
 }/*# sourceMappingURL=single.css.map */
