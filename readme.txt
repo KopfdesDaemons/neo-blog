@@ -12,7 +12,7 @@ Copyright: Neo Theme, Copyright 2023
 
 == Description ==
 
-Neo is a timeless WordPress theme that effortlessly combines classic aesthetics with modern functionality. Enjoy the versatility of dark and light modes, extensive color customization, and locally hosted fonts. Designed for bloggers, this theme boasts a classic feed layout, customizable headers, and a translation-ready interface. Elevate your blogging experience with Neo.
+Neo is a modern WordPress theme that combines a classic layout with functionality. Enjoy the versatility of dark and light modes, extensive color customization, and locally hosted fonts. Designed for bloggers, this theme boasts a classic feed layout, customizable headers, and a translation-ready interface. Elevate your blogging experience with Neo.
 
 == Installation ==
 
@@ -27,15 +27,6 @@ Neo is a timeless WordPress theme that effortlessly combines classic aesthetics 
 
 = 1.0 =
 * Initial release.
-
-== Frequently Asked Questions ==
-
-= How do I change the theme's colors? =
-You can customize the theme's colors in the WordPress Customizer. Go to "Appearance" > "Customize" and select the color customization options there.
-
-= Can I use custom fonts? =
-Yes, Neo allows you to use locally hosted fonts. You can select your desired fonts in the Customizer.
-
 
 == License ==
 

@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: neo\n"
-"POT-Creation-Date: 2023-09-10 00:01+0200\n"
-"PO-Revision-Date: 2023-09-10 00:05+0200\n"
+"POT-Creation-Date: 2023-09-11 00:04+0200\n"
+"PO-Revision-Date: 2023-09-11 00:06+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de\n"
@@ -23,7 +23,7 @@ msgstr "Gehe zur Startseite"
 msgid "Role"
 msgstr "Rolle"
 
-#: archive.php:40 customizer-options/feed-options.php:37
+#: archive.php:40 customizer-options/feed-options.php:50
 msgid "Number of posts"
 msgstr "Anzahl der Beiträge"
 
@@ -55,15 +55,15 @@ msgstr "Archive für"
 msgid "Archive"
 msgstr "Archive"
 
-#: archive.php:144 home.php:34 index.php:24 search.php:35
+#: archive.php:144 home.php:35 index.php:24 search.php:35
 msgid "« Previous"
 msgstr "« Zurück"
 
-#: archive.php:145 home.php:35 index.php:25 search.php:36
+#: archive.php:145 home.php:36 index.php:25 search.php:36
 msgid "Next »"
 msgstr "Weiter »"
 
-#: archive.php:150 home.php:41 index.php:31
+#: archive.php:150 home.php:43 index.php:31
 msgid "No posts found."
 msgstr "Keine Beiträge gefunden."
 
@@ -93,7 +93,8 @@ msgid "Author Page"
 msgstr "Autorenseite"
 
 #: customizer-options/author-page-options.php:19
-#: customizer-options/posts-options.php:179
+#: customizer-options/feed-options.php:38
+#: customizer-options/posts-options.php:166
 msgid "Show sidebar"
 msgstr "Sidebar anzeigen"
 
@@ -173,70 +174,70 @@ msgstr "Feed"
 msgid "Maximum width of the feed"
 msgstr "Maximale Breite des Feeds"
 
-#: customizer-options/feed-options.php:57
+#: customizer-options/feed-options.php:70
 msgid "Spacing between posts"
 msgstr "Abstand zwischen Beiträgen"
 
-#: customizer-options/feed-options.php:74
+#: customizer-options/feed-options.php:87
 msgid "Number of words in the snippet"
 msgstr "Anzahl der Wörter in der Vorschau"
 
-#: customizer-options/feed-options.php:93
+#: customizer-options/feed-options.php:106
 #: customizer-options/posts-options.php:127
 msgid "Show tags"
 msgstr "Tags anzeigen"
 
-#: customizer-options/feed-options.php:107
+#: customizer-options/feed-options.php:120
 msgid "Tags border radius"
 msgstr "Radius der Tags"
 
-#: customizer-options/feed-options.php:126
+#: customizer-options/feed-options.php:139
 msgid "Show read more button"
 msgstr "Schaltfläche „Mehr lesen“ anzeigen"
 
-#: customizer-options/feed-options.php:139
+#: customizer-options/feed-options.php:152
 msgid "Show comments"
 msgstr "Kommentare anzeigen"
 
-#: customizer-options/feed-options.php:153
+#: customizer-options/feed-options.php:166
 msgid "Line height in text snippet"
 msgstr "Zeilenhöhe im Textausschnitt"
 
-#: customizer-options/feed-options.php:172
+#: customizer-options/feed-options.php:185
 msgid "Border radius"
 msgstr "Rahmenradius"
 
-#: customizer-options/feed-options.php:191
+#: customizer-options/feed-options.php:204
 msgid "Padding"
 msgstr "Innenabstand (Padding)"
 
-#: customizer-options/feed-options.php:209
+#: customizer-options/feed-options.php:222
 msgid "Show image"
 msgstr "Bild anzeigen"
 
-#: customizer-options/feed-options.php:222
+#: customizer-options/feed-options.php:235
 msgid "Image postion"
 msgstr "Bildposition"
 
-#: customizer-options/feed-options.php:226
+#: customizer-options/feed-options.php:239
 #: customizer-options/pages-options.php:55
 #: customizer-options/posts-options.php:62
 msgid "left"
 msgstr "links"
 
-#: customizer-options/feed-options.php:227
+#: customizer-options/feed-options.php:240
 msgid "top"
 msgstr "oben"
 
-#: customizer-options/feed-options.php:240
+#: customizer-options/feed-options.php:253
 msgid "Image display behavior"
 msgstr "Bild-Anzeige-Verhalten"
 
-#: customizer-options/feed-options.php:261
+#: customizer-options/feed-options.php:274
 msgid "Image radius"
 msgstr "Bildradius"
 
-#: customizer-options/feed-options.php:281
+#: customizer-options/feed-options.php:294
 msgid "Image height"
 msgstr "Bildhöhe"
 
@@ -256,16 +257,16 @@ msgstr ""
 msgid "Main text font"
 msgstr "Haupttextschriftart"
 
-#: customizer-options/fonts-options.php:51
+#: customizer-options/fonts-options.php:52
 msgid "Line height in paragraphs"
 msgstr "Zeilenhöhe in Absätzen"
 
-#: customizer-options/fonts-options.php:67
+#: customizer-options/fonts-options.php:68
 #: customizer-options/header-options.php:253
 msgid "Font color light mode"
 msgstr "Schriftfarbe im hellen Modus"
 
-#: customizer-options/fonts-options.php:79
+#: customizer-options/fonts-options.php:80
 #: customizer-options/header-options.php:265
 msgid "Font color dark mode"
 msgstr "Schriftfarbe im dunklen Modus"
@@ -338,6 +339,26 @@ msgstr "Schriftfarbe des Menüs"
 msgid "Menu backgound color"
 msgstr "Hintergrundfarbe des Menüs"
 
+#: customizer-options/mobile-options.php:6
+msgid "Mobile Settings"
+msgstr "Mobile Einstellungen"
+
+#: customizer-options/mobile-options.php:20
+msgid "Menu style"
+msgstr "Menü Style"
+
+#: customizer-options/mobile-options.php:22
+msgid "horizontal scrolling"
+msgstr "horizontales Scrollen"
+
+#: customizer-options/mobile-options.php:23
+msgid "vertical arrangement with menu button"
+msgstr "vertikale Ausrichtung mit Menübutton"
+
+#: customizer-options/mobile-options.php:38
+msgid "Content Padding (in pixels)"
+msgstr "Abstand zum Inhalt (in Pixeln)"
+
 #: customizer-options/pages-options.php:6
 msgid "Pages"
 msgstr "Seiten"
@@ -398,38 +419,34 @@ msgid "Show author details"
 msgstr "Autorendetails anzeigen"
 
 #: customizer-options/posts-options.php:153
-msgid "Show share area"
-msgstr "Teilen-Bereich anzeigen"
-
-#: customizer-options/posts-options.php:166
 msgid "Show post pagination"
 msgstr "Post-Paginierung anzeigen"
 
-#: functions.php:69
+#: functions.php:77
 msgid "Header Menu"
 msgstr "Kopfzeilenmenü"
 
-#: functions.php:70
+#: functions.php:78
 msgid "Footer Menu"
 msgstr "Fußzeilenmenü"
 
-#: functions.php:79
+#: functions.php:87
 msgid "Sidebar"
 msgstr "Sidebar"
 
-#: functions.php:98
+#: functions.php:106
 msgid "Your Name"
 msgstr "Dein Name"
 
-#: functions.php:105
+#: functions.php:113
 msgid "Your Email"
 msgstr "Deine E-Mail"
 
-#: functions.php:112
+#: functions.php:120
 msgid "Your Website"
 msgstr "Deine Website"
 
-#: header.php:243 header.php:263
+#: header.php:247 header.php:273
 msgid "Home page"
 msgstr "Startseite"
 
@@ -440,6 +457,9 @@ msgstr "Suche"
 #: template-parts/feed.php:47
 msgid "read more"
 msgstr "Mehr lesen"
+
+#~ msgid "Show share area"
+#~ msgstr "Teilen-Bereich anzeigen"
 
 #, fuzzy
 #~| msgid "Background color dark mode"

@@ -265,8 +265,8 @@
             </div>
 
             <!-- Header menu and home link -->
-            <div class="mobileExpandedMenu">
-                <nav class="headerMenuColumn">
+            <div class="neo_header_menu_column">
+                <nav class="neo_header_menu_nav">
                     <?php
                     $home_page_link = get_theme_mod('home_page_link', true);
                     if ($home_page_link) { ?>

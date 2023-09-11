@@ -225,7 +225,7 @@ function neo_custom_feed($wp_customize)
 
     // Image position
     $wp_customize->add_setting('feed_image_postion', array(
-        'default' => 'imageTop',
+        'default' => 'imageLeft',
         'transport' => 'refresh',
         'sanitize_callback' => 'sanitize_text_field',
     ));

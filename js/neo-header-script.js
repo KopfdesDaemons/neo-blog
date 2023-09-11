@@ -1,5 +1,5 @@
 function toggleMenu() {
-    var menu = document.querySelector('.mobileExpandedMenu');
+    var menu = document.querySelector('.neo_header_menu_column');
     menu.classList.toggle('headerMenuOpen');
 }
 

@@ -3,7 +3,7 @@ function neo_display_post_card($post_classes)
 {
     ob_start(); // Start output buffering
 ?>
-    <div class="<?php echo implode(' ', $post_classes) . ' ' . get_theme_mod('feed_image_postion', 'imageTop'); ?>">
+    <div class="<?php echo implode(' ', $post_classes) . ' ' . get_theme_mod('feed_image_postion', 'imageLeft'); ?>">
         <?php if (has_post_thumbnail() && get_theme_mod('feed_post_card_image', true)) { ?>
             <a class="imgA" href="<?php the_permalink(); ?>">
                 <img src="<?php the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>">

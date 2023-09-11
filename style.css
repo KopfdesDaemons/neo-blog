@@ -3,7 +3,7 @@ Theme Name: Neo
 Author: Rico
 Author URI: https://ricoswebsite.com/
 Text Domain: neo
-Description: Neo is a timeless WordPress theme that effortlessly combines classic aesthetics with modern functionality. Enjoy the versatility of dark and light modes, extensive color customization, and locally hosted fonts. Designed for bloggers, this theme boasts a classic feed layout, customizable headers, and a translation-ready interface. Elevate your blogging experience with Neo.
+Description: Neo is a modern WordPress theme that combines a classic layout with functionality. Enjoy the versatility of dark and light modes, extensive color customization, and locally hosted fonts. Designed for bloggers, this theme boasts a classic feed layout, customizable headers, and a translation-ready interface. Elevate your blogging experience with Neo.
 Tags: blog, one-column, two-columns, right-sidebar, custom-colors, custom-header, custom-menu, flexible-header, full-width-template, sticky-post, theme-options, threaded-comments, translation-ready
 Version: 1.0
 Requires at least: 5.0
@@ -265,6 +265,9 @@ a {
     padding: 0.75em;
   }
   .imageLeft .imgA {
+    width: 100%;
+  }
+  .textDiv {
     width: 100%;
   }
 }

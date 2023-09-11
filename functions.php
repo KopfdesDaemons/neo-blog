@@ -23,6 +23,7 @@ function enqueue_custom_styles()
 }
 add_action('wp_enqueue_scripts', 'enqueue_custom_styles');
 
+
 // Theme Support
 add_theme_support('post-thumbnails');
 add_theme_support("title-tag");
@@ -37,6 +38,7 @@ add_theme_support('html5', array(
 add_theme_support('align-wide');
 add_theme_support('responsive-embeds');
 
+
 // Header Script
 function neo_header_script()
 {
@@ -44,9 +46,10 @@ function neo_header_script()
 }
 add_action('wp_enqueue_scripts', 'neo_header_script');
 
-/* Load the wordpress comment script from the “\wordpress\wp-includes\js” directory.
-This allows the comment response form to be located below the corresponding comment
-and not at the very bottom of the page. */
+
+// Load the wordpress comment script from the “\wordpress\wp-includes\js” directory.
+// This allows the comment response form to be located below the corresponding comment
+// and not at the very bottom of the page.
 function neo_enqueue_comments_reply()
 {
     if (is_singular() && comments_open() && get_option('thread_comments')) {
@@ -55,6 +58,7 @@ function neo_enqueue_comments_reply()
 }
 add_action('wp_enqueue_scripts', 'neo_enqueue_comments_reply');
 
+
 // For the translation
 function neo_load_theme_textdomain()
 {
@@ -62,13 +66,14 @@ function neo_load_theme_textdomain()
 }
 add_action('after_setup_theme', 'neo_load_theme_textdomain');
 
+
 // defaults to the feed as the homepage
 function neo_set_default_front_page()
 {
     update_option('show_on_front', 'posts');
 }
-
 add_action('after_setup_theme', 'neo_set_default_front_page');
+
 
 function neo_register_menus()
 {
@@ -94,6 +99,7 @@ function neo_register_sidebar()
 }
 add_action('widgets_init', 'neo_register_sidebar');
 
+
 // Custom comment form fields
 function neo_custom_comment_form_fields($fields)
 {
@@ -113,7 +119,7 @@ function neo_custom_comment_form_fields($fields)
         '<label for="email">' . __('Your Email', 'neo') . '<span class="required">*</span></label>' .
         '</p>';
 
-    // Add the URL field back with its label and input
+    // URL field
     $fields['url'] = '<p class="comment-form-url">' .
         '<input id="url" name="url" placeholder="&nbsp;" type="text" value="' . esc_attr($commenter['comment_author_url']) .
         '" size="30" />' .
@@ -123,6 +129,7 @@ function neo_custom_comment_form_fields($fields)
     return $fields;
 }
 add_filter('comment_form_default_fields', 'neo_custom_comment_form_fields');
+
 
 // Custom Settings
 require_once get_template_directory() . '/customizer-options/colors-options.php';

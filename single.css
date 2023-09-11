@@ -139,6 +139,9 @@ tbody tr:nth-of-type(even) {
     flex-direction: column;
   }
 }
+.author-info .author-details {
+  flex-grow: 1;
+}
 .author-info .author-avatar {
   margin-right: 1em;
 }
