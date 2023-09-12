@@ -26,7 +26,7 @@
     opacity: 0;
 }
 
-  #searchsubmit {
+  #neo_search_submit {
     border-radius: 6px;
     height: 100%;
     padding: 0 0.4em;
@@ -36,7 +36,7 @@
     background-color: var(--neo_primary_variant_much_brighter);
   }
 
-  #searchsubmit:hover {
+  #neo_search_submit:hover {
     cursor: pointer;
     background-color: var(--neo_element_background);
     outline: 1px solid var(--neo_font_color);

@@ -24,7 +24,7 @@ body {
 }
 
 input, textarea {
-  background-color: var(--neo_element_background-inputfeld);
+  background-color: var(--neo_element_background_inputfeld);
 }
 
 h1,
@@ -53,18 +53,14 @@ button {
 
 h2,
 h3,
-.darkmode h2,
-.darkmode h3 {
+.neo_dark_mode h2,
+.neo_dark_mode h3 {
   color: var(--neo_primary_variant_darker);
 }
 
-.darkmode .rot,
+.neo_dark_mode .rot,
 .rot {
   color: red;
-}
-
-.variantColor {
-  color: var(--neo_primary_variant_darker);
 }
 
 main {
@@ -74,7 +70,7 @@ main {
   align-items: center;
 }
 
-.spacer {
+.neo_content_spacer {
   margin: 0 auto;
   max-width: 70em;
   width: 95vw;
@@ -82,11 +78,11 @@ main {
   position: relative;
 }
 
-.spacerFeed {
+.neo_content_spacer_feed {
   max-width: var(--neo_max_feed_width);
 }
 
-.spacerPages {
+.neo_content_spacer_pages {
   max-width: var(--neo_max_pages_width);
 }
 
@@ -94,35 +90,31 @@ a {
   color: var(--neo_primary_variant_darker);
 }
 
-.darkmode a {
+.neo_dark_mode a {
   color: var(--neo_primary_color);
 }
 
-.grid {
+.neo_content_and_sidebar_grid {
   display: grid;
   grid-template-columns: 70fr auto;
   align-items: flex-start;
   margin-bottom: 2em;
 }
 @media only screen and (max-width: 600px) {
-  .grid {
+  .neo_content_and_sidebar_grid {
     display: flex;
   }
 }
 
-.shadow {
+.neo_shadow {
   box-shadow: 1px 1px 8px -6px #000000;
 }
 
-#authorPageComments {
-  background-color: var(--neo_element_background);
-}
-
-.archive-h3 {
+.neo_author_last_comments_headline {
   margin: 1em;
 }
 
-.postCard {
+.neo_post_card {
   background-color: var(--neo_element_background);
   border: 1px solid rgb(221, 221, 221);
   border-radius: var(--neo_feed_post_card_border_radius);
@@ -138,12 +130,12 @@ a {
   width: 100%;
   box-sizing: border-box;
 }
-.postCard .imgA {
+.neo_post_card .neo_post_card_image_container {
   overflow: hidden;
   display: flex;
   border-radius: var(--neo_feed_post_card_border_radius_image);
 }
-.postCard .imgA img {
+.neo_post_card .neo_post_card_image_container img {
   width: 100%;
   max-width: 100%;
   -o-object-fit: var(--neo_image_display_behavior);
@@ -151,10 +143,10 @@ a {
   height: var(--neo_feed_image_height);
   transition: all 500ms;
 }
-.postCard .imgA:hover img {
+.neo_post_card .neo_post_card_image_container:hover img {
   transform: scale(1.2);
 }
-.postCard .textDiv {
+.neo_post_card .neo_post_card_content_div {
   padding: 0.5em;
   display: flex;
   flex-direction: column;
@@ -163,30 +155,30 @@ a {
   grid-column: span 2;
   height: 100%;
 }
-.postCard .textDiv a {
+.neo_post_card .neo_post_card_content_div a {
   text-decoration: none;
 }
-.postCard .textDiv p {
+.neo_post_card .neo_post_card_content_div p {
   line-height: var(--neo_feed_post_card_line_height);
 }
-.postCard .textDiv .date {
+.neo_post_card .neo_post_card_content_div .neo_post_card_image_date {
   font-size: 0.8em;
 }
-.postCard .textDiv .buttomDiv {
+.neo_post_card .neo_post_card_content_div .neo_post_card_buttom_row {
   margin-top: auto;
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.postCard .textDiv .buttomDiv .postLinks {
+.neo_post_card .neo_post_card_content_div .neo_post_card_buttom_row .neo_post_card_link_div {
   display: flex;
   margin-left: auto;
 }
-.postCard .textDiv .buttomDiv .pin {
+.neo_post_card .neo_post_card_content_div .neo_post_card_buttom_row .neo_post_card_pin {
   display: none;
 }
-.postCard .textDiv .buttomDiv .commentscount {
+.neo_post_card .neo_post_card_content_div .neo_post_card_buttom_row .neo_post_card_comments_count {
   display: flex;
   align-items: center;
   background-color: var(--neo_body);
@@ -196,13 +188,13 @@ a {
   border-radius: 8px;
   margin-right: 0.5em;
 }
-.postCard .textDiv .buttomDiv .commentscount :nth-child(2) {
+.neo_post_card .neo_post_card_content_div .neo_post_card_buttom_row .neo_post_card_comments_count :nth-child(2) {
   margin-left: 0.5em;
 }
-.postCard .textDiv .buttomDiv .commentscount:hover {
+.neo_post_card .neo_post_card_content_div .neo_post_card_buttom_row .neo_post_card_comments_count:hover {
   background-color: var(--neo_element_background);
 }
-.postCard .textDiv .buttomDiv .readMore {
+.neo_post_card .neo_post_card_content_div .neo_post_card_buttom_row .neo_post_card_read_more {
   text-decoration: none;
   border: 1px solid rgb(226, 226, 226);
   background-color: var(--neo_body);
@@ -210,20 +202,20 @@ a {
   border-radius: 8px;
   padding: 0.8em 1.2em;
 }
-.postCard .textDiv .buttomDiv .readMore:hover {
+.neo_post_card .neo_post_card_content_div .neo_post_card_buttom_row .neo_post_card_read_more:hover {
   background-color: var(--neo_element_background);
   transition: all 200ms;
   color: var(--neo_font_color);
 }
-.postCard h2 {
+.neo_post_card h2 {
   margin: 0 0 0.5em 0;
   color: var(--neo_font_color);
   font-size: 1.4em;
 }
-.postCard h2:hover {
+.neo_post_card h2:hover {
   text-decoration: underline;
 }
-.postCard .tagsDiv ul {
+.neo_post_card .neo_post_card_tags_div ul {
   display: flex;
   flex-wrap: wrap;
   list-style: none;
@@ -232,10 +224,10 @@ a {
   font-size: 1.2em;
   margin-bottom: 0.5em;
 }
-.postCard .tagsDiv ul li {
+.neo_post_card .neo_post_card_tags_div ul li {
   margin: 0.4em 0.2em;
 }
-.postCard .tagsDiv ul a {
+.neo_post_card .neo_post_card_tags_div ul a {
   text-decoration: none;
   color: var(--neo_font_color);
   text-align: center;
@@ -245,52 +237,52 @@ a {
   min-width: 2em;
   background-color: var(--neo_element_background_variant);
 }
-.postCard .tagsDiv ul a:hover {
+.neo_post_card .neo_post_card_tags_div ul a:hover {
   outline: 1px solid rgb(97, 97, 97);
 }
 
-.imageTop {
+.neo_post_card_image_top {
   grid-template-columns: auto;
   grid-auto-flow: row;
 }
-.imageTop .textDiv {
+.neo_post_card_image_top .neo_post_card_content_div {
   grid-column: span 1;
 }
 
 @media only screen and (max-width: 600px) {
-  .imageLeft {
+  .neo_post_card_image_left {
     display: flex;
     flex-direction: column;
     font-size: 0.9em;
     padding: 0.75em;
   }
-  .imageLeft .imgA {
+  .neo_post_card_image_left .neo_post_card_image_container {
     width: 100%;
   }
-  .textDiv {
+  .neo_post_card_content_div {
     width: 100%;
   }
 }
-.darkmode .postCard {
+.neo_dark_mode .neo_post_card {
   border: none;
 }
-.darkmode .postCard img {
+.neo_dark_mode .neo_post_card img {
   filter: brightness(0.8);
 }
-.darkmode .postCard .tagsDiv a {
+.neo_dark_mode .neo_post_card .neo_post_card_tags_div a {
   background-color: var(--neo_primary_variant_much_brighter);
 }
 @media only screen and (max-width: 600px) {
-  .darkmode .postCard {
+  .neo_dark_mode .neo_post_card {
     border: 1px solid rgb(49, 49, 49);
   }
 }
 
-.stickyPost .textDiv .buttomDiv .pin {
+.neo_sticky_post .neo_post_card_content_div .neo_post_card_buttom_row .neo_post_card_pin {
   display: block;
 }
 
-.pagination {
+.neo_pagination {
   margin-top: 2em;
   margin-bottom: 3em;
   display: flex;
@@ -299,20 +291,20 @@ a {
   padding: 0.5em;
   font-size: clamp(14px, 2vw, 1rem);
 }
-.pagination a,
-.pagination span {
-  background-color: var(--neo_element_background_variant-darker);
+.neo_pagination a,
+.neo_pagination span {
+  background-color: var(--neo_element_background_variant_darker);
   border-radius: 8px;
   margin: 0.2em;
   padding: 0.5em 1em;
   text-decoration: none;
   vertical-align: middle;
 }
-.pagination span {
+.neo_pagination span {
   border: 1px solid var(--neo_font_color);
   background-color: var(--neo_body);
 }
-.pagination a:hover {
+.neo_pagination a:hover {
   background-color: var(--neo_primary_variant_much_brighter);
 }
 
@@ -340,14 +332,14 @@ html body ::-webkit-scrollbar {
   background: #555;
 }
 
-.spacerPages h1 {
+.neo_content_spacer_pages h1 {
   text-align: var(--neo_page_title_alignment);
 }
-.spacerPages .articlearea {
+.neo_content_spacer_pages .neo_article {
   background-color: var(--neo_background_color_pages);
 }
 
-.darkmode .spacerPages .articlearea {
+.neo_dark_mode .neo_content_spacer_pages .neo_article {
   background-color: var(--neo_dark_mode_background_color_pages);
 }
 

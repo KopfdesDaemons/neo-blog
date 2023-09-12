@@ -1,10 +1,10 @@
-#footer {
+#neo_footer {
   margin-top: auto;
   background-color: var(--neo_primary_variant_much_brighter);
   display: flex;
   justify-content: center;
 }
-#footer nav ul {
+#neo_footer nav ul {
   padding: 1.5em;
   padding: 0;
   list-style: none;
@@ -12,28 +12,28 @@
   align-items: flex-start;
   flex-wrap: wrap;
 }
-#footer nav ul li {
+#neo_footer nav ul li {
   margin: 1.5em;
 }
-#footer nav ul li a {
+#neo_footer nav ul li a {
   font-weight: bold;
   font-size: 0.8em;
   text-decoration: none;
 }
-#footer nav ul li ul {
+#neo_footer nav ul li ul {
   display: flex;
   flex-direction: column;
 }
-#footer nav ul li ul li {
+#neo_footer nav ul li ul li {
   margin: 0;
   display: flex;
   flex-direction: column;
 }
-#footer nav ul li ul li a {
+#neo_footer nav ul li ul li a {
   font-weight: normal;
   font-size: 1em;
 }
-#footer nav ul li ul li ul {
+#neo_footer nav ul li ul li ul {
   display: flex;
   flex-direction: column;
 }/*# sourceMappingURL=footer.css.map */

@@ -4,11 +4,11 @@ if (post_password_required()) {
 }
 ?>
 
-<div id="comments" class="comments-area">
+<div id="comments" class="neo_comments_area">
 
     <?php if (have_comments()) : ?>
 
-        <h2 class="comments-title">
+        <h2>
             <?php
             $comments_number = get_comments_number();
             if ($comments_number === 1) {
@@ -30,7 +30,7 @@ if (post_password_required()) {
         </ul>
 
         <?php if (get_comment_pages_count() > 1 && get_option('page_comments')) : ?>
-            <nav class="comment-navigation" role="navigation">
+            <nav role="navigation">
                 <div class="nav-previous"><?php previous_comments_link(__('Older Comments', 'neo')); ?></div>
                 <div class="nav-next"><?php next_comments_link(__('Newer Comments', 'neo')); ?></div>
             </nav>
@@ -39,12 +39,12 @@ if (post_password_required()) {
     <?php endif; ?>
 
     <?php if (!comments_open() && get_comments_number() && post_type_supports(get_post_type(), 'comments')) : ?>
-        <p class="no-comments"><?php _e('Comments are closed.', 'neo'); ?></p>
+        <p><?php _e('Comments are closed.', 'neo'); ?></p>
     <?php endif; ?>
 
     <?php
     comment_form(array(
-        'title_reply_before' => '<h2 id="reply-title" class="comment-reply-title">',
+        'title_reply_before' => '<h2 class="neo_comment_reply_title">',
         'title_reply_after'  => '</h2>',
     ));
     ?>

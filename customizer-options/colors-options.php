@@ -106,12 +106,12 @@ function neo_add_darkmode_class_to_html()
 
     if ($dark_mode_option === 'dark') {
         echo '<script>
-            document.documentElement.classList.add("darkmode");
+            document.documentElement.classList.add("neo_dark_mode");
         </script>';
     } elseif ($dark_mode_option === 'system') {
         echo '<script>
             if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-                document.documentElement.classList.add("darkmode");
+                document.documentElement.classList.add("neo_dark_mode");
             }
         </script>';
     }

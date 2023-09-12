@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <main role="main">
-    <section class="spacerPost grid">
-        <div class="content">
+    <section class="neo_content_spacer_post neo_content_and_sidebar_grid">
+        <div class="neo_content_container">
             <?php
             if (have_posts()) {
                 while (have_posts()) {
@@ -16,7 +16,7 @@
 
                 // Pagination
                 if ($wp_query->max_num_pages > 1) {
-                    echo '<div class="pagination shadow">';
+                    echo '<div class="neo_pagination neo_shadow">';
                     echo paginate_links(array(
                         'total' => $wp_query->max_num_pages,
                         'current' => $paged,

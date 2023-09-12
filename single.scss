@@ -4,7 +4,7 @@ h1 {
     margin-left: 0;
 }
 
-.spacerPost {
+.neo_content_spacer_post {
     max-width: var(--neo_max_posts_width);
 
     h1 {
@@ -33,7 +33,7 @@ blockquote {
     }
 }
 
-.darkmode .wp-block-quote,
+.neo_dark_mode .wp-block-quote,
 blockquote {
     background-color: rgb(37, 38, 39);
 }
@@ -88,16 +88,16 @@ th {
 }
 
 tbody tr:nth-of-type(even) {
-    background-color: var(--neo_element_background_variant-darker);
+    background-color: var(--neo_element_background_variant_darker);
 }
 
-.darkmode table {
+.neo_dark_mode table {
     tbody tr:nth-of-type(even) {
         color: #000000;
     }
 }
 
-.post-categories {
+.neo_post_categories {
     ul {
         list-style: none;
         padding: 0;
@@ -109,7 +109,7 @@ tbody tr:nth-of-type(even) {
     }
 }
 
-.post-tags {
+.neo_post_tags {
     ul {
         display: flex;
         flex-wrap: wrap;
@@ -138,7 +138,7 @@ tbody tr:nth-of-type(even) {
     }
 }
 
-.author-info {
+.neo_author_card {
     border: 2px solid rgb(192, 192, 192);
     padding: 1em;
     display: flex;
@@ -149,15 +149,24 @@ tbody tr:nth-of-type(even) {
         flex-direction: column;
     }
 
-    .author-details {
+    ul {
+        list-style: none;
+        padding: 0;
+
+        li {
+            margin: 0.5em;
+        }
+    }
+
+    .neo_author_details {
         flex-grow: 1;
     }
 
-    .author-avatar {
+    .neo_author_avatar {
         margin-right: 1em;
     }
 
-    .author-row {
+    .neo_author_name_row {
         display: flex;
         justify-content: space-between;
 
@@ -175,18 +184,18 @@ tbody tr:nth-of-type(even) {
     }
 }
 
-.darkmode .articlearea {
+.neo_dark_mode .neo_article {
     background-color: var(--neo_dark_mode_background_color_posts);
 }
 
-.articlearea {
+.neo_article {
     width: 100%;
     overflow: hidden;
     background-color: var(--neo_background_color_posts);
     padding: 5px;
     box-sizing: border-box;
 
-    .content {
+    .neo_content_container {
         padding: 2em;
         padding-top: 0;
         border-radius: 16px;
@@ -196,7 +205,7 @@ tbody tr:nth-of-type(even) {
     @media only screen and (max-width: 600px) {
         padding: var(--neo_content_padding);
 
-        .content {
+        .neo_content_container {
             padding: 0;
         }
     }
@@ -265,7 +274,7 @@ tbody tr:nth-of-type(even) {
         .post-page-numbers {
             border-radius: 8px;
             text-decoration: none;
-            background-color: var(--neo_element_background_variant-darker);
+            background-color: var(--neo_element_background_variant_darker);
             margin: 0.2em;
             padding: 0.5em 1em;
 
@@ -425,12 +434,12 @@ tbody tr:nth-of-type(even) {
     }
 
     #header,
-    #footer,
+    #neo_footer,
     #sidebar,
     #comments,
-    .author-info,
+    .neo_author_card,
     .post-pagination,
-    .post-tags {
+    .neo_post_tags {
         display: none;
     }
 

@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <main role="main">
-    <section class="spacer spacerFeed grid">
-        <div class="articleArea">
+    <section class="neo_content_spacer neo_content_spacer_feed neo_content_and_sidebar_grid">
+        <div class="neo_article">
             <?php if (is_author()) {;
                 $author_id = get_the_author_meta('ID');
                 $author_name = get_the_author_meta('display_name');
@@ -13,12 +13,12 @@
                 $author_avatar = get_avatar($author_id, $image_size);
 
             ?>
-                <div class="author-info" id="author-bio">
-                    <div class="author-avatar">
+                <div class="neo_author_card">
+                    <div class="neo_author_avatar">
                         <?php echo $author_avatar; ?>
                     </div>
-                    <div class="author-details">
-                        <div class="author-row">
+                    <div class="neo_author_details">
+                        <div class="neo_author_name_row">
                             <h3><a href="<?php echo get_author_posts_url($author_id); ?>"><?php echo $author_name; ?></a>
                             </h3>
                             <?php if ($author_website && get_theme_mod('author_website', true)) : ?>
@@ -69,13 +69,14 @@
                         'number' => 5, // Number of comments
                     );
                     $author_comments = get_comments($args); ?>
-                    <h3 class="archive-h3"><?php echo __('Last comments from', 'neo') . ' ' . $author_name; ?></h3>
+                    <h3 class="neo_author_last_comments_headline">
+                        <?php echo __('Last comments from', 'neo') . ' ' . $author_name; ?></h3>
                     <ol class="has-avatars has-dates has-excerpts wp-block-latest-comments">
                         <?php
 
                         if ($author_comments) {
                             foreach ($author_comments as $comment) {
-                                echo '<li class="wp-block-latest-comments__comment" id="authorPageComments">';
+                                echo '<li class="wp-block-latest-comments__comment">';
                                 echo get_avatar($comment->comment_author_email, 48); // Gravatar-Avatar
                                 echo '<article>';
                                 echo '<footer class="wp-block-latest-comments__comment-meta">';
@@ -123,9 +124,9 @@
             if (have_posts()) {
                 while (have_posts()) {
                     the_post();
-                    $post_classes = array('postCard shadow');
+                    $post_classes = array('neo_post_card neo_shadow');
                     if (is_sticky()) {
-                        $post_classes[] = 'stickyPost';
+                        $post_classes[] = 'neo_sticky_post';
                     }
 
                     // Show cards
@@ -137,7 +138,7 @@
                 global $wp_query;
                 $total_pages = $wp_query->max_num_pages;
                 if ($total_pages > 1) {
-                    echo '<div class="pagination shadow">';
+                    echo '<div class="neo_pagination neo_shadow">';
                     echo paginate_links(array(
                         'total' => $total_pages,
                         'prev_next' => true,

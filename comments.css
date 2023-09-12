@@ -1,23 +1,23 @@
-.comments-area {
+.neo_comments_area {
   margin-top: 1em;
   border-radius: 12px;
   padding: 1em;
 }
-.comments-area .comment-list {
+.neo_comments_area .comment-list {
   padding: 0;
 }
-.comments-area .comment-list {
+.neo_comments_area .comment-list {
   list-style: none;
 }
-.comments-area .comment {
+.neo_comments_area .comment {
   list-style: none;
   font-size: 0.8em;
 }
-.comments-area .comment-awaiting-moderation {
+.neo_comments_area .comment-awaiting-moderation {
   color: rgb(255, 0, 0);
   font-weight: bold;
 }
-.comments-area .comment-body {
+.neo_comments_area .comment-body {
   background-color: var(--neo_element_background);
   border-radius: 12px;
   padding: 1em;
@@ -30,39 +30,39 @@
   max-height: 500px;
   overflow-y: auto;
 }
-.comments-area .vcard {
+.neo_comments_area .vcard {
   display: flex;
   align-items: center;
   margin-bottom: 0.5em;
 }
-.comments-area .vcard cite a {
+.neo_comments_area .vcard cite a {
   text-decoration: none;
   color: unset;
   font-weight: bold;
   font-size: 1.5em;
   padding: 0.2em;
 }
-.comments-area .vcard img {
+.neo_comments_area .vcard img {
   height: 3em;
   width: auto;
   margin: 0 1em 0 0;
 }
-.comments-area .vcard span {
+.neo_comments_area .vcard span {
   display: none;
 }
-.comments-area .comment-meta {
+.neo_comments_area .comment-meta {
   display: flex;
   justify-content: space-between;
 }
-.comments-area .comment-meta a {
+.neo_comments_area .comment-meta a {
   text-decoration: none;
   margin: 0.5em 0;
 }
-.comments-area .reply {
+.neo_comments_area .reply {
   display: flex;
   margin-top: 1em;
 }
-.comments-area .reply .comment-reply-link {
+.neo_comments_area .reply .comment-reply-link {
   text-decoration: none;
   background-color: var(--neo_primary_variant_much_brighter);
   padding: 0.5rem 1rem;
@@ -70,41 +70,41 @@
   color: var(--neo_font_color);
   border: 1px solid var(--neo_element_background);
 }
-.comments-area .reply .comment-reply-link:hover {
+.neo_comments_area .reply .comment-reply-link:hover {
   background-color: unset;
 }
-.comments-area .bypostauthor .comment-body {
+.neo_comments_area .bypostauthor .comment-body {
   background-color: var(--neo_body);
   border: 1px solid var(--neo_font_color);
   box-shadow: inset 0px 0px 50px 0px rgba(216, 221, 167, 0.41);
 }
-.comments-area .children {
+.neo_comments_area .children {
   grid-column-end: 3;
   padding: 0;
 }
-.comments-area .children .comment {
+.neo_comments_area .children .comment {
   margin-left: 2em;
   font-size: 1em;
 }
-.comments-area .children .author img {
+.neo_comments_area .children .author img {
   max-width: 5em;
   height: auto;
 }
-.comments-area .comment-respond {
+.neo_comments_area .comment-respond {
   padding: 1em;
 }
-.comments-area .comment-respond .comment-form-comment {
+.neo_comments_area .comment-respond .comment-form-comment {
   display: flex;
   flex-direction: column;
 }
-.comments-area .comment-respond .comment-form-comment textarea {
+.neo_comments_area .comment-respond .comment-form-comment textarea {
   resize: vertical;
   width: 100%;
 }
-.comments-area .comment-respond .form-submit {
+.neo_comments_area .comment-respond .form-submit {
   margin: 0.5rem;
 }
-.comments-area .comment-respond .form-submit .submit {
+.neo_comments_area .comment-respond .form-submit .submit {
   text-decoration: none;
   background-color: var(--neo_primary_color);
   padding: 0.5rem 1rem;
@@ -115,60 +115,60 @@
   font-size: 1.2em;
   height: auto;
 }
-.comments-area .comment-respond .form-submit .submit:hover {
+.neo_comments_area .comment-respond .form-submit .submit:hover {
   background-color: var(--neo_primary_variant_brighter);
 }
-.comments-area .comment-respond .comment-reply-title {
+.neo_comments_area .comment-respond .neo_comment_reply_title {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
-.comments-area .comment-respond .comment-reply-title #cancel-comment-reply-link {
+.neo_comments_area .comment-respond .neo_comment_reply_title #cancel-comment-reply-link {
   font-size: 0.8em;
   color: red;
   text-decoration: none;
 }
-.comments-area .comment-respond input {
+.neo_comments_area .comment-respond input {
   padding: 0.5em;
   height: 25px;
   border: solid 1px var(--neo_font_color);
-  background-color: var(--neo_element_background-inputfeld);
+  background-color: var(--neo_element_background_inputfeld);
 }
-.comments-area .comment-respond .comment-form-author,
-.comments-area .comment-respond .comment-form-email,
-.comments-area .comment-respond .comment-form-url {
+.neo_comments_area .comment-respond .comment-form-author,
+.neo_comments_area .comment-respond .comment-form-email,
+.neo_comments_area .comment-respond .comment-form-url {
   position: relative;
   display: flex;
   flex-direction: column-reverse;
   align-items: flex-start;
 }
-.comments-area .comment-respond .comment-form-author label,
-.comments-area .comment-respond .comment-form-email label,
-.comments-area .comment-respond .comment-form-url label {
+.neo_comments_area .comment-respond .comment-form-author label,
+.neo_comments_area .comment-respond .comment-form-email label,
+.neo_comments_area .comment-respond .comment-form-url label {
   pointer-events: none;
   position: absolute;
   top: 8px;
   left: 5px;
   color: black;
 }
-.comments-area .comment-respond .comment-form-author input:not(:placeholder-shown) + label,
-.comments-area .comment-respond .comment-form-author input:focus + label,
-.comments-area .comment-respond .comment-form-author input:-webkit-autofill + label,
-.comments-area .comment-respond .comment-form-email input:not(:placeholder-shown) + label,
-.comments-area .comment-respond .comment-form-email input:focus + label,
-.comments-area .comment-respond .comment-form-email input:-webkit-autofill + label,
-.comments-area .comment-respond .comment-form-url input:not(:placeholder-shown) + label,
-.comments-area .comment-respond .comment-form-url input:focus + label,
-.comments-area .comment-respond .comment-form-url input:-webkit-autofill + label {
+.neo_comments_area .comment-respond .comment-form-author input:not(:placeholder-shown) + label,
+.neo_comments_area .comment-respond .comment-form-author input:focus + label,
+.neo_comments_area .comment-respond .comment-form-author input:-webkit-autofill + label,
+.neo_comments_area .comment-respond .comment-form-email input:not(:placeholder-shown) + label,
+.neo_comments_area .comment-respond .comment-form-email input:focus + label,
+.neo_comments_area .comment-respond .comment-form-email input:-webkit-autofill + label,
+.neo_comments_area .comment-respond .comment-form-url input:not(:placeholder-shown) + label,
+.neo_comments_area .comment-respond .comment-form-url input:focus + label,
+.neo_comments_area .comment-respond .comment-form-url input:-webkit-autofill + label {
   transform: scale(0.8) translateY(-1.2em);
   height: auto;
   font-size: 0.8em;
   left: 0;
 }
 
-.darkmode .comments-area .comment-body {
+.neo_dark_mode .neo_comments_area .comment-body {
   box-shadow: inset 0px 0px 50px 0px var(--neo_primary_variant_much_brighter);
 }
-.darkmode .comments-area .bypostauthor .comment-body {
+.neo_dark_mode .neo_comments_area .bypostauthor .comment-body {
   box-shadow: inset 0px 0px 50px 0px rgba(216, 221, 167, 0.41);
 }/*# sourceMappingURL=comments.css.map */

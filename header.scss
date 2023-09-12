@@ -1,4 +1,4 @@
-.header::before {
+.neo_header::before {
     content: "";
     position: absolute;
     top: 0; left: 0;
@@ -9,7 +9,7 @@
     background-position-x: center;
 }
 
-.header {
+.neo_header {
     margin-bottom: 1em;
     position: relative;
     z-index: 10;
@@ -22,20 +22,20 @@
         margin-bottom: 10px;
     }
     
-    .headerDiv {
+    .neo_header_div {
         width: 100%;
         display: flex;
         justify-content: center;
         flex-direction: column;
         align-items: center;
         position: relative;
-        gap: var(--neo_header-gap);
+        gap: var(--neo_header_gap);
 
         @media only screen and (max-width: 600px) {
             gap: 0;
         }
 
-        .SearchColumn {
+        .neo_header_search_row {
             display: flex;
 
             img {
@@ -48,7 +48,7 @@
                 overflow: hidden;
             }
             
-            .searchDiv {
+            .neo_header_search_div {
                 display: flex;
                 justify-content: center;
                 width: 100%;
@@ -62,7 +62,7 @@
             }
         }
 
-        .titleDiv {
+        .neo_header_title_div {
             margin: 0 0.5em;
             display: flex;
             align-items: center;
@@ -71,7 +71,7 @@
                 text-decoration: none;
             }
 
-            .site-title {
+            .neo_header_title_span {
                 font-size: clamp(10px, 5vw, var(--neo_title_size));
                 word-break: keep-all;
                 margin: 0 0.5em;
@@ -81,7 +81,7 @@
             }
         }
 
-        .sloganDiv {
+        .neo_header_slogan_div {
             text-align: center;
             padding: 0 1em;
             margin: 0.3em 0;
@@ -93,7 +93,7 @@
             }
         }
 
-        .headerBanner {
+        .neo_header_banner {
             max-height: 400px;
             width: 100%;
             object-fit: cover;
@@ -101,13 +101,13 @@
             margin: 0.5em 0;
         }
         
-        .toggleDiv {
+        .neo_header_toggle_row {
             display: flex;
             gap: 0.1em;
             // height: 3em;
             margin: 0.3em;
 
-            .home-link {
+            .neo_header_home_link {
                 margin-right: auto;
                 background-color: var(--neo_body);
                 display: flex;
@@ -124,7 +124,7 @@
             }
         }
 
-        .neo_header_menu_column {
+        .neo_header_menu_row {
             width: 100%;
             display: flex;
             justify-content: center;
@@ -159,7 +159,7 @@
                 }
             }
         }
-        #headerMenuBtn {
+        #neo_header_menu_button {
             padding: 5px;
             width: 5em;
             border-radius: 4px;
@@ -188,7 +188,7 @@
                 overflow-y: auto;
             }
 
-            .home-link {
+            .neo_header_home_link {
                 background-color: var(--neo_body);
                 padding: 1em;
 
@@ -197,7 +197,7 @@
                 }
             }
 
-            .home-link:hover {
+            .neo_header_home_link:hover {
                 background-color: var(--neo_element_background);
             }
 
@@ -287,7 +287,7 @@
             }
         }
 
-        .headerMenuOpen{
+        .neo_header_menu_open{
             .neo_header_menu_nav {
                 justify-content: center;
             }
@@ -310,6 +310,6 @@
     }
 }
 
-.fixedHeader {
+.neo_header_fixed {
     position: fixed;
 }

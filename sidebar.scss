@@ -64,7 +64,7 @@
 
         li {
             padding: 0.8em 1em;
-            border: 1px solid var(--neo_element_background_variant-darker);
+            border: 1px solid var(--neo_element_background_variant_darker);
             box-shadow: inset 0px 0px 20px 0px var(--neo_element_background_variant);
 
             a {
@@ -364,40 +364,38 @@
     }
 }
 
-.darkmode {
-    #sidebar {
-        .widget_recent_entries {
-            a:hover {
-                background-color: var(--neo_body);
-                color: var(--neo_font_color);
-            }
+.neo_dark_mode {
+    .widget_recent_entries {
+        a:hover {
+            background-color: var(--neo_body);
+            color: var(--neo_font_color);
         }
+    }
 
-        .wp-block-latest-posts a,
-        .wp-block-archives li,
-        .widget_recent_entries a {
+    .wp-block-latest-posts a,
+    .wp-block-archives li,
+    .widget_recent_entries a {
+        box-shadow: inset 0px 0px 20px 0px var(--neo_primary_variant_much_brighter);
+    }
+
+    .wp-block-latest-comments {
+        li {
+            box-shadow: inset 0px 0px 50px 0px var(--neo_primary_variant_much_brighter);
+        }
+    }
+
+    .wp-block-page-list {
+        li {
             box-shadow: inset 0px 0px 20px 0px var(--neo_primary_variant_much_brighter);
         }
 
-        .wp-block-latest-comments {
-            li {
-                box-shadow: inset 0px 0px 50px 0px var(--neo_primary_variant_much_brighter);
-            }
+        ul li {
+            box-shadow: none;
         }
+    }
 
-        .wp-block-page-list {
-            li {
-                box-shadow: inset 0px 0px 20px 0px var(--neo_primary_variant_much_brighter);
-            }
-
-            ul li {
-                box-shadow: none;
-            }
-        }
-
-        .wp-block-tag-cloud a,
-        .tagcloud a {
-            background-color: var(--neo_primary_variant_much_brighter);
-        }
+    .wp-block-tag-cloud a,
+    .tagcloud a {
+        background-color: var(--neo_primary_variant_much_brighter);
     }
 }

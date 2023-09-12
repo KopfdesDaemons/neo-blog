@@ -1,4 +1,4 @@
-<footer id="footer">
+<footer id="neo_footer">
     <nav>
         <?php
         wp_nav_menu(array(

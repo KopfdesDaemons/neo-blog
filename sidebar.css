@@ -56,7 +56,7 @@
 }
 #sidebar .widget_archive li {
   padding: 0.8em 1em;
-  border: 1px solid var(--neo_element_background_variant-darker);
+  border: 1px solid var(--neo_element_background_variant_darker);
   box-shadow: inset 0px 0px 20px 0px var(--neo_element_background_variant);
 }
 #sidebar .widget_archive li a {
@@ -309,25 +309,25 @@
   box-sizing: border-box;
 }
 
-.darkmode #sidebar .widget_recent_entries a:hover {
+.neo_dark_mode .widget_recent_entries a:hover {
   background-color: var(--neo_body);
   color: var(--neo_font_color);
 }
-.darkmode #sidebar .wp-block-latest-posts a,
-.darkmode #sidebar .wp-block-archives li,
-.darkmode #sidebar .widget_recent_entries a {
+.neo_dark_mode .wp-block-latest-posts a,
+.neo_dark_mode .wp-block-archives li,
+.neo_dark_mode .widget_recent_entries a {
   box-shadow: inset 0px 0px 20px 0px var(--neo_primary_variant_much_brighter);
 }
-.darkmode #sidebar .wp-block-latest-comments li {
+.neo_dark_mode .wp-block-latest-comments li {
   box-shadow: inset 0px 0px 50px 0px var(--neo_primary_variant_much_brighter);
 }
-.darkmode #sidebar .wp-block-page-list li {
+.neo_dark_mode .wp-block-page-list li {
   box-shadow: inset 0px 0px 20px 0px var(--neo_primary_variant_much_brighter);
 }
-.darkmode #sidebar .wp-block-page-list ul li {
+.neo_dark_mode .wp-block-page-list ul li {
   box-shadow: none;
 }
-.darkmode #sidebar .wp-block-tag-cloud a,
-.darkmode #sidebar .tagcloud a {
+.neo_dark_mode .wp-block-tag-cloud a,
+.neo_dark_mode .tagcloud a {
   background-color: var(--neo_primary_variant_much_brighter);
 }/*# sourceMappingURL=sidebar.css.map */

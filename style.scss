@@ -25,7 +25,7 @@ body {
 }
 
 input, textarea {
-    background-color: var(--neo_element_background-inputfeld);
+    background-color: var(--neo_element_background_inputfeld);
 }
 
 h1,
@@ -54,18 +54,14 @@ button {
 
 h2,
 h3,
-.darkmode h2,
-.darkmode h3 {
+.neo_dark_mode h2,
+.neo_dark_mode h3 {
   color: var(--neo_primary_variant_darker);
 }
 
-.darkmode .rot,
+.neo_dark_mode .rot,
 .rot {
   color: red;
-}
-
-.variantColor {
-  color: var(--neo_primary_variant_darker);
 }
 
 main {
@@ -75,7 +71,7 @@ main {
     align-items: center;
 }
 
-.spacer {
+.neo_content_spacer {
     margin: 0 auto;
     max-width: 70em;
     width: 95vw;
@@ -83,11 +79,11 @@ main {
     position: relative;
 }
 
-.spacerFeed {
+.neo_content_spacer_feed {
     max-width: var(--neo_max_feed_width);
 }
 
-.spacerPages {
+.neo_content_spacer_pages {
     max-width: var(--neo_max_pages_width);
 }
 
@@ -95,11 +91,11 @@ a {
     color: var(--neo_primary_variant_darker);
 }
 
-.darkmode a {
+.neo_dark_mode a {
     color: var(--neo_primary_color);
 }
 
-.grid {
+.neo_content_and_sidebar_grid {
     display: grid;
     grid-template-columns: 70fr auto;
     align-items: flex-start;
@@ -110,19 +106,15 @@ a {
     }
 }
 
-.shadow {
+.neo_shadow {
     box-shadow: 1px 1px 8px -6px #000000;
 }
 
-#authorPageComments {
-    background-color: var(--neo_element_background)
-}
-
-.archive-h3 {
+.neo_author_last_comments_headline {
     margin: 1em;
 }
 
-.postCard {
+.neo_post_card {
     background-color: var(--neo_element_background);
     border: 1px solid rgb(221, 221, 221);
     border-radius: var(--neo_feed_post_card_border_radius);
@@ -138,7 +130,7 @@ a {
     width: 100%;
     box-sizing: border-box;
 
-    .imgA {
+    .neo_post_card_image_container {
         overflow: hidden;
         display: flex;
         border-radius: var( --neo_feed_post_card_border_radius_image);
@@ -152,11 +144,11 @@ a {
         }
     }
 
-    .imgA:hover img {
+    .neo_post_card_image_container:hover img {
         transform: scale(1.2);
     }
 
-    .textDiv {
+    .neo_post_card_content_div {
         padding: 0.5em;
         display: flex;
         flex-direction: column;
@@ -172,27 +164,27 @@ a {
             line-height: var(--neo_feed_post_card_line_height);
         }
 
-        .date {
+        .neo_post_card_image_date {
             font-size: 0.8em;
         }
 
-        .buttomDiv {
+        .neo_post_card_buttom_row {
             margin-top: auto;
             width: 100%;
             display: flex;
             justify-content: space-between;
             align-items: center;
 
-            .postLinks {
+            .neo_post_card_link_div {
                 display: flex;
                 margin-left: auto;
             }
 
-            .pin {
+            .neo_post_card_pin {
                 display: none;
             }
 
-            .commentscount {
+            .neo_post_card_comments_count {
                 display: flex;
                 align-items: center;
                 background-color: var(--neo_body);
@@ -207,11 +199,11 @@ a {
                 }
             }
 
-            .commentscount:hover {
+            .neo_post_card_comments_count:hover {
                 background-color: var(--neo_element_background);
             }
 
-            .readMore {
+            .neo_post_card_read_more {
                 text-decoration: none;
                 border: 1px solid rgb(226, 226, 226);
                 background-color: var(--neo_body);
@@ -220,7 +212,7 @@ a {
                 padding: 0.8em 1.2em;
             }
 
-            .readMore:hover {
+            .neo_post_card_read_more:hover {
                 background-color: var(--neo_element_background);
                 transition: all 200ms;
                 color: var(--neo_font_color);
@@ -238,7 +230,7 @@ a {
         text-decoration: underline;
     }
     
-    .tagsDiv ul {
+    .neo_post_card_tags_div ul {
         display: flex;
         flex-wrap: wrap;
         list-style: none;
@@ -268,39 +260,39 @@ a {
     }
 }
 
-.imageTop {
+.neo_post_card_image_top {
     grid-template-columns: auto;
     grid-auto-flow: row;
-    .textDiv {
+    .neo_post_card_content_div {
         grid-column: span 1;
     }
 }
 
 @media only screen and (max-width: 600px) {
-    .imageLeft{
+    .neo_post_card_image_left{
         display: flex;
         flex-direction: column;
         font-size: 0.9em;
         padding: 0.75em;
 
-        .imgA {
+        .neo_post_card_image_container {
             width: 100%;
         }
     }
 
-    .textDiv {
+    .neo_post_card_content_div {
         width: 100%;
     }
 }
 
-.darkmode .postCard {
+.neo_dark_mode .neo_post_card {
     border: none;
     
     img {
         filter: brightness(0.8);
     }
 
-    .tagsDiv a {
+    .neo_post_card_tags_div a {
         background-color: var(--neo_primary_variant_much_brighter);
     }
 
@@ -309,13 +301,13 @@ a {
     }
 }
 
-.stickyPost {
-    .textDiv .buttomDiv .pin {
+.neo_sticky_post {
+    .neo_post_card_content_div .neo_post_card_buttom_row .neo_post_card_pin {
         display: block;
     }
 }
 
-.pagination {
+.neo_pagination {
     margin-top: 2em;
     margin-bottom: 3em;
     display: flex;
@@ -326,7 +318,7 @@ a {
 
     a,
     span {
-        background-color: var(--neo_element_background_variant-darker);
+        background-color: var(--neo_element_background_variant_darker);
         border-radius: 8px;
         margin: 0.2em;
         padding: 0.5em 1em;
@@ -373,17 +365,17 @@ html {
     background: #555;
 }
 
-.spacerPages {
+.neo_content_spacer_pages {
     h1 {
         text-align: var(--neo_page_title_alignment);
     }
 
-    .articlearea {
+    .neo_article {
         background-color: var(--neo_background_color_pages);
     }
 }
 
-.darkmode .spacerPages .articlearea {
+.neo_dark_mode .neo_content_spacer_pages .neo_article {
     background-color: var(--neo_dark_mode_background_color_pages);
 }
 

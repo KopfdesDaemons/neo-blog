@@ -14,7 +14,7 @@
     display: none;
 }
 
-.articlearea .wp-polls-ans {
+.neo_article .wp-polls-ans {
     margin-bottom: 2em;
     border: 1px solid var(--neo_primary_color);
     background-color: var(--neo_element_background);
@@ -44,7 +44,7 @@
 
     a {
         text-decoration: none;
-        background-color: var(--neo_element_background_variant-darker);
+        background-color: var(--neo_element_background_variant_darker);
         margin: 0.2em;
         padding: 0.5em;
         border-radius: 8px;

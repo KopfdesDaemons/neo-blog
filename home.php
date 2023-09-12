@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <main role="main">
-    <section class="spacer grid spacerFeed">
-        <div class="feed">
+    <section class="neo_content_spacer neo_content_and_sidebar_grid neo_content_spacer_feed">
+        <div class="neo_feed">
             <?php
             $paged = (get_query_var('paged')) ? get_query_var('paged') : 1; // Query current page
             $args = array(
@@ -15,9 +15,9 @@
             if ($query->have_posts()) {
                 while ($query->have_posts()) {
                     $query->the_post();
-                    $post_classes = array('postCard shadow');
+                    $post_classes = array('neo_post_card neo_shadow');
                     if (is_sticky()) {
-                        $post_classes[] = 'stickyPost';
+                        $post_classes[] = 'neo_sticky_post';
                     }
 
                     // Show Cards
@@ -27,7 +27,7 @@
 
                 // Pagination only if needed
                 if ($query->max_num_pages > 1) {
-                    echo '<div class="pagination shadow">';
+                    echo '<div class="neo_pagination neo_shadow">';
                     echo paginate_links(array(
                         'total' => $query->max_num_pages,
                         'current' => $paged,

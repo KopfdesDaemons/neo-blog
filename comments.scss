@@ -1,4 +1,4 @@
-.comments-area {
+.neo_comments_area {
     margin-top: 1em;
     border-radius: 12px;
     padding: 1em;
@@ -156,7 +156,7 @@
         }
 
         // h2 "Write a comment"
-        .comment-reply-title {
+        .neo_comment_reply_title {
             display: flex;
             justify-content: space-between;
             flex-wrap: wrap;
@@ -172,7 +172,7 @@
             padding: 0.5em;
             height: 25px;
             border: solid 1px var(--neo_font_color);
-            background-color: var(--neo_element_background-inputfeld);
+            background-color: var(--neo_element_background_inputfeld);
         }
 
         .comment-form-author,
@@ -203,7 +203,7 @@
     }
 }
 
-.darkmode .comments-area {
+.neo_dark_mode .neo_comments_area {
     .comment-body {
         box-shadow: inset 0px 0px 50px 0px var(--neo_primary_variant_much_brighter);
     }

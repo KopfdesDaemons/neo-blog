@@ -1,14 +1,14 @@
 <?php get_header(); ?>
 
-<main id="primary" class="site-main">
+<main>
     <?php
     while (have_posts()) :
         the_post();
     ?>
-        <article class="spacer spacerPost" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-            <div class="grid">
-                <div class="articlearea">
-                    <div class="content">
+        <article class="neo_content_spacer neo_content_spacer_post" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+            <div class="neo_content_and_sidebar_grid">
+                <div class="neo_article">
+                    <div class="neo_content_container">
                         <header>
                             <h1 class="title"><?php the_title(); ?></h1>
                         </header>
@@ -24,7 +24,7 @@
                         <?php
                         $post_categories = get_theme_mod('post_categories', true);
                         if ($post_categories) { ?>
-                            <div class="post-categories">
+                            <div class="neo_post_categories">
                                 <?php
                                 $categories = get_the_category();
                                 if (!empty($categories)) {
@@ -59,7 +59,7 @@
                         $tags_options = get_theme_mod('tags', true);
                         $tags = get_the_tags();
                         if ($tags_options & !empty($tags)) {
-                            echo '<div class="post-tags"><ul>';
+                            echo '<div class="neo_post_tags"><ul>';
                             foreach ($tags as $tag) {
                                 echo '<li><a href="' . esc_url(get_tag_link($tag->term_id)) . '">' . $tag->name . '</a></li>';
                             }
@@ -80,12 +80,12 @@
 
 
                         ?>
-                            <div class="author-info">
-                                <div class="author-avatar">
+                            <div class="neo_author_card">
+                                <div class="neo_author_avatar">
                                     <?php echo $author_avatar; ?>
                                 </div>
-                                <div class="author-details">
-                                    <div class="author-row">
+                                <div class="neo_author_details">
+                                    <div class="neo_author_name_row">
                                         <h3><a href="<?php echo get_author_posts_url($author_id); ?>"><?php echo $author_name; ?></a>
                                         </h3>
                                         <?php if ($author_website) : ?>
