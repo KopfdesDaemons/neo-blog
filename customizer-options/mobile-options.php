@@ -35,7 +35,25 @@ function neo_mobile_settings($wp_customize)
     $wp_customize->add_control('content_padding', array(
         'type' => 'number',
         'section' => 'neo_mobile_section',
-        'label' => __('Content Padding (in pixels)', 'neo'),
+        'label' => __('Content Padding Pages/Posts (in pixels)', 'neo'),
+    ));
+
+    // Padding Feed
+    $wp_customize->add_setting('mobile_feed_padding', array(
+        'default' => '5',
+        'transport' => 'refresh',
+        'sanitize_callback' => 'absint',
+    ));
+
+    $wp_customize->add_control('mobile_feed_padding', array(
+        'type' => 'number',
+        'label' => __('Mobile feed spacing in pixels (padding)', 'neo'),
+        'section' => 'neo_mobile_section',
+        'input_attrs' => array(
+            'min' => 0,
+            'max' => 40,
+            'step' => 1,
+        ),
     ));
 }
 add_action('customize_register', 'neo_mobile_settings');

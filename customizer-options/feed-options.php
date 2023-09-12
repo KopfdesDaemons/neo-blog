@@ -181,7 +181,6 @@ function neo_custom_feed($wp_customize)
 
     $wp_customize->add_control('feed_post_card_border_radius', array(
         'type' => 'range',
-        'section' => 'title_tagline',
         'label' => __('Border radius', 'neo'),
         'section' => 'custom_feed',
         'input_attrs' => array(
@@ -200,13 +199,12 @@ function neo_custom_feed($wp_customize)
 
     $wp_customize->add_control('feed_post_card_padding', array(
         'type' => 'range',
-        'section' => 'title_tagline',
         'label' => __('Padding', 'neo'),
         'section' => 'custom_feed',
         'input_attrs' => array(
             'min' => 0,
             'max' => 3,
-            'step' => 0.1,
+            'step' => 1,
         ),
     ));
 

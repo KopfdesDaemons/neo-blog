@@ -13,7 +13,6 @@
   }
 }
 #sidebar ul {
-  margin: 0;
   list-style: none;
   padding: 0;
 }
@@ -37,120 +36,134 @@
   height: auto;
   border-radius: 6px;
 }
-#sidebar .widget {
+
+.widget {
   padding: 0 1rem 1rem 1rem;
 }
-#sidebar .wp-widget-group__inner-blocks {
+
+.wp-widget-group__inner-blocks {
   margin-top: 1em;
 }
-#sidebar .wp-block-social-link:hover {
+
+.wp-block-social-link:hover {
   transform: scale(0.9);
 }
-#sidebar .wp-block-archives {
+
+.wp-block-archives {
   margin: 0 1em 1em 1em;
   max-height: 800px;
   overflow-y: auto;
 }
-#sidebar .widget_archive {
+
+.widget_archive {
   padding: 0;
 }
-#sidebar .widget_archive li {
+.widget_archive li {
   padding: 0.8em 1em;
   border: 1px solid var(--neo_element_background_variant_darker);
   box-shadow: inset 0px 0px 20px 0px var(--neo_element_background_variant);
 }
-#sidebar .widget_archive li a {
+.widget_archive li a {
   text-decoration: none;
   width: 100%;
   height: 100%;
   color: var(--neo_font_color);
 }
-#sidebar .widget_archive li:nth-child(even) {
+.widget_archive li:nth-child(even) {
   background-color: var(--neo_element_background);
 }
-#sidebar .wp-block-calendar caption,
-#sidebar .widget_calendar caption {
+
+.wp-block-calendar caption,
+.widget_calendar caption {
   color: var(--neo_font_color);
 }
-#sidebar .wp-block-calendar .wp-calendar-nav,
-#sidebar .widget_calendar .wp-calendar-nav {
+.wp-block-calendar .wp-calendar-nav,
+.widget_calendar .wp-calendar-nav {
   margin-top: 0.5rem;
 }
-#sidebar .wp-block-calendar .wp-calendar-nav a,
-#sidebar .widget_calendar .wp-calendar-nav a {
+.wp-block-calendar .wp-calendar-nav a,
+.widget_calendar .wp-calendar-nav a {
   padding: 8px;
 }
-#sidebar .wp-block-calendar th,
-#sidebar .wp-block-calendar td,
-#sidebar .widget_calendar th,
-#sidebar .widget_calendar td {
+.wp-block-calendar th,
+.wp-block-calendar td,
+.widget_calendar th,
+.widget_calendar td {
   border: 1px solid var(--neo_primary_variant_much_brighter);
 }
-#sidebar .wp-block-calendar tr,
-#sidebar .wp-block-calendar th,
-#sidebar .widget_calendar tr,
-#sidebar .widget_calendar th {
+.wp-block-calendar tr,
+.wp-block-calendar th,
+.widget_calendar tr,
+.widget_calendar th {
   background-color: unset;
   text-align: center;
 }
-#sidebar .wp-block-calendar tr,
-#sidebar .widget_calendar tr {
+.wp-block-calendar tr,
+.widget_calendar tr {
   color: var(--neo_font_color);
 }
-#sidebar .calendar_wrap td {
+
+.wp-block-social-links {
+  margin: 0.3em 0;
+}
+
+.calendar_wrap td {
   padding: 4px;
 }
-#sidebar .calendar_wrap .wp-calendar-nav {
+.calendar_wrap .wp-calendar-nav {
   margin-top: 0.5rem;
   display: flex;
   justify-content: space-between;
 }
-#sidebar .calendar_wrap .wp-calendar-nav a {
+.calendar_wrap .wp-calendar-nav a {
   padding: 8px;
 }
-#sidebar .widget_search form {
+
+.widget_search form {
   display: flex;
   flex-direction: column;
   gap: 0.5em;
 }
-#sidebar .widget_search form label {
+.widget_search form label {
   font-size: 1.2em;
 }
-#sidebar .widget_search input[type=search] {
+.widget_search input[type=search] {
   height: 3em;
   outline: 1px solid var(--neo_primary_variant_darker);
 }
-#sidebar .widget_search input[type=search]:focus {
+.widget_search input[type=search]:focus {
   outline: none;
   outline: 1px solid var(--neo_primary_color);
 }
-#sidebar .widget_search button {
+.widget_search button {
   height: 3em;
   border-radius: 8px;
   color: white;
   background-color: var(--neo_primary_variant_much_brighter);
   border: none;
 }
-#sidebar .widget_search button:hover {
+.widget_search button:hover {
   background-color: var(--neo_body);
   transition: all 200ms;
   outline: 1px solid var(--neo_font_color);
   color: var(--neo_font_color);
 }
-#sidebar .widget_categories,
-#sidebar .wp-block-categories {
+
+.widget_categories,
+.wp-block-categories {
   max-height: 600px;
   overflow-y: auto;
+  margin: 0;
 }
-#sidebar .widget_categories li,
-#sidebar .wp-block-categories li {
+.widget_categories li,
+.wp-block-categories li {
   display: flex;
   margin-bottom: 0.2em;
   align-items: center;
   gap: 0.2em;
 }
-#sidebar .widget_categories li a,
-#sidebar .wp-block-categories li a {
+.widget_categories li a,
+.wp-block-categories li a {
   padding: 0.5em;
   border-radius: 6px;
   background-color: var(--neo_body);
@@ -159,67 +172,71 @@
   border: 1px solid var(--neo_primary_variant_darker);
   box-shadow: inset 0px 0px 20px 0px var(--neo_primary_variant_much_brighter);
 }
-#sidebar .widget_categories li a:hover,
-#sidebar .wp-block-categories li a:hover {
+.widget_categories li a:hover,
+.wp-block-categories li a:hover {
   background-color: var(--neo_element_background_variant);
 }
-#sidebar .wp-block-page-list {
+
+.wp-block-page-list {
   font-size: 0.9em;
   max-height: 800px;
   overflow-y: auto;
 }
-#sidebar .wp-block-page-list li {
+.wp-block-page-list li {
   background-color: var(--neo_body);
   border: 1px solid var(--neo_primary_variant_darker);
   box-shadow: inset 0px 0px 20px 0px var(--neo_element_background_variant);
 }
-#sidebar .wp-block-page-list a {
+.wp-block-page-list a {
   color: unset;
 }
-#sidebar .wp-block-page-list ul {
+.wp-block-page-list ul {
   list-style: circle;
   padding-left: 2em;
 }
-#sidebar .wp-block-page-list ul li {
+.wp-block-page-list ul li {
   padding-left: 0;
   margin: 0;
   border: none;
   background-color: unset;
   box-shadow: none;
 }
-#sidebar .wp-block-page-list ul li a {
+.wp-block-page-list ul li a {
   text-decoration: none;
 }
-#sidebar .wp-block-loginout {
+
+.wp-block-loginout {
   display: flex;
   justify-content: center;
 }
-#sidebar .wp-block-loginout a {
+.wp-block-loginout a {
   padding: 0.8em 1em;
   border-radius: 8px;
   background-color: var(--neo_primary_color);
   text-decoration: none;
   color: white;
 }
-#sidebar .wp-block-loginout a:hover {
+.wp-block-loginout a:hover {
   background-color: var(--neo_element_background);
   outline: 1px solid var(--neo_primary_color);
   transition: all 200ms;
 }
-#sidebar .wp-block-page-list li,
-#sidebar .widget_rss li {
+
+.wp-block-page-list li,
+.widget_rss li {
   background-color: var(--neo_element_background);
   padding: 0.5rem;
   margin-top: 0.5rem;
 }
-#sidebar .wp-block-latest-posts li,
-#sidebar .widget_recent_entries li {
+
+.wp-block-latest-posts li,
+.widget_recent_entries li {
   margin-top: 0.5rem;
   width: 100%;
   border: 1px solid rgb(212, 212, 212);
 }
-#sidebar .wp-block-latest-posts li a,
-#sidebar .widget_recent_entries li a {
+.wp-block-latest-posts li a,
+.widget_recent_entries li a {
   display: block;
   padding: 0.5rem;
   background-color: var(--neo_body);
@@ -228,23 +245,26 @@
   box-shadow: inset 0px 0px 50px 0px var(--neo_element_background_variant);
   text-decoration: none;
 }
-#sidebar .wp-block-latest-posts li a:hover,
-#sidebar .widget_recent_entries li a:hover {
+.wp-block-latest-posts li a:hover,
+.widget_recent_entries li a:hover {
   background-color: var(--neo_element_background_variant);
 }
-#sidebar .wp-block-latest-posts__post-excerpt a {
+
+.wp-block-latest-posts__post-excerpt a {
   margin: 1em 0 0 0;
 }
-#sidebar .tagcloud {
+
+.tagcloud {
   display: flex;
   flex-wrap: wrap;
 }
-#sidebar .wp-block-tag-cloud p,
-#sidebar .tagcloud p {
+
+.wp-block-tag-cloud p,
+.tagcloud p {
   margin: 0;
 }
-#sidebar .wp-block-tag-cloud a,
-#sidebar .tagcloud a {
+.wp-block-tag-cloud a,
+.tagcloud a {
   margin: 0.2em 0.2em;
   text-decoration: none;
   color: var(--neo_font_color);
@@ -255,8 +275,8 @@
   font-size: 0.7em !important;
   min-width: 2em;
 }
-#sidebar .wp-block-tag-cloud a:hover,
-#sidebar .tagcloud a:hover {
+.wp-block-tag-cloud a:hover,
+.tagcloud a:hover {
   outline: 1px solid var(--neo_font_color);
 }
 

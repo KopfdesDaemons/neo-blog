@@ -11,7 +11,7 @@
     overflow: hidden;
 
     ul {
-        margin: 0;
+        // margin: 0;
         list-style: none;
         padding: 0;
     }
@@ -40,274 +40,279 @@
         height: auto;
         border-radius: 6px;
     }
+}
 
-    .widget {
-        padding: 0 1rem 1rem 1rem;
-    }
+.widget {
+    padding: 0 1rem 1rem 1rem;
+}
 
-    .wp-widget-group__inner-blocks {
-        margin-top: 1em;
-    }
+.wp-widget-group__inner-blocks {
+    margin-top: 1em;
+}
 
-    .wp-block-social-link:hover {
-        transform: scale(0.9);
-    }
+.wp-block-social-link:hover {
+    transform: scale(0.9);
+}
 
-    .wp-block-archives {
-        margin: 0 1em 1em 1em;
-        max-height: 800px;
-        overflow-y: auto;
-    }
+.wp-block-archives {
+    margin: 0 1em 1em 1em;
+    max-height: 800px;
+    overflow-y: auto;
+}
 
-    .widget_archive {
-        padding: 0;
+.widget_archive {
+    padding: 0;
 
-        li {
-            padding: 0.8em 1em;
-            border: 1px solid var(--neo_element_background_variant_darker);
-            box-shadow: inset 0px 0px 20px 0px var(--neo_element_background_variant);
-
-            a {
-                text-decoration: none;
-                width: 100%;
-                height: 100%;
-                color: var(--neo_font_color);
-            }
-        }
-
-        li:nth-child(even) {
-            background-color: var(--neo_element_background);
-        }
-    }
-
-    .wp-block-calendar,
-    .widget_calendar {
-        caption {
-            color: var(--neo_font_color);
-        }
-
-        .wp-calendar-nav {
-            margin-top: 0.5rem;
-
-            a {
-                padding: 8px;
-            }
-        }
-
-        th,
-        td {
-            border: 1px solid var(--neo_primary_variant_much_brighter);
-        }
-
-        tr,
-        th {
-            background-color: unset;
-            text-align: center;
-        }
-
-        tr {
-            color: var(--neo_font_color);
-        }
-    }
-
-    .calendar_wrap {
-        td {
-            padding: 4px;
-        }
-
-        .wp-calendar-nav {
-            margin-top: 0.5rem;
-            display: flex;
-            justify-content: space-between;
-
-            a {
-                padding: 8px;
-            }
-        }
-    }
-
-    .widget_search {
-        form {
-            display: flex;
-            flex-direction: column;
-            gap: 0.5em;
-
-            label {
-                font-size: 1.2em;
-            }
-        }
-
-        input[type=search] {
-            height: 3em;
-            // border-radius: 8px;
-            outline: 1px solid var(--neo_primary_variant_darker);
-        }
-
-        input[type=search]:focus {
-            outline: none;
-            outline: 1px solid var(--neo_primary_color);
-        }
-
-        button {
-            height: 3em;
-            border-radius: 8px;
-            color: white;
-            background-color: var(--neo_primary_variant_much_brighter);
-            border: none;
-        }
-
-        button:hover {
-            background-color: var(--neo_body);
-            transition: all 200ms;
-            outline: 1px solid var(--neo_font_color);
-            color: var(--neo_font_color);
-        }
-    }
-
-    .widget_categories,
-    .wp-block-categories {
-        max-height: 600px;
-        overflow-y: auto;
-
-        li {
-            display: flex;
-            margin-bottom: 0.2em;
-            align-items: center;
-            gap: 0.2em;
-
-            a {
-                padding: 0.5em;
-                border-radius: 6px;
-                background-color: var(--neo_body);
-                color: var(--neo_font_color);
-                text-decoration: none;
-                border: 1px solid var(--neo_primary_variant_darker);
-                box-shadow: inset 0px 0px 20px 0px var(--neo_primary_variant_much_brighter);
-            }
-
-            a:hover {
-                background-color: var(--neo_element_background_variant);
-            }
-        }
-    }
-
-    .wp-block-page-list {
-        font-size: 0.9em;
-        max-height: 800px;
-        overflow-y: auto;
-
-        li {
-            background-color: var(--neo_body);
-            border: 1px solid var(--neo_primary_variant_darker);
-            box-shadow: inset 0px 0px 20px 0px var(--neo_element_background_variant);
-        }
+    li {
+        padding: 0.8em 1em;
+        border: 1px solid var(--neo_element_background_variant_darker);
+        box-shadow: inset 0px 0px 20px 0px var(--neo_element_background_variant);
 
         a {
-            color: unset;
-        }
-
-        ul {
-            list-style: circle;
-            padding-left: 2em;
-
-            li {
-                padding-left: 0;
-                margin: 0;
-                border: none;
-                background-color: unset;
-                box-shadow: none;
-
-                a {
-                    text-decoration: none;
-                }
-            }
-        }
-    }
-
-    .wp-block-loginout {
-        display: flex;
-        justify-content: center;
-
-        a {
-            padding: 0.8em 1em;
-            border-radius: 8px;
-            background-color: var(--neo_primary_color);
             text-decoration: none;
-            color: white;
-        }
-
-        a:hover {
-            background-color: var(--neo_element_background);
-            outline: 1px solid var(--neo_primary_color);
-            transition: all 200ms;
-        }
-    }
-
-    .wp-block-page-list,
-    .widget_rss {
-        li {
-            background-color: var(--neo_element_background);
-            padding: 0.5rem;
-            margin-top: 0.5rem;
-        }
-    }
-
-    // Post suggestions
-    .wp-block-latest-posts,
-    .widget_recent_entries {
-        li {
-            margin-top: 0.5rem;
             width: 100%;
-            border: 1px solid rgb(212, 212, 212);
-
-            a {
-                display: block;
-                padding: 0.5rem;
-                background-color: var(--neo_body);
-                background-color: var(--neo_element_background);
-                border: 1px solid var(--neo_primary_variant_much_brighter);
-                box-shadow: inset 0px 0px 50px 0px var(--neo_element_background_variant);
-                text-decoration: none;
-            }
-
-            a:hover {
-                background-color: var(--neo_element_background_variant);
-            }
-        }
-    }
-
-    .wp-block-latest-posts__post-excerpt {
-        a {
-            margin: 1em 0 0 0;
-        }
-    }
-
-    .tagcloud {
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    .wp-block-tag-cloud,
-    .tagcloud {
-        p {
-            margin: 0;
-        }
-
-        a {
-            margin: 0.2em 0.2em;
-            text-decoration: none;
+            height: 100%;
             color: var(--neo_font_color);
-            text-align: center;
-            background-color: var(--neo_element_background_variant);
-            padding: 0.6em 1em;
-            border-radius: 32px;
-            font-size: 0.7em !important;
-            min-width: 2em;
+        }
+    }
+
+    li:nth-child(even) {
+        background-color: var(--neo_element_background);
+    }
+}
+
+.wp-block-calendar,
+.widget_calendar {
+    caption {
+        color: var(--neo_font_color);
+    }
+
+    .wp-calendar-nav {
+        margin-top: 0.5rem;
+
+        a {
+            padding: 8px;
+        }
+    }
+
+    th,
+    td {
+        border: 1px solid var(--neo_primary_variant_much_brighter);
+    }
+
+    tr,
+    th {
+        background-color: unset;
+        text-align: center;
+    }
+
+    tr {
+        color: var(--neo_font_color);
+    }
+}
+
+.wp-block-social-links {
+    margin: 0.3em 0;
+}
+
+.calendar_wrap {
+    td {
+        padding: 4px;
+    }
+
+    .wp-calendar-nav {
+        margin-top: 0.5rem;
+        display: flex;
+        justify-content: space-between;
+
+        a {
+            padding: 8px;
+        }
+    }
+}
+
+.widget_search {
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5em;
+
+        label {
+            font-size: 1.2em;
+        }
+    }
+
+    input[type=search] {
+        height: 3em;
+        // border-radius: 8px;
+        outline: 1px solid var(--neo_primary_variant_darker);
+    }
+
+    input[type=search]:focus {
+        outline: none;
+        outline: 1px solid var(--neo_primary_color);
+    }
+
+    button {
+        height: 3em;
+        border-radius: 8px;
+        color: white;
+        background-color: var(--neo_primary_variant_much_brighter);
+        border: none;
+    }
+
+    button:hover {
+        background-color: var(--neo_body);
+        transition: all 200ms;
+        outline: 1px solid var(--neo_font_color);
+        color: var(--neo_font_color);
+    }
+}
+
+.widget_categories,
+.wp-block-categories {
+    max-height: 600px;
+    overflow-y: auto;
+    margin: 0;
+    
+    li {
+        display: flex;
+        margin-bottom: 0.2em;
+        align-items: center;
+        gap: 0.2em;
+
+        a {
+            padding: 0.5em;
+            border-radius: 6px;
+            background-color: var(--neo_body);
+            color: var(--neo_font_color);
+            text-decoration: none;
+            border: 1px solid var(--neo_primary_variant_darker);
+            box-shadow: inset 0px 0px 20px 0px var(--neo_primary_variant_much_brighter);
         }
 
         a:hover {
-            outline: 1px solid var(--neo_font_color);
+            background-color: var(--neo_element_background_variant);
         }
+    }
+}
+
+.wp-block-page-list {
+    font-size: 0.9em;
+    max-height: 800px;
+    overflow-y: auto;
+
+    li {
+        background-color: var(--neo_body);
+        border: 1px solid var(--neo_primary_variant_darker);
+        box-shadow: inset 0px 0px 20px 0px var(--neo_element_background_variant);
+    }
+
+    a {
+        color: unset;
+    }
+
+    ul {
+        list-style: circle;
+        padding-left: 2em;
+
+        li {
+            padding-left: 0;
+            margin: 0;
+            border: none;
+            background-color: unset;
+            box-shadow: none;
+
+            a {
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+.wp-block-loginout {
+    display: flex;
+    justify-content: center;
+
+    a {
+        padding: 0.8em 1em;
+        border-radius: 8px;
+        background-color: var(--neo_primary_color);
+        text-decoration: none;
+        color: white;
+    }
+
+    a:hover {
+        background-color: var(--neo_element_background);
+        outline: 1px solid var(--neo_primary_color);
+        transition: all 200ms;
+    }
+}
+
+.wp-block-page-list,
+.widget_rss {
+    li {
+        background-color: var(--neo_element_background);
+        padding: 0.5rem;
+        margin-top: 0.5rem;
+    }
+}
+
+// Post suggestions
+.wp-block-latest-posts,
+.widget_recent_entries {
+    li {
+        margin-top: 0.5rem;
+        width: 100%;
+        border: 1px solid rgb(212, 212, 212);
+
+        a {
+            display: block;
+            padding: 0.5rem;
+            background-color: var(--neo_body);
+            background-color: var(--neo_element_background);
+            border: 1px solid var(--neo_primary_variant_much_brighter);
+            box-shadow: inset 0px 0px 50px 0px var(--neo_element_background_variant);
+            text-decoration: none;
+        }
+
+        a:hover {
+            background-color: var(--neo_element_background_variant);
+        }
+    }
+}
+
+.wp-block-latest-posts__post-excerpt {
+    a {
+        margin: 1em 0 0 0;
+    }
+}
+
+.tagcloud {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.wp-block-tag-cloud,
+.tagcloud {
+    p {
+        margin: 0;
+    }
+
+    a {
+        margin: 0.2em 0.2em;
+        text-decoration: none;
+        color: var(--neo_font_color);
+        text-align: center;
+        background-color: var(--neo_element_background_variant);
+        padding: 0.6em 1em;
+        border-radius: 32px;
+        font-size: 0.7em !important;
+        min-width: 2em;
+    }
+
+    a:hover {
+        outline: 1px solid var(--neo_font_color);
     }
 }
 

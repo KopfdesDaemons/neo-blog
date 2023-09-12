@@ -114,6 +114,12 @@ a {
   margin: 1em;
 }
 
+@media only screen and (max-width: 600px) {
+  .neo_feed {
+    padding: var(--neo_mobile_feed_padding);
+  }
+}
+
 .neo_post_card {
   background-color: var(--neo_element_background);
   border: 1px solid rgb(221, 221, 221);
@@ -129,6 +135,11 @@ a {
   gap: 0.5em;
   width: 100%;
   box-sizing: border-box;
+}
+@media only screen and (max-width: 600px) {
+  .neo_post_card {
+    padding: 1em;
+  }
 }
 .neo_post_card .neo_post_card_image_container {
   overflow: hidden;

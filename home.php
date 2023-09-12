@@ -21,7 +21,7 @@
                     }
 
                     // Show Cards
-                    require_once get_template_directory() . '/template-parts/feed.php';
+                    require_once get_template_directory() . '/template-parts/post-card.php';
                     echo neo_display_post_card($post_classes);
                 }
 

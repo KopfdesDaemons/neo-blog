@@ -169,6 +169,8 @@
             /* Mobile Settings */
             --neo_content_padding: <?php echo esc_attr(get_theme_mod('content_padding', '10') . 'px');
                                     ?>;
+            --neo_mobile_feed_padding: <?php echo esc_attr(get_theme_mod('mobile_feed_padding', '5') . 'px');
+                                        ?>
         }
 
 

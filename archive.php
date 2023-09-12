@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <main role="main">
     <section class="neo_content_spacer neo_content_spacer_feed neo_content_and_sidebar_grid">
-        <div class="neo_article">
+        <div>
             <?php if (is_author()) {;
                 $author_id = get_the_author_meta('ID');
                 $author_name = get_the_author_meta('display_name');
@@ -122,6 +122,7 @@
 
             <?php
             if (have_posts()) {
+                echo '<div class="neo_feed">';
                 while (have_posts()) {
                     the_post();
                     $post_classes = array('neo_post_card neo_shadow');
@@ -130,9 +131,10 @@
                     }
 
                     // Show cards
-                    require_once get_template_directory() . '/template-parts/feed.php';
+                    require_once get_template_directory() . '/template-parts/post-card.php';
                     echo neo_display_post_card($post_classes);
                 }
+                echo '</div>';
 
                 // Pagination 
                 global $wp_query;
