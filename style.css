@@ -136,11 +136,6 @@ a {
   width: 100%;
   box-sizing: border-box;
 }
-@media only screen and (max-width: 600px) {
-  .neo_post_card {
-    padding: 1em;
-  }
-}
 .neo_post_card .neo_post_card_image_container {
   overflow: hidden;
   display: flex;
@@ -253,7 +248,7 @@ a {
 }
 
 .neo_post_card_image_top {
-  grid-template-columns: auto;
+  grid-template-columns: 1fr;
   grid-auto-flow: row;
 }
 .neo_post_card_image_top .neo_post_card_content_div {
@@ -270,8 +265,15 @@ a {
   .neo_post_card_image_left .neo_post_card_image_container {
     width: 100%;
   }
-  .neo_post_card_content_div {
+  .neo_post_card {
+    padding: 1em;
+  }
+  .neo_post_card .neo_post_card_content_div {
     width: 100%;
+    padding: 0.5em 0;
+  }
+  .neo_post_card .neo_post_card_content_div p {
+    line-height: unset;
   }
 }
 .neo_dark_mode .neo_post_card {

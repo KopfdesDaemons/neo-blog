@@ -8,8 +8,8 @@ if (post_password_required()) {
 
     <?php if (have_comments()) : ?>
 
-        <h2>
-            <?php
+    <h2>
+        <?php
             $comments_number = get_comments_number();
             if ($comments_number === 1) {
                 printf(__('One Comment', 'neo'));
@@ -17,29 +17,29 @@ if (post_password_required()) {
                 printf(__('%d Comments', 'neo'), $comments_number);
             }
             ?>
-        </h2>
+    </h2>
 
-        <ul class="comment-list">
-            <?php
+    <ul class="comment-list <?php if (!get_theme_mod('comments_image', true)) echo 'neo_comments_without_image'; ?>">
+        <?php
             wp_list_comments(array(
                 'style'       => 'ol',
                 'short_ping'  => true,
-                'avatar_size' => 100,
+                'avatar_size' => get_theme_mod('image_size_comments', 40),
             ));
             ?>
-        </ul>
+    </ul>
 
-        <?php if (get_comment_pages_count() > 1 && get_option('page_comments')) : ?>
-            <nav role="navigation">
-                <div class="nav-previous"><?php previous_comments_link(__('Older Comments', 'neo')); ?></div>
-                <div class="nav-next"><?php next_comments_link(__('Newer Comments', 'neo')); ?></div>
-            </nav>
-        <?php endif; ?>
+    <?php if (get_comment_pages_count() > 1 && get_option('page_comments')) : ?>
+    <nav role="navigation">
+        <div class="nav-previous"><?php previous_comments_link(__('Older Comments', 'neo')); ?></div>
+        <div class="nav-next"><?php next_comments_link(__('Newer Comments', 'neo')); ?></div>
+    </nav>
+    <?php endif; ?>
 
     <?php endif; ?>
 
     <?php if (!comments_open() && get_comments_number() && post_type_supports(get_post_type(), 'comments')) : ?>
-        <p><?php _e('Comments are closed.', 'neo'); ?></p>
+    <p><?php _e('Comments are closed.', 'neo'); ?></p>
     <?php endif; ?>
 
     <?php

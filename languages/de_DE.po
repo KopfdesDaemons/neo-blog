@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: neo\n"
-"POT-Creation-Date: 2023-09-12 19:15+0200\n"
-"PO-Revision-Date: 2023-09-12 19:16+0200\n"
+"POT-Creation-Date: 2023-09-16 11:22+0200\n"
+"PO-Revision-Date: 2023-09-16 11:25+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de\n"
@@ -55,15 +55,15 @@ msgstr "Archive für"
 msgid "Archive"
 msgstr "Archive"
 
-#: archive.php:145 home.php:35 index.php:24 search.php:35
+#: archive.php:147 home.php:35 index.php:24 search.php:35
 msgid "« Previous"
 msgstr "« Zurück"
 
-#: archive.php:146 home.php:36 index.php:25 search.php:36
+#: archive.php:148 home.php:36 index.php:25 search.php:36
 msgid "Next »"
 msgstr "Weiter »"
 
-#: archive.php:151 home.php:43 index.php:31 search.php:43
+#: archive.php:153 home.php:43 index.php:31 search.php:43
 msgid "No posts found."
 msgstr "Keine Beiträge gefunden."
 
@@ -119,6 +119,7 @@ msgid "Show author website"
 msgstr "Website des Autors anzeigen"
 
 #: customizer-options/author-page-options.php:98
+#: customizer-options/comments-options.php:82
 msgid "Image size"
 msgstr "Bildgröße"
 
@@ -166,6 +167,64 @@ msgstr "Hell"
 msgid "System"
 msgstr "System"
 
+#: customizer-options/comments-options.php:6
+msgid "Comments"
+msgstr "Kommentare"
+
+#: customizer-options/comments-options.php:19
+#: customizer-options/feed-options.php:184
+msgid "Border radius"
+msgstr "Rahmenradius"
+
+#: customizer-options/comments-options.php:37
+msgid "Inner glow"
+msgstr "Innerer Schein"
+
+#: customizer-options/comments-options.php:55
+msgid "Border"
+msgstr "Rahmen"
+
+#: customizer-options/comments-options.php:68
+#, fuzzy
+#| msgid "Show image"
+msgid "Show Image"
+msgstr "Bild anzeigen"
+
+#: customizer-options/comments-options.php:107
+msgid "Name font size"
+msgstr "Name Schriftgröße"
+
+#: customizer-options/comments-options.php:126
+msgid "Radius reply button"
+msgstr "Radius Antwortbutton"
+
+#: customizer-options/comments-options.php:144
+msgid "Reply button positon"
+msgstr "Antwortbutton Position "
+
+#: customizer-options/comments-options.php:147
+#: customizer-options/feed-options.php:237
+#: customizer-options/pages-options.php:55
+#: customizer-options/posts-options.php:62
+msgid "left"
+msgstr "links"
+
+#: customizer-options/comments-options.php:148
+#: customizer-options/pages-options.php:56
+#: customizer-options/posts-options.php:63
+msgid "center"
+msgstr "mittig"
+
+#: customizer-options/comments-options.php:149
+#: customizer-options/pages-options.php:57
+#: customizer-options/posts-options.php:64
+msgid "right"
+msgstr "rechts"
+
+#: customizer-options/comments-options.php:161
+msgid "Max height in pixels"
+msgstr "Maximale Höhe in Pixeln"
+
 #: customizer-options/feed-options.php:6
 msgid "Feed"
 msgstr "Feed"
@@ -203,41 +262,31 @@ msgstr "Kommentare anzeigen"
 msgid "Line height in text snippet"
 msgstr "Zeilenhöhe im Textausschnitt"
 
-#: customizer-options/feed-options.php:185
-msgid "Border radius"
-msgstr "Rahmenradius"
-
-#: customizer-options/feed-options.php:204
+#: customizer-options/feed-options.php:202
 msgid "Padding"
 msgstr "Innenabstand (Padding)"
 
-#: customizer-options/feed-options.php:222
+#: customizer-options/feed-options.php:220
 msgid "Show image"
 msgstr "Bild anzeigen"
 
-#: customizer-options/feed-options.php:235
+#: customizer-options/feed-options.php:233
 msgid "Image postion"
 msgstr "Bildposition"
 
-#: customizer-options/feed-options.php:239
-#: customizer-options/pages-options.php:55
-#: customizer-options/posts-options.php:62
-msgid "left"
-msgstr "links"
-
-#: customizer-options/feed-options.php:240
+#: customizer-options/feed-options.php:238
 msgid "top"
 msgstr "oben"
 
-#: customizer-options/feed-options.php:253
+#: customizer-options/feed-options.php:251
 msgid "Image display behavior"
 msgstr "Bild-Anzeige-Verhalten"
 
-#: customizer-options/feed-options.php:274
+#: customizer-options/feed-options.php:272
 msgid "Image radius"
 msgstr "Bildradius"
 
-#: customizer-options/feed-options.php:294
+#: customizer-options/feed-options.php:292
 msgid "Image height"
 msgstr "Bildhöhe"
 
@@ -356,8 +405,12 @@ msgid "vertical arrangement with menu button"
 msgstr "vertikale Ausrichtung mit Menübutton"
 
 #: customizer-options/mobile-options.php:38
-msgid "Content Padding (in pixels)"
-msgstr "Abstand zum Inhalt (in Pixeln)"
+msgid "Content Padding Pages/Posts (in pixels)"
+msgstr "Abstand zum Inhalt Seiten/Posts (in Pixeln)"
+
+#: customizer-options/mobile-options.php:50
+msgid "Mobile feed spacing in pixels (padding)"
+msgstr "Mobile Feed Abstand in Pixeln (Padding)"
 
 #: customizer-options/pages-options.php:6
 msgid "Pages"
@@ -379,16 +432,6 @@ msgstr "Sidebar anzeigen"
 #: customizer-options/posts-options.php:60
 msgid "Page Title Alignment"
 msgstr "Seitentitel Ausrichtung"
-
-#: customizer-options/pages-options.php:56
-#: customizer-options/posts-options.php:63
-msgid "center"
-msgstr "mittig"
-
-#: customizer-options/pages-options.php:57
-#: customizer-options/posts-options.php:64
-msgid "right"
-msgstr "rechts"
 
 #: customizer-options/posts-options.php:6
 msgid "Posts"
@@ -446,7 +489,7 @@ msgstr "Deine E-Mail"
 msgid "Your Website"
 msgstr "Deine Website"
 
-#: header.php:247 header.php:273
+#: header.php:265 header.php:292
 msgid "Home page"
 msgstr "Startseite"
 
@@ -458,7 +501,7 @@ msgstr "Suchergebnisse für"
 msgid "Search"
 msgstr "Suche"
 
-#: template-parts/feed.php:47
+#: template-parts/post-card.php:48
 msgid "read more"
 msgstr "Mehr lesen"
 

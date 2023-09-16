@@ -138,6 +138,7 @@ require_once get_template_directory() . '/customizer-options/header-options.php'
 require_once get_template_directory() . '/customizer-options/feed-options.php';
 require_once get_template_directory() . '/customizer-options/posts-options.php';
 require_once get_template_directory() . '/customizer-options/pages-options.php';
+require_once get_template_directory() . '/customizer-options/comments-options.php';
 require_once get_template_directory() . '/customizer-options/author-page-options.php';
 require_once get_template_directory() . '/customizer-options/mobile-options.php';
 

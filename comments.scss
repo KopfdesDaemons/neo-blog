@@ -23,16 +23,19 @@
 
     .comment-body {
         background-color: var(--neo_element_background);
-        border-radius: 12px;
+        border-radius: var(--neo_comments_border_radius);
         padding: 1em;
         margin-top: 1em;
-        border: 1px solid var(--neo_primary_variant_darker);
-        box-shadow: inset 0px 0px 50px 0px var(--neo_element_background_variant);
+        border: var(--neo_comments_border);
+        box-shadow: inset 0px 0px var(--neo_comments_inner_glow) 0px var(--neo_element_background_variant);
         overflow-wrap: anywhere;
         word-wrap: break-word;
         overflow: hidden;
-        max-height: 500px;
-        overflow-y: auto;
+    }
+
+    .comment-content {
+        overflow: hidden auto;
+        max-height: var(--neo_comments_max_height);
     }
 
     // Image and name row
@@ -52,11 +55,13 @@
         }
 
         img {
-            height: 3em;
             width: auto;
             margin: 0 1em 0 0;
         }
-
+        
+        .fn {
+            font-size: var(--neo_comments_name_font_size);
+        }
         // "says:"
         span {
             display: none;
@@ -67,6 +72,7 @@
     .comment-meta {
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
 
         a {
             text-decoration: none;
@@ -78,18 +84,20 @@
     .reply {
         display: flex;
         margin-top: 1em;
+        justify-content: var(--neo_comments_reply_link_position);
 
         .comment-reply-link {
             text-decoration: none;
             background-color: var(--neo_primary_variant_much_brighter);
             padding: 0.5rem 1rem;
-            border-radius: 12px;
+            border-radius: var(--neo_comments_border_radius_reply_link);
             color: var(--neo_font_color);
             border: 1px solid var(--neo_element_background);
         }
 
         .comment-reply-link:hover {
             background-color: unset;
+            border: 1px solid var(--neo_font_color);
         }
     }
 
@@ -121,6 +129,10 @@
     // Answer form container
     .comment-respond {
         padding: 1em;
+
+        @media only screen and (max-width: 600px) {
+            padding: 0;
+        }
 
         // P-tag with label + textarea to answer
         .comment-form-comment {
@@ -201,11 +213,17 @@
             }
         }
     }
+
+    .neo_comments_without_image {
+        .vcard img {
+            display: none;
+        }
+    }
 }
 
 .neo_dark_mode .neo_comments_area {
     .comment-body {
-        box-shadow: inset 0px 0px 50px 0px var(--neo_primary_variant_much_brighter);
+        box-shadow: inset 0px 0px var(--neo_comments_inner_glow) 0px var(--neo_primary_variant_much_brighter);
     }
 
     .bypostauthor {
