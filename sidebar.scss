@@ -1,4 +1,4 @@
-#sidebar {
+#neo_sidebar {
     @media only screen and (max-width: 950px) {
         display: none;
     }
@@ -288,6 +288,10 @@
     }
 }
 
+.wp-block-latest-comments__comment-excerpt {
+    max-height: 200px;
+    overflow-y: auto;
+}
 .tagcloud {
     display: flex;
     flex-wrap: wrap;
@@ -328,7 +332,7 @@
         border-radius: 12px;
         margin-bottom: 0.5em;
         background-color: var(--neo_element_background);
-        border: 1px solid var(--neo_primary_variant_darker);
+        border: var(--neo_comments_border);
         box-shadow: inset 0px 0px 50px 0px var(--neo_element_background_variant);
     }
 
@@ -385,7 +389,7 @@
 
     .wp-block-latest-comments {
         li {
-            box-shadow: inset 0px 0px 50px 0px var(--neo_primary_variant_much_brighter);
+            box-shadow: inset 0px 0px var(--neo_comments_inner_glow) 0px var(--neo_primary_variant_much_brighter);
         }
     }
 

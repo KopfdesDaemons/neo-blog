@@ -1,4 +1,4 @@
-#sidebar {
+#neo_sidebar {
   margin: 0 1em;
   padding-bottom: 0.5em;
   border-radius: 12px;
@@ -8,30 +8,30 @@
   overflow: hidden;
 }
 @media only screen and (max-width: 950px) {
-  #sidebar {
+  #neo_sidebar {
     display: none;
   }
 }
-#sidebar ul {
+#neo_sidebar ul {
   list-style: none;
   padding: 0;
 }
-#sidebar hr {
+#neo_sidebar hr {
   width: 80%;
   margin-top: 1rem;
 }
-#sidebar h2 {
+#neo_sidebar h2 {
   margin: 0;
 }
-#sidebar select {
+#neo_sidebar select {
   margin: 0.5rem 0;
   padding: 6px;
   border: none;
 }
-#sidebar select option {
+#neo_sidebar select option {
   padding: 4px;
 }
-#sidebar img {
+#neo_sidebar img {
   max-width: 100%;
   height: auto;
   border-radius: 6px;
@@ -254,6 +254,11 @@
   margin: 1em 0 0 0;
 }
 
+.wp-block-latest-comments__comment-excerpt {
+  max-height: 200px;
+  overflow-y: auto;
+}
+
 .tagcloud {
   display: flex;
   flex-wrap: wrap;
@@ -293,7 +298,7 @@
   border-radius: 12px;
   margin-bottom: 0.5em;
   background-color: var(--neo_element_background);
-  border: 1px solid var(--neo_primary_variant_darker);
+  border: var(--neo_comments_border);
   box-shadow: inset 0px 0px 50px 0px var(--neo_element_background_variant);
 }
 .widget_recent_comments ol p,
@@ -339,7 +344,7 @@
   box-shadow: inset 0px 0px 20px 0px var(--neo_primary_variant_much_brighter);
 }
 .neo_dark_mode .wp-block-latest-comments li {
-  box-shadow: inset 0px 0px 50px 0px var(--neo_primary_variant_much_brighter);
+  box-shadow: inset 0px 0px var(--neo_comments_inner_glow) 0px var(--neo_primary_variant_much_brighter);
 }
 .neo_dark_mode .wp-block-page-list li {
   box-shadow: inset 0px 0px 20px 0px var(--neo_primary_variant_much_brighter);

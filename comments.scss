@@ -3,11 +3,12 @@
     border-radius: 12px;
     padding: 1em;
 
-    .comment-list {
+    @media only screen and (max-width: 600px) {
         padding: 0;
     }
 
-    .comment-list {
+    .neo_comment_list {
+        padding: 0;
         list-style: none;
     }
 
@@ -73,6 +74,7 @@
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
+        flex-direction: var(--neo_comments_date_position);
 
         a {
             text-decoration: none;
@@ -149,12 +151,11 @@
         .form-submit {
             margin: 0.5rem;
 
-
             .submit {
                 text-decoration: none;
                 background-color: var(--neo_primary_color);
                 padding: 0.5rem 1rem;
-                border-radius: 12px;
+                border-radius: var(--neo_comments_border_radius_reply_link);
                 color: black;
                 border: none;
                 cursor: pointer;

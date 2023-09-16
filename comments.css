@@ -3,10 +3,13 @@
   border-radius: 12px;
   padding: 1em;
 }
-.neo_comments_area .comment-list {
-  padding: 0;
+@media only screen and (max-width: 600px) {
+  .neo_comments_area {
+    padding: 0;
+  }
 }
-.neo_comments_area .comment-list {
+.neo_comments_area .neo_comment_list {
+  padding: 0;
   list-style: none;
 }
 .neo_comments_area .comment {
@@ -58,6 +61,7 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  flex-direction: var(--neo_comments_date_position);
 }
 .neo_comments_area .comment-meta a {
   text-decoration: none;
@@ -120,7 +124,7 @@
   text-decoration: none;
   background-color: var(--neo_primary_color);
   padding: 0.5rem 1rem;
-  border-radius: 12px;
+  border-radius: var(--neo_comments_border_radius_reply_link);
   color: black;
   border: none;
   cursor: pointer;

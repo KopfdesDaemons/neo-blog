@@ -17,7 +17,7 @@ function neo_mobile_settings($wp_customize)
     $wp_customize->add_control('header_menu_style', array(
         'type' => 'select',
         'section' => 'neo_mobile_section',
-        'label' => __('Menu style', 'neo'),
+        'label' => __('Header menu style', 'neo'),
         'choices' => array(
             'horizontal' => __('horizontal scrolling', 'neo'),
             'vertical' => __('vertical arrangement with menu button', 'neo'),

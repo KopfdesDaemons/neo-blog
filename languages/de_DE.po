@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: neo\n"
-"POT-Creation-Date: 2023-09-16 11:22+0200\n"
-"PO-Revision-Date: 2023-09-16 11:25+0200\n"
+"POT-Creation-Date: 2023-09-16 20:33+0200\n"
+"PO-Revision-Date: 2023-09-16 20:35+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de\n"
@@ -185,8 +185,6 @@ msgid "Border"
 msgstr "Rahmen"
 
 #: customizer-options/comments-options.php:68
-#, fuzzy
-#| msgid "Show image"
 msgid "Show Image"
 msgstr "Bild anzeigen"
 
@@ -200,7 +198,7 @@ msgstr "Radius Antwortbutton"
 
 #: customizer-options/comments-options.php:144
 msgid "Reply button positon"
-msgstr "Antwortbutton Position "
+msgstr "Antwortbutton Position"
 
 #: customizer-options/comments-options.php:147
 #: customizer-options/feed-options.php:237
@@ -221,7 +219,19 @@ msgstr "mittig"
 msgid "right"
 msgstr "rechts"
 
-#: customizer-options/comments-options.php:161
+#: customizer-options/comments-options.php:162
+msgid "Date positon"
+msgstr "Datumsposition"
+
+#: customizer-options/comments-options.php:165
+msgid "top right corner"
+msgstr "obige rechte Ecke"
+
+#: customizer-options/comments-options.php:166
+msgid "under name"
+msgstr "unter dem Namen"
+
+#: customizer-options/comments-options.php:178
 msgid "Max height in pixels"
 msgstr "Maximale Höhe in Pixeln"
 
@@ -393,8 +403,8 @@ msgid "Mobile Settings"
 msgstr "Mobile Einstellungen"
 
 #: customizer-options/mobile-options.php:20
-msgid "Menu style"
-msgstr "Menü Style"
+msgid "Header menu style"
+msgstr "Headermenüstyle"
 
 #: customizer-options/mobile-options.php:22
 msgid "horizontal scrolling"
@@ -489,7 +499,7 @@ msgstr "Deine E-Mail"
 msgid "Your Website"
 msgstr "Deine Website"
 
-#: header.php:265 header.php:292
+#: header.php:267 header.php:293
 msgid "Home page"
 msgstr "Startseite"
 
@@ -504,6 +514,9 @@ msgstr "Suche"
 #: template-parts/post-card.php:48
 msgid "read more"
 msgstr "Mehr lesen"
+
+#~ msgid "Menu style"
+#~ msgstr "Menü Style"
 
 #~ msgid "Show share area"
 #~ msgstr "Teilen-Bereich anzeigen"

@@ -150,6 +150,23 @@ function neo_custom_comments($wp_customize)
         ),
     ));
 
+    // Date positon
+    $wp_customize->add_setting('comments_date_position', array(
+        'default' => 'row',
+        'transport' => 'refresh',
+        'sanitize_callback' => 'sanitize_text_field',
+    ));
+
+    $wp_customize->add_control('comments_date_position', array(
+        'type' => 'select',
+        'label' => __('Date positon', 'neo'),
+        'section' => 'custom_comments',
+        'choices' => array(
+            'row' => __('top right corner', 'neo'),
+            'column' => __('under name', 'neo'),
+        ),
+    ));
+
     // Max comments height
     $wp_customize->add_setting('comments_max_height', array(
         'default' => 400,
