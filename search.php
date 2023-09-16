@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 <main role="main">
-    <section class="neo_content_spacer grid">
+    <section class="neo_content_spacer neo_content_and_sidebar_grid">
         <div class="neo_feed">
             <?php
             $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
@@ -21,7 +21,7 @@
                         $post_classes[] = 'neo_sticky_post';
                     }
                     // Show cards
-                    require_once get_template_directory() . '/template-parts/feed.php';
+                    require_once get_template_directory() . '/template-parts/post-card.php';
                     echo neo_display_post_card($post_classes);
                 }
 

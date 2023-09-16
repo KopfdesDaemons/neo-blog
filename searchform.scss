@@ -16,6 +16,8 @@
     // border-radius: 6px;
     text-align: center;
     outline: 1px solid var(--neo_primary_variant_darker);
+    background-color: #c9c9c969;
+    color: var(--neo_font_color);
   }
 
   #neo_searchinput:focus {
@@ -42,4 +44,8 @@
     outline: 1px solid var(--neo_font_color);
     transition: all 200ms;
   }
+}
+
+.neo_dark_mode #neo_searchform #neo_searchinput{
+  background-color: #00000069;
 }

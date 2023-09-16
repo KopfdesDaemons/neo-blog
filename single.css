@@ -12,6 +12,7 @@ h1 {
 }
 
 .wp-block-quote,
+.wp-block-pullquote,
 blockquote {
   padding: 1em;
   background-color: rgb(95, 95, 102);
@@ -20,15 +21,30 @@ blockquote {
   display: flex;
   flex-direction: column;
   color: white;
+  position: relative;
+  padding-left: 40px;
 }
 .wp-block-quote p,
+.wp-block-pullquote p,
 blockquote p {
   color: white;
 }
 .wp-block-quote cite,
+.wp-block-pullquote cite,
 blockquote cite {
   display: inline-flex;
   justify-content: flex-end;
+}
+.wp-block-quote p::before,
+.wp-block-pullquote p::before,
+blockquote p::before {
+  content: "\f10d";
+  font-family: "Font Awesome Solid";
+  font-size: 1.5em;
+  margin-right: 10px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
 }
 
 .neo_dark_mode .wp-block-quote,
@@ -93,40 +109,6 @@ tbody tr:nth-of-type(even) {
   color: #000000;
 }
 
-.neo_post_categories ul {
-  list-style: none;
-  padding: 0;
-  margin-top: 0;
-  display: flex;
-  gap: 0.5em;
-  flex-wrap: wrap;
-  margin: 0;
-}
-
-.neo_post_tags ul {
-  display: flex;
-  flex-wrap: wrap;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  font-size: 1.2em;
-}
-.neo_post_tags ul li {
-  margin: 0.4em 0.2em;
-}
-.neo_post_tags ul a {
-  text-decoration: none;
-  text-align: center;
-  background-color: var(--neo_primary_variant_much_brighter);
-  padding: 0.6em 1em;
-  border-radius: 32px;
-  font-size: 0.7em;
-  min-width: 2em;
-}
-.neo_post_tags ul a:hover {
-  outline: 1px solid var(--neo_primary_variant_brighter);
-}
-
 .neo_author_card {
   border: 2px solid rgb(192, 192, 192);
   padding: 1em;
@@ -177,6 +159,41 @@ tbody tr:nth-of-type(even) {
   padding: 5px;
   box-sizing: border-box;
 }
+.neo_article .neo_post_categories ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 0;
+  display: flex;
+  gap: 0.5em;
+  flex-wrap: wrap;
+  margin: 0;
+}
+.neo_article .neo_post_categories li {
+  margin: 0;
+}
+.neo_article .neo_post_tags ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 1.2em;
+}
+.neo_article .neo_post_tags ul li {
+  margin: 0.4em 0.2em;
+}
+.neo_article .neo_post_tags ul a {
+  text-decoration: none;
+  text-align: center;
+  background-color: var(--neo_primary_variant_much_brighter);
+  padding: 0.6em 1em;
+  border-radius: 32px;
+  font-size: 0.7em;
+  min-width: 2em;
+}
+.neo_article .neo_post_tags ul a:hover {
+  outline: 1px solid var(--neo_primary_variant_brighter);
+}
 .neo_article .neo_content_container {
   padding: 2em;
   padding-top: 0;
@@ -196,6 +213,9 @@ tbody tr:nth-of-type(even) {
 }
 .neo_article .wp-block-columns p {
   margin: 0;
+}
+.neo_article li {
+  margin: 3px;
 }
 .neo_article .wp-caption {
   font-size: 0.8em;

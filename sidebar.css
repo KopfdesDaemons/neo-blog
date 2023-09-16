@@ -232,7 +232,6 @@
 .wp-block-latest-posts li,
 .widget_recent_entries li {
   margin-top: 0.5rem;
-  width: 100%;
   border: 1px solid rgb(212, 212, 212);
 }
 .wp-block-latest-posts li a,
