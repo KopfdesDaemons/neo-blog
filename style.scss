@@ -25,7 +25,19 @@ body {
 }
 
 input, textarea {
-    background-color: var(--neo_element_background_inputfeld);
+    background-color: var(--neo_element_background);
+    color: var(--neo_font_color);
+}
+
+input:-webkit-autofill {
+    -webkit-text-fill-color: var(--neo_font_color);
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    box-shadow: inset 0 0 0 1px var(--neo_element_background), inset 0 0 0 100px var(--neo_element_background);
 }
 
 h1,

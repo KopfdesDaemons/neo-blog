@@ -148,7 +148,6 @@
   padding: 0.5em;
   height: 25px;
   border: solid 1px var(--neo_font_color);
-  background-color: var(--neo_element_background_inputfeld);
 }
 .neo_comments_area .comment-respond .comment-form-author,
 .neo_comments_area .comment-respond .comment-form-email,
@@ -165,12 +164,6 @@
   position: absolute;
   top: 8px;
   left: 5px;
-  color: black;
-}
-.neo_comments_area .comment-respond .comment-form-author .required,
-.neo_comments_area .comment-respond .comment-form-email .required,
-.neo_comments_area .comment-respond .comment-form-url .required {
-  color: black;
 }
 .neo_comments_area .comment-respond .comment-form-author input:not(:placeholder-shown) + label,
 .neo_comments_area .comment-respond .comment-form-author input:focus + label,

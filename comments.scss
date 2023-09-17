@@ -59,10 +59,11 @@
             width: auto;
             margin: 0 1em 0 0;
         }
-        
+
         .fn {
             font-size: var(--neo_comments_name_font_size);
         }
+
         // "says:"
         span {
             display: none;
@@ -185,7 +186,6 @@
             padding: 0.5em;
             height: 25px;
             border: solid 1px var(--neo_font_color);
-            background-color: var(--neo_element_background_inputfeld);
         }
 
         .comment-form-author,
@@ -201,12 +201,6 @@
                 position: absolute;
                 top: 8px;
                 left: 5px;
-                color: black;
-            }
-
-            // *
-            .required {
-                color: black;
             }
 
             input:not(:placeholder-shown)+label,

@@ -40,7 +40,7 @@
 
                 wp_reset_postdata();
             } else {
-                echo __('No posts found.', 'neo');
+                echo '<h1>' . __('No posts found.', 'neo') . '</h1>';
             }
             ?>
         </div>
