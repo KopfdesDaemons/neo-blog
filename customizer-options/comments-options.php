@@ -116,7 +116,7 @@ function neo_custom_comments($wp_customize)
 
     // Border radius reply button
     $wp_customize->add_setting('comments_border_radius_reply_link', array(
-        'default' => '12',
+        'default' => '8',
         'transport' => 'refresh',
         'sanitize_callback' => 'absint',
     ));

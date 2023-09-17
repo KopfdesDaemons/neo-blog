@@ -18,6 +18,12 @@
   background-color: rgba(201, 201, 201, 0.4117647059);
   color: var(--neo_font_color);
 }
+#neo_searchform #neo_searchinput::-moz-placeholder {
+  color: var(--neo_font_color);
+}
+#neo_searchform #neo_searchinput::placeholder {
+  color: var(--neo_font_color);
+}
 #neo_searchform #neo_searchinput:focus {
   outline: 2px solid var(--neo_primary_color);
 }

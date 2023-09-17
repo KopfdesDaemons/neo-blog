@@ -179,7 +179,7 @@
                                         ?>;
             --neo_comments_border: <?php if (get_theme_mod('comments_border', true)) echo '1px solid var(--neo_primary_variant_darker)';
                                     else echo 'none' ?>;
-            --neo_comments_border_radius_reply_link: <?php echo esc_attr(get_theme_mod('comments_border_radius_reply_link', '12') . 'px');
+            --neo_comments_border_radius_reply_link: <?php echo esc_attr(get_theme_mod('comments_border_radius_reply_link', '8') . 'px');
                                                         ?>;
             --neo_comments_reply_link_position: <?php echo esc_attr(get_theme_mod('comments_reply_link_position', 'flex-start'));
                                                 ?>;

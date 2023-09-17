@@ -14,7 +14,6 @@ h1 {
 
 // Zitate
 .wp-block-quote,
-.wp-block-pullquote,
 blockquote {
     padding: 1em;
     background-color: rgb(95, 95, 102);
@@ -44,6 +43,10 @@ blockquote {
         top: 10px;
         left: 10px;
     }
+}
+
+.wp-block-pullquote {
+    color: white;
 }
 
 .neo_dark_mode .wp-block-quote,
@@ -163,6 +166,10 @@ tbody tr:nth-of-type(even) {
 
 .neo_dark_mode .neo_article {
     background-color: var(--neo_dark_mode_background_color_posts);
+
+    .neo_post_tags ul a {
+        background-color: var(--neo_primary_variant_much_brighter);
+    }
 }
 
 .neo_article {
@@ -204,7 +211,7 @@ tbody tr:nth-of-type(even) {
             a {
                 text-decoration: none;
                 text-align: center;
-                background-color: var(--neo_primary_variant_much_brighter);
+                background-color: var(--neo_element_background_variant);
                 padding: 0.6em 1em;
                 border-radius: 32px;
                 font-size: 0.7em;
@@ -321,6 +328,10 @@ tbody tr:nth-of-type(even) {
         a:hover {
             background-color: var(--neo_primary_variant_much_brighter);
         }
+    }
+
+    .wp-block-cover__inner-container {
+        color: rgb(245, 245, 245);
     }
 
     .gallery {

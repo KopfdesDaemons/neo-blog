@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: neo\n"
-"POT-Creation-Date: 2023-09-16 20:33+0200\n"
-"PO-Revision-Date: 2023-09-16 20:35+0200\n"
+"POT-Creation-Date: 2023-09-17 19:43+0200\n"
+"PO-Revision-Date: 2023-09-17 19:43+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de\n"
@@ -12,10 +12,14 @@ msgstr ""
 "X-Generator: Poedit 3.3.2\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-KeywordsList: gettext;gettext_noop;__;_e;_n:1,2;_x:1,2c;_ex:1,2c;"
-"esc_html__\n"
+"esc_html__;esc_html_e\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: 404.php:7
+#: 404.php:5
+msgid "File not found"
+msgstr "Datei nicht gefunden."
+
+#: 404.php:6
 msgid "Go to the home page"
 msgstr "Gehe zur Startseite"
 

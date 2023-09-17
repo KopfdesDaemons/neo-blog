@@ -156,7 +156,7 @@
                 background-color: var(--neo_primary_color);
                 padding: 0.5rem 1rem;
                 border-radius: var(--neo_comments_border_radius_reply_link);
-                color: black;
+                color: rgb(36, 36, 36);
                 border: none;
                 cursor: pointer;
                 font-size: 1.2em;
@@ -201,6 +201,11 @@
                 position: absolute;
                 top: 8px;
                 left: 5px;
+                color: black;
+            }
+
+            // *
+            .required {
                 color: black;
             }
 
