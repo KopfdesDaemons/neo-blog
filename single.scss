@@ -81,8 +81,9 @@ table {
     border-collapse: collapse;
     margin-top: 25px;
     font-size: clamp(0.8rem, 4vw, 1rem);
-    border-radius: 10px;
-    background-color: var(--neo_element_background);
+    border-radius: 8px;
+    display: block;
+    overflow-x: auto;
 }
 
 table thead tr {
@@ -98,6 +99,10 @@ td {
 
 th {
     color: var(--neo_primary_variant_darker);
+}
+
+tr {
+    background-color: var(--neo_element_background);
 }
 
 tbody tr:nth-of-type(even) {
@@ -203,7 +208,7 @@ tbody tr:nth-of-type(even) {
                 padding: 0.6em 1em;
                 border-radius: 32px;
                 font-size: 0.7em;
-                min-width: 2em;
+                color: var(--neo_font_color);
             }
     
             a:hover {
