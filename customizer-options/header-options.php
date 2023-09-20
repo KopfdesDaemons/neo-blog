@@ -283,7 +283,7 @@ function neo_header($wp_customize)
     // Menu backgound color
     $wp_customize->add_setting('header_menu_background_color', array(
         'default' => '',
-        'sanitize_callback' => 'sanitize_hex_color_alpha',
+        'sanitize_callback' => 'sanitize_hex_color',
     ));
 
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'header_menu_background_color', array(

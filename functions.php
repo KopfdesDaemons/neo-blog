@@ -130,6 +130,34 @@ function neo_custom_comment_form_fields($fields)
 }
 add_filter('comment_form_default_fields', 'neo_custom_comment_form_fields');
 
+class neo_Menu_Walker extends Walker_Nav_Menu
+{
+    function start_el(&$output, $item, $depth = 0, $args = [], $id = 0)
+    {
+        $output .= "<li class='" .  implode(" ", $item->classes) . "'>";
+        $output .= "<div class='neo_menuitem_contaier'>";
+
+        if ($item->url && $item->url != '#') {
+            $output .= '<a href="' . $item->url . '">';
+        } else {
+            $output .= '<span>';
+        }
+
+        $output .= $item->title;
+
+        if ($item->url && $item->url != '#') {
+            $output .= '</a>';
+        } else {
+            $output .= '</span>';
+        }
+
+        if ($args->walker->has_children) {
+            $output .= '<i class="neo_submenu_toggle fa fa-angle-down"></i>';
+        }
+        $output .= "</div>";
+    }
+}
+
 
 // Custom Settings
 require_once get_template_directory() . '/customizer-options/colors-options.php';
