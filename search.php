@@ -12,7 +12,7 @@
 
             if (have_posts()) {
                 $query = get_search_query();
-                echo '<h1>' . __('Search results for', 'neo') . ' "' . esc_html($query) . '"</h1>';
+                echo '<h1 class="neo_search_headline">' . __('Search results for', 'neo') . ' "' . esc_html($query) . '"</h1>';
 
                 while (have_posts()) {
                     the_post();

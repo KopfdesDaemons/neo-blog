@@ -319,12 +319,12 @@
     }
 }
 
-// Also on author page
 .widget_recent_comments ol,
 .wp-block-latest-comments,
 #recentcomments {
     margin: 0;
     padding: 0;
+    line-height: 1.3;
 
     li {
         padding: 0.5rem;

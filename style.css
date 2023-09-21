@@ -382,4 +382,8 @@ input::-moz-selection {
 
 input::selection {
   background: initial;
+}
+
+.neo_search_headline {
+  text-align: center;
 }/*# sourceMappingURL=style.css.map */
