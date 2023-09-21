@@ -9,7 +9,7 @@ function neo_mobile_settings($wp_customize)
 
     // Menu Style
     $wp_customize->add_setting('header_menu_style', array(
-        'default' => 'horizontal',
+        'default' => 'vertical',
         'transport' => 'refresh',
         'sanitize_callback' => 'sanitize_text_field',
     ));

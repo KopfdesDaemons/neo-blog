@@ -130,12 +130,14 @@ function neo_custom_comment_form_fields($fields)
 }
 add_filter('comment_form_default_fields', 'neo_custom_comment_form_fields');
 
+
+// Custom menu structure
 class neo_Menu_Walker extends Walker_Nav_Menu
 {
     function start_el(&$output, $item, $depth = 0, $args = [], $id = 0)
     {
         $output .= "<li class='" .  implode(" ", $item->classes) . "'>";
-        $output .= "<div class='neo_menuitem_contaier'>";
+        $output .= "<div class='neo_menuitem_container'>";
 
         if ($item->url && $item->url != '#') {
             $output .= '<a href="' . $item->url . '">';

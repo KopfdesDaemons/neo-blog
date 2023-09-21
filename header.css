@@ -121,6 +121,7 @@
   border: 1px solid var(--neo_header_menu_font_color);
   padding: 8px 10px;
   color: var(--neo_header_menu_font_color);
+  max-height: 15px;
 }
 @media only screen and (max-width: 600px) {
   .neo_header .neo_header_div .neo_header_menu_row {
@@ -132,7 +133,7 @@
   .neo_header .neo_header_div .neo_header_menu_row a {
     margin-left: 1em;
   }
-  .neo_header .neo_header_div .neo_header_menu_row .neo_menuitem_contaier {
+  .neo_header .neo_header_div .neo_header_menu_row .neo_menuitem_container {
     padding: 0.5rem;
   }
   .neo_header .neo_header_div .neo_header_menu_row .neo_header_menu_nav ul li {
@@ -146,17 +147,14 @@
   .neo_header .neo_header_div .neo_header_menu_row .neo_header_menu_vertical {
     flex-direction: column;
   }
+  .neo_header .neo_header_div .neo_header_menu_row ul {
+    display: none;
+  }
   .neo_header .neo_header_div .neo_header_menu_row li:hover {
     border-bottom: 1px solid;
     background-color: rgba(65, 65, 65, 0.479);
   }
-  .neo_header .neo_header_div .neo_header_menu_row li:hover ul:first-of-type {
-    display: flex;
-  }
-  .neo_header .neo_header_div .neo_header_menu_row li:hover ul:first-of-type ul {
-    display: none;
-  }
-  .neo_header .neo_header_div .neo_header_menu_row li:hover ul:first-of-type li:hover ul:first-of-type {
+  .neo_header .neo_header_div .neo_header_menu_row li:hover > ul {
     display: flex;
   }
   .neo_header .neo_header_div .neo_header_menu_row .menu-item-has-children .menu-item-has-children::after {
@@ -178,10 +176,6 @@
   .neo_header .neo_header_div #neo_header_menu_button {
     display: block;
   }
-}
-.neo_header .neo_header_div .neo_header_menu_nav::-webkit-scrollbar {
-  width: 5px;
-  height: 1px;
 }
 .neo_header .neo_header_div .neo_header_menu_nav {
   width: 100%;
@@ -232,15 +226,15 @@
   .neo_header .neo_header_div .neo_header_menu_nav .neo_header_menu_horizontal li ul ul {
     position: static;
   }
-  .neo_header .neo_header_div .neo_header_menu_nav .neo_header_menu_horizontal .neo_menuitem_contaier {
-    width: unset;
+  .neo_header .neo_header_div .neo_header_menu_nav .neo_header_menu_horizontal .neo_menuitem_container {
     margin: 0 0.5em;
     height: 100%;
+    width: 90%;
   }
-  .neo_header .neo_header_div .neo_header_menu_nav .neo_header_menu_horizontal .neo_menuitem_contaier a {
+  .neo_header .neo_header_div .neo_header_menu_nav .neo_header_menu_horizontal .neo_menuitem_container a {
     margin-left: 0;
   }
-  .neo_header .neo_header_div .neo_header_menu_nav .neo_header_menu_horizontal .neo_menuitem_contaier .neo_submenu_toggle {
+  .neo_header .neo_header_div .neo_header_menu_nav .neo_header_menu_horizontal .neo_menuitem_container .neo_submenu_toggle {
     margin-left: 0.5em;
   }
 }
@@ -261,15 +255,14 @@
   padding: 0;
   display: flex;
 }
-.neo_header .neo_header_div .neo_header_menu_nav ul .neo_menuitem_contaier {
+.neo_header .neo_header_div .neo_header_menu_nav ul .neo_menuitem_container {
   display: flex;
   justify-content: space-between;
   width: 100%;
   margin: 0 1em;
   box-sizing: border-box;
-  min-height: 2.5em;
 }
-.neo_header .neo_header_div .neo_header_menu_nav ul .neo_menuitem_contaier a {
+.neo_header .neo_header_div .neo_header_menu_nav ul .neo_menuitem_container a {
   display: flex;
   align-items: center;
 }
@@ -278,11 +271,13 @@
 }
 .neo_header .neo_header_div .neo_header_menu_nav ul li {
   display: flex;
+  justify-content: center;
   align-items: center;
   white-space: nowrap;
   position: relative;
   border-bottom: 1px solid transparent;
   font-size: 1.2rem;
+  min-height: 3rem;
 }
 .neo_header .neo_header_div .neo_header_menu_nav ul li ul {
   background-color: var(--neo_primary_variant_much_brighter);
@@ -301,7 +296,7 @@
   }
 }
 .neo_header .neo_header_div .neo_header_menu_nav ul li ul a {
-  color: var(--neo_header_menu_font_color);
+  overflow: hidden;
 }
 .neo_header .neo_header_div .neo_header_menu_nav ul li ul li {
   position: relative;
@@ -319,7 +314,6 @@
   }
   .neo_header .neo_header_div .neo_header_menu_open .neo_header_menu_nav {
     justify-content: flex-start;
-    overflow-y: auto;
   }
   .neo_header .neo_header_div .neo_header_menu_open .neo_header_menu_vertical {
     transition: max-height 500ms;
@@ -333,12 +327,6 @@
   }
   .neo_header .neo_header_div .neo_header_menu_open .neo_header_menu_vertical ul {
     position: static;
-  }
-  .neo_header .neo_header_div .neo_header_menu_open .neo_header_menu_vertical .menu-all-pages-container ul ul {
-    top: 100%;
-    left: 0;
-    height: auto;
-    display: none;
   }
 }
 
