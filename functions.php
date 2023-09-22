@@ -136,7 +136,11 @@ class neo_Menu_Walker extends Walker_Nav_Menu
 {
     function start_el(&$output, $item, $depth = 0, $args = [], $id = 0)
     {
-        $output .= "<li class='" .  implode(" ", $item->classes) . "'>";
+        if (empty($item->title)) {
+            return;
+        }
+
+        $output .= "<li class='" .  implode(" ", (array)$item->classes) . "'>";
         $output .= "<div class='neo_menuitem_container'>";
 
         if ($item->url && $item->url != '#') {
@@ -159,6 +163,7 @@ class neo_Menu_Walker extends Walker_Nav_Menu
         $output .= "</div>";
     }
 }
+
 
 
 // Custom Settings

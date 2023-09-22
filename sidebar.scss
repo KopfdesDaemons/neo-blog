@@ -1,3 +1,8 @@
+.widget, .widget ul {
+    list-style: none;
+    padding: 0;
+}
+
 #neo_sidebar {
     @media only screen and (max-width: 950px) {
         display: none;
@@ -9,12 +14,6 @@
     width: 20em;
     height: min-content;
     overflow: hidden;
-
-    ul {
-        // margin: 0;
-        list-style: none;
-        padding: 0;
-    }
 
     hr {
         width: 80%;
@@ -58,9 +57,11 @@
     margin: 0 1em 1em 1em;
     max-height: 800px;
     overflow-y: auto;
+    list-style: none;
+    padding: 0;
 }
 
-.widget_archive {
+.widget_archive, .wp-block-archives {
     padding: 0;
 
     li {
@@ -83,6 +84,10 @@
 
 .wp-block-calendar,
 .widget_calendar {
+    table {
+        display: table;
+    }
+    
     caption {
         color: var(--neo_font_color);
     }
@@ -201,6 +206,8 @@
     font-size: 0.9em;
     max-height: 800px;
     overflow-y: auto;
+    padding: 0;
+    list-style: none;
 
     li {
         background-color: var(--neo_body);

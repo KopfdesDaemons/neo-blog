@@ -290,17 +290,13 @@ a {
 }
 .neo_dark_mode .neo_post_card {
   border: none;
+  border: 1px solid rgb(49, 49, 49);
 }
 .neo_dark_mode .neo_post_card img {
   filter: brightness(0.8);
 }
 .neo_dark_mode .neo_post_card .neo_post_card_tags_div a {
   background-color: var(--neo_primary_variant_much_brighter);
-}
-@media only screen and (max-width: 600px) {
-  .neo_dark_mode .neo_post_card {
-    border: 1px solid rgb(49, 49, 49);
-  }
 }
 
 .neo_sticky_post .neo_post_card_content_div .neo_post_card_buttom_row .neo_post_card_pin {

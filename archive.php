@@ -63,12 +63,13 @@
 
                 <!-- Show latest comments -->
                 <?php
-                if (get_theme_mod('author_page_latest_comments', true)) {
-                    $args = array(
-                        'user_id' => $author_id,
-                        'number' => 5, // Number of comments
-                    );
-                    $author_comments = get_comments($args); ?>
+                $args = array(
+                    'user_id' => $author_id,
+                    'number' => 5, // Number of comments
+                );
+                $author_comments = get_comments($args);
+                if (get_theme_mod('author_page_latest_comments', true) && !empty($author_comments)) {
+                ?>
                     <h3 class="neo_author_last_comments_headline">
                         <?php echo __('Last comments from', 'neo') . ' ' . $author_name; ?></h3>
                     <ol class="has-avatars has-dates has-excerpts wp-block-latest-comments">

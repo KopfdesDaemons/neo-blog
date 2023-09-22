@@ -39,25 +39,6 @@ function neo_custom_fonts($wp_customize)
         ),
     ));
 
-    // Line height
-    $wp_customize->add_setting('line_heigt', array(
-        'default' => '24',
-        'transport' => 'refresh',
-        'sanitize_callback' => 'absint',
-    ));
-
-    $wp_customize->add_control('line_heigt', array(
-        'type' => 'range',
-        'section' => 'title_tagline',
-        'label' => __('Line height in paragraphs', 'neo'),
-        'section' => 'theme_fonts_section',
-        'input_attrs' => array(
-            'min' => 15,
-            'max' => 50,
-            'step' => 1,
-        ),
-    ));
-
     // Font color light mode
     $wp_customize->add_setting('font_color_light_mode', array(
         'default' => '#0a0a0a',

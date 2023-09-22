@@ -322,9 +322,7 @@ a {
         background-color: var(--neo_primary_variant_much_brighter);
     }
 
-    @media only screen and (max-width: 600px) {
-        border: 1px solid rgb(49, 49, 49);
-    }
+    border: 1px solid rgb(49, 49, 49);
 }
 
 .neo_sticky_post {

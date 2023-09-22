@@ -1,3 +1,8 @@
+.widget, .widget ul {
+  list-style: none;
+  padding: 0;
+}
+
 #neo_sidebar {
   margin: 0 1em;
   padding-bottom: 0.5em;
@@ -11,10 +16,6 @@
   #neo_sidebar {
     display: none;
   }
-}
-#neo_sidebar ul {
-  list-style: none;
-  padding: 0;
 }
 #neo_sidebar hr {
   width: 80%;
@@ -53,26 +54,32 @@
   margin: 0 1em 1em 1em;
   max-height: 800px;
   overflow-y: auto;
-}
-
-.widget_archive {
+  list-style: none;
   padding: 0;
 }
-.widget_archive li {
+
+.widget_archive, .wp-block-archives {
+  padding: 0;
+}
+.widget_archive li, .wp-block-archives li {
   padding: 0.8em 1em;
   border: 1px solid var(--neo_element_background_variant_darker);
   box-shadow: inset 0px 0px 20px 0px var(--neo_element_background_variant);
 }
-.widget_archive li a {
+.widget_archive li a, .wp-block-archives li a {
   text-decoration: none;
   width: 100%;
   height: 100%;
   color: var(--neo_font_color);
 }
-.widget_archive li:nth-child(even) {
+.widget_archive li:nth-child(even), .wp-block-archives li:nth-child(even) {
   background-color: var(--neo_element_background);
 }
 
+.wp-block-calendar table,
+.widget_calendar table {
+  display: table;
+}
 .wp-block-calendar caption,
 .widget_calendar caption {
   color: var(--neo_font_color);
@@ -181,6 +188,8 @@
   font-size: 0.9em;
   max-height: 800px;
   overflow-y: auto;
+  padding: 0;
+  list-style: none;
 }
 .wp-block-page-list li {
   background-color: var(--neo_body);

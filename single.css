@@ -13,7 +13,7 @@ h1 {
 
 .wp-block-quote,
 blockquote {
-  padding: 1em;
+  padding: 1em !important;
   background-color: rgb(95, 95, 102);
   font-style: italic;
   margin: 1em 0;
@@ -21,7 +21,7 @@ blockquote {
   flex-direction: column;
   color: white;
   position: relative;
-  padding-left: 40px;
+  padding-left: 40px !important;
 }
 .wp-block-quote p,
 blockquote p {
@@ -37,7 +37,6 @@ blockquote p::before {
   content: "\f10d";
   font-family: "Font Awesome Solid";
   font-size: 1.5em;
-  margin-right: 10px;
   position: absolute;
   top: 10px;
   left: 10px;
@@ -82,7 +81,6 @@ table {
   border-collapse: collapse;
   margin-top: 25px;
   font-size: clamp(0.8rem, 4vw, 1rem);
-  border-radius: 8px;
   display: block;
   overflow-x: auto;
 }
@@ -95,7 +93,6 @@ table thead tr {
 th,
 td {
   padding: 12px 15px;
-  border: none !important;
 }
 
 th {
@@ -106,11 +103,15 @@ tr {
   background-color: var(--neo_element_background);
 }
 
-tbody tr:nth-of-type(even) {
+.wp-block-table.is-style-stripes {
+  border-bottom: none;
+}
+
+.wp-block-table.is-style-stripes tbody tr:nth-child(odd) {
   background-color: var(--neo_element_background_variant_darker);
 }
 
-.neo_dark_mode table tbody tr:nth-of-type(even) {
+.neo_dark_mode .wp-block-table.is-style-stripes tbody tr:nth-child(odd) {
   color: #000000;
 }
 
@@ -231,9 +232,6 @@ tbody tr:nth-of-type(even) {
 }
 .neo_article figure {
   margin: 0;
-}
-.neo_article p {
-  line-height: var(--neo_line_height);
 }
 .neo_article img {
   margin: 0.6em 0;
