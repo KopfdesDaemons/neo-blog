@@ -79,8 +79,8 @@ function neo_blog_register_menus()
 {
     register_nav_menus(
         array(
-            'header-menu' => __('Header Menu', 'neo_blog'),
-            'footer-menu' => __('Footer Menu', 'neo_blog')
+            'header-menu' => __('Header Menu', 'neo-blog'),
+            'footer-menu' => __('Footer Menu', 'neo-blog')
         )
     );
 }
@@ -89,7 +89,7 @@ add_action('init', 'neo_blog_register_menus');
 function neo_blog_register_sidebar()
 {
     register_sidebar(array(
-        'name' => __('Sidebar', 'neo_blog'),
+        'name' => __('Sidebar', 'neo-blog'),
         'id' => 'my-sidebar',
         'before_widget' => '<div id="%1$s" class="widget %2$s">',
         'after_widget' => '</div>',
@@ -109,21 +109,21 @@ function neo_blog_custom_comment_form_fields($fields)
     $fields['author'] = '<p class="comment-form-author">' .
         '<input id="author" name="author" placeholder="&nbsp;" type="text" value="' . esc_attr($commenter['comment_author']) .
         '" size="30" ' . 'aria-required="true" required />' .
-        '<label for="author">' . __('Your Name', 'neo_blog') . '<span class="required">*</span></label>' .
+        '<label for="author">' . __('Your Name', 'neo-blog') . '<span class="required">*</span></label>' .
         '</p>';
 
     // Modify the Email field
     $fields['email'] = '<p class="comment-form-email">' .
         '<input id="email" name="email" placeholder="&nbsp;" type="text" value="' . esc_attr($commenter['comment_author_email']) .
         '" size="30" ' . 'aria-required="true" required />' .
-        '<label for="email">' . __('Your Email', 'neo_blog') . '<span class="required">*</span></label>' .
+        '<label for="email">' . __('Your Email', 'neo-blog') . '<span class="required">*</span></label>' .
         '</p>';
 
     // URL field
     $fields['url'] = '<p class="comment-form-url">' .
         '<input id="url" name="url" placeholder="&nbsp;" type="text" value="' . esc_attr($commenter['comment_author_url']) .
         '" size="30" />' .
-        '<label for="url">' . __('Your Website', 'neo_blog') . '</label>' .
+        '<label for="url">' . __('Your Website', 'neo-blog') . '</label>' .
         '</p>';
 
     return $fields;

@@ -3,7 +3,7 @@ function neo_blog_custom_author_page($wp_customize)
 {
     // Section
     $wp_customize->add_section('custom_author_page', array(
-        'title' => __('Author Page', 'neo_blog'),
+        'title' => __('Author Page', 'neo-blog'),
         'priority' => 30,
     ));
 
@@ -16,7 +16,7 @@ function neo_blog_custom_author_page($wp_customize)
 
     $wp_customize->add_control('author_page_sidebar', array(
         'type' => 'checkbox',
-        'label' => __('Show sidebar', 'neo_blog'),
+        'label' => __('Show sidebar', 'neo-blog'),
         'section' => 'custom_author_page',
     ));
 
@@ -29,7 +29,7 @@ function neo_blog_custom_author_page($wp_customize)
 
     $wp_customize->add_control('author_page_latest_comments', array(
         'type' => 'checkbox',
-        'label' => __('Show recent comments', 'neo_blog'),
+        'label' => __('Show recent comments', 'neo-blog'),
         'section' => 'custom_author_page',
     ));
 
@@ -42,7 +42,7 @@ function neo_blog_custom_author_page($wp_customize)
 
     $wp_customize->add_control('author_page_role', array(
         'type' => 'checkbox',
-        'label' => __('Show author role', 'neo_blog'),
+        'label' => __('Show author role', 'neo-blog'),
         'section' => 'custom_author_page',
     ));
 
@@ -55,7 +55,7 @@ function neo_blog_custom_author_page($wp_customize)
 
     $wp_customize->add_control('author_number_of_posts', array(
         'type' => 'checkbox',
-        'label' => __('Show number of posts', 'neo_blog'),
+        'label' => __('Show number of posts', 'neo-blog'),
         'section' => 'custom_author_page',
     ));
 
@@ -68,7 +68,7 @@ function neo_blog_custom_author_page($wp_customize)
 
     $wp_customize->add_control('author_registration_date', array(
         'type' => 'checkbox',
-        'label' => __('Show registration date', 'neo_blog'),
+        'label' => __('Show registration date', 'neo-blog'),
         'section' => 'custom_author_page',
     ));
 
@@ -81,7 +81,7 @@ function neo_blog_custom_author_page($wp_customize)
 
     $wp_customize->add_control('author_website', array(
         'type' => 'checkbox',
-        'label' => __('Show author website', 'neo_blog'),
+        'label' => __('Show author website', 'neo-blog'),
         'section' => 'custom_author_page',
     ));
 
@@ -95,7 +95,7 @@ function neo_blog_custom_author_page($wp_customize)
     $wp_customize->add_control('image_size_setting', array(
         'type' => 'range',
         'section' => 'title_tagline',
-        'label' => __('Image size', 'neo_blog'),
+        'label' => __('Image size', 'neo-blog'),
         'section' => 'custom_author_page',
         'input_attrs' => array(
             'min' => 50,

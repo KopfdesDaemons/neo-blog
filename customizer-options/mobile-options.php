@@ -3,7 +3,7 @@ function neo_blog_mobile_settings($wp_customize)
 {
     // Section
     $wp_customize->add_section('neo_blog_mobile_section', array(
-        'title'      => __('Mobile Settings', 'neo_blog'),
+        'title'      => __('Mobile Settings', 'neo-blog'),
         'priority'   => 30,
     ));
 
@@ -17,10 +17,10 @@ function neo_blog_mobile_settings($wp_customize)
     $wp_customize->add_control('header_menu_style', array(
         'type' => 'select',
         'section' => 'neo_blog_mobile_section',
-        'label' => __('Header menu style', 'neo_blog'),
+        'label' => __('Header menu style', 'neo-blog'),
         'choices' => array(
-            'horizontal' => __('horizontal scrolling', 'neo_blog'),
-            'vertical' => __('vertical arrangement with menu button', 'neo_blog'),
+            'horizontal' => __('horizontal scrolling', 'neo-blog'),
+            'vertical' => __('vertical arrangement with menu button', 'neo-blog'),
         ),
         'active_callback' => 'header_menu_callback'
     ));
@@ -35,7 +35,7 @@ function neo_blog_mobile_settings($wp_customize)
     $wp_customize->add_control('content_padding', array(
         'type' => 'number',
         'section' => 'neo_blog_mobile_section',
-        'label' => __('Content Padding Pages/Posts (in pixels)', 'neo_blog'),
+        'label' => __('Content Padding Pages/Posts (in pixels)', 'neo-blog'),
     ));
 
     // Padding Feed
@@ -47,7 +47,7 @@ function neo_blog_mobile_settings($wp_customize)
 
     $wp_customize->add_control('mobile_feed_padding', array(
         'type' => 'number',
-        'label' => __('Mobile feed spacing in pixels (padding)', 'neo_blog'),
+        'label' => __('Mobile feed spacing in pixels (padding)', 'neo-blog'),
         'section' => 'neo_blog_mobile_section',
         'input_attrs' => array(
             'min' => 0,

@@ -3,7 +3,7 @@ function neo_blog_header($wp_customize)
 {
     // Section
     $wp_customize->add_section('custom_theme_header', array(
-        'title' => __('Header', 'neo_blog'),
+        'title' => __('Header', 'neo-blog'),
         'priority' => 30,
     ));
 
@@ -16,7 +16,7 @@ function neo_blog_header($wp_customize)
 
     $wp_customize->add_control('fixed_header', array(
         'type' => 'checkbox',
-        'label' => __('Fix Header', 'neo_blog'),
+        'label' => __('Fix Header', 'neo-blog'),
         'section' => 'custom_theme_header',
     ));
 
@@ -29,7 +29,7 @@ function neo_blog_header($wp_customize)
 
     $wp_customize->add_control('header_menu', array(
         'type' => 'checkbox',
-        'label' => __('Show menu in header', 'neo_blog'),
+        'label' => __('Show menu in header', 'neo-blog'),
         'section' => 'custom_theme_header',
     ));
 
@@ -42,7 +42,7 @@ function neo_blog_header($wp_customize)
 
     $wp_customize->add_control('home_page_link', array(
         'type' => 'checkbox',
-        'label' => __('Show link to home page', 'neo_blog'),
+        'label' => __('Show link to home page', 'neo-blog'),
         'section' => 'custom_theme_header',
     ));
 
@@ -55,7 +55,7 @@ function neo_blog_header($wp_customize)
 
     $wp_customize->add_control('searchbar', array(
         'type' => 'checkbox',
-        'label' => __('Show search bar', 'neo_blog'),
+        'label' => __('Show search bar', 'neo-blog'),
         'section' => 'custom_theme_header',
     ));
 
@@ -68,7 +68,7 @@ function neo_blog_header($wp_customize)
 
     $wp_customize->add_control('search_button', array(
         'type' => 'checkbox',
-        'label' => __('Show search button', 'neo_blog'),
+        'label' => __('Show search button', 'neo-blog'),
         'section' => 'custom_theme_header',
         'active_callback' => 'searchbar_active_callback'
     ));
@@ -82,7 +82,7 @@ function neo_blog_header($wp_customize)
 
     $wp_customize->add_control('title', array(
         'type' => 'checkbox',
-        'label' => __('Show title', 'neo_blog'),
+        'label' => __('Show title', 'neo-blog'),
         'section' => 'custom_theme_header',
     ));
 
@@ -96,7 +96,7 @@ function neo_blog_header($wp_customize)
     $wp_customize->add_control('title_size_setting', array(
         'type' => 'range',
         'section' => 'title_tagline',
-        'label' => __('Title size', 'neo_blog'),
+        'label' => __('Title size', 'neo-blog'),
         'section' => 'custom_theme_header',
         'input_attrs' => array(
             'min' => 8,
@@ -115,7 +115,7 @@ function neo_blog_header($wp_customize)
 
     $wp_customize->add_control('tagline', array(
         'type' => 'checkbox',
-        'label' => __('Show slogan', 'neo_blog'),
+        'label' => __('Show slogan', 'neo-blog'),
         'section' => 'custom_theme_header',
     ));
 
@@ -129,7 +129,7 @@ function neo_blog_header($wp_customize)
     $wp_customize->add_control('slogan_size_setting', array(
         'type' => 'range',
         'section' => 'title_tagline',
-        'label' => __('Slogan size', 'neo_blog'),
+        'label' => __('Slogan size', 'neo-blog'),
         'section' => 'custom_theme_header',
         'input_attrs' => array(
             'min' => 8,
@@ -148,7 +148,7 @@ function neo_blog_header($wp_customize)
 
     $wp_customize->add_control('header_text_background', array(
         'type' => 'checkbox',
-        'label' => __('Text background', 'neo_blog'),
+        'label' => __('Text background', 'neo-blog'),
         'section' => 'custom_theme_header',
     ));
 
@@ -162,7 +162,7 @@ function neo_blog_header($wp_customize)
     $wp_customize->add_control('header_gap', array(
         'type' => 'range',
         'section' => 'title_tagline',
-        'label' => __('Element spacing', 'neo_blog'),
+        'label' => __('Element spacing', 'neo-blog'),
         'section' => 'custom_theme_header',
         'input_attrs' => array(
             'min' => 0,
@@ -204,7 +204,7 @@ function neo_blog_header($wp_customize)
     ));
 
     $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'image_control2', array(
-        'label' => __('Background image', 'neo_blog'),
+        'label' => __('Background image', 'neo-blog'),
         'section' => 'custom_theme_header',
         'settings' => 'header_background_image',
         'type' => 'image',
@@ -221,7 +221,7 @@ function neo_blog_header($wp_customize)
     $wp_customize->add_control('header_background_saturation', array(
         'type' => 'range',
         'section' => 'title_tagline',
-        'label' => __('Background image saturation', 'neo_blog'),
+        'label' => __('Background image saturation', 'neo-blog'),
         'section' => 'custom_theme_header',
         'input_attrs' => array(
             'min' => 0,
@@ -238,7 +238,7 @@ function neo_blog_header($wp_customize)
     ));
 
     $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'image_control', array(
-        'label' => __('Banner image', 'neo_blog'),
+        'label' => __('Banner image', 'neo-blog'),
         'section' => 'custom_theme_header',
         'settings' => 'header_banner',
     )));
@@ -250,7 +250,7 @@ function neo_blog_header($wp_customize)
     ));
 
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'font_color_light_mode2', array(
-        'label' => __('Font color light mode', 'neo_blog'),
+        'label' => __('Font color light mode', 'neo-blog'),
         'section' => 'custom_theme_header',
         'settings' => 'header_font_color_light_mode'
     )));
@@ -262,7 +262,7 @@ function neo_blog_header($wp_customize)
     ));
 
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'font_color_dark_mode2', array(
-        'label' => __('Font color dark mode', 'neo_blog'),
+        'label' => __('Font color dark mode', 'neo-blog'),
         'section' => 'custom_theme_header',
         'settings' => 'header_font_color_dark_mode'
     )));
@@ -274,7 +274,7 @@ function neo_blog_header($wp_customize)
     ));
 
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'font_color_header_menu', array(
-        'label' => __('Font color menu', 'neo_blog'),
+        'label' => __('Font color menu', 'neo-blog'),
         'section' => 'custom_theme_header',
         'settings' => 'header_menu_font_color',
         'active_callback' => 'header_menu_callback'
@@ -287,7 +287,7 @@ function neo_blog_header($wp_customize)
     ));
 
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'header_menu_background_color', array(
-        'label' => __('Menu backgound color', 'neo_blog'),
+        'label' => __('Menu backgound color', 'neo-blog'),
         'section' => 'custom_theme_header',
         'settings' => 'header_menu_background_color',
         'active_callback' => 'header_menu_callback'

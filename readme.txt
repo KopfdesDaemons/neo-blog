@@ -8,7 +8,7 @@ License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Font Awesome License: Font Awesome Free License (https://fontawesome.com/license/free)
 Google Fonts License: Open Font License (https://scripts.sil.org/OFL)
-Copyright: neo_blog Theme, Copyright 2023
+Copyright: Neo Blog Theme, Copyright 2023
 
 == Description ==
 

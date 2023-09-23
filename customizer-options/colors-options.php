@@ -4,7 +4,7 @@ function neo_blog_custom_colors($wp_customize)
 {
     // Section
     $wp_customize->add_section('custom_theme_colors', array(
-        'title' => __('Colors', 'neo_blog'),
+        'title' => __('Colors', 'neo-blog'),
         'priority' => 30,
     ));
 
@@ -15,7 +15,7 @@ function neo_blog_custom_colors($wp_customize)
     ));
 
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'diwp_background_color', array(
-        'label' => __('Primary Color', 'neo_blog'),
+        'label' => __('Primary Color', 'neo-blog'),
         'section' => 'custom_theme_colors',
         'settings' => 'primary_color'
     )));
@@ -27,7 +27,7 @@ function neo_blog_custom_colors($wp_customize)
     ));
 
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'element_background_color_light_mode', array(
-        'label' => __('Element background color light mode', 'neo_blog'),
+        'label' => __('Element background color light mode', 'neo-blog'),
         'section' => 'custom_theme_colors',
         'settings' => 'element_background_color_light_mode'
     )));
@@ -39,7 +39,7 @@ function neo_blog_custom_colors($wp_customize)
     ));
 
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'element_background_color_dark_mode', array(
-        'label' => __('Element background color dark mode', 'neo_blog'),
+        'label' => __('Element background color dark mode', 'neo-blog'),
         'section' => 'custom_theme_colors',
         'settings' => 'element_background_color_dark_mode'
     )));
@@ -51,7 +51,7 @@ function neo_blog_custom_colors($wp_customize)
     ));
 
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'Background_color_light_mode', array(
-        'label' => __('Background color light mode', 'neo_blog'),
+        'label' => __('Background color light mode', 'neo-blog'),
         'section' => 'custom_theme_colors',
         'settings' => 'background_color_light_mode'
     )));
@@ -63,7 +63,7 @@ function neo_blog_custom_colors($wp_customize)
     ));
 
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'Background_color_dark_mode', array(
-        'label' => __('Background color dark mode', 'neo_blog'),
+        'label' => __('Background color dark mode', 'neo-blog'),
         'section' => 'custom_theme_colors',
         'settings' => 'background_color_dark_mode'
     )));
@@ -77,12 +77,12 @@ function neo_blog_custom_colors($wp_customize)
 
     $wp_customize->add_control('dark_mode', array(
         'type' => 'select',
-        'label' => __('Design scheme', 'neo_blog'),
+        'label' => __('Design scheme', 'neo-blog'),
         'section' => 'custom_theme_colors',
         'choices' => array(
-            'dark' => __('Dark', 'neo_blog'),
-            'light' => __('Light', 'neo_blog'),
-            'system' => __('System', 'neo_blog'),
+            'dark' => __('Dark', 'neo-blog'),
+            'light' => __('Light', 'neo-blog'),
+            'system' => __('System', 'neo-blog'),
         ),
     ));
 }

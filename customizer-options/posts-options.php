@@ -3,9 +3,9 @@ function neo_blog_custom_posts($wp_customize)
 {
     // Section
     $wp_customize->add_section('custom_theme_article', array(
-        'title' => __('Posts', 'neo_blog'),
+        'title' => __('Posts', 'neo-blog'),
         'priority' => 30,
-        'description' => __('Settings of the individual posts.', 'neo_blog')
+        'description' => __('Settings of the individual posts.', 'neo-blog')
     ));
 
     // Maximum width of the post
@@ -18,7 +18,7 @@ function neo_blog_custom_posts($wp_customize)
     $wp_customize->add_control('maximum_width_of_posts', array(
         'type' => 'range',
         'section' => 'title_tagline',
-        'label' => __('Maximum width of posts', 'neo_blog'),
+        'label' => __('Maximum width of posts', 'neo-blog'),
         'section' => 'custom_theme_article',
         'input_attrs' => array(
             'min' => 50,
@@ -37,7 +37,7 @@ function neo_blog_custom_posts($wp_customize)
     $wp_customize->add_control('heading_font_size', array(
         'type' => 'range',
         'section' => 'title_tagline',
-        'label' => __('Heading font size', 'neo_blog'),
+        'label' => __('Heading font size', 'neo-blog'),
         'section' => 'custom_theme_article',
         'input_attrs' => array(
             'min' => 24,
@@ -57,11 +57,11 @@ function neo_blog_custom_posts($wp_customize)
     $wp_customize->add_control('posts_title_alignment', array(
         'type' => 'select',
         'section' => 'custom_theme_article',
-        'label' => __('Page Title Alignment', 'neo_blog'),
+        'label' => __('Page Title Alignment', 'neo-blog'),
         'choices' => array(
-            'left' => __('left', 'neo_blog'),
-            'center' => __('center', 'neo_blog'),
-            'right' => __('right', 'neo_blog'),
+            'left' => __('left', 'neo-blog'),
+            'center' => __('center', 'neo-blog'),
+            'right' => __('right', 'neo-blog'),
         ),
     ));
 
@@ -72,7 +72,7 @@ function neo_blog_custom_posts($wp_customize)
     ));
 
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'Posts_background_color', array(
-        'label' => __('Background color light mode', 'neo_blog'),
+        'label' => __('Background color light mode', 'neo-blog'),
         'section' => 'custom_theme_article',
         'settings' => 'background_color_posts'
     )));
@@ -84,7 +84,7 @@ function neo_blog_custom_posts($wp_customize)
     ));
 
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'Post_background_color_dark_mode', array(
-        'label' => __('Background color dark mode', 'neo_blog'),
+        'label' => __('Background color dark mode', 'neo-blog'),
         'section' => 'custom_theme_article',
         'settings' => 'dark_mode_background_color_posts'
     )));
@@ -98,7 +98,7 @@ function neo_blog_custom_posts($wp_customize)
 
     $wp_customize->add_control('post_date', array(
         'type' => 'checkbox',
-        'label' => __('Show date', 'neo_blog'),
+        'label' => __('Show date', 'neo-blog'),
         'section' => 'custom_theme_article',
     ));
 
@@ -111,7 +111,7 @@ function neo_blog_custom_posts($wp_customize)
 
     $wp_customize->add_control('post_categories', array(
         'type' => 'checkbox',
-        'label' => __('Show categories', 'neo_blog'),
+        'label' => __('Show categories', 'neo-blog'),
         'section' => 'custom_theme_article',
     ));
 
@@ -124,7 +124,7 @@ function neo_blog_custom_posts($wp_customize)
 
     $wp_customize->add_control('tags', array(
         'type' => 'checkbox',
-        'label' => __('Show tags', 'neo_blog'),
+        'label' => __('Show tags', 'neo-blog'),
         'section' => 'custom_theme_article',
     ));
 
@@ -137,7 +137,7 @@ function neo_blog_custom_posts($wp_customize)
 
     $wp_customize->add_control('author_details', array(
         'type' => 'checkbox',
-        'label' => __('Show author details', 'neo_blog'),
+        'label' => __('Show author details', 'neo-blog'),
         'section' => 'custom_theme_article',
     ));
 
@@ -150,7 +150,7 @@ function neo_blog_custom_posts($wp_customize)
 
     $wp_customize->add_control('post_pagination', array(
         'type' => 'checkbox',
-        'label' => __('Show post pagination', 'neo_blog'),
+        'label' => __('Show post pagination', 'neo-blog'),
         'section' => 'custom_theme_article',
     ));
 
@@ -163,7 +163,7 @@ function neo_blog_custom_posts($wp_customize)
 
     $wp_customize->add_control('post_sidebar', array(
         'type' => 'checkbox',
-        'label' => __('Show sidebar', 'neo_blog'),
+        'label' => __('Show sidebar', 'neo-blog'),
         'section' => 'custom_theme_article',
     ));
 }

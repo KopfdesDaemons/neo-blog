@@ -33,15 +33,15 @@
                         'total' => $query->max_num_pages,
                         'current' => $paged,
                         'prev_next' => true,
-                        'prev_text' => __('« Previous', 'neo_blog'),
-                        'next_text' => __('Next »', 'neo_blog'),
+                        'prev_text' => __('« Previous', 'neo-blog'),
+                        'next_text' => __('Next »', 'neo-blog'),
                     ));
                     echo '</div>';
                 }
 
                 wp_reset_postdata();
             } else {
-                echo esc_html__('No posts found.', 'neo_blog');
+                echo esc_html__('No posts found.', 'neo-blog');
             }
             ?>
         </div>

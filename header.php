@@ -18,7 +18,7 @@
     <meta name="description" content="<?php echo esc_attr(get_the_excerpt()); ?>">
 
     <?php if (is_singular() && pings_open()) { ?>
-    <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
+        <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
     <?php }
 
     wp_head(); ?>
@@ -66,17 +66,16 @@
                 <?php
                 $home_page_link = get_theme_mod('home_page_link', true);
                 if ($home_page_link) { ?>
-                <a href="/" class="neo_blog_header_home_link" title="<?php echo __('Home page', 'neo_blog') ?>">
-                    <i class="fa-solid fa-house"></i>
-                </a>
+                    <a href="/" class="neo_blog_header_home_link" title="<?php echo __('Home page', 'neo-blog') ?>">
+                        <i class="fa-solid fa-house"></i>
+                    </a>
                 <?php } ?>
 
                 <?php
                 $header_menu_is_activ = get_theme_mod('header_menu', true);
                 $header_menu_style_is_horizontal = get_theme_mod('header_menu_style', 'vertical') == 'horizontal';
                 if ($header_menu_is_activ & !$header_menu_style_is_horizontal) { ?>
-                <button id="neo_blog_header_menu_button" onclick="neo_blog_toggle_menu()"><i
-                        class="fa-solid fa-bars"></i></button>
+                    <button id="neo_blog_header_menu_button" onclick="neo_blog_toggle_menu()"><i class="fa-solid fa-bars"></i></button>
                 <?php }
                 $searchbar = get_theme_mod('searchbar', false);
                 if ($searchbar) {
@@ -93,9 +92,9 @@
                     <?php
                     $home_page_link = get_theme_mod('home_page_link', true);
                     if ($home_page_link) { ?>
-                    <a href="/" class="neo_blog_header_home_link" title="<?php echo __('Home page', 'neo_blog') ?>">
-                        <i class="fa-solid fa-house"></i>
-                    </a>
+                        <a href="/" class="neo_blog_header_home_link" title="<?php echo __('Home page', 'neo-blog') ?>">
+                            <i class="fa-solid fa-house"></i>
+                        </a>
                     <?php } ?>
                     <?php
                     if ($header_menu_is_activ & !$header_menu_style_is_horizontal) {

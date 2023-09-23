@@ -31,13 +31,13 @@
                             $author_roles = get_the_author_meta('roles');
 
                             if (!empty($author_roles) && get_theme_mod('author_page_role', true)) {
-                                echo '<li><b>' . __('Role', 'neo_blog') . ':</b> <span>' . $author_roles[0] . '</span></li>';
+                                echo '<li><b>' . __('Role', 'neo-blog') . ':</b> <span>' . $author_roles[0] . '</span></li>';
                             }
 
                             $author_posts_count = count_user_posts($author_id);
 
                             if (get_theme_mod('author_number_of_posts', true)) {
-                                echo '<li><b>' . __('Number of posts', 'neo_blog') . ':</b> <span>' . $author_posts_count . '</span></li>';
+                                echo '<li><b>' . __('Number of posts', 'neo-blog') . ':</b> <span>' . $author_posts_count . '</span></li>';
                             }
 
                             if (get_theme_mod('author_registration_date', true)) {
@@ -49,12 +49,12 @@
                                 // Format the date using date_i18n() into the national representation
                                 $formatted_date = date_i18n(get_option('date_format'), $timestamp);
 
-                                echo '<li><b>' . __('Registration Date', 'neo_blog') . ':</b> <span>' . $formatted_date . '</span></li>';
+                                echo '<li><b>' . __('Registration Date', 'neo-blog') . ':</b> <span>' . $formatted_date . '</span></li>';
                             }
 
                             if (get_theme_mod('author_website', true)) {
                                 $author_website = get_the_author_meta('user_url');
-                                echo '<li><b>' . __('Website', 'neo_blog') . ':</b> <a href="' . $author_website . '" target="_blank">' . $author_website . '</a></li>';
+                                echo '<li><b>' . __('Website', 'neo-blog') . ':</b> <a href="' . $author_website . '" target="_blank">' . $author_website . '</a></li>';
                             }
                             ?>
                         </ul>
@@ -71,7 +71,7 @@
                 if (get_theme_mod('author_page_latest_comments', true) && !empty($author_comments)) {
                 ?>
                     <h3 class="neo_blog_author_last_comments_headline">
-                        <?php echo __('Last comments from', 'neo_blog') . ' ' . $author_name; ?></h3>
+                        <?php echo __('Last comments from', 'neo-blog') . ' ' . $author_name; ?></h3>
                     <ol class="has-avatars has-dates has-excerpts wp-block-latest-comments">
                         <?php
 
@@ -92,7 +92,7 @@
                                 echo '</li>';
                             }
                         } else {
-                            echo __('No comments found.', 'neo_blog');
+                            echo __('No comments found.', 'neo-blog');
                         }
                         ?>
                     </ol>
@@ -107,16 +107,16 @@
                     echo single_tag_title(); // Tag
                 } elseif (is_author()) {
                     the_post();
-                    echo esc_html__('Posts by', 'neo_blog') . ' ' . get_the_author(); // Author name
+                    echo esc_html__('Posts by', 'neo-blog') . ' ' . get_the_author(); // Author name
                     rewind_posts();
                 } elseif (is_day()) {
-                    echo esc_html__('Archive for', 'neo_blog') . ' ' . get_the_date(); // Archive for day
+                    echo esc_html__('Archive for', 'neo-blog') . ' ' . get_the_date(); // Archive for day
                 } elseif (is_month()) {
-                    echo esc_html__('Archive for', 'neo_blog') . ' ' . get_the_date('F Y'); // Archive for month
+                    echo esc_html__('Archive for', 'neo-blog') . ' ' . get_the_date('F Y'); // Archive for month
                 } elseif (is_year()) {
-                    echo esc_html__('Archive for', 'neo_blog') . ' ' . get_the_date('Y'); // Archive for year
+                    echo esc_html__('Archive for', 'neo-blog') . ' ' . get_the_date('Y'); // Archive for year
                 } else {
-                    echo esc_html__('Archive', 'neo_blog'); // default
+                    echo esc_html__('Archive', 'neo-blog'); // default
                 }
                 ?>
             </h1>
@@ -145,13 +145,13 @@
                     echo paginate_links(array(
                         'total' => $total_pages,
                         'prev_next' => true,
-                        'prev_text' => __('« Previous', 'neo_blog'),
-                        'next_text' => __('Next »', 'neo_blog'),
+                        'prev_text' => __('« Previous', 'neo-blog'),
+                        'next_text' => __('Next »', 'neo-blog'),
                     ));
                     echo '</div>';
                 }
             } else {
-                echo esc_html__('No posts found.', 'neo_blog');
+                echo esc_html__('No posts found.', 'neo-blog');
             }
             ?>
         </div>

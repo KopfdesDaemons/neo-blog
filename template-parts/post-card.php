@@ -44,7 +44,7 @@ function neo_blog_display_post_card($post_classes)
                     <?php } ?>
 
                     <?php if (get_theme_mod('feed_post_card_read_more', true)) {
-                        echo '<a class="neo_blog_post_card_read_more" href="' . get_permalink() . '">' . __('read more', 'neo_blog') . '</a>';
+                        echo '<a class="neo_blog_post_card_read_more" href="' . get_permalink() . '">' . __('read more', 'neo-blog') . '</a>';
                     } ?>
                 </div>
             </div>

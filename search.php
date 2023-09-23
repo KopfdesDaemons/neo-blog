@@ -12,7 +12,7 @@
 
             if (have_posts()) {
                 $query = get_search_query();
-                echo '<h1 class="neo_blog_search_headline">' . __('Search results for', 'neo_blog') . ' "' . esc_html($query) . '"</h1>';
+                echo '<h1 class="neo_blog_search_headline">' . __('Search results for', 'neo-blog') . ' "' . esc_html($query) . '"</h1>';
 
                 while (have_posts()) {
                     the_post();
@@ -32,15 +32,15 @@
                         'total' => $wp_query->max_num_pages,
                         'current' => $paged,
                         'prev_next' => true,
-                        'prev_text' => __('« Previous', 'neo_blog'),
-                        'next_text' => __('Next »', 'neo_blog'),
+                        'prev_text' => __('« Previous', 'neo-blog'),
+                        'next_text' => __('Next »', 'neo-blog'),
                     ));
                     echo '</div>';
                 }
 
                 wp_reset_postdata();
             } else {
-                echo '<h1>' . __('No posts found.', 'neo_blog') . '</h1>';
+                echo '<h1>' . __('No posts found.', 'neo-blog') . '</h1>';
             }
             ?>
         </div>
