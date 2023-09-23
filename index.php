@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <main role="main">
-    <section class="neo_content_spacer_post neo_content_and_sidebar_grid">
-        <div class="neo_content_container">
+    <section class="neo_blog_content_spacer_post neo_blog_content_and_sidebar_grid">
+        <div class="neo_blog_content_container">
             <?php
             if (have_posts()) {
                 while (have_posts()) {
@@ -16,19 +16,19 @@
 
                 // Pagination
                 if ($wp_query->max_num_pages > 1) {
-                    echo '<div class="neo_pagination neo_shadow">';
+                    echo '<div class="neo_blog_pagination neo_blog_shadow">';
                     echo paginate_links(array(
                         'total' => $wp_query->max_num_pages,
                         'current' => $paged,
                         'prev_next' => true,
-                        'prev_text' => __('« Previous', 'neo'),
-                        'next_text' => __('Next »', 'neo'),
+                        'prev_text' => __('« Previous', 'neo_blog'),
+                        'next_text' => __('Next »', 'neo_blog'),
                     ));
                     echo '</div>';
                 }
             } else {
                 // If no posts are found
-                echo esc_html__('No posts found.', 'neo');
+                echo esc_html__('No posts found.', 'neo_blog');
             }
             ?>
         </div>

@@ -1,9 +1,9 @@
 <?php
-function neo_custom_comments($wp_customize)
+function neo_blog_custom_comments($wp_customize)
 {
     // Section
     $wp_customize->add_section('custom_comments', array(
-        'title' => __('Comments', 'neo'),
+        'title' => __('Comments', 'neo_blog'),
         'priority' => 30,
     ));
 
@@ -16,7 +16,7 @@ function neo_custom_comments($wp_customize)
 
     $wp_customize->add_control('comments_border_radius', array(
         'type' => 'range',
-        'label' => __('Border radius', 'neo'),
+        'label' => __('Border radius', 'neo_blog'),
         'section' => 'custom_comments',
         'input_attrs' => array(
             'min' => 0,
@@ -34,7 +34,7 @@ function neo_custom_comments($wp_customize)
 
     $wp_customize->add_control('comments_inner_glow', array(
         'type' => 'range',
-        'label' => __('Inner glow', 'neo'),
+        'label' => __('Inner glow', 'neo_blog'),
         'section' => 'custom_comments',
         'input_attrs' => array(
             'min' => 0,
@@ -47,12 +47,12 @@ function neo_custom_comments($wp_customize)
     $wp_customize->add_setting('comments_border', array(
         'default' => true,
         'transport' => 'refresh',
-        'sanitize_callback' => 'neo_sanitize_checkbox',
+        'sanitize_callback' => 'neo_blog_sanitize_checkbox',
     ));
 
     $wp_customize->add_control('comments_border', array(
         'type' => 'checkbox',
-        'label' => __('Border', 'neo'),
+        'label' => __('Border', 'neo_blog'),
         'section' => 'custom_comments',
     ));
 
@@ -60,12 +60,12 @@ function neo_custom_comments($wp_customize)
     $wp_customize->add_setting('comments_image', array(
         'default' => true,
         'transport' => 'refresh',
-        'sanitize_callback' => 'neo_sanitize_checkbox',
+        'sanitize_callback' => 'neo_blog_sanitize_checkbox',
     ));
 
     $wp_customize->add_control('comments_image', array(
         'type' => 'checkbox',
-        'label' => __('Show Image', 'neo'),
+        'label' => __('Show Image', 'neo_blog'),
         'section' => 'custom_comments',
     ));
 
@@ -79,9 +79,9 @@ function neo_custom_comments($wp_customize)
     $wp_customize->add_control('image_size_comments', array(
         'type' => 'range',
         'section' => 'title_tagline',
-        'label' => __('Image size', 'neo'),
+        'label' => __('Image size', 'neo_blog'),
         'section' => 'custom_comments',
-        'active_callback' => 'neo_comments_image_active_callback',
+        'active_callback' => 'neo_blog_comments_image_active_callback',
         'input_attrs' => array(
             'min' => 20,
             'max' => 80,
@@ -89,7 +89,7 @@ function neo_custom_comments($wp_customize)
         ),
     ));
 
-    function neo_comments_image_active_callback($control)
+    function neo_blog_comments_image_active_callback($control)
     {
         return $control->manager->get_setting('comments_image')->value();
     }
@@ -104,7 +104,7 @@ function neo_custom_comments($wp_customize)
     $wp_customize->add_control('comments_name_font_size', array(
         'type' => 'range',
         'section' => 'title_tagline',
-        'label' => __('Name font size', 'neo'),
+        'label' => __('Name font size', 'neo_blog'),
         'section' => 'custom_comments',
         'input_attrs' => array(
             'min' => 10,
@@ -123,7 +123,7 @@ function neo_custom_comments($wp_customize)
 
     $wp_customize->add_control('comments_border_radius_reply_link', array(
         'type' => 'range',
-        'label' => __('Radius reply button', 'neo'),
+        'label' => __('Radius reply button', 'neo_blog'),
         'section' => 'custom_comments',
         'input_attrs' => array(
             'min' => 0,
@@ -141,12 +141,12 @@ function neo_custom_comments($wp_customize)
 
     $wp_customize->add_control('comments_reply_link_position', array(
         'type' => 'select',
-        'label' => __('Reply button positon', 'neo'),
+        'label' => __('Reply button positon', 'neo_blog'),
         'section' => 'custom_comments',
         'choices' => array(
-            'flex-start' => __('left', 'neo'),
-            'center' => __('center', 'neo'),
-            'flex-end' => __('right', 'neo'),
+            'flex-start' => __('left', 'neo_blog'),
+            'center' => __('center', 'neo_blog'),
+            'flex-end' => __('right', 'neo_blog'),
         ),
     ));
 
@@ -159,11 +159,11 @@ function neo_custom_comments($wp_customize)
 
     $wp_customize->add_control('comments_date_position', array(
         'type' => 'select',
-        'label' => __('Date positon', 'neo'),
+        'label' => __('Date positon', 'neo_blog'),
         'section' => 'custom_comments',
         'choices' => array(
-            'row' => __('top right corner', 'neo'),
-            'column' => __('under name', 'neo'),
+            'row' => __('top right corner', 'neo_blog'),
+            'column' => __('under name', 'neo_blog'),
         ),
     ));
 
@@ -175,7 +175,7 @@ function neo_custom_comments($wp_customize)
 
     $wp_customize->add_control('comments_max_height', array(
         'type' => 'number',
-        'label' => __('Max height in pixels', 'neo'),
+        'label' => __('Max height in pixels', 'neo_blog'),
         'section' => 'custom_comments',
         'priority' => 10,
         'input_attrs' => array(
@@ -185,4 +185,4 @@ function neo_custom_comments($wp_customize)
         ),
     ));
 }
-add_action('customize_register', 'neo_custom_comments');
+add_action('customize_register', 'neo_blog_custom_comments');

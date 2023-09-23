@@ -1,9 +1,9 @@
 <?php
-function neo_custom_feed($wp_customize)
+function neo_blog_custom_feed($wp_customize)
 {
     // Section
     $wp_customize->add_section('custom_feed', array(
-        'title' => __('Feed', 'neo'),
+        'title' => __('Feed', 'neo_blog'),
         'priority' => 30,
     ));
 
@@ -17,7 +17,7 @@ function neo_custom_feed($wp_customize)
     $wp_customize->add_control('maximum_width_of_the_feed', array(
         'type' => 'range',
         'section' => 'title_tagline',
-        'label' => __('Maximum width of the feed', 'neo'),
+        'label' => __('Maximum width of the feed', 'neo_blog'),
         'section' => 'custom_feed',
         'input_attrs' => array(
             'min' => 50,
@@ -30,12 +30,12 @@ function neo_custom_feed($wp_customize)
     $wp_customize->add_setting('feed_sidebar', array(
         'default' => true,
         'transport' => 'refresh',
-        'sanitize_callback' => 'neo_sanitize_checkbox',
+        'sanitize_callback' => 'neo_blog_sanitize_checkbox',
     ));
 
     $wp_customize->add_control('feed_sidebar', array(
         'type' => 'checkbox',
-        'label' => __('Show sidebar', 'neo'),
+        'label' => __('Show sidebar', 'neo_blog'),
         'section' => 'custom_feed',
     ));
 
@@ -49,7 +49,7 @@ function neo_custom_feed($wp_customize)
     $wp_customize->add_control('feed_post_card_spacing', array(
         'type' => 'range',
         'section' => 'title_tagline',
-        'label' => __('Spacing between posts', 'neo'),
+        'label' => __('Spacing between posts', 'neo_blog'),
         'section' => 'custom_feed',
         'input_attrs' => array(
             'min' => 0,
@@ -66,7 +66,7 @@ function neo_custom_feed($wp_customize)
 
     $wp_customize->add_control('words_in_snippet', array(
         'type' => 'number',
-        'label' => __('Number of words in the snippet', 'neo'),
+        'label' => __('Number of words in the snippet', 'neo_blog'),
         'section' => 'custom_feed',
         'priority' => 10,
         'input_attrs' => array(
@@ -80,12 +80,12 @@ function neo_custom_feed($wp_customize)
     $wp_customize->add_setting('feed_post_card_tags', array(
         'default' => true,
         'transport' => 'refresh',
-        'sanitize_callback' => 'neo_sanitize_checkbox',
+        'sanitize_callback' => 'neo_blog_sanitize_checkbox',
     ));
 
     $wp_customize->add_control('feed_post_card_tags', array(
         'type' => 'checkbox',
-        'label' => __('Show tags', 'neo'),
+        'label' => __('Show tags', 'neo_blog'),
         'section' => 'custom_feed',
     ));
 
@@ -99,7 +99,7 @@ function neo_custom_feed($wp_customize)
     $wp_customize->add_control('tags_border_radius', array(
         'type' => 'range',
         'section' => 'title_tagline',
-        'label' => __('Tags border radius', 'neo'),
+        'label' => __('Tags border radius', 'neo_blog'),
         'section' => 'custom_feed',
         'active_callback' => 'tags_active_callback',
         'input_attrs' => array(
@@ -113,12 +113,12 @@ function neo_custom_feed($wp_customize)
     $wp_customize->add_setting('feed_post_card_read_more', array(
         'default' => true,
         'transport' => 'refresh',
-        'sanitize_callback' => 'neo_sanitize_checkbox',
+        'sanitize_callback' => 'neo_blog_sanitize_checkbox',
     ));
 
     $wp_customize->add_control('feed_post_card_read_more', array(
         'type' => 'checkbox',
-        'label' => __('Show read more button', 'neo'),
+        'label' => __('Show read more button', 'neo_blog'),
         'section' => 'custom_feed',
     ));
 
@@ -126,12 +126,12 @@ function neo_custom_feed($wp_customize)
     $wp_customize->add_setting('feed_post_card_comments', array(
         'default' => true,
         'transport' => 'refresh',
-        'sanitize_callback' => 'neo_sanitize_checkbox',
+        'sanitize_callback' => 'neo_blog_sanitize_checkbox',
     ));
 
     $wp_customize->add_control('feed_post_card_comments', array(
         'type' => 'checkbox',
-        'label' => __('Show comments', 'neo'),
+        'label' => __('Show comments', 'neo_blog'),
         'section' => 'custom_feed',
     ));
 
@@ -145,7 +145,7 @@ function neo_custom_feed($wp_customize)
     $wp_customize->add_control('feed_post_card_line_heigt', array(
         'type' => 'range',
         'section' => 'title_tagline',
-        'label' => __('Line height in text snippet', 'neo'),
+        'label' => __('Line height in text snippet', 'neo_blog'),
         'section' => 'custom_feed',
         'input_attrs' => array(
             'min' => 15,
@@ -163,7 +163,7 @@ function neo_custom_feed($wp_customize)
 
     $wp_customize->add_control('feed_post_card_border_radius', array(
         'type' => 'range',
-        'label' => __('Border radius', 'neo'),
+        'label' => __('Border radius', 'neo_blog'),
         'section' => 'custom_feed',
         'input_attrs' => array(
             'min' => 0,
@@ -181,7 +181,7 @@ function neo_custom_feed($wp_customize)
 
     $wp_customize->add_control('feed_post_card_padding', array(
         'type' => 'range',
-        'label' => __('Padding', 'neo'),
+        'label' => __('Padding', 'neo_blog'),
         'section' => 'custom_feed',
         'input_attrs' => array(
             'min' => 0,
@@ -194,30 +194,30 @@ function neo_custom_feed($wp_customize)
     $wp_customize->add_setting('feed_post_card_image', array(
         'default' => true,
         'transport' => 'refresh',
-        'sanitize_callback' => 'neo_sanitize_checkbox',
+        'sanitize_callback' => 'neo_blog_sanitize_checkbox',
     ));
 
     $wp_customize->add_control('feed_post_card_image', array(
         'type' => 'checkbox',
-        'label' => __('Show image', 'neo'),
+        'label' => __('Show image', 'neo_blog'),
         'section' => 'custom_feed',
     ));
 
     // Image position
     $wp_customize->add_setting('feed_image_postion', array(
-        'default' => 'neo_post_card_image_left',
+        'default' => 'neo_blog_post_card_image_left',
         'transport' => 'refresh',
         'sanitize_callback' => 'sanitize_text_field',
     ));
 
     $wp_customize->add_control('feed_image_postion', array(
         'type' => 'select',
-        'label' => __('Image postion', 'neo'),
+        'label' => __('Image postion', 'neo_blog'),
         'section' => 'custom_feed',
         'active_callback' => 'image_active_callback',
         'choices' => array(
-            'neo_post_card_image_left' => __('left', 'neo'),
-            'neo_post_card_image_top' => __('top', 'neo'),
+            'neo_blog_post_card_image_left' => __('left', 'neo_blog'),
+            'neo_blog_post_card_image_top' => __('top', 'neo_blog'),
         ),
     ));
 
@@ -230,7 +230,7 @@ function neo_custom_feed($wp_customize)
 
     $wp_customize->add_control('image_display_behavior', array(
         'type' => 'select',
-        'label' => __('Image display behavior', 'neo'),
+        'label' => __('Image display behavior', 'neo_blog'),
         'section' => 'custom_feed',
         'active_callback' => 'image_active_callback',
         'choices' => array(
@@ -251,7 +251,7 @@ function neo_custom_feed($wp_customize)
     $wp_customize->add_control('feed_post_card_border_radius_image', array(
         'type' => 'range',
         'section' => 'title_tagline',
-        'label' => __('Image radius', 'neo'),
+        'label' => __('Image radius', 'neo_blog'),
         'section' => 'custom_feed',
         'active_callback' => 'image_active_callback',
         'input_attrs' => array(
@@ -271,7 +271,7 @@ function neo_custom_feed($wp_customize)
     $wp_customize->add_control('feed_image_height', array(
         'type' => 'range',
         'section' => 'title_tagline',
-        'label' => __('Image height', 'neo'),
+        'label' => __('Image height', 'neo_blog'),
         'section' => 'custom_feed',
         'active_callback' => 'image_active_callback',
         'input_attrs' => array(
@@ -291,18 +291,18 @@ function neo_custom_feed($wp_customize)
         return $control->manager->get_setting('feed_post_card_tags')->value();
     }
 }
-add_action('customize_register', 'neo_custom_feed');
+add_action('customize_register', 'neo_blog_custom_feed');
 
 // Number of words previewed in the feed
-function neo_custom_excerpt_length($length)
+function neo_blog_custom_excerpt_length($length)
 {
     return get_theme_mod('words_in_snippet', 30);
 }
-add_filter('excerpt_length', 'neo_custom_excerpt_length', 999);
+add_filter('excerpt_length', 'neo_blog_custom_excerpt_length', 999);
 
 // Characters after snippet
-function neo_custom_excerpt_more($more)
+function neo_blog_custom_excerpt_more($more)
 {
     return '...';
 }
-add_filter('excerpt_more', 'neo_custom_excerpt_more');
+add_filter('excerpt_more', 'neo_blog_custom_excerpt_more');

@@ -1,11 +1,11 @@
-#neo_searchform {
+#neo_blog_searchform {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 0.3em;
   width: 100%;
 }
-#neo_searchform #neo_searchinput {
+#neo_blog_searchform #neo_blog_searchinput {
   height: 100%;
   width: 80%;
   max-width: 20em;
@@ -14,38 +14,38 @@
   padding: 0;
   margin: 5px 0;
   text-align: center;
-  outline: 1px solid var(--neo_primary_variant_darker);
+  outline: 1px solid var(--neo_blog_primary_variant_darker);
   background-color: rgba(201, 201, 201, 0.4117647059);
-  color: var(--neo_font_color);
+  color: var(--neo_blog_font_color);
 }
-#neo_searchform #neo_searchinput::-moz-placeholder {
-  color: var(--neo_font_color);
+#neo_blog_searchform #neo_blog_searchinput::-moz-placeholder {
+  color: var(--neo_blog_font_color);
 }
-#neo_searchform #neo_searchinput::placeholder {
-  color: var(--neo_font_color);
+#neo_blog_searchform #neo_blog_searchinput::placeholder {
+  color: var(--neo_blog_font_color);
 }
-#neo_searchform #neo_searchinput:focus {
-  outline: 2px solid var(--neo_primary_color);
+#neo_blog_searchform #neo_blog_searchinput:focus {
+  outline: 2px solid var(--neo_blog_primary_color);
 }
-#neo_searchform #neo_searchinput:focus::-webkit-input-placeholder {
+#neo_blog_searchform #neo_blog_searchinput:focus::-webkit-input-placeholder {
   opacity: 0;
 }
-#neo_searchform #neo_search_submit {
+#neo_blog_searchform #neo_blog_search_submit {
   border-radius: 6px;
   height: 100%;
   padding: 0 0.4em;
   font-size: 1.3em;
   border: none;
   color: rgb(248, 248, 248);
-  background-color: var(--neo_primary_variant_much_brighter);
+  background-color: var(--neo_blog_primary_variant_much_brighter);
 }
-#neo_searchform #neo_search_submit:hover {
+#neo_blog_searchform #neo_blog_search_submit:hover {
   cursor: pointer;
-  background-color: var(--neo_element_background);
-  outline: 1px solid var(--neo_font_color);
+  background-color: var(--neo_blog_element_background);
+  outline: 1px solid var(--neo_blog_font_color);
   transition: all 200ms;
 }
 
-.neo_dark_mode #neo_searchform #neo_searchinput {
+.neo_blog_dark_mode #neo_blog_searchform #neo_blog_searchinput {
   background-color: rgba(0, 0, 0, 0.4117647059);
 }/*# sourceMappingURL=searchform.css.map */

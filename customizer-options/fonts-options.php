@@ -1,10 +1,10 @@
 <?php
-function neo_custom_fonts($wp_customize)
+function neo_blog_custom_fonts($wp_customize)
 {
     // Section
     $wp_customize->add_section('theme_fonts_section', array(
-        'title'      => __('Font', 'neo'),
-        'description' => __('All fonts are hosted locally. Consent according to the GDPR is not required for this theme (cookie banner).', 'neo'),
+        'title'      => __('Font', 'neo_blog'),
+        'description' => __('All fonts are hosted locally. Consent according to the GDPR is not required for this theme (cookie banner).', 'neo_blog'),
         'priority'   => 30,
     ));
 
@@ -16,7 +16,7 @@ function neo_custom_fonts($wp_customize)
     ));
 
     $wp_customize->add_control('body_font', array(
-        'label'      => __('Main text font', 'neo'),
+        'label'      => __('Main text font', 'neo_blog'),
         'section'    => 'theme_fonts_section',
         'type'       => 'select',
         'choices'    => array(
@@ -46,7 +46,7 @@ function neo_custom_fonts($wp_customize)
     ));
 
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'font_color_light_mode', array(
-        'label' => __('Font color light mode', 'neo'),
+        'label' => __('Font color light mode', 'neo_blog'),
         'section' => 'theme_fonts_section',
         'settings' => 'font_color_light_mode'
     )));
@@ -58,9 +58,9 @@ function neo_custom_fonts($wp_customize)
     ));
 
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'font_color_dark_mode', array(
-        'label' => __('Font color dark mode', 'neo'),
+        'label' => __('Font color dark mode', 'neo_blog'),
         'section' => 'theme_fonts_section',
         'settings' => 'font_color_dark_mode'
     )));
 }
-add_action('customize_register', 'neo_custom_fonts');
+add_action('customize_register', 'neo_blog_custom_fonts');

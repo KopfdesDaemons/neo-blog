@@ -1,10 +1,10 @@
-#neo_footer {
+#neo_blog_footer {
   margin-top: auto;
-  background-color: var(--neo_primary_variant_much_brighter);
+  background-color: var(--neo_blog_primary_variant_much_brighter);
   display: flex;
   justify-content: center;
 }
-#neo_footer nav ul {
+#neo_blog_footer nav ul {
   padding: 1.5em;
   padding: 0;
   list-style: none;
@@ -12,28 +12,28 @@
   align-items: flex-start;
   flex-wrap: wrap;
 }
-#neo_footer nav ul li {
+#neo_blog_footer nav ul li {
   margin: 1.5em;
 }
-#neo_footer nav ul li a {
+#neo_blog_footer nav ul li a {
   font-weight: bold;
   font-size: 0.8em;
   text-decoration: none;
 }
-#neo_footer nav ul li ul {
+#neo_blog_footer nav ul li ul {
   display: flex;
   flex-direction: column;
 }
-#neo_footer nav ul li ul li {
+#neo_blog_footer nav ul li ul li {
   margin: 0;
   display: flex;
   flex-direction: column;
 }
-#neo_footer nav ul li ul li a {
+#neo_blog_footer nav ul li ul li a {
   font-weight: normal;
   font-size: 1em;
 }
-#neo_footer nav ul li ul li ul {
+#neo_blog_footer nav ul li ul li ul {
   display: flex;
   flex-direction: column;
 }/*# sourceMappingURL=footer.css.map */

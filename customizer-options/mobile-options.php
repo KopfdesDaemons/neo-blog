@@ -1,9 +1,9 @@
 <?php
-function neo_mobile_settings($wp_customize)
+function neo_blog_mobile_settings($wp_customize)
 {
     // Section
-    $wp_customize->add_section('neo_mobile_section', array(
-        'title'      => __('Mobile Settings', 'neo'),
+    $wp_customize->add_section('neo_blog_mobile_section', array(
+        'title'      => __('Mobile Settings', 'neo_blog'),
         'priority'   => 30,
     ));
 
@@ -16,11 +16,11 @@ function neo_mobile_settings($wp_customize)
 
     $wp_customize->add_control('header_menu_style', array(
         'type' => 'select',
-        'section' => 'neo_mobile_section',
-        'label' => __('Header menu style', 'neo'),
+        'section' => 'neo_blog_mobile_section',
+        'label' => __('Header menu style', 'neo_blog'),
         'choices' => array(
-            'horizontal' => __('horizontal scrolling', 'neo'),
-            'vertical' => __('vertical arrangement with menu button', 'neo'),
+            'horizontal' => __('horizontal scrolling', 'neo_blog'),
+            'vertical' => __('vertical arrangement with menu button', 'neo_blog'),
         ),
         'active_callback' => 'header_menu_callback'
     ));
@@ -34,8 +34,8 @@ function neo_mobile_settings($wp_customize)
 
     $wp_customize->add_control('content_padding', array(
         'type' => 'number',
-        'section' => 'neo_mobile_section',
-        'label' => __('Content Padding Pages/Posts (in pixels)', 'neo'),
+        'section' => 'neo_blog_mobile_section',
+        'label' => __('Content Padding Pages/Posts (in pixels)', 'neo_blog'),
     ));
 
     // Padding Feed
@@ -47,8 +47,8 @@ function neo_mobile_settings($wp_customize)
 
     $wp_customize->add_control('mobile_feed_padding', array(
         'type' => 'number',
-        'label' => __('Mobile feed spacing in pixels (padding)', 'neo'),
-        'section' => 'neo_mobile_section',
+        'label' => __('Mobile feed spacing in pixels (padding)', 'neo_blog'),
+        'section' => 'neo_blog_mobile_section',
         'input_attrs' => array(
             'min' => 0,
             'max' => 40,
@@ -56,4 +56,4 @@ function neo_mobile_settings($wp_customize)
         ),
     ));
 }
-add_action('customize_register', 'neo_mobile_settings');
+add_action('customize_register', 'neo_blog_mobile_settings');

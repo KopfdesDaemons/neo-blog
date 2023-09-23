@@ -1,23 +1,23 @@
-.neo_error {
+.neo_blog_error {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 3em;
 }
-.neo_error span {
+.neo_blog_error span {
   font-size: 5em;
 }
-.neo_error a {
+.neo_blog_error a {
   margin: 1em 2em 0 2em;
   text-decoration: none;
-  background-color: var(--neo_primary_color);
+  background-color: var(--neo_blog_primary_color);
   color: white;
   border-radius: 8px;
   padding: 0.8em 1.2em;
 }
-.neo_error a:hover {
+.neo_blog_error a:hover {
   background-color: transparent;
-  outline: 1px solid var(--neo_font_color);
-  color: var(--neo_font_color);
+  outline: 1px solid var(--neo_blog_font_color);
+  color: var(--neo_blog_font_color);
   transition: all 200ms;
 }/*# sourceMappingURL=404.css.map */

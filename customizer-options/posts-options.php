@@ -1,11 +1,11 @@
 <?php
-function neo_custom_posts($wp_customize)
+function neo_blog_custom_posts($wp_customize)
 {
     // Section
     $wp_customize->add_section('custom_theme_article', array(
-        'title' => __('Posts', 'neo'),
+        'title' => __('Posts', 'neo_blog'),
         'priority' => 30,
-        'description' => __('Settings of the individual posts.', 'neo')
+        'description' => __('Settings of the individual posts.', 'neo_blog')
     ));
 
     // Maximum width of the post
@@ -18,7 +18,7 @@ function neo_custom_posts($wp_customize)
     $wp_customize->add_control('maximum_width_of_posts', array(
         'type' => 'range',
         'section' => 'title_tagline',
-        'label' => __('Maximum width of posts', 'neo'),
+        'label' => __('Maximum width of posts', 'neo_blog'),
         'section' => 'custom_theme_article',
         'input_attrs' => array(
             'min' => 50,
@@ -37,7 +37,7 @@ function neo_custom_posts($wp_customize)
     $wp_customize->add_control('heading_font_size', array(
         'type' => 'range',
         'section' => 'title_tagline',
-        'label' => __('Heading font size', 'neo'),
+        'label' => __('Heading font size', 'neo_blog'),
         'section' => 'custom_theme_article',
         'input_attrs' => array(
             'min' => 24,
@@ -57,11 +57,11 @@ function neo_custom_posts($wp_customize)
     $wp_customize->add_control('posts_title_alignment', array(
         'type' => 'select',
         'section' => 'custom_theme_article',
-        'label' => __('Page Title Alignment', 'neo'),
+        'label' => __('Page Title Alignment', 'neo_blog'),
         'choices' => array(
-            'left' => __('left', 'neo'),
-            'center' => __('center', 'neo'),
-            'right' => __('right', 'neo'),
+            'left' => __('left', 'neo_blog'),
+            'center' => __('center', 'neo_blog'),
+            'right' => __('right', 'neo_blog'),
         ),
     ));
 
@@ -72,7 +72,7 @@ function neo_custom_posts($wp_customize)
     ));
 
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'Posts_background_color', array(
-        'label' => __('Background color light mode', 'neo'),
+        'label' => __('Background color light mode', 'neo_blog'),
         'section' => 'custom_theme_article',
         'settings' => 'background_color_posts'
     )));
@@ -84,7 +84,7 @@ function neo_custom_posts($wp_customize)
     ));
 
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'Post_background_color_dark_mode', array(
-        'label' => __('Background color dark mode', 'neo'),
+        'label' => __('Background color dark mode', 'neo_blog'),
         'section' => 'custom_theme_article',
         'settings' => 'dark_mode_background_color_posts'
     )));
@@ -93,12 +93,12 @@ function neo_custom_posts($wp_customize)
     $wp_customize->add_setting('post_date', array(
         'default' => true,
         'transport' => 'refresh',
-        'sanitize_callback' => 'neo_sanitize_checkbox',
+        'sanitize_callback' => 'neo_blog_sanitize_checkbox',
     ));
 
     $wp_customize->add_control('post_date', array(
         'type' => 'checkbox',
-        'label' => __('Show date', 'neo'),
+        'label' => __('Show date', 'neo_blog'),
         'section' => 'custom_theme_article',
     ));
 
@@ -106,12 +106,12 @@ function neo_custom_posts($wp_customize)
     $wp_customize->add_setting('post_categories', array(
         'default' => true,
         'transport' => 'refresh',
-        'sanitize_callback' => 'neo_sanitize_checkbox',
+        'sanitize_callback' => 'neo_blog_sanitize_checkbox',
     ));
 
     $wp_customize->add_control('post_categories', array(
         'type' => 'checkbox',
-        'label' => __('Show categories', 'neo'),
+        'label' => __('Show categories', 'neo_blog'),
         'section' => 'custom_theme_article',
     ));
 
@@ -119,12 +119,12 @@ function neo_custom_posts($wp_customize)
     $wp_customize->add_setting('tags', array(
         'default' => true,
         'transport' => 'refresh',
-        'sanitize_callback' => 'neo_sanitize_checkbox',
+        'sanitize_callback' => 'neo_blog_sanitize_checkbox',
     ));
 
     $wp_customize->add_control('tags', array(
         'type' => 'checkbox',
-        'label' => __('Show tags', 'neo'),
+        'label' => __('Show tags', 'neo_blog'),
         'section' => 'custom_theme_article',
     ));
 
@@ -132,12 +132,12 @@ function neo_custom_posts($wp_customize)
     $wp_customize->add_setting('author_details', array(
         'default' => true,
         'transport' => 'refresh',
-        'sanitize_callback' => 'neo_sanitize_checkbox',
+        'sanitize_callback' => 'neo_blog_sanitize_checkbox',
     ));
 
     $wp_customize->add_control('author_details', array(
         'type' => 'checkbox',
-        'label' => __('Show author details', 'neo'),
+        'label' => __('Show author details', 'neo_blog'),
         'section' => 'custom_theme_article',
     ));
 
@@ -145,12 +145,12 @@ function neo_custom_posts($wp_customize)
     $wp_customize->add_setting('post_pagination', array(
         'default' => true,
         'transport' => 'refresh',
-        'sanitize_callback' => 'neo_sanitize_checkbox',
+        'sanitize_callback' => 'neo_blog_sanitize_checkbox',
     ));
 
     $wp_customize->add_control('post_pagination', array(
         'type' => 'checkbox',
-        'label' => __('Show post pagination', 'neo'),
+        'label' => __('Show post pagination', 'neo_blog'),
         'section' => 'custom_theme_article',
     ));
 
@@ -158,13 +158,13 @@ function neo_custom_posts($wp_customize)
     $wp_customize->add_setting('post_sidebar', array(
         'default' => true,
         'transport' => 'refresh',
-        'sanitize_callback' => 'neo_sanitize_checkbox',
+        'sanitize_callback' => 'neo_blog_sanitize_checkbox',
     ));
 
     $wp_customize->add_control('post_sidebar', array(
         'type' => 'checkbox',
-        'label' => __('Show sidebar', 'neo'),
+        'label' => __('Show sidebar', 'neo_blog'),
         'section' => 'custom_theme_article',
     ));
 }
-add_action('customize_register', 'neo_custom_posts');
+add_action('customize_register', 'neo_blog_custom_posts');

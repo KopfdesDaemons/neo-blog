@@ -14,10 +14,10 @@
     display: none;
 }
 
-.neo_article .wp-polls-ans {
+.neo_blog_article .wp-polls-ans {
     margin-bottom: 2em;
-    border: 1px solid var(--neo_primary_color);
-    background-color: var(--neo_element_background);
+    border: 1px solid var(--neo_blog_primary_color);
+    background-color: var(--neo_blog_element_background);
 
     ul {
         list-style: none;
@@ -29,7 +29,7 @@
 }
 
 .wp-polls-archive + code {
-    background-color: var(--neo_element_background);
+    background-color: var(--neo_blog_element_background);
 }
 
 .wp-polls-paging {
@@ -44,14 +44,14 @@
 
     a {
         text-decoration: none;
-        background-color: var(--neo_element_background_variant_darker);
+        background-color: var(--neo_blog_element_background_variant_darker);
         margin: 0.2em;
         padding: 0.5em;
         border-radius: 8px;
     }
 
     a:hover {
-        background-color: var(--neo_primary_variant_much_brighter);
+        background-color: var(--neo_blog_primary_variant_much_brighter);
     }
 }
 

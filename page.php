@@ -1,14 +1,14 @@
 <?php
 get_header();
 ?>
-<main class="neo_content_spacer neo_content_spacer_pages neo_content_and_sidebar_grid">
+<main class="neo_blog_content_spacer neo_blog_content_spacer_pages neo_blog_content_and_sidebar_grid">
 
     <?php
     while (have_posts()) {
         the_post();
     ?>
 
-        <div id="post-<?php the_ID(); ?>" class="neo_article" <?php post_class(); ?>>
+        <div id="post-<?php the_ID(); ?>" class="neo_blog_article" <?php post_class(); ?>>
 
             <h1><?php the_title(); ?></h1>
             <?php the_content(); ?>

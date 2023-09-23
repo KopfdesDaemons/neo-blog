@@ -4,7 +4,7 @@ if (post_password_required()) {
 }
 ?>
 
-<div id="comments" class="neo_comments_area">
+<div id="comments" class="neo_blog_comments_area">
 
     <?php if (have_comments()) : ?>
 
@@ -12,14 +12,14 @@ if (post_password_required()) {
             <?php
             $comments_number = get_comments_number();
             if ($comments_number === 1) {
-                printf(__('One Comment', 'neo'));
+                printf(__('One Comment', 'neo_blog'));
             } else {
-                printf(__('%d Comments', 'neo'), $comments_number);
+                printf(__('%d Comments', 'neo_blog'), $comments_number);
             }
             ?>
         </h2>
 
-        <ul class="neo_comment_list <?php if (!get_theme_mod('comments_image', true)) echo 'neo_comments_without_image'; ?>">
+        <ul class="neo_blog_comment_list <?php if (!get_theme_mod('comments_image', true)) echo 'neo_blog_comments_without_image'; ?>">
             <?php
             wp_list_comments(array(
                 'style'       => 'ol',
@@ -31,20 +31,20 @@ if (post_password_required()) {
 
         <?php if (get_comment_pages_count() > 1 && get_option('page_comments')) : ?>
             <nav role="navigation">
-                <div class="nav-previous"><?php previous_comments_link(__('Older Comments', 'neo')); ?></div>
-                <div class="nav-next"><?php next_comments_link(__('Newer Comments', 'neo')); ?></div>
+                <div class="nav-previous"><?php previous_comments_link(__('Older Comments', 'neo_blog')); ?></div>
+                <div class="nav-next"><?php next_comments_link(__('Newer Comments', 'neo_blog')); ?></div>
             </nav>
         <?php endif; ?>
 
     <?php endif; ?>
 
     <?php if (!comments_open() && get_comments_number() && post_type_supports(get_post_type(), 'comments')) : ?>
-        <p><?php _e('Comments are closed.', 'neo'); ?></p>
+        <p><?php _e('Comments are closed.', 'neo_blog'); ?></p>
     <?php endif; ?>
 
     <?php
     comment_form(array(
-        'title_reply_before' => '<h2 class="neo_comment_reply_title">',
+        'title_reply_before' => '<h2 class="neo_blog_comment_reply_title">',
         'title_reply_after'  => '</h2>',
     ));
     ?>

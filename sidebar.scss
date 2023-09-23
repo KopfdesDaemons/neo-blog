@@ -3,7 +3,7 @@
     padding: 0;
 }
 
-#neo_sidebar {
+#neo_blog_sidebar {
     @media only screen and (max-width: 950px) {
         display: none;
     }
@@ -66,19 +66,19 @@
 
     li {
         padding: 0.8em 1em;
-        border: 1px solid var(--neo_element_background_variant_darker);
-        box-shadow: inset 0px 0px 20px 0px var(--neo_element_background_variant);
+        border: 1px solid var(--neo_blog_element_background_variant_darker);
+        box-shadow: inset 0px 0px 20px 0px var(--neo_blog_element_background_variant);
 
         a {
             text-decoration: none;
             width: 100%;
             height: 100%;
-            color: var(--neo_font_color);
+            color: var(--neo_blog_font_color);
         }
     }
 
     li:nth-child(even) {
-        background-color: var(--neo_element_background);
+        background-color: var(--neo_blog_element_background);
     }
 }
 
@@ -87,9 +87,9 @@
     table {
         display: table;
     }
-    
+
     caption {
-        color: var(--neo_font_color);
+        color: var(--neo_blog_font_color);
     }
 
     .wp-calendar-nav {
@@ -102,7 +102,7 @@
 
     th,
     td {
-        border: 1px solid var(--neo_primary_variant_much_brighter);
+        border: 1px solid var(--neo_blog_primary_variant_much_brighter);
     }
 
     tr,
@@ -112,7 +112,7 @@
     }
 
     tr {
-        color: var(--neo_font_color);
+        color: var(--neo_blog_font_color);
     }
 }
 
@@ -150,27 +150,27 @@
     input[type=search] {
         height: 3em;
         // border-radius: 8px;
-        outline: 1px solid var(--neo_primary_variant_darker);
+        outline: 1px solid var(--neo_blog_primary_variant_darker);
     }
 
     input[type=search]:focus {
         outline: none;
-        outline: 1px solid var(--neo_primary_color);
+        outline: 1px solid var(--neo_blog_primary_color);
     }
 
     button {
         height: 3em;
         border-radius: 8px;
         color: white;
-        background-color: var(--neo_primary_variant_much_brighter);
+        background-color: var(--neo_blog_primary_variant_much_brighter);
         border: none;
     }
 
     button:hover {
-        background-color: var(--neo_body);
+        background-color: var(--neo_blog_body);
         transition: all 200ms;
-        outline: 1px solid var(--neo_font_color);
-        color: var(--neo_font_color);
+        outline: 1px solid var(--neo_blog_font_color);
+        color: var(--neo_blog_font_color);
     }
 }
 
@@ -189,15 +189,15 @@
         a {
             padding: 0.5em;
             border-radius: 6px;
-            background-color: var(--neo_body);
-            color: var(--neo_font_color);
+            background-color: var(--neo_blog_body);
+            color: var(--neo_blog_font_color);
             text-decoration: none;
-            border: 1px solid var(--neo_primary_variant_darker);
-            box-shadow: inset 0px 0px 20px 0px var(--neo_primary_variant_much_brighter);
+            border: 1px solid var(--neo_blog_primary_variant_darker);
+            box-shadow: inset 0px 0px 20px 0px var(--neo_blog_primary_variant_much_brighter);
         }
 
         a:hover {
-            background-color: var(--neo_element_background_variant);
+            background-color: var(--neo_blog_element_background_variant);
         }
     }
 }
@@ -210,9 +210,9 @@
     list-style: none;
 
     li {
-        background-color: var(--neo_body);
-        border: 1px solid var(--neo_primary_variant_darker);
-        box-shadow: inset 0px 0px 20px 0px var(--neo_element_background_variant);
+        background-color: var(--neo_blog_body);
+        border: 1px solid var(--neo_blog_primary_variant_darker);
+        box-shadow: inset 0px 0px 20px 0px var(--neo_blog_element_background_variant);
     }
 
     a {
@@ -244,14 +244,14 @@
     a {
         padding: 0.8em 1em;
         border-radius: 8px;
-        background-color: var(--neo_primary_color);
+        background-color: var(--neo_blog_primary_color);
         text-decoration: none;
         color: white;
     }
 
     a:hover {
-        background-color: var(--neo_element_background);
-        outline: 1px solid var(--neo_primary_color);
+        background-color: var(--neo_blog_element_background);
+        outline: 1px solid var(--neo_blog_primary_color);
         transition: all 200ms;
     }
 }
@@ -259,7 +259,7 @@
 .wp-block-page-list,
 .widget_rss {
     li {
-        background-color: var(--neo_element_background);
+        background-color: var(--neo_blog_element_background);
         padding: 0.5rem;
         margin-top: 0.5rem;
     }
@@ -275,15 +275,15 @@
         a {
             display: block;
             padding: 0.5rem;
-            background-color: var(--neo_body);
-            background-color: var(--neo_element_background);
-            border: 1px solid var(--neo_primary_variant_much_brighter);
-            box-shadow: inset 0px 0px 50px 0px var(--neo_element_background_variant);
+            background-color: var(--neo_blog_body);
+            background-color: var(--neo_blog_element_background);
+            border: 1px solid var(--neo_blog_primary_variant_much_brighter);
+            box-shadow: inset 0px 0px 50px 0px var(--neo_blog_element_background_variant);
             text-decoration: none;
         }
 
         a:hover {
-            background-color: var(--neo_element_background_variant);
+            background-color: var(--neo_blog_element_background_variant);
         }
     }
 }
@@ -312,9 +312,9 @@
     a {
         margin: 0.2em 0.2em;
         text-decoration: none;
-        color: var(--neo_font_color);
+        color: var(--neo_blog_font_color);
         text-align: center;
-        background-color: var(--neo_element_background_variant);
+        background-color: var(--neo_blog_element_background_variant);
         padding: 0.6em 1em;
         border-radius: 32px;
         font-size: 0.7em !important;
@@ -322,7 +322,7 @@
     }
 
     a:hover {
-        outline: 1px solid var(--neo_font_color);
+        outline: 1px solid var(--neo_blog_font_color);
     }
 }
 
@@ -337,9 +337,9 @@
         padding: 0.5rem;
         border-radius: 12px;
         margin-bottom: 0.5em;
-        background-color: var(--neo_element_background);
-        border: var(--neo_comments_border);
-        box-shadow: inset 0px 0px 50px 0px var(--neo_element_background_variant);
+        background-color: var(--neo_blog_element_background);
+        border: var(--neo_blog_comments_border);
+        box-shadow: inset 0px 0px 50px 0px var(--neo_blog_element_background_variant);
     }
 
     p {
@@ -360,7 +360,7 @@
 
 #recentcomments {
     li {
-        background-color: var(--neo_element_background);
+        background-color: var(--neo_blog_element_background);
         border-radius: 6px;
         box-shadow: none;
     }
@@ -379,29 +379,29 @@
     }
 }
 
-.neo_dark_mode {
+.neo_blog_dark_mode {
     .widget_recent_entries {
         a:hover {
-            background-color: var(--neo_body);
-            color: var(--neo_font_color);
+            background-color: var(--neo_blog_body);
+            color: var(--neo_blog_font_color);
         }
     }
 
     .wp-block-latest-posts a,
     .wp-block-archives li,
     .widget_recent_entries a {
-        box-shadow: inset 0px 0px 20px 0px var(--neo_primary_variant_much_brighter);
+        box-shadow: inset 0px 0px 20px 0px var(--neo_blog_primary_variant_much_brighter);
     }
 
     .wp-block-latest-comments {
         li {
-            box-shadow: inset 0px 0px var(--neo_comments_inner_glow) 0px var(--neo_primary_variant_much_brighter);
+            box-shadow: inset 0px 0px var(--neo_blog_comments_inner_glow) 0px var(--neo_blog_primary_variant_much_brighter);
         }
     }
 
     .wp-block-page-list {
         li {
-            box-shadow: inset 0px 0px 20px 0px var(--neo_primary_variant_much_brighter);
+            box-shadow: inset 0px 0px 20px 0px var(--neo_blog_primary_variant_much_brighter);
         }
 
         ul li {
@@ -411,6 +411,6 @@
 
     .wp-block-tag-cloud a,
     .tagcloud a {
-        background-color: var(--neo_primary_variant_much_brighter);
+        background-color: var(--neo_blog_primary_variant_much_brighter);
     }
 }

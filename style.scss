@@ -1,9 +1,9 @@
 /*
-Theme Name: Neo
+Theme Name: Neo Blog
 Author: Rico
 Author URI: https://ricoswebsite.com/
-Text Domain: neo
-Description: Neo is a modern WordPress theme that combines a classic layout with functionality. Enjoy the versatility of dark and light modes, extensive color customization, and locally hosted fonts. Designed for bloggers, this theme boasts a classic feed layout, customizable headers, and a translation-ready interface. Elevate your blogging experience with Neo.
+Text Domain: neo_blog
+Description: Neo Blog is a modern WordPress theme that combines a classic layout with functionality. Enjoy the versatility of dark and light modes, extensive color customization, and locally hosted fonts. Designed for bloggers, this theme boasts a classic feed layout, customizable headers, and a translation-ready interface. Elevate your blogging experience with Neo Blog.
 Tags: blog, one-column, two-columns, right-sidebar, custom-colors, custom-header, custom-menu, flexible-header, full-width-template, sticky-post, theme-options, threaded-comments, translation-ready
 Version: 1.0
 Requires at least: 5.0
@@ -13,7 +13,7 @@ License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Font Awesome License: Font Awesome Free License (https://fontawesome.com/license/free)
 Google Fonts License: Open Font License (https://scripts.sil.org/OFL)
-Copyright: Neo Theme, Copyright 2023
+Copyright: neo_blog Theme, Copyright 2023
 */
 
 body {
@@ -21,23 +21,23 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background: var(--neo_body)
+    background: var(--neo_blog_body)
 }
 
 input, textarea {
-    background-color: var(--neo_element_background);
-    color: var(--neo_font_color);
+    background-color: var(--neo_blog_element_background);
+    color: var(--neo_blog_font_color);
 }
 
 input:-webkit-autofill {
-    -webkit-text-fill-color: var(--neo_font_color);
+    -webkit-text-fill-color: var(--neo_blog_font_color);
 }
 
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
-    box-shadow: inset 0 0 0 1px var(--neo_element_background), inset 0 0 0 100px var(--neo_element_background);
+    box-shadow: inset 0 0 0 1px var(--neo_blog_element_background), inset 0 0 0 100px var(--neo_blog_element_background);
 }
 
 h1,
@@ -61,17 +61,17 @@ table,
 label,
 div,
 button {
-  color: var(--neo_font_color);
+  color: var(--neo_blog_font_color);
 }
 
 h2,
 h3,
-.neo_dark_mode h2,
-.neo_dark_mode h3 {
-  color: var(--neo_primary_variant_darker);
+.neo_blog_dark_mode h2,
+.neo_blog_dark_mode h3 {
+  color: var(--neo_blog_primary_variant_darker);
 }
 
-.neo_dark_mode .rot,
+.neo_blog_dark_mode .rot,
 .rot {
   color: red;
 }
@@ -83,7 +83,7 @@ main {
     align-items: center;
 }
 
-.neo_content_spacer {
+.neo_blog_content_spacer {
     margin: 0 auto;
     max-width: 70em;
     width: 95vw;
@@ -91,23 +91,23 @@ main {
     position: relative;
 }
 
-.neo_content_spacer_feed {
-    max-width: var(--neo_max_feed_width);
+.neo_blog_content_spacer_feed {
+    max-width: var(--neo_blog_max_feed_width);
 }
 
-.neo_content_spacer_pages {
-    max-width: var(--neo_max_pages_width);
+.neo_blog_content_spacer_pages {
+    max-width: var(--neo_blog_max_pages_width);
 }
 
 a {
-    color: var(--neo_primary_variant_darker);
+    color: var(--neo_blog_primary_variant_darker);
 }
 
-.neo_dark_mode a {
-    color: var(--neo_primary_color);
+.neo_blog_dark_mode a {
+    color: var(--neo_blog_primary_color);
 }
 
-.neo_content_and_sidebar_grid {
+.neo_blog_content_and_sidebar_grid {
     display: grid;
     grid-template-columns: 70fr auto;
     align-items: flex-start;
@@ -118,26 +118,26 @@ a {
     }
 }
 
-.neo_shadow {
+.neo_blog_shadow {
     box-shadow: 1px 1px 8px -6px #000000;
 }
 
-.neo_author_last_comments_headline {
+.neo_blog_author_last_comments_headline {
     margin: 1em;
 }
 
-.neo_feed {
+.neo_blog_feed {
     @media only screen and (max-width: 600px) {
-        padding: var(--neo_mobile_feed_padding);
+        padding: var(--neo_blog_mobile_feed_padding);
     }
 }
 
-.neo_post_card {
-    background-color: var(--neo_element_background);
+.neo_blog_post_card {
+    background-color: var(--neo_blog_element_background);
     border: 1px solid rgb(221, 221, 221);
-    border-radius: var(--neo_feed_post_card_border_radius);
-    padding: var(--neo_feed_post_card_padding);
-    margin-bottom: var(--neo_feed_post_card_spacing);
+    border-radius: var(--neo_blog_feed_post_card_border_radius);
+    padding: var(--neo_blog_feed_post_card_padding);
+    margin-bottom: var(--neo_blog_feed_post_card_spacing);
     display: grid;
     grid-template-columns: 40% 1fr;
     grid-auto-flow: column;
@@ -148,25 +148,25 @@ a {
     width: 100%;
     box-sizing: border-box;
 
-    .neo_post_card_image_container {
+    .neo_blog_post_card_image_container {
         overflow: hidden;
         display: flex;
-        border-radius: var( --neo_feed_post_card_border_radius_image);
+        border-radius: var( --neo_blog_feed_post_card_border_radius_image);
 
         img {
             width: 100%;
             max-width: 100%;
-            object-fit: var(--neo_image_display_behavior);
-            height: var(--neo_feed_image_height);
+            object-fit: var(--neo_blog_image_display_behavior);
+            height: var(--neo_blog_feed_image_height);
             transition: all 500ms;
         }
     }
 
-    .neo_post_card_image_container:hover img {
+    .neo_blog_post_card_image_container:hover img {
         transform: scale(1.2);
     }
 
-    .neo_post_card_content_div {
+    .neo_blog_post_card_content_div {
         padding: 0.5em;
         display: flex;
         flex-direction: column;
@@ -180,33 +180,33 @@ a {
         }
 
         p {
-            line-height: var(--neo_feed_post_card_line_height);
+            line-height: var(--neo_blog_feed_post_card_line_height);
         }
 
-        .neo_post_card_image_date {
+        .neo_blog_post_card_image_date {
             font-size: 0.8em;
         }
 
-        .neo_post_card_buttom_row {
+        .neo_blog_post_card_buttom_row {
             margin-top: auto;
             width: 100%;
             display: flex;
             justify-content: space-between;
             align-items: center;
 
-            .neo_post_card_link_div {
+            .neo_blog_post_card_link_div {
                 display: flex;
                 margin-left: auto;
             }
 
-            .neo_post_card_pin {
+            .neo_blog_post_card_pin {
                 display: none;
             }
 
-            .neo_post_card_comments_count {
+            .neo_blog_post_card_comments_count {
                 display: flex;
                 align-items: center;
-                background-color: var(--neo_body);
+                background-color: var(--neo_blog_body);
                 border: 1px solid rgb(226, 226, 226);
                 text-decoration: none;
                 padding: 0.8em 1.2em;
@@ -218,30 +218,30 @@ a {
                 }
             }
 
-            .neo_post_card_comments_count:hover {
-                background-color: var(--neo_element_background);
+            .neo_blog_post_card_comments_count:hover {
+                background-color: var(--neo_blog_element_background);
             }
 
-            .neo_post_card_read_more {
+            .neo_blog_post_card_read_more {
                 text-decoration: none;
                 border: 1px solid rgb(226, 226, 226);
-                background-color: var(--neo_body);
-                color: var(--neo_font_color);
+                background-color: var(--neo_blog_body);
+                color: var(--neo_blog_font_color);
                 border-radius: 8px;
                 padding: 0.8em 1.2em;
             }
 
-            .neo_post_card_read_more:hover {
-                background-color: var(--neo_element_background);
+            .neo_blog_post_card_read_more:hover {
+                background-color: var(--neo_blog_element_background);
                 transition: all 200ms;
-                color: var(--neo_font_color);
+                color: var(--neo_blog_font_color);
             }
         }
     }
     
     h2 {
         margin: 0 0 0.5em 0;
-        color: var(--neo_font_color);
+        color: var(--neo_blog_font_color);
         font-size: 1.4em;
     }
 
@@ -249,7 +249,7 @@ a {
         text-decoration: underline;
     }
     
-    .neo_post_card_tags_div ul {
+    .neo_blog_post_card_tags_div ul {
         display: flex;
         flex-wrap: wrap;
         list-style: none;
@@ -264,13 +264,13 @@ a {
 
         a {
             text-decoration: none;
-            color: var(--neo_font_color);
+            color: var(--neo_blog_font_color);
             text-align: center;
             padding: 0.6em 1em;
-            border-radius: var(--neo_tags_border_radius);
+            border-radius: var(--neo_blog_tags_border_radius);
             font-size: 0.7em;
             min-width: 2em;
-            background-color: var(--neo_element_background_variant);
+            background-color: var(--neo_blog_element_background_variant);
         }
         
         a:hover {
@@ -279,29 +279,29 @@ a {
     }
 }
 
-.neo_post_card_image_top {
+.neo_blog_post_card_image_top {
     grid-template-columns: 1fr;
     grid-auto-flow: row;
-    .neo_post_card_content_div {
+    .neo_blog_post_card_content_div {
         grid-column: span 1;
     }
 }
 
 @media only screen and (max-width: 600px) {
-    .neo_post_card_image_left{
+    .neo_blog_post_card_image_left{
         display: flex;
         flex-direction: column;
         font-size: 0.9em;
         padding: 0.75em;
 
-        .neo_post_card_image_container {
+        .neo_blog_post_card_image_container {
             width: 100%;
         }
     }
 
-    .neo_post_card {
+    .neo_blog_post_card {
         padding: 1em;
-        .neo_post_card_content_div {
+        .neo_blog_post_card_content_div {
             width: 100%;
             padding: 0.5em 0;
             p {
@@ -311,38 +311,38 @@ a {
     }
 }
 
-.neo_dark_mode .neo_post_card {
+.neo_blog_dark_mode .neo_blog_post_card {
     border: none;
     
     img {
         filter: brightness(0.8);
     }
 
-    .neo_post_card_tags_div a {
-        background-color: var(--neo_primary_variant_much_brighter);
+    .neo_blog_post_card_tags_div a {
+        background-color: var(--neo_blog_primary_variant_much_brighter);
     }
 
     border: 1px solid rgb(49, 49, 49);
 }
 
-.neo_sticky_post {
-    .neo_post_card_content_div .neo_post_card_buttom_row .neo_post_card_pin {
+.neo_blog_sticky_post {
+    .neo_blog_post_card_content_div .neo_blog_post_card_buttom_row .neo_blog_post_card_pin {
         display: block;
     }
 }
 
-.neo_pagination {
+.neo_blog_pagination {
     margin-top: 2em;
     margin-bottom: 3em;
     display: flex;
     justify-content: flex-end;
-    background-color: var(--neo_element_background);
+    background-color: var(--neo_blog_element_background);
     padding: 0.5em;
     font-size: clamp(14px, 2vw, 1rem);
 
     a,
     span {
-        background-color: var(--neo_element_background_variant_darker);
+        background-color: var(--neo_blog_element_background_variant_darker);
         border-radius: 8px;
         margin: 0.2em;
         padding: 0.5em 1em;
@@ -351,12 +351,12 @@ a {
     }
 
     span {
-        border: 1px solid var(--neo_font_color);
-        background-color: var(--neo_body);
+        border: 1px solid var(--neo_blog_font_color);
+        background-color: var(--neo_blog_body);
     }
 
     a:hover {
-        background-color: var(--neo_primary_variant_much_brighter);
+        background-color: var(--neo_blog_primary_variant_much_brighter);
     }
 }
 
@@ -389,28 +389,28 @@ html {
     background: #555;
 }
 
-.neo_content_spacer_pages {
+.neo_blog_content_spacer_pages {
     h1 {
-        text-align: var(--neo_page_title_alignment);
+        text-align: var(--neo_blog_page_title_alignment);
     }
 
-    .neo_article {
-        background-color: var(--neo_background_color_pages);
+    .neo_blog_article {
+        background-color: var(--neo_blog_background_color_pages);
     }
 }
 
-.neo_dark_mode .neo_content_spacer_pages .neo_article {
-    background-color: var(--neo_dark_mode_background_color_pages);
+.neo_blog_dark_mode .neo_blog_content_spacer_pages .neo_blog_article {
+    background-color: var(--neo_blog_dark_mode_background_color_pages);
 }
 
 ::selection {
-    background: var(--neo_primary_variant_much_brighter);
+    background: var(--neo_blog_primary_variant_much_brighter);
 }
 
 input::selection {
     background: initial;
 }
 
-.neo_search_headline {
+.neo_blog_search_headline {
     text-align: center;
 }

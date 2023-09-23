@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 <main role="main">
-    <section class="neo_content_spacer neo_content_spacer_feed neo_content_and_sidebar_grid">
+    <section class="neo_blog_content_spacer neo_blog_content_spacer_feed neo_blog_content_and_sidebar_grid">
         <div>
             <?php if (is_author()) {;
                 $author_id = get_the_author_meta('ID');
@@ -13,12 +13,12 @@
                 $author_avatar = get_avatar($author_id, $image_size);
 
             ?>
-                <div class="neo_author_card">
-                    <div class="neo_author_avatar">
+                <div class="neo_blog_author_card">
+                    <div class="neo_blog_author_avatar">
                         <?php echo $author_avatar; ?>
                     </div>
-                    <div class="neo_author_details">
-                        <div class="neo_author_name_row">
+                    <div class="neo_blog_author_details">
+                        <div class="neo_blog_author_name_row">
                             <h3><a href="<?php echo get_author_posts_url($author_id); ?>"><?php echo $author_name; ?></a>
                             </h3>
                             <?php if ($author_website && get_theme_mod('author_website', true)) : ?>
@@ -31,13 +31,13 @@
                             $author_roles = get_the_author_meta('roles');
 
                             if (!empty($author_roles) && get_theme_mod('author_page_role', true)) {
-                                echo '<li><b>' . __('Role', 'neo') . ':</b> <span>' . $author_roles[0] . '</span></li>';
+                                echo '<li><b>' . __('Role', 'neo_blog') . ':</b> <span>' . $author_roles[0] . '</span></li>';
                             }
 
                             $author_posts_count = count_user_posts($author_id);
 
                             if (get_theme_mod('author_number_of_posts', true)) {
-                                echo '<li><b>' . __('Number of posts', 'neo') . ':</b> <span>' . $author_posts_count . '</span></li>';
+                                echo '<li><b>' . __('Number of posts', 'neo_blog') . ':</b> <span>' . $author_posts_count . '</span></li>';
                             }
 
                             if (get_theme_mod('author_registration_date', true)) {
@@ -49,12 +49,12 @@
                                 // Format the date using date_i18n() into the national representation
                                 $formatted_date = date_i18n(get_option('date_format'), $timestamp);
 
-                                echo '<li><b>' . __('Registration Date', 'neo') . ':</b> <span>' . $formatted_date . '</span></li>';
+                                echo '<li><b>' . __('Registration Date', 'neo_blog') . ':</b> <span>' . $formatted_date . '</span></li>';
                             }
 
                             if (get_theme_mod('author_website', true)) {
                                 $author_website = get_the_author_meta('user_url');
-                                echo '<li><b>' . __('Website', 'neo') . ':</b> <a href="' . $author_website . '" target="_blank">' . $author_website . '</a></li>';
+                                echo '<li><b>' . __('Website', 'neo_blog') . ':</b> <a href="' . $author_website . '" target="_blank">' . $author_website . '</a></li>';
                             }
                             ?>
                         </ul>
@@ -70,8 +70,8 @@
                 $author_comments = get_comments($args);
                 if (get_theme_mod('author_page_latest_comments', true) && !empty($author_comments)) {
                 ?>
-                    <h3 class="neo_author_last_comments_headline">
-                        <?php echo __('Last comments from', 'neo') . ' ' . $author_name; ?></h3>
+                    <h3 class="neo_blog_author_last_comments_headline">
+                        <?php echo __('Last comments from', 'neo_blog') . ' ' . $author_name; ?></h3>
                     <ol class="has-avatars has-dates has-excerpts wp-block-latest-comments">
                         <?php
 
@@ -92,7 +92,7 @@
                                 echo '</li>';
                             }
                         } else {
-                            echo __('No comments found.', 'neo');
+                            echo __('No comments found.', 'neo_blog');
                         }
                         ?>
                     </ol>
@@ -107,33 +107,33 @@
                     echo single_tag_title(); // Tag
                 } elseif (is_author()) {
                     the_post();
-                    echo esc_html__('Posts by', 'neo') . ' ' . get_the_author(); // Author name
+                    echo esc_html__('Posts by', 'neo_blog') . ' ' . get_the_author(); // Author name
                     rewind_posts();
                 } elseif (is_day()) {
-                    echo esc_html__('Archive for', 'neo') . ' ' . get_the_date(); // Archive for day
+                    echo esc_html__('Archive for', 'neo_blog') . ' ' . get_the_date(); // Archive for day
                 } elseif (is_month()) {
-                    echo esc_html__('Archive for', 'neo') . ' ' . get_the_date('F Y'); // Archive for month
+                    echo esc_html__('Archive for', 'neo_blog') . ' ' . get_the_date('F Y'); // Archive for month
                 } elseif (is_year()) {
-                    echo esc_html__('Archive for', 'neo') . ' ' . get_the_date('Y'); // Archive for year
+                    echo esc_html__('Archive for', 'neo_blog') . ' ' . get_the_date('Y'); // Archive for year
                 } else {
-                    echo esc_html__('Archive', 'neo'); // default
+                    echo esc_html__('Archive', 'neo_blog'); // default
                 }
                 ?>
             </h1>
 
             <?php
             if (have_posts()) {
-                echo '<div class="neo_feed">';
+                echo '<div class="neo_blog_feed">';
                 while (have_posts()) {
                     the_post();
-                    $post_classes = array('neo_post_card neo_shadow');
+                    $post_classes = array('neo_blog_post_card neo_blog_shadow');
                     if (is_sticky()) {
-                        $post_classes[] = 'neo_sticky_post';
+                        $post_classes[] = 'neo_blog_sticky_post';
                     }
 
                     // Show cards
                     require_once get_template_directory() . '/template-parts/post-card.php';
-                    echo neo_display_post_card($post_classes);
+                    echo neo_blog_display_post_card($post_classes);
                 }
                 echo '</div>';
 
@@ -141,17 +141,17 @@
                 global $wp_query;
                 $total_pages = $wp_query->max_num_pages;
                 if ($total_pages > 1) {
-                    echo '<div class="neo_pagination neo_shadow">';
+                    echo '<div class="neo_blog_pagination neo_blog_shadow">';
                     echo paginate_links(array(
                         'total' => $total_pages,
                         'prev_next' => true,
-                        'prev_text' => __('« Previous', 'neo'),
-                        'next_text' => __('Next »', 'neo'),
+                        'prev_text' => __('« Previous', 'neo_blog'),
+                        'next_text' => __('Next »', 'neo_blog'),
                     ));
                     echo '</div>';
                 }
             } else {
-                echo esc_html__('No posts found.', 'neo');
+                echo esc_html__('No posts found.', 'neo_blog');
             }
             ?>
         </div>
