@@ -3,10 +3,11 @@
     <section class="neo_content_spacer neo_content_and_sidebar_grid neo_content_spacer_feed">
         <div class="neo_feed">
             <?php
-            $paged = (get_query_var('paged')) ? get_query_var('paged') : 1; // Query current page
+            $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+            $posts_per_page = get_option('posts_per_page');
             $args = array(
                 'post_type' => 'post',
-                'posts_per_page' => get_theme_mod('feed_posts_count'), // Number of posts per page
+                'posts_per_page' => $posts_per_page,
                 'paged' => $paged
             );
 

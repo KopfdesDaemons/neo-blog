@@ -39,24 +39,6 @@ function neo_custom_feed($wp_customize)
         'section' => 'custom_feed',
     ));
 
-    // Number of posts in feed
-    $wp_customize->add_setting('feed_posts_count', array(
-        'default' => 10,
-        'sanitize_callback' => 'absint',
-    ));
-
-    $wp_customize->add_control('feed_posts_count', array(
-        'type' => 'number',
-        'label' => __('Number of posts', 'neo'),
-        'section' => 'custom_feed',
-        'priority' => 10,
-        'input_attrs' => array(
-            'min' => 1,
-            'max' => 20,
-            'step' => 1,
-        ),
-    ));
-
     // Posts Spacing
     $wp_customize->add_setting('feed_post_card_spacing', array(
         'default' => '1',
