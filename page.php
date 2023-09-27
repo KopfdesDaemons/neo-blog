@@ -1,7 +1,7 @@
 <?php
 get_header();
 ?>
-<main class="neo_blog_content_spacer neo_blog_content_spacer_pages neo_blog_content_and_sidebar_grid">
+<main class="neo_blog_content_spacer neo_blog_content_spacer_pages neo_blog_content_and_sidebar_grid" id="neo_main_content">
 
     <?php
     while (have_posts()) {

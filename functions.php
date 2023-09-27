@@ -62,7 +62,7 @@ add_action('wp_enqueue_scripts', 'neo_blog_enqueue_comments_reply');
 // For the translation
 function neo_blog_load_theme_textdomain()
 {
-    load_theme_textdomain('neo_blog', get_template_directory() . '/languages');
+    load_theme_textdomain('neo-blog', get_template_directory() . '/languages');
 }
 add_action('after_setup_theme', 'neo_blog_load_theme_textdomain');
 
@@ -144,7 +144,7 @@ class neo_blog_Menu_Walker extends Walker_Nav_Menu
         $output .= "<div class='neo_blog_menuitem_container'>";
 
         if ($item->url && $item->url != '#') {
-            $output .= '<a href="' . $item->url . '">';
+            $output .= '<a href="' . esc_url($item->url) . '">';
         } else {
             $output .= '<span>';
         }

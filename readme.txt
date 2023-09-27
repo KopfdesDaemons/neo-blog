@@ -6,13 +6,14 @@ Requires PHP: 7.0
 Tested up to: 6.2
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Font Awesome License: Font Awesome Free License (https://fontawesome.com/license/free)
-Google Fonts License: Open Font License (https://scripts.sil.org/OFL)
 Copyright: Neo Blog Theme, Copyright 2023
 
 == Description ==
 
-Neo Blog is a modern WordPress theme that combines a classic layout with functionality. Enjoy the versatility of dark and light modes, extensive color customization, and locally hosted fonts. Designed for bloggers, this theme boasts a classic feed layout, customizable headers, and a translation-ready interface. Elevate your blogging experience with Neo Blog.
+Neo Blog is a modern WordPress theme that combines a classic layout with functionality.
+Enjoy the versatility of dark and light modes, extensive color customization, and locally hosted fonts. 
+Designed for bloggers, this theme boasts a classic feed layout, customizable headers, and a translation-ready interface. 
+Elevate your blogging experience with Neo Blog.
 
 == Installation ==
 
@@ -25,9 +26,49 @@ Neo Blog is a modern WordPress theme that combines a classic layout with functio
 
 == Changelog ==
 
-= 1.0 =
-* Initial release.
+    = 1.0.1 =
+        - Skip Link (Accessibility)
+        - Keyboard Navigation
+
+    = 1.0.0 =
+        - Initial release
 
 == License ==
 
-This theme is licensed under the GNU General Public License v2 or later. For more information, see [http://www.gnu.org/licenses/gpl-2.0.html](http://www.gnu.org/licenses/gpl-2.0.html).
+    = Images =
+
+    Image for theme screenshot (Header Image)
+    License: CC0 1.0 Universal (CC0 1.0) Public Domain Dedication
+    License URL: https://creativecommons.org/publicdomain/zero/1.0/
+    Source: https://pxhere.com/de/photo/911268
+
+    Image for theme screenshot (Post 1)
+    License: Attribution 2.0 Generic (CC BY 2.0)
+    License URL: https://creativecommons.org/licenses/by/2.0/
+    Source: https://www.flickr.com/photos/byrawpixel/39726357210/
+
+    Image for theme screenshot (Post 2)
+    License: CC0 1.0 Universal (CC0 1.0) Public Domain Dedication
+    License URL: https://creativecommons.org/publicdomain/zero/1.0/
+    Source: https://www.flickr.com/photos/jonas-svidras/39608400995/
+
+    Image for theme screenshot (Post 3)
+    License: CC0 1.0 Universal (CC0 1.0) Public Domain Dedication
+    License URL: https://creativecommons.org/publicdomain/zero/1.0/
+    Source: https://www.stockvault.net/photo/189035/coding
+
+    = Fonts =
+
+    Google Fonts
+    License: Open Font License
+    License URL: https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL
+    Source: https://fonts.google.com/
+
+    Font Awesome
+    License: Font Awesome Free License
+    license URI: https://fontawesome.com/license/free
+    Source: https://fontawesome.com/start
+
+
+This theme is licensed under the GNU General Public License v2 or later. 
+For more information, see [http://www.gnu.org/licenses/gpl-2.0.html](http://www.gnu.org/licenses/gpl-2.0.html).

@@ -40,7 +40,7 @@ function neo_blog_hex2hsl($hex)
 }
 
 // Get the primary color from the Customizer
-$neo_blog_primary_color = get_theme_mod('primary_color', '#1C28C4');
+$neo_blog_primary_color = esc_attr(get_theme_mod('primary_color', '#1C28C4'));
 // Convert the primary color to HSL
 list($primary_hue, $saturation, $lightness) = neo_blog_hex2hsl($neo_blog_primary_color);
 
@@ -55,9 +55,9 @@ $neo_blog_background_variant_darker = "hsl($primary_hue, " . (min(100, $saturati
 
 <style>
     <?php // Variables from Settings
-    $font_color_light_mode = get_theme_mod('font_color_light_mode', '#0a0a0a');
-    $header_font_color_light_mode = get_theme_mod('header_font_color_light_mode', '');
-    $header_menu_font_color = get_theme_mod('header_menu_font_color', '');
+    $font_color_light_mode = esc_attr(get_theme_mod('font_color_light_mode', '#0a0a0a'));
+    $header_font_color_light_mode = esc_attr(get_theme_mod('header_font_color_light_mode', ''));
+    $header_menu_font_color = esc_attr(get_theme_mod('header_menu_font_color', ''));
 
     // Automatic font color for the header if none specified
     if (empty($header_font_color_light_mode)) {

@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <main role="main">
     <section class="neo_blog_content_spacer_post neo_blog_content_and_sidebar_grid">
-        <div class="neo_blog_content_container">
+        <div class="neo_blog_content_container" id="neo_main_content">
             <?php
             if (have_posts()) {
                 while (have_posts()) {

@@ -30,6 +30,7 @@
     <?php wp_body_open(); ?>
     <?php $neo_blog_header_fixed = get_theme_mod('fixed_header', false); ?>
     <header class="neo_blog_header <?php if ($neo_blog_header_fixed) echo 'neo_blog_header_fixed' ?>" role="banner">
+        <a href="#neo_main_content" class="neo_blog_skip_link"><?php echo esc_html__('Skip to main content', 'neo-blog') ?></a>
         <div class="neo_blog_header_div">
 
             <!-- Title -->
@@ -66,7 +67,7 @@
                 <?php
                 $home_page_link = get_theme_mod('home_page_link', true);
                 if ($home_page_link) { ?>
-                    <a href="/" class="neo_blog_header_home_link" title="<?php echo __('Home page', 'neo-blog') ?>">
+                    <a href="/" class="neo_blog_header_home_link" title="<?php echo esc_attr('Home page', 'neo-blog') ?>">
                         <i class="fa-solid fa-house"></i>
                     </a>
                 <?php } ?>
@@ -75,7 +76,7 @@
                 $header_menu_is_activ = get_theme_mod('header_menu', true);
                 $header_menu_style_is_horizontal = get_theme_mod('header_menu_style', 'vertical') == 'horizontal';
                 if ($header_menu_is_activ & !$header_menu_style_is_horizontal) { ?>
-                    <button id="neo_blog_header_menu_button" onclick="neo_blog_toggle_menu()"><i class="fa-solid fa-bars"></i></button>
+                    <button id="neo_blog_header_menu_button" onclick="neo_blog_toggle_menu()" aria-label="<?php echo esc_attr('open menu', 'neo-blog') ?>"><i class="fa-solid fa-bars"></i></button>
                 <?php }
                 $searchbar = get_theme_mod('searchbar', false);
                 if ($searchbar) {
@@ -92,7 +93,7 @@
                     <?php
                     $home_page_link = get_theme_mod('home_page_link', true);
                     if ($home_page_link) { ?>
-                        <a href="/" class="neo_blog_header_home_link" title="<?php echo __('Home page', 'neo-blog') ?>">
+                        <a href="/" class="neo_blog_header_home_link" title="<?php echo esc_attr('Home page', 'neo-blog') ?>" aria-label="<?php echo esc_attr('Home page', 'neo-blog') ?>">
                             <i class="fa-solid fa-house"></i>
                         </a>
                     <?php } ?>

@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <main role="main">
     <section class="neo_blog_content_spacer neo_blog_content_and_sidebar_grid">
-        <div class="neo_blog_feed">
+        <div class="neo_blog_feed" id="neo_main_content">
             <?php
             $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
             $args = array(

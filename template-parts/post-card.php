@@ -22,7 +22,7 @@ function neo_blog_display_post_card($post_classes)
                     if ($tags) {
                         echo '<ul>';
                         foreach ($tags as $tag) {
-                            $tag_link = get_tag_link($tag->term_id);
+                            $tag_link = esc_url(get_tag_link($tag->term_id));
                             echo '<li><a href="' . $tag_link . '">' . $tag->name . '</a></li>';
                         }
                         echo '</ul>';
@@ -44,7 +44,7 @@ function neo_blog_display_post_card($post_classes)
                     <?php } ?>
 
                     <?php if (get_theme_mod('feed_post_card_read_more', true)) {
-                        echo '<a class="neo_blog_post_card_read_more" href="' . get_permalink() . '">' . __('read more', 'neo-blog') . '</a>';
+                        echo '<a class="neo_blog_post_card_read_more" href="' . esc_url(get_permalink()) . '">' . __('read more', 'neo-blog') . '</a>';
                     } ?>
                 </div>
             </div>

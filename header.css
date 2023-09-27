@@ -255,6 +255,9 @@
   padding: 0;
   display: flex;
 }
+.neo_blog_header .neo_blog_header_div .neo_blog_header_menu_nav ul li:focus-within > ul {
+  display: flex;
+}
 .neo_blog_header .neo_blog_header_div .neo_blog_header_menu_nav ul .neo_blog_menuitem_container {
   display: flex;
   justify-content: space-between;

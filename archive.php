@@ -4,22 +4,22 @@
         <div>
             <?php if (is_author()) {;
                 $author_id = get_the_author_meta('ID');
-                $author_name = get_the_author_meta('display_name');
-                $author_description = get_the_author_meta('description');
-                $author_website = get_the_author_meta('user_url');
+                $author_name = esc_html(get_the_author_meta('display_name'));
+                $author_description = esc_html(get_the_author_meta('description'));
+                $author_website = esc_url(get_the_author_meta('user_url'));
 
                 // Avatar
-                $image_size = get_theme_mod('image_size_setting', '150');
+                $image_size = esc_attr(get_theme_mod('image_size_setting', '150'));
                 $author_avatar = get_avatar($author_id, $image_size);
 
             ?>
-                <div class="neo_blog_author_card">
+                <div class="neo_blog_author_card" id="neo_main_content">
                     <div class="neo_blog_author_avatar">
                         <?php echo $author_avatar; ?>
                     </div>
                     <div class="neo_blog_author_details">
                         <div class="neo_blog_author_name_row">
-                            <h3><a href="<?php echo get_author_posts_url($author_id); ?>"><?php echo $author_name; ?></a>
+                            <h3><a href="<?php echo esc_url(get_author_posts_url($author_id)); ?>"><?php echo $author_name; ?></a>
                             </h3>
                             <?php if ($author_website && get_theme_mod('author_website', true)) : ?>
                                 <a href="<?php echo $author_website; ?>" target="_blank">🌐</a>
