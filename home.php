@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <main role="main">
     <section class="neo_blog_content_spacer neo_blog_content_and_sidebar_grid neo_blog_content_spacer_feed">
-        <div class="neo_blog_feed" id="neo_main_content">
+        <div class="neo_blog_feed" id="neo_blog_main_content">
             <?php
             $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
             $posts_per_page = get_option('posts_per_page');
@@ -29,13 +29,25 @@
                 // Pagination only if needed
                 if ($query->max_num_pages > 1) {
                     echo '<div class="neo_blog_pagination neo_blog_shadow">';
+                    echo '<div class="neo_blog_pagination_content">';
+
+                    echo '<div class="neo_blog_pagination_controls">';
+                    previous_posts_link(__('« Previous', 'neo-blog'));
+                    echo '</div>';
+
+                    echo '<div class="neo_blog_pagination_pages">';
                     echo paginate_links(array(
                         'total' => $query->max_num_pages,
                         'current' => $paged,
-                        'prev_next' => true,
-                        'prev_text' => __('« Previous', 'neo-blog'),
-                        'next_text' => __('Next »', 'neo-blog'),
+                        'prev_next' => false,
                     ));
+                    echo '</div>';
+
+                    echo '<div class="neo_blog_pagination_controls">';
+                    next_posts_link(__('Next »', 'neo-blog'), $query->max_num_pages);
+                    echo '</div>';
+
+                    echo '</div>';
                     echo '</div>';
                 }
 

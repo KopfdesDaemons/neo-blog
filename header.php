@@ -30,7 +30,7 @@
     <?php wp_body_open(); ?>
     <?php $neo_blog_header_fixed = get_theme_mod('fixed_header', false); ?>
     <header class="neo_blog_header <?php if ($neo_blog_header_fixed) echo 'neo_blog_header_fixed' ?>" role="banner">
-        <a href="#neo_main_content" class="neo_blog_skip_link"><?php echo esc_html__('Skip to main content', 'neo-blog') ?></a>
+        <a href="#neo_blog_main_content" class="neo_blog_skip_link"><?php echo esc_html__('Skip to main content', 'neo-blog') ?></a>
         <div class="neo_blog_header_div">
 
             <!-- Title -->

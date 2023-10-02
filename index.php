@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <main role="main">
     <section class="neo_blog_content_spacer_post neo_blog_content_and_sidebar_grid">
-        <div class="neo_blog_content_container" id="neo_main_content">
+        <div class="neo_blog_content_container" id="neo_blog_main_content">
             <?php
             if (have_posts()) {
                 while (have_posts()) {
@@ -15,15 +15,27 @@
                 }
 
                 // Pagination
-                if ($wp_query->max_num_pages > 1) {
+                if ($query->max_num_pages > 1) {
                     echo '<div class="neo_blog_pagination neo_blog_shadow">';
+                    echo '<div class="neo_blog_pagination_content">';
+
+                    echo '<div class="neo_blog_pagination_controls">';
+                    previous_posts_link(__('« Previous', 'neo-blog'));
+                    echo '</div>';
+
+                    echo '<div class="neo_blog_pagination_pages">';
                     echo paginate_links(array(
-                        'total' => $wp_query->max_num_pages,
+                        'total' => $query->max_num_pages,
                         'current' => $paged,
-                        'prev_next' => true,
-                        'prev_text' => __('« Previous', 'neo-blog'),
-                        'next_text' => __('Next »', 'neo-blog'),
+                        'prev_next' => false,
                     ));
+                    echo '</div>';
+
+                    echo '<div class="neo_blog_pagination_controls">';
+                    next_posts_link(__('Next »', 'neo-blog'), $query->max_num_pages);
+                    echo '</div>';
+
+                    echo '</div>';
                     echo '</div>';
                 }
             } else {

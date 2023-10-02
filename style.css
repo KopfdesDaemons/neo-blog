@@ -5,7 +5,7 @@ Author URI: https://ricoswebsite.com/
 Text Domain: neo-blog
 Description: Neo Blog is a modern WordPress theme that combines a classic layout with functionality. Enjoy the versatility of dark and light modes, extensive color customization, and locally hosted fonts. Designed for bloggers, this theme boasts a classic feed layout, customizable headers, and a translation-ready interface. Elevate your blogging experience with Neo Blog.
 Tags: blog, one-column, two-columns, right-sidebar, custom-colors, custom-header, custom-menu, flexible-header, full-width-template, sticky-post, theme-options, threaded-comments, translation-ready
-Version: 1.0.1
+Version: 1.0.2
 Requires at least: 5.0
 Requires PHP: 7.0
 Tested up to: 6.2
@@ -319,9 +319,16 @@ a {
   margin-bottom: 3em;
   display: flex;
   justify-content: flex-end;
+  align-items: center;
   background-color: var(--neo_blog_element_background);
   padding: 0.5em;
   font-size: clamp(14px, 2vw, 1rem);
+  flex-direction: column;
+}
+@media only screen and (max-width: 600px) {
+  .neo_blog_pagination {
+    font-size: 0.8em;
+  }
 }
 .neo_blog_pagination a,
 .neo_blog_pagination span {
@@ -331,6 +338,9 @@ a {
   padding: 0.5em 1em;
   text-decoration: none;
   vertical-align: middle;
+  height: 100%;
+  box-sizing: border-box;
+  border: 1px solid transparent;
 }
 .neo_blog_pagination span {
   border: 1px solid var(--neo_blog_font_color);
@@ -338,6 +348,28 @@ a {
 }
 .neo_blog_pagination a:hover {
   background-color: var(--neo_blog_primary_variant_much_brighter);
+}
+.neo_blog_pagination .neo_blog_pagination_content {
+  display: flex;
+  align-items: center;
+}
+.neo_blog_pagination .neo_blog_pagination_pages {
+  display: flex;
+  overflow-x: auto;
+}
+@media only screen and (max-width: 600px) {
+  .neo_blog_pagination .neo_blog_pagination_pages {
+    max-width: 40vw;
+  }
+}
+.neo_blog_pagination .neo_blog_pagination_pages::-webkit-scrollbar {
+  height: 1px;
+}
+.neo_blog_pagination .neo_blog_pagination_controls {
+  min-width: 5em;
+  margin-bottom: 1px;
+  box-sizing: border-box;
+  display: flex;
 }
 
 html ::-webkit-scrollbar {

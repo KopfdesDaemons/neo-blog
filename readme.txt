@@ -26,9 +26,12 @@ Elevate your blogging experience with Neo Blog.
 
 == Changelog ==
 
+    = 1.0.2 =
+        - Fixed mobile pagination overflow
+
     = 1.0.1 =
-        - Skip Link (Accessibility)
-        - Keyboard Navigation
+        - Skip link (Accessibility)
+        - Keyboard navigation
 
     = 1.0.0 =
         - Initial release
