@@ -6,4 +6,4 @@
 2. custom colors
 3. custom font
 
-![Preview](/screenshot.PNG)
+![Preview](/screenshot.jpg)
