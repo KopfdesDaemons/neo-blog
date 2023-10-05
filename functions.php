@@ -136,26 +136,13 @@ class neo_blog_Menu_Walker extends Walker_Nav_Menu
 {
     function start_el(&$output, $item, $depth = 0, $args = [], $id = 0)
     {
-        if (empty($item->title)) {
-            return;
-        }
+        if (empty($item->title)) return;
 
         $output .= "<li class='" .  implode(" ", (array)$item->classes) . "'>";
         $output .= "<div class='neo_blog_menuitem_container'>";
-
-        if ($item->url && $item->url != '#') {
-            $output .= '<a href="' . esc_url($item->url) . '">';
-        } else {
-            $output .= '<span>';
-        }
-
+        $output .= '<a href="' . esc_url($item->url) . '">';
         $output .= $item->title;
-
-        if ($item->url && $item->url != '#') {
-            $output .= '</a>';
-        } else {
-            $output .= '</span>';
-        }
+        $output .= '</a>';
 
         if ($args->walker->has_children) {
             $output .= '<i class="neo_blog_submenu_toggle fa fa-angle-down"></i>';

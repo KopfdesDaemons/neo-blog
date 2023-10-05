@@ -102,7 +102,7 @@ function neo_blog_sanitize_dark_mode_option($input)
 
 function neo_blog_add_darkmode_class_to_html()
 {
-    $dark_mode_option = get_theme_mod('dark_mode', 'system');
+    $dark_mode_option = get_theme_mod('dark_mode', 'dark');
 
     if ($dark_mode_option === 'dark') {
         echo '<script>

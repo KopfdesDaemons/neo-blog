@@ -26,6 +26,10 @@ Elevate your blogging experience with Neo Blog.
 
 == Changelog ==
 
+    = 1.0.3 =
+        - Fixed keyboard navigation of header menus without links
+        - Fixed default design scheme
+
     = 1.0.2 =
         - Fixed mobile pagination overflow
 
