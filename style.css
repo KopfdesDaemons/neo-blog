@@ -5,7 +5,7 @@ Author URI: https://ricoswebsite.com/
 Text Domain: neo-blog
 Description: Neo Blog is a modern WordPress theme that combines a classic layout with functionality. Enjoy the versatility of dark and light modes, extensive color customization, and locally hosted fonts. Designed for bloggers, this theme boasts a classic feed layout, customizable headers, and a translation-ready interface. Elevate your blogging experience with Neo Blog.
 Tags: blog, one-column, two-columns, right-sidebar, custom-colors, custom-header, custom-menu, flexible-header, full-width-template, sticky-post, theme-options, threaded-comments, translation-ready
-Version: 1.0.3
+Version: 1.0.4
 Requires at least: 5.0
 Requires PHP: 7.0
 Tested up to: 6.2
@@ -34,7 +34,8 @@ body {
   top: 0;
 }
 
-input, textarea {
+input,
+textarea {
   background-color: var(--neo_blog_element_background);
   color: var(--neo_blog_font_color);
 }
@@ -103,6 +104,10 @@ main {
 
 .neo_blog_content_spacer_feed {
   max-width: var(--neo_blog_max_feed_width);
+}
+.neo_blog_content_spacer_feed > :first-child {
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .neo_blog_content_spacer_pages {
@@ -352,21 +357,19 @@ a {
 .neo_blog_pagination .neo_blog_pagination_content {
   display: flex;
   align-items: center;
+  width: 100%;
 }
 .neo_blog_pagination .neo_blog_pagination_pages {
   display: flex;
+  flex: 1 1 0%;
   overflow-x: auto;
 }
-@media only screen and (max-width: 600px) {
-  .neo_blog_pagination .neo_blog_pagination_pages {
-    max-width: 40vw;
-  }
-}
-.neo_blog_pagination .neo_blog_pagination_pages::-webkit-scrollbar {
+
+.neo_blog_pagination_pages::-webkit-scrollbar {
   height: 1px;
 }
-.neo_blog_pagination .neo_blog_pagination_controls {
-  min-width: 5em;
+
+.neo_blog_pagination_controls {
   margin-bottom: 1px;
   box-sizing: border-box;
   display: flex;

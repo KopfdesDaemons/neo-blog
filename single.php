@@ -100,9 +100,10 @@
                         if ($post_pagination) { ?>
                             <div class="post-pagination">
                                 <div class="pagination-prev">
-                                    <?php previous_post_link('%link', '&laquo; Vorheriger Beitrag'); ?>
+                                    <?php previous_post_link('%link', __('&laquo; Previous Post', 'neo-blog')); ?>
                                 </div>
-                                <div class="pagination-next"><?php next_post_link('%link', 'Nächster Beitrag &raquo;'); ?>
+                                <div class="pagination-next">
+                                    <?php next_post_link('%link', __('Next Post &raquo;', 'neo-blog')); ?>
                                 </div>
                             </div>
                         <?php } ?>

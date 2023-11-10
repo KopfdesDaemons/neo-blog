@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: neo-blog\n"
-"POT-Creation-Date: 2023-09-25 21:56+0200\n"
-"PO-Revision-Date: 2023-09-25 21:56+0200\n"
+"POT-Creation-Date: 2023-11-10 21:26+0100\n"
+"PO-Revision-Date: 2023-11-10 21:27+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de\n"
@@ -59,15 +59,15 @@ msgstr "Archive für"
 msgid "Archive"
 msgstr "Archive"
 
-#: archive.php:148 home.php:36 index.php:24 search.php:35
+#: archive.php:148 home.php:35 index.php:23 search.php:34
 msgid "« Previous"
 msgstr "« Zurück"
 
-#: archive.php:149 home.php:37 index.php:25 search.php:36
+#: archive.php:160 home.php:47 index.php:35 search.php:46
 msgid "Next »"
 msgstr "Weiter »"
 
-#: archive.php:154 home.php:44 index.php:31 search.php:43
+#: archive.php:167 home.php:56 index.php:43 search.php:55
 msgid "No posts found."
 msgstr "Keine Beiträge gefunden."
 
@@ -499,29 +499,34 @@ msgstr "Deine E-Mail"
 msgid "Your Website"
 msgstr "Deine Website"
 
-#: header.php:34
+#: header.php:33
 msgid "Skip to main content"
 msgstr "Springe zum Hauptinhalt"
-
-#: header.php:71 header.php:100 header.php:101
-msgid "Home page"
-msgstr "Startseite"
-
-#: header.php:81
-msgid "open menu"
-msgstr "öffne Menü"
 
 #: search.php:15
 msgid "Search results for"
 msgstr "Suchergebnisse für"
 
-#: searchform.php:2
-msgid "Search"
-msgstr "Suche"
+#: single.php:103
+msgid "&laquo; Previous Post"
+msgstr "&laquo; Vorheriger Beitrag"
+
+#: single.php:106
+msgid "Next Post &raquo;"
+msgstr "Nächster Beitrag &raquo;"
 
 #: template-parts/post-card.php:47
 msgid "read more"
 msgstr "Mehr lesen"
+
+#~ msgid "Home page"
+#~ msgstr "Startseite"
+
+#~ msgid "open menu"
+#~ msgstr "öffne Menü"
+
+#~ msgid "Search"
+#~ msgstr "Suche"
 
 #~ msgid "Line height in paragraphs"
 #~ msgstr "Zeilenhöhe in Absätzen"

@@ -5,7 +5,7 @@ Author URI: https://ricoswebsite.com/
 Text Domain: neo-blog
 Description: Neo Blog is a modern WordPress theme that combines a classic layout with functionality. Enjoy the versatility of dark and light modes, extensive color customization, and locally hosted fonts. Designed for bloggers, this theme boasts a classic feed layout, customizable headers, and a translation-ready interface. Elevate your blogging experience with Neo Blog.
 Tags: blog, one-column, two-columns, right-sidebar, custom-colors, custom-header, custom-menu, flexible-header, full-width-template, sticky-post, theme-options, threaded-comments, translation-ready
-Version: 1.0.3
+Version: 1.0.4
 Requires at least: 5.0
 Requires PHP: 7.0
 Tested up to: 6.2
@@ -35,7 +35,8 @@ body {
     top: 0;
 }
 
-input, textarea {
+input,
+textarea {
     background-color: var(--neo_blog_element_background);
     color: var(--neo_blog_font_color);
 }
@@ -72,19 +73,19 @@ table,
 label,
 div,
 button {
-  color: var(--neo_blog_font_color);
+    color: var(--neo_blog_font_color);
 }
 
 h2,
 h3,
 .neo_blog_dark_mode h2,
 .neo_blog_dark_mode h3 {
-  color: var(--neo_blog_primary_variant_darker);
+    color: var(--neo_blog_primary_variant_darker);
 }
 
 .neo_blog_dark_mode .rot,
 .rot {
-  color: red;
+    color: red;
 }
 
 main {
@@ -104,6 +105,11 @@ main {
 
 .neo_blog_content_spacer_feed {
     max-width: var(--neo_blog_max_feed_width);
+
+    >:first-child {
+        width: 100%;
+        box-sizing: border-box;
+    }
 }
 
 .neo_blog_content_spacer_pages {
@@ -162,7 +168,7 @@ a {
     .neo_blog_post_card_image_container {
         overflow: hidden;
         display: flex;
-        border-radius: var( --neo_blog_feed_post_card_border_radius_image);
+        border-radius: var(--neo_blog_feed_post_card_border_radius_image);
 
         img {
             width: 100%;
@@ -249,7 +255,7 @@ a {
             }
         }
     }
-    
+
     h2 {
         margin: 0 0 0.5em 0;
         color: var(--neo_blog_font_color);
@@ -259,7 +265,7 @@ a {
     h2:hover {
         text-decoration: underline;
     }
-    
+
     .neo_blog_post_card_tags_div ul {
         display: flex;
         flex-wrap: wrap;
@@ -283,7 +289,7 @@ a {
             min-width: 2em;
             background-color: var(--neo_blog_element_background_variant);
         }
-        
+
         a:hover {
             outline: 1px solid rgb(97, 97, 97);
         }
@@ -293,13 +299,14 @@ a {
 .neo_blog_post_card_image_top {
     grid-template-columns: 1fr;
     grid-auto-flow: row;
+
     .neo_blog_post_card_content_div {
         grid-column: span 1;
     }
 }
 
 @media only screen and (max-width: 600px) {
-    .neo_blog_post_card_image_left{
+    .neo_blog_post_card_image_left {
         display: flex;
         flex-direction: column;
         font-size: 0.9em;
@@ -312,9 +319,11 @@ a {
 
     .neo_blog_post_card {
         padding: 1em;
+
         .neo_blog_post_card_content_div {
             width: 100%;
             padding: 0.5em 0;
+
             p {
                 line-height: unset;
             }
@@ -324,7 +333,7 @@ a {
 
 .neo_blog_dark_mode .neo_blog_post_card {
     border: none;
-    
+
     img {
         filter: brightness(0.8);
     }
@@ -355,7 +364,7 @@ a {
 
     @media only screen and (max-width: 600px) {
         font-size: 0.8em;
-        }
+    }
 
     a,
     span {
@@ -382,14 +391,13 @@ a {
     .neo_blog_pagination_content {
         display: flex;
         align-items: center;
+        width: 100%;
     }
 
     .neo_blog_pagination_pages {
         display: flex;
+        flex: 1 1 0%;
         overflow-x: auto;
-        
-        @media only screen and (max-width: 600px) {
-        max-width: 40vw;
     }
 }
 
@@ -398,11 +406,9 @@ a {
 }
 
 .neo_blog_pagination_controls {
-        min-width: 5em;
-        margin-bottom: 1px;
-        box-sizing: border-box;
-        display: flex;
-    }
+    margin-bottom: 1px;
+    box-sizing: border-box;
+    display: flex;
 }
 
 html {
