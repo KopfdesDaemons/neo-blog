@@ -79,15 +79,18 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
   font-family: "Font Awesome Solid";
   src: url("fonts/fontawesome/webfonts/fa-solid-900.woff2") format("woff2"), url("fonts/fontawesome/webfonts/fa-solid-900.ttf") format("truetype");
 }
+.neo_blog_dark_mode .neo_blog_error,
 .neo_blog_error {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 3em;
 }
+.neo_blog_dark_mode .neo_blog_error span,
 .neo_blog_error span {
   font-size: 5em;
 }
+.neo_blog_dark_mode .neo_blog_error a,
 .neo_blog_error a {
   margin: 1em 2em 0 2em;
   text-decoration: none;
@@ -96,6 +99,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
   border-radius: 8px;
   padding: 0.8em 1.2em;
 }
+.neo_blog_dark_mode .neo_blog_error a:hover,
 .neo_blog_error a:hover {
   background-color: transparent;
   outline: 1px solid var(--neo_blog_font_color);
