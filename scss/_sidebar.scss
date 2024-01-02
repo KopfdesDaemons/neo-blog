@@ -237,6 +237,7 @@
     }
 }
 
+.neo_blog_dark_mode .wp-block-loginout,
 .wp-block-loginout {
     display: flex;
     justify-content: center;
@@ -246,7 +247,7 @@
         border-radius: 8px;
         background-color: var(--neo_blog_primary_color);
         text-decoration: none;
-        color: white;
+        color: var(--neo_blog_font_color);
     }
 
     a:hover {
@@ -303,6 +304,8 @@
     flex-wrap: wrap;
 }
 
+.neo_blog_dark_mode .wp-block-tag-cloud,
+.neo_blog_dark_mode .tagcloud,
 .wp-block-tag-cloud,
 .tagcloud {
     p {

@@ -95,7 +95,6 @@ function neo_blog_header($wp_customize)
 
     $wp_customize->add_control('title_size_setting', array(
         'type' => 'range',
-        'section' => 'title_tagline',
         'label' => __('Title size', 'neo-blog'),
         'section' => 'custom_theme_header',
         'input_attrs' => array(
@@ -128,7 +127,6 @@ function neo_blog_header($wp_customize)
 
     $wp_customize->add_control('slogan_size_setting', array(
         'type' => 'range',
-        'section' => 'title_tagline',
         'label' => __('Slogan size', 'neo-blog'),
         'section' => 'custom_theme_header',
         'input_attrs' => array(
@@ -161,7 +159,6 @@ function neo_blog_header($wp_customize)
 
     $wp_customize->add_control('header_gap', array(
         'type' => 'range',
-        'section' => 'title_tagline',
         'label' => __('Element spacing', 'neo-blog'),
         'section' => 'custom_theme_header',
         'input_attrs' => array(
@@ -220,7 +217,6 @@ function neo_blog_header($wp_customize)
 
     $wp_customize->add_control('header_background_saturation', array(
         'type' => 'range',
-        'section' => 'title_tagline',
         'label' => __('Background image saturation', 'neo-blog'),
         'section' => 'custom_theme_header',
         'input_attrs' => array(

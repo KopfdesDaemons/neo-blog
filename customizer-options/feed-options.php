@@ -48,7 +48,6 @@ function neo_blog_custom_feed($wp_customize)
 
     $wp_customize->add_control('feed_post_card_spacing', array(
         'type' => 'range',
-        'section' => 'title_tagline',
         'label' => __('Spacing between posts', 'neo-blog'),
         'section' => 'custom_feed',
         'input_attrs' => array(
@@ -98,7 +97,6 @@ function neo_blog_custom_feed($wp_customize)
 
     $wp_customize->add_control('tags_border_radius', array(
         'type' => 'range',
-        'section' => 'title_tagline',
         'label' => __('Tags border radius', 'neo-blog'),
         'section' => 'custom_feed',
         'active_callback' => 'tags_active_callback',
@@ -144,7 +142,6 @@ function neo_blog_custom_feed($wp_customize)
 
     $wp_customize->add_control('feed_post_card_line_heigt', array(
         'type' => 'range',
-        'section' => 'title_tagline',
         'label' => __('Line height in text snippet', 'neo-blog'),
         'section' => 'custom_feed',
         'input_attrs' => array(
@@ -250,7 +247,6 @@ function neo_blog_custom_feed($wp_customize)
 
     $wp_customize->add_control('feed_post_card_border_radius_image', array(
         'type' => 'range',
-        'section' => 'title_tagline',
         'label' => __('Image radius', 'neo-blog'),
         'section' => 'custom_feed',
         'active_callback' => 'image_active_callback',
@@ -270,7 +266,6 @@ function neo_blog_custom_feed($wp_customize)
 
     $wp_customize->add_control('feed_image_height', array(
         'type' => 'range',
-        'section' => 'title_tagline',
         'label' => __('Image height', 'neo-blog'),
         'section' => 'custom_feed',
         'active_callback' => 'image_active_callback',

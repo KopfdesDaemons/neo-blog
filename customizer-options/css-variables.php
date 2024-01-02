@@ -85,89 +85,60 @@ $neo_blog_background_variant_darker = "hsl($primary_hue, " . (min(100, $saturati
 
         /* Header Settings */
         --neo_blog_header_font_color: <?php echo esc_attr(get_theme_mod('header_font_color_light_mode', '')) ?>;
-        --neo_blog_title_size: <?php echo esc_attr(get_theme_mod('title_size_setting', '25')) . 'px;'
-                                ?>;
-        --neo_blog_slogan-size: <?php echo esc_attr(get_theme_mod('slogan_size_setting', '14')) . 'px;'
-                                ?>;
+        --neo_blog_title_size: <?php echo esc_attr(get_theme_mod('title_size_setting', '25')) . 'px;' ?>;
+        --neo_blog_slogan-size: <?php echo esc_attr(get_theme_mod('slogan_size_setting', '14')) . 'px;' ?>;
         --neo_blog_header_menu_font_color: <?php echo esc_attr(get_theme_mod('header_menu_font_color', '')) ?>;
         --neo_blog_header_menu_background_color: <?php echo esc_attr(get_theme_mod('header_menu_background_color', '')) ?>;
         --neo_blog_header_text-background_color: <?php if (get_theme_mod('header_text_background', '')) echo esc_attr('#00000057');
                                                     else echo esc_attr('transparent') ?>;
-        --neo_blog_header_gap: <?php echo esc_attr(get_theme_mod('header_gap', '0')) . 'em';
-                                ?>;
+        --neo_blog_header_gap: <?php echo esc_attr(get_theme_mod('header_gap', '0')) . 'em'; ?>;
+
         /* Font Settings */
-        --neo_blog_line_height: <?php echo esc_attr(get_theme_mod('line_heigt', '24')) . 'px;';
-                                ?>;
+        --neo_blog_line_height: <?php echo esc_attr(get_theme_mod('line_heigt', '24')) . 'px;'; ?>;
 
         /* Feed Setting */
-        --neo_blog_feed_post_card_line_height: <?php echo esc_attr(get_theme_mod('feed_post_card_line_heigt', '24')) . 'px;';
-                                                ?>;
-        --neo_blog_feed_post_card_border_radius: <?php echo esc_attr(get_theme_mod('feed_post_card_border_radius', '8')) . 'px;';
-                                                    ?>;
-        --neo_blog_feed_post_card_padding: <?php echo esc_attr(get_theme_mod('feed_post_card_padding', '1.5')) . 'em;';
-                                            ?>;
-        --neo_blog_feed_post_card_border_radius_image: <?php echo esc_attr(get_theme_mod('feed_post_card_border_radius_image', '6')) . 'px;';
-                                                        ?>;
-        --neo_blog_feed_post_card_spacing: <?php echo esc_attr(get_theme_mod('feed_post_card_spacing', '1')) . 'em;';
-                                            ?>;
-        --neo_blog_feed_image_height: <?php echo esc_attr(get_theme_mod('feed_image_height', '15')) . 'em;';
-                                        ?>;
-        --neo_blog_image_display_behavior: <?php echo esc_attr(get_theme_mod('image_display_behavior', 'cover'));
-                                            ?>;
-        --neo_blog_tags_border_radius: <?php echo esc_attr(get_theme_mod('tags_border_radius', '8')) . 'px;';
-                                        ?>;
-        --neo_blog_max_feed_width: <?php echo esc_attr(get_theme_mod('maximum_width_of_the_feed', '70')) . 'em';
-                                    ?>;
+        --neo_blog_feed_post_card_line_height: <?php echo esc_attr(get_theme_mod('feed_post_card_line_heigt', '24')) . 'px;'; ?>;
+        --neo_blog_feed_post_card_border_radius: <?php echo esc_attr(get_theme_mod('feed_post_card_border_radius', '8')) . 'px;'; ?>;
+        --neo_blog_feed_post_card_padding: <?php echo esc_attr(get_theme_mod('feed_post_card_padding', '1.5')) . 'em;'; ?>;
+        --neo_blog_feed_post_card_border_radius_image: <?php echo esc_attr(get_theme_mod('feed_post_card_border_radius_image', '6')) . 'px;'; ?>;
+        --neo_blog_feed_post_card_spacing: <?php echo esc_attr(get_theme_mod('feed_post_card_spacing', '1')) . 'em;'; ?>;
+        --neo_blog_feed_image_height: <?php echo esc_attr(get_theme_mod('feed_image_height', '15')) . 'em;'; ?>;
+        --neo_blog_image_display_behavior: <?php echo esc_attr(get_theme_mod('image_display_behavior', 'cover')); ?>;
+        --neo_blog_tags_border_radius: <?php echo esc_attr(get_theme_mod('tags_border_radius', '8')) . 'px;'; ?>;
+        --neo_blog_max_feed_width: <?php echo esc_attr(get_theme_mod('maximum_width_of_the_feed', '70')) . 'em'; ?>;
 
         /* Posts Settings */
-        --neo_blog_max_posts_width: <?php echo esc_attr(get_theme_mod('maximum_width_of_posts', '70')) . 'em';
-                                    ?>;
-        --neo_blog_background_color_posts: <?php echo esc_attr(get_theme_mod('background_color_posts', '#0A0A0A00'));
-                                            ?>;
-        --neo_blog_dark_mode_background_color_posts: <?php echo esc_attr(get_theme_mod('dark_mode_background_color_posts', '#0A0A0A00'));
-                                                        ?>;
-        --neo_blog_heading_font_size: <?php echo esc_attr(get_theme_mod('heading_font_size', '24')) . 'px;';
-                                        ?>;
-        --neo_blog_posts_title_alignment: <?php echo esc_attr(get_theme_mod('posts_title_alignment', 'left'));
-                                            ?>;
+        --neo_blog_max_posts_width: <?php echo esc_attr(get_theme_mod('maximum_width_of_posts', '70')) . 'em'; ?>;
+        --neo_blog_background_color_posts: <?php echo esc_attr(get_theme_mod('background_color_posts', '#0A0A0A00')); ?>;
+        --neo_blog_dark_mode_background_color_posts: <?php echo esc_attr(get_theme_mod('dark_mode_background_color_posts', '#0A0A0A00')); ?>;
+        --neo_blog_heading_font_size: <?php echo esc_attr(get_theme_mod('heading_font_size', '24')) . 'px;'; ?>;
+        --neo_blog_posts_title_alignment: <?php echo esc_attr(get_theme_mod('posts_title_alignment', 'left')); ?>;
 
         /* Pages Settings */
-        --neo_blog_max_pages_width: <?php echo esc_attr(get_theme_mod('maximum_width_of_pages', '70')) . 'em';
-                                    ?>;
-        --neo_blog_page_title_alignment: <?php echo esc_attr(get_theme_mod('page_title_alignment', 'left'));
-                                            ?>;
-        --neo_blog_background_color_pages: <?php echo esc_attr(get_theme_mod('background_color_pages', '#0A0A0A00'));
-                                            ?>;
-        --neo_blog_dark_mode_background_color_pages: <?php echo esc_attr(get_theme_mod('dark_mode_background_color_pages', '#0A0A0A00'));
-                                                        ?>;
+        --neo_blog_max_pages_width: <?php echo esc_attr(get_theme_mod('maximum_width_of_pages', '70')) . 'em'; ?>;
+        --neo_blog_page_title_alignment: <?php echo esc_attr(get_theme_mod('page_title_alignment', 'left')); ?>;
+        --neo_blog_background_color_pages: <?php echo esc_attr(get_theme_mod('background_color_pages', '#0A0A0A00')); ?>;
+        --neo_blog_dark_mode_background_color_pages: <?php echo esc_attr(get_theme_mod('dark_mode_background_color_pages', '#0A0A0A00')); ?>;
 
         /* Mobile Settings */
-        --neo_blog_content_padding: <?php echo esc_attr(get_theme_mod('content_padding', '10') . 'px');
-                                    ?>;
-        --neo_blog_mobile_feed_padding: <?php echo esc_attr(get_theme_mod('mobile_feed_padding', '5') . 'px');
-                                        ?>;
+        --neo_blog_content_padding: <?php echo esc_attr(get_theme_mod('content_padding', '10') . 'px'); ?>;
+        --neo_blog_mobile_feed_padding: <?php echo esc_attr(get_theme_mod('mobile_feed_padding', '5') . 'px'); ?>;
 
         /* Comments Settings */
-        --neo_blog_comments_border_radius: <?php echo esc_attr(get_theme_mod('comments_border_radius', '12') . 'px');
-                                            ?>;
-        --neo_blog_comments_inner_glow: <?php echo esc_attr(get_theme_mod('comments_inner_glow', '50') . 'px');
-                                        ?>;
+        --neo_blog_comments_border_radius: <?php echo esc_attr(get_theme_mod('comments_border_radius', '12') . 'px'); ?>;
+        --neo_blog_comments_inner_glow: <?php echo esc_attr(get_theme_mod('comments_inner_glow', '50') . 'px'); ?>;
         --neo_blog_comments_border: <?php if (get_theme_mod('comments_border', true)) echo '1px solid var(--neo_blog_primary_variant_darker)';
                                     else echo 'none' ?>;
-        --neo_blog_comments_border_radius_reply_link: <?php echo esc_attr(get_theme_mod('comments_border_radius_reply_link', '8') . 'px');
-                                                        ?>;
-        --neo_blog_comments_reply_link_position: <?php echo esc_attr(get_theme_mod('comments_reply_link_position', 'flex-start'));
-                                                    ?>;
-        --neo_blog_comments_name_font_size: <?php echo esc_attr(get_theme_mod('comments_name_font_size', '14')) . 'px;';
-                                            ?>;
-        --neo_blog_comments_max_height: <?php echo esc_attr(get_theme_mod('comments_max_height', '400') . 'px');
-                                        ?>;
-        --neo_blog_comments_date_position: <?php echo esc_attr(get_theme_mod('comments_date_position', 'row'));
-                                            ?>;
+        --neo_blog_comments_border_radius_reply_link: <?php echo esc_attr(get_theme_mod('comments_border_radius_reply_link', '8') . 'px'); ?>;
+        --neo_blog_comments_reply_link_position: <?php echo esc_attr(get_theme_mod('comments_reply_link_position', 'flex-start')); ?>;
+        --neo_blog_comments_name_font_size: <?php echo esc_attr(get_theme_mod('comments_name_font_size', '14')) . 'px;'; ?>;
+        --neo_blog_comments_max_height: <?php echo esc_attr(get_theme_mod('comments_max_height', '400') . 'px'); ?>;
+        --neo_blog_comments_date_position: <?php echo esc_attr(get_theme_mod('comments_date_position', 'row')); ?>;
     }
 
 
-    <?php // Variables from Settings
+    <?php
+    // Variables from Settings
     $neo_blog_font_color_dark_mode = esc_attr(get_theme_mod('font_color_dark_mode', '#c8c8c8'));
     $neo_blog_header_font_color_dark_mode = esc_attr(get_theme_mod('header_font_color_dark_mode', ''));
 
@@ -175,7 +146,6 @@ $neo_blog_background_variant_darker = "hsl($primary_hue, " . (min(100, $saturati
     if (empty($neo_blog_header_font_color_dark_mode)) {
         $neo_blog_header_font_color_dark_mode = $neo_blog_font_color_dark_mode;
     }
-
     ?>.neo_blog_dark_mode {
         --neo_blog_primary_variant_darker: <?php echo $neo_blog_primary_variant_much_brighter ?>;
         --neo_blog_primary_variant_much_brighter: <?php echo $neo_blog_primary_variant_darker ?>;

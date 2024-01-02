@@ -206,7 +206,7 @@
             input:not(:placeholder-shown)+label,
             input:focus+label,
             input:-webkit-autofill+label {
-                transform: scale(0.8) translateY(-1.2em);
+                transform: scale(0.8) translateY(-0.8em);
                 height: auto;
                 font-size: 0.8em;
                 left: 0;

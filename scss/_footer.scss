@@ -2,7 +2,12 @@
     margin-top: auto;
     background-color: var(--neo_blog_primary_variant_much_brighter);
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    a {
+        color: var(--neo_blog_primary_variant_darker);
+    }
     
     nav {
         ul{
@@ -13,9 +18,6 @@
             align-items: flex-start;
             flex-wrap: wrap;
 
-            @media only screen and (max-width: 600px) {
-                // flex-direction: column;
-            }
             li {
                 margin: 1.5em;
                 a {
@@ -43,5 +45,10 @@
                 }
             }
         }
+    }
+
+    .neo_blog_footer_info {
+        margin-bottom: 0.2em;
+        font-size: 0.8em;
     }
 }

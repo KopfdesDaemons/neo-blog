@@ -78,7 +78,6 @@ function neo_blog_custom_comments($wp_customize)
 
     $wp_customize->add_control('image_size_comments', array(
         'type' => 'range',
-        'section' => 'title_tagline',
         'label' => __('Image size', 'neo-blog'),
         'section' => 'custom_comments',
         'active_callback' => 'neo_blog_comments_image_active_callback',
@@ -103,7 +102,6 @@ function neo_blog_custom_comments($wp_customize)
 
     $wp_customize->add_control('comments_name_font_size', array(
         'type' => 'range',
-        'section' => 'title_tagline',
         'label' => __('Name font size', 'neo-blog'),
         'section' => 'custom_comments',
         'input_attrs' => array(

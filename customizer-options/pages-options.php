@@ -17,7 +17,6 @@ function neo_blog_custom_pages($wp_customize)
 
     $wp_customize->add_control('maximum_width_of_pages', array(
         'type' => 'range',
-        'section' => 'title_tagline',
         'label' => __('Maximum width of pages', 'neo-blog'),
         'section' => 'custom_theme_pages',
         'input_attrs' => array(

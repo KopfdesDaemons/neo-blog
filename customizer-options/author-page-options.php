@@ -94,7 +94,6 @@ function neo_blog_custom_author_page($wp_customize)
 
     $wp_customize->add_control('image_size_setting', array(
         'type' => 'range',
-        'section' => 'title_tagline',
         'label' => __('Image size', 'neo-blog'),
         'section' => 'custom_author_page',
         'input_attrs' => array(

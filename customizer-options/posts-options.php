@@ -17,7 +17,6 @@ function neo_blog_custom_posts($wp_customize)
 
     $wp_customize->add_control('maximum_width_of_posts', array(
         'type' => 'range',
-        'section' => 'title_tagline',
         'label' => __('Maximum width of posts', 'neo-blog'),
         'section' => 'custom_theme_article',
         'input_attrs' => array(
@@ -36,7 +35,6 @@ function neo_blog_custom_posts($wp_customize)
 
     $wp_customize->add_control('heading_font_size', array(
         'type' => 'range',
-        'section' => 'title_tagline',
         'label' => __('Heading font size', 'neo-blog'),
         'section' => 'custom_theme_article',
         'input_attrs' => array(

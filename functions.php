@@ -3,23 +3,8 @@ function enqueue_custom_styles()
 {
     $theme_directory = get_stylesheet_directory_uri();
 
-    $styles = array(
-        'custom-font' => '/fonts/fonts.css',
-        'custom-styles' => '/style.css',
-        'searchform-styles' => '/searchform.css',
-        'header-styles' => '/header.css',
-        'footer-styles' => '/footer.css',
-        'sidebar-styles' => '/sidebar.css',
-        'comments-styles' => '/comments.css',
-        'archive-styles' => '/archive.css',
-        'single-styles' => '/single.css',
-        '404-styles' => '/404.css',
-        'fontawesome' => '/fonts/fontawesome/css/all.min.css',
-    );
-
-    foreach ($styles as $handle => $file) {
-        wp_enqueue_style($handle, $theme_directory . $file, array(), '1', 'all');
-    }
+    wp_enqueue_style('custom-styles', $theme_directory . '/style.css', array(), '1.1', 'all');
+    wp_enqueue_style('fontawesome', $theme_directory . '/fonts/fontawesome/css/all.min.css', array(), '1', 'all');
 }
 add_action('wp_enqueue_scripts', 'enqueue_custom_styles');
 
@@ -150,7 +135,6 @@ class neo_blog_Menu_Walker extends Walker_Nav_Menu
         $output .= "</div>";
     }
 }
-
 
 
 // Custom Settings
