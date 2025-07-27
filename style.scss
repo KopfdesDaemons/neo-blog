@@ -5,7 +5,7 @@ Author URI: https://ricoswebsite.com/
 Text Domain: neo-blog
 Description: Neo Blog is a modern WordPress theme that combines a classic layout with functionality. Enjoy the versatility of dark and light modes, extensive color customization, and locally hosted fonts. Designed for bloggers, this theme boasts a classic feed layout, customizable headers, and a translation-ready interface. Elevate your blogging experience with Neo Blog.
 Tags: blog, one-column, two-columns, right-sidebar, custom-colors, custom-header, custom-menu, flexible-header, full-width-template, sticky-post, theme-options, threaded-comments, translation-ready
-Version: 1.0.5
+Version: 1.1.0
 Requires at least: 5.0
 Requires PHP: 7.0
 Tested up to: 6.2
@@ -13,54 +13,55 @@ License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
 
-@use 'scss/fonts.scss' as *;
-@use 'scss/404' as *;
-@use 'scss/archive' as *;
-@use 'scss/comments' as *;
-@use 'scss/footer' as *;
-@use 'scss/header' as *;
-@use 'scss/single' as *;
-@use 'scss/sidebar' as *;
-@use 'scss/polls-css' as *;
-@use 'scss/searchform' as *;
+@use "scss/fonts.scss" as *;
+@use "scss/404" as *;
+@use "scss/archive" as *;
+@use "scss/comments" as *;
+@use "scss/footer" as *;
+@use "scss/header" as *;
+@use "scss/single" as *;
+@use "scss/sidebar" as *;
+@use "scss/polls-css" as *;
+@use "scss/searchform" as *;
 
 body {
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    background: var(--neo_blog_body)
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: var(--neo_blog_body);
 }
 
 .neo_blog_skip_link {
-    position: absolute;
-    top: -40px;
-    left: 0;
-    background-color: #333;
-    color: #fff;
-    padding: 5px;
-    z-index: 999;
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background-color: #333;
+  color: #fff;
+  padding: 5px;
+  z-index: 999;
 }
 
 .neo_blog_skip_link:focus {
-    top: 0;
+  top: 0;
 }
 
 input,
 textarea {
-    background-color: var(--neo_blog_element_background);
-    color: var(--neo_blog_font_color);
+  background-color: var(--neo_blog_element_background);
+  color: var(--neo_blog_font_color);
 }
 
 input:-webkit-autofill {
-    -webkit-text-fill-color: var(--neo_blog_font_color);
+  -webkit-text-fill-color: var(--neo_blog_font_color);
 }
 
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
-    box-shadow: inset 0 0 0 1px var(--neo_blog_element_background), inset 0 0 0 100px var(--neo_blog_element_background);
+  box-shadow: inset 0 0 0 1px var(--neo_blog_element_background),
+    inset 0 0 0 100px var(--neo_blog_element_background);
 }
 
 h1,
@@ -69,9 +70,9 @@ h3,
 h4,
 h5,
 h6 {
-    word-wrap: break-word;
-    overflow-wrap: anywhere;
-    margin: 0.2em 0;
+  word-wrap: break-word;
+  overflow-wrap: anywhere;
+  margin: 0.2em 0;
 }
 
 h1,
@@ -84,395 +85,397 @@ table,
 label,
 div,
 button {
-    color: var(--neo_blog_font_color);
+  color: var(--neo_blog_font_color);
 }
 
 h2,
 h3,
 .neo_blog_dark_mode h2,
 .neo_blog_dark_mode h3 {
-    color: var(--neo_blog_primary_variant_darker);
+  color: var(--neo_blog_primary_variant_darker);
 }
 
 .neo_blog_dark_mode .rot,
 .rot {
-    color: red;
+  color: red;
 }
 
 main {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
 }
 
 .neo_blog_content_spacer {
-    margin: 0 auto;
-    max-width: 70em;
-    width: 95vw;
-    z-index: 5;
-    position: relative;
+  margin: 0 auto;
+  max-width: 70em;
+  width: 95vw;
+  z-index: 5;
+  position: relative;
 }
 
 .neo_blog_content_spacer_feed {
-    max-width: var(--neo_blog_max_feed_width);
+  max-width: var(--neo_blog_max_feed_width);
 
-    >:first-child {
-        width: 100%;
-        box-sizing: border-box;
-    }
+  > :first-child {
+    width: 100%;
+    box-sizing: border-box;
+  }
 }
 
 .neo_blog_content_spacer_pages {
-    max-width: var(--neo_blog_max_pages_width);
+  max-width: var(--neo_blog_max_pages_width);
 }
 
 a {
-    color: var(--neo_blog_primary_variant_darker);
+  color: var(--neo_blog_primary_variant_darker);
 }
 
 .neo_blog_dark_mode a {
-    color: var(--neo_blog_primary_color);
+  color: var(--neo_blog_primary_color);
 }
 
 .neo_blog_content_and_sidebar_grid {
-    display: grid;
-    grid-template-columns: 70fr auto;
-    align-items: flex-start;
-    margin-bottom: 2em;
+  display: grid;
+  grid-template-columns: 70fr auto;
+  align-items: flex-start;
+  margin-bottom: 2em;
 
-    @media only screen and (max-width: 600px) {
-        display: flex;
-    }
+  @media only screen and (max-width: 600px) {
+    display: flex;
+  }
 }
 
 .neo_blog_shadow {
-    box-shadow: 1px 1px 8px -6px #000000;
+  box-shadow: 1px 1px 8px -6px #000000;
 }
 
 .neo_blog_author_last_comments_headline {
-    margin: 1em;
+  margin: 1em;
 }
 
 .neo_blog_feed {
-    @media only screen and (max-width: 600px) {
-        padding: var(--neo_blog_mobile_feed_padding);
-    }
+  @media only screen and (max-width: 600px) {
+    padding: var(--neo_blog_mobile_feed_padding);
+  }
 }
 
 .neo_blog_post_card {
-    background-color: var(--neo_blog_element_background);
-    border: 1px solid rgb(221, 221, 221);
-    border-radius: var(--neo_blog_feed_post_card_border_radius);
-    padding: var(--neo_blog_feed_post_card_padding);
-    margin-bottom: var(--neo_blog_feed_post_card_spacing);
-    display: grid;
-    grid-template-columns: 40% 1fr;
-    grid-auto-flow: column;
-    width: 50rem;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 0.5em;
-    width: 100%;
-    box-sizing: border-box;
+  background-color: var(--neo_blog_element_background);
+  border: 1px solid rgb(221, 221, 221);
+  border-radius: var(--neo_blog_feed_post_card_border_radius);
+  padding: var(--neo_blog_feed_post_card_padding);
+  margin-bottom: var(--neo_blog_feed_post_card_spacing);
+  display: grid;
+  grid-template-columns: 40% 1fr;
+  grid-auto-flow: column;
+  width: 50rem;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.5em;
+  width: 100%;
+  box-sizing: border-box;
 
-    .neo_blog_post_card_image_container {
-        overflow: hidden;
-        display: flex;
-        border-radius: var(--neo_blog_feed_post_card_border_radius_image);
-
-        img {
-            width: 100%;
-            max-width: 100%;
-            object-fit: var(--neo_blog_image_display_behavior);
-            height: var(--neo_blog_feed_image_height);
-            transition: all 500ms;
-        }
-    }
-
-    .neo_blog_post_card_image_container:hover img {
-        transform: scale(1.2);
-    }
-
-    .neo_blog_post_card_content_div {
-        padding: 0.5em;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        font-size: 0.9em;
-        grid-column: span 2;
-        height: 100%;
-
-        a {
-            text-decoration: none;
-        }
-
-        p {
-            line-height: var(--neo_blog_feed_post_card_line_height);
-        }
-
-        .neo_blog_post_card_image_date {
-            font-size: 0.8em;
-        }
-
-        .neo_blog_post_card_buttom_row {
-            margin-top: auto;
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-
-            .neo_blog_post_card_link_div {
-                display: flex;
-                margin-left: auto;
-            }
-
-            .neo_blog_post_card_pin {
-                display: none;
-            }
-
-            .neo_blog_post_card_comments_count {
-                display: flex;
-                align-items: center;
-                background-color: var(--neo_blog_body);
-                border: 1px solid rgb(226, 226, 226);
-                text-decoration: none;
-                padding: 0.8em 1.2em;
-                border-radius: 8px;
-                margin-right: 0.5em;
-
-                :nth-child(2) {
-                    margin-left: 0.5em;
-                }
-            }
-
-            .neo_blog_post_card_comments_count:hover {
-                background-color: var(--neo_blog_element_background);
-            }
-
-            .neo_blog_post_card_read_more {
-                text-decoration: none;
-                border: 1px solid rgb(226, 226, 226);
-                background-color: var(--neo_blog_body);
-                color: var(--neo_blog_font_color);
-                border-radius: 8px;
-                padding: 0.8em 1.2em;
-            }
-
-            .neo_blog_post_card_read_more:hover {
-                background-color: var(--neo_blog_element_background);
-                transition: all 200ms;
-                color: var(--neo_blog_font_color);
-            }
-        }
-    }
-
-    h2 {
-        margin: 0 0 0.5em 0;
-        color: var(--neo_blog_font_color);
-        font-size: 1.4em;
-    }
-
-    h2:hover {
-        text-decoration: underline;
-    }
-
-    .neo_blog_post_card_tags_div ul {
-        display: flex;
-        flex-wrap: wrap;
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        font-size: 1.2em;
-        margin-bottom: 0.5em;
-
-        li {
-            margin: 0.4em 0.2em;
-        }
-
-        a {
-            text-decoration: none;
-            color: var(--neo_blog_font_color);
-            text-align: center;
-            padding: 0.6em 1em;
-            border-radius: var(--neo_blog_tags_border_radius);
-            font-size: 0.7em;
-            min-width: 2em;
-            background-color: var(--neo_blog_element_background_variant);
-        }
-
-        a:hover {
-            outline: 1px solid rgb(97, 97, 97);
-        }
-    }
-}
-
-.neo_blog_post_card_image_top {
-    grid-template-columns: 1fr;
-    grid-auto-flow: row;
-
-    .neo_blog_post_card_content_div {
-        grid-column: span 1;
-    }
-}
-
-@media only screen and (max-width: 600px) {
-    .neo_blog_post_card_image_left {
-        display: flex;
-        flex-direction: column;
-        font-size: 0.9em;
-        padding: 0.75em;
-
-        .neo_blog_post_card_image_container {
-            width: 100%;
-        }
-    }
-
-    .neo_blog_post_card {
-        padding: 1em;
-
-        .neo_blog_post_card_content_div {
-            width: 100%;
-            padding: 0.5em 0;
-
-            p {
-                line-height: unset;
-            }
-        }
-    }
-}
-
-.neo_blog_dark_mode .neo_blog_post_card {
-    border: none;
+  .neo_blog_post_card_image_container {
+    overflow: hidden;
+    display: flex;
+    border-radius: var(--neo_blog_feed_post_card_border_radius_image);
 
     img {
-        filter: brightness(0.8);
+      width: 100%;
+      max-width: 100%;
+      object-fit: var(--neo_blog_image_display_behavior);
+      height: var(--neo_blog_feed_image_height);
+      transition: all 500ms;
     }
+  }
 
-    .neo_blog_post_card_tags_div a {
-        background-color: var(--neo_blog_primary_variant_much_brighter);
-    }
+  .neo_blog_post_card_image_container:hover img {
+    transform: scale(1.2);
+  }
 
-    border: 1px solid rgb(49, 49, 49);
-}
-
-.neo_blog_sticky_post {
-    .neo_blog_post_card_content_div .neo_blog_post_card_buttom_row .neo_blog_post_card_pin {
-        display: block;
-    }
-}
-
-.neo_blog_pagination {
-    margin-top: 2em;
-    margin-bottom: 3em;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    background-color: var(--neo_blog_element_background);
+  .neo_blog_post_card_content_div {
     padding: 0.5em;
-    font-size: clamp(14px, 2vw, 1rem);
+    display: flex;
     flex-direction: column;
+    align-items: flex-start;
+    font-size: 0.9em;
+    grid-column: span 2;
+    height: 100%;
 
-    @media only screen and (max-width: 600px) {
-        font-size: 0.8em;
+    a {
+      text-decoration: none;
     }
 
-    a,
-    span {
-        background-color: var(--neo_blog_element_background_variant_darker);
-        border-radius: 8px;
-        margin: 0.2em;
-        padding: 0.5em 1em;
-        text-decoration: none;
-        vertical-align: middle;
-        height: 100%;
-        box-sizing: border-box;
-        border: 1px solid transparent;
+    p {
+      line-height: var(--neo_blog_feed_post_card_line_height);
     }
 
-    span {
-        border: 1px solid var(--neo_blog_font_color);
+    .neo_blog_post_card_image_date {
+      font-size: 0.8em;
+    }
+
+    .neo_blog_post_card_buttom_row {
+      margin-top: auto;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .neo_blog_post_card_link_div {
+        display: flex;
+        margin-left: auto;
+      }
+
+      .neo_blog_post_card_pin {
+        display: none;
+      }
+
+      .neo_blog_post_card_comments_count {
+        display: flex;
+        align-items: center;
         background-color: var(--neo_blog_body);
+        border: 1px solid rgb(226, 226, 226);
+        text-decoration: none;
+        padding: 0.8em 1.2em;
+        border-radius: 8px;
+        margin-right: 0.5em;
+
+        :nth-child(2) {
+          margin-left: 0.5em;
+        }
+      }
+
+      .neo_blog_post_card_comments_count:hover {
+        background-color: var(--neo_blog_element_background);
+      }
+
+      .neo_blog_post_card_read_more {
+        text-decoration: none;
+        border: 1px solid rgb(226, 226, 226);
+        background-color: var(--neo_blog_body);
+        color: var(--neo_blog_font_color);
+        border-radius: 8px;
+        padding: 0.8em 1.2em;
+      }
+
+      .neo_blog_post_card_read_more:hover {
+        background-color: var(--neo_blog_element_background);
+        transition: all 200ms;
+        color: var(--neo_blog_font_color);
+      }
+    }
+  }
+
+  h2 {
+    margin: 0 0 0.5em 0;
+    color: var(--neo_blog_font_color);
+    font-size: 1.4em;
+  }
+
+  h2:hover {
+    text-decoration: underline;
+  }
+
+  .neo_blog_post_card_tags_div ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: 1.2em;
+    margin-bottom: 0.5em;
+
+    li {
+      margin: 0.4em 0.2em;
+    }
+
+    a {
+      text-decoration: none;
+      color: var(--neo_blog_font_color);
+      text-align: center;
+      padding: 0.6em 1em;
+      border-radius: var(--neo_blog_tags_border_radius);
+      font-size: 0.7em;
+      min-width: 2em;
+      background-color: var(--neo_blog_element_background_variant);
     }
 
     a:hover {
-        background-color: var(--neo_blog_primary_variant_much_brighter);
+      outline: 1px solid rgb(97, 97, 97);
     }
+  }
+}
 
-    .neo_blog_pagination_content {
-        display: flex;
-        align-items: center;
-        width: 100%;
-    }
+.neo_blog_post_card_image_top {
+  grid-template-columns: 1fr;
+  grid-auto-flow: row;
 
-    .neo_blog_pagination_pages {
-        display: flex;
-        flex: 1 1 0%;
-        overflow-x: auto;
+  .neo_blog_post_card_content_div {
+    grid-column: span 1;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .neo_blog_post_card_image_left {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.9em;
+    padding: 0.75em;
+
+    .neo_blog_post_card_image_container {
+      width: 100%;
     }
+  }
+
+  .neo_blog_post_card {
+    padding: 1em;
+
+    .neo_blog_post_card_content_div {
+      width: 100%;
+      padding: 0.5em 0;
+
+      p {
+        line-height: unset;
+      }
+    }
+  }
+}
+
+.neo_blog_dark_mode .neo_blog_post_card {
+  border: none;
+
+  img {
+    filter: brightness(0.8);
+  }
+
+  .neo_blog_post_card_tags_div a {
+    background-color: var(--neo_blog_primary_variant_much_brighter);
+  }
+
+  border: 1px solid rgb(49, 49, 49);
+}
+
+.neo_blog_sticky_post {
+  .neo_blog_post_card_content_div
+    .neo_blog_post_card_buttom_row
+    .neo_blog_post_card_pin {
+    display: block;
+  }
+}
+
+.neo_blog_pagination {
+  margin-top: 2em;
+  margin-bottom: 3em;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: var(--neo_blog_element_background);
+  padding: 0.5em;
+  font-size: clamp(14px, 2vw, 1rem);
+  flex-direction: column;
+
+  @media only screen and (max-width: 600px) {
+    font-size: 0.8em;
+  }
+
+  a,
+  span {
+    background-color: var(--neo_blog_element_background_variant_darker);
+    border-radius: 8px;
+    margin: 0.2em;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    vertical-align: middle;
+    height: 100%;
+    box-sizing: border-box;
+    border: 1px solid transparent;
+  }
+
+  span {
+    border: 1px solid var(--neo_blog_font_color);
+    background-color: var(--neo_blog_body);
+  }
+
+  a:hover {
+    background-color: var(--neo_blog_primary_variant_much_brighter);
+  }
+
+  .neo_blog_pagination_content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+
+  .neo_blog_pagination_pages {
+    display: flex;
+    flex: 1 1 0%;
+    overflow-x: auto;
+  }
 }
 
 .neo_blog_pagination_pages::-webkit-scrollbar {
-    height: 1px;
+  height: 1px;
 }
 
 .neo_blog_pagination_controls {
-    margin-bottom: 1px;
-    box-sizing: border-box;
-    display: flex;
+  margin-bottom: 1px;
+  box-sizing: border-box;
+  display: flex;
 }
 
 html {
-    ::-webkit-scrollbar {
-        width: 15px;
-        height: 10px;
-    }
+  ::-webkit-scrollbar {
+    width: 15px;
+    height: 10px;
+  }
 
-    body {
-        ::-webkit-scrollbar {
-            width: 5px;
-            height: 5px;
-        }
+  body {
+    ::-webkit-scrollbar {
+      width: 5px;
+      height: 5px;
     }
+  }
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-    background: #f1f1f1;
+  background: #f1f1f1;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: #888;
+  background: #888;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: #555;
+  background: #555;
 }
 
 .neo_blog_content_spacer_pages {
-    h1 {
-        text-align: var(--neo_blog_page_title_alignment);
-    }
+  h1 {
+    text-align: var(--neo_blog_page_title_alignment);
+  }
 
-    .neo_blog_article {
-        background-color: var(--neo_blog_background_color_pages);
-    }
+  .neo_blog_article {
+    background-color: var(--neo_blog_background_color_pages);
+  }
 }
 
 .neo_blog_dark_mode .neo_blog_content_spacer_pages .neo_blog_article {
-    background-color: var(--neo_blog_dark_mode_background_color_pages);
+  background-color: var(--neo_blog_dark_mode_background_color_pages);
 }
 
 ::selection {
-    background: var(--neo_blog_primary_variant_much_brighter);
+  background: var(--neo_blog_primary_variant_much_brighter);
 }
 
 input::selection {
-    background: initial;
+  background: initial;
 }
 
 .neo_blog_search_headline {
-    text-align: center;
+  text-align: center;
 }

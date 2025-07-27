@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: neo-blog\n"
-"POT-Creation-Date: 2023-11-10 21:26+0100\n"
-"PO-Revision-Date: 2023-11-10 21:27+0100\n"
+"POT-Creation-Date: 2025-07-27 23:38+0200\n"
+"PO-Revision-Date: 2025-07-27 23:39+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.3.2\n"
+"X-Generator: Poedit 3.4.2\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-KeywordsList: gettext;gettext_noop;__;_e;_n:1,2;_x:1,2c;_ex:1,2c;"
 "esc_html__;esc_html_e\n"
@@ -98,7 +98,7 @@ msgstr "Autorenseite"
 
 #: customizer-options/author-page-options.php:19
 #: customizer-options/feed-options.php:38
-#: customizer-options/posts-options.php:166
+#: customizer-options/posts-options.php:164
 msgid "Show sidebar"
 msgstr "Sidebar anzeigen"
 
@@ -122,8 +122,8 @@ msgstr "Registrierungsdatum anzeigen"
 msgid "Show author website"
 msgstr "Website des Autors anzeigen"
 
-#: customizer-options/author-page-options.php:98
-#: customizer-options/comments-options.php:82
+#: customizer-options/author-page-options.php:97
+#: customizer-options/comments-options.php:81
 msgid "Image size"
 msgstr "Bildgröße"
 
@@ -144,14 +144,14 @@ msgid "Element background color dark mode"
 msgstr "Elemente Hintergrund im dunklen Modus"
 
 #: customizer-options/colors-options.php:54
-#: customizer-options/pages-options.php:68
-#: customizer-options/posts-options.php:75
+#: customizer-options/pages-options.php:67
+#: customizer-options/posts-options.php:73
 msgid "Background color light mode"
 msgstr "Hintergrundfarbe im hellen Modus"
 
 #: customizer-options/colors-options.php:66
-#: customizer-options/pages-options.php:80
-#: customizer-options/posts-options.php:87
+#: customizer-options/pages-options.php:79
+#: customizer-options/posts-options.php:85
 msgid "Background color dark mode"
 msgstr "Hintergrundfarbe im dunklen Modus"
 
@@ -176,7 +176,7 @@ msgid "Comments"
 msgstr "Kommentare"
 
 #: customizer-options/comments-options.php:19
-#: customizer-options/feed-options.php:166
+#: customizer-options/feed-options.php:163
 msgid "Border radius"
 msgstr "Rahmenradius"
 
@@ -192,50 +192,50 @@ msgstr "Rahmen"
 msgid "Show Image"
 msgstr "Bild anzeigen"
 
-#: customizer-options/comments-options.php:107
+#: customizer-options/comments-options.php:105
 msgid "Name font size"
 msgstr "Name Schriftgröße"
 
-#: customizer-options/comments-options.php:126
+#: customizer-options/comments-options.php:124
 msgid "Radius reply button"
 msgstr "Radius Antwortbutton"
 
-#: customizer-options/comments-options.php:144
+#: customizer-options/comments-options.php:142
 msgid "Reply button positon"
 msgstr "Antwortbutton Position"
 
-#: customizer-options/comments-options.php:147
-#: customizer-options/feed-options.php:219
-#: customizer-options/pages-options.php:55
-#: customizer-options/posts-options.php:62
+#: customizer-options/comments-options.php:145
+#: customizer-options/feed-options.php:216
+#: customizer-options/pages-options.php:54
+#: customizer-options/posts-options.php:60
 msgid "left"
 msgstr "links"
 
-#: customizer-options/comments-options.php:148
-#: customizer-options/pages-options.php:56
-#: customizer-options/posts-options.php:63
+#: customizer-options/comments-options.php:146
+#: customizer-options/pages-options.php:55
+#: customizer-options/posts-options.php:61
 msgid "center"
 msgstr "mittig"
 
-#: customizer-options/comments-options.php:149
-#: customizer-options/pages-options.php:57
-#: customizer-options/posts-options.php:64
+#: customizer-options/comments-options.php:147
+#: customizer-options/pages-options.php:56
+#: customizer-options/posts-options.php:62
 msgid "right"
 msgstr "rechts"
 
-#: customizer-options/comments-options.php:162
+#: customizer-options/comments-options.php:160
 msgid "Date positon"
 msgstr "Datumsposition"
 
-#: customizer-options/comments-options.php:165
+#: customizer-options/comments-options.php:163
 msgid "top right corner"
 msgstr "obige rechte Ecke"
 
-#: customizer-options/comments-options.php:166
+#: customizer-options/comments-options.php:164
 msgid "under name"
 msgstr "unter dem Namen"
 
-#: customizer-options/comments-options.php:178
+#: customizer-options/comments-options.php:176
 msgid "Max height in pixels"
 msgstr "Maximale Höhe in Pixeln"
 
@@ -247,60 +247,60 @@ msgstr "Feed"
 msgid "Maximum width of the feed"
 msgstr "Maximale Breite des Feeds"
 
-#: customizer-options/feed-options.php:52
+#: customizer-options/feed-options.php:51
 msgid "Spacing between posts"
 msgstr "Abstand zwischen Beiträgen"
 
-#: customizer-options/feed-options.php:69
+#: customizer-options/feed-options.php:68
 msgid "Number of words in the snippet"
 msgstr "Anzahl der Wörter in der Vorschau"
 
-#: customizer-options/feed-options.php:88
-#: customizer-options/posts-options.php:127
+#: customizer-options/feed-options.php:87
+#: customizer-options/posts-options.php:125
 msgid "Show tags"
 msgstr "Tags anzeigen"
 
-#: customizer-options/feed-options.php:102
+#: customizer-options/feed-options.php:100
 msgid "Tags border radius"
 msgstr "Radius der Tags"
 
-#: customizer-options/feed-options.php:121
+#: customizer-options/feed-options.php:119
 msgid "Show read more button"
 msgstr "Schaltfläche „Mehr lesen“ anzeigen"
 
-#: customizer-options/feed-options.php:134
+#: customizer-options/feed-options.php:132
 msgid "Show comments"
 msgstr "Kommentare anzeigen"
 
-#: customizer-options/feed-options.php:148
+#: customizer-options/feed-options.php:145
 msgid "Line height in text snippet"
 msgstr "Zeilenhöhe im Textausschnitt"
 
-#: customizer-options/feed-options.php:184
+#: customizer-options/feed-options.php:181
 msgid "Padding"
 msgstr "Innenabstand (Padding)"
 
-#: customizer-options/feed-options.php:202
+#: customizer-options/feed-options.php:199
 msgid "Show image"
 msgstr "Bild anzeigen"
 
-#: customizer-options/feed-options.php:215
+#: customizer-options/feed-options.php:212
 msgid "Image postion"
 msgstr "Bildposition"
 
-#: customizer-options/feed-options.php:220
+#: customizer-options/feed-options.php:217
 msgid "top"
 msgstr "oben"
 
-#: customizer-options/feed-options.php:233
+#: customizer-options/feed-options.php:230
 msgid "Image display behavior"
 msgstr "Bild-Anzeige-Verhalten"
 
-#: customizer-options/feed-options.php:254
+#: customizer-options/feed-options.php:250
 msgid "Image radius"
 msgstr "Bildradius"
 
-#: customizer-options/feed-options.php:274
+#: customizer-options/feed-options.php:269
 msgid "Image height"
 msgstr "Bildhöhe"
 
@@ -321,12 +321,12 @@ msgid "Main text font"
 msgstr "Haupttextschriftart"
 
 #: customizer-options/fonts-options.php:49
-#: customizer-options/header-options.php:253
+#: customizer-options/header-options.php:249
 msgid "Font color light mode"
 msgstr "Schriftfarbe im hellen Modus"
 
 #: customizer-options/fonts-options.php:61
-#: customizer-options/header-options.php:265
+#: customizer-options/header-options.php:261
 msgid "Font color dark mode"
 msgstr "Schriftfarbe im dunklen Modus"
 
@@ -358,43 +358,43 @@ msgstr "Suchbutton anzeigen"
 msgid "Show title"
 msgstr "Titel anzeigen"
 
-#: customizer-options/header-options.php:99
+#: customizer-options/header-options.php:98
 msgid "Title size"
 msgstr "Titelgröße"
 
-#: customizer-options/header-options.php:118
+#: customizer-options/header-options.php:117
 msgid "Show slogan"
 msgstr "Slogan anzeigen"
 
-#: customizer-options/header-options.php:132
+#: customizer-options/header-options.php:130
 msgid "Slogan size"
 msgstr "Slogan Größe"
 
-#: customizer-options/header-options.php:151
+#: customizer-options/header-options.php:149
 msgid "Text background"
 msgstr "Hintergrundfarbe der Texte"
 
-#: customizer-options/header-options.php:165
+#: customizer-options/header-options.php:162
 msgid "Element spacing"
 msgstr "Abstand der Elemente"
 
-#: customizer-options/header-options.php:207
+#: customizer-options/header-options.php:204
 msgid "Background image"
 msgstr "Hintergrundbild"
 
-#: customizer-options/header-options.php:224
+#: customizer-options/header-options.php:220
 msgid "Background image saturation"
 msgstr "Sättigung des Hintergundbildes"
 
-#: customizer-options/header-options.php:241
+#: customizer-options/header-options.php:237
 msgid "Banner image"
 msgstr "Bannerbild"
 
-#: customizer-options/header-options.php:277
+#: customizer-options/header-options.php:273
 msgid "Font color menu"
 msgstr "Schriftfarbe des Menüs"
 
-#: customizer-options/header-options.php:290
+#: customizer-options/header-options.php:286
 msgid "Menu backgound color"
 msgstr "Hintergrundfarbe des Menüs"
 
@@ -430,16 +430,16 @@ msgstr "Seiten"
 msgid "Options for WordPress \"Pages\"."
 msgstr "Optionen für WordPress \"Seiten\"."
 
-#: customizer-options/pages-options.php:21
+#: customizer-options/pages-options.php:20
 msgid "Maximum width of pages"
 msgstr "Maximale Breite des Seiten"
 
-#: customizer-options/pages-options.php:39
+#: customizer-options/pages-options.php:38
 msgid "Show Sidebar"
 msgstr "Sidebar anzeigen"
 
-#: customizer-options/pages-options.php:53
-#: customizer-options/posts-options.php:60
+#: customizer-options/pages-options.php:52
+#: customizer-options/posts-options.php:58
 msgid "Page Title Alignment"
 msgstr "Seitentitel Ausrichtung"
 
@@ -451,55 +451,55 @@ msgstr "Beiträge"
 msgid "Settings of the individual posts."
 msgstr "Einstellungen der einzelnen Beträge."
 
-#: customizer-options/posts-options.php:21
+#: customizer-options/posts-options.php:20
 msgid "Maximum width of posts"
 msgstr "Maximale Breite des Beitrags"
 
-#: customizer-options/posts-options.php:40
+#: customizer-options/posts-options.php:38
 msgid "Heading font size"
 msgstr "Überschrift Schriftgröße"
 
-#: customizer-options/posts-options.php:101
+#: customizer-options/posts-options.php:99
 msgid "Show date"
 msgstr "Datum anzeigen"
 
-#: customizer-options/posts-options.php:114
+#: customizer-options/posts-options.php:112
 msgid "Show categories"
 msgstr "Kategorien anzeigen"
 
-#: customizer-options/posts-options.php:140
+#: customizer-options/posts-options.php:138
 msgid "Show author details"
 msgstr "Autorendetails anzeigen"
 
-#: customizer-options/posts-options.php:153
+#: customizer-options/posts-options.php:151
 msgid "Show post pagination"
 msgstr "Post-Paginierung anzeigen"
 
-#: functions.php:82
+#: functions.php:67
 msgid "Header Menu"
 msgstr "Kopfzeilenmenü"
 
-#: functions.php:83
+#: functions.php:68
 msgid "Footer Menu"
 msgstr "Fußzeilenmenü"
 
-#: functions.php:92
+#: functions.php:77
 msgid "Sidebar"
 msgstr "Sidebar"
 
-#: functions.php:112
+#: functions.php:97
 msgid "Your Name"
 msgstr "Dein Name"
 
-#: functions.php:119
+#: functions.php:104
 msgid "Your Email"
 msgstr "Deine E-Mail"
 
-#: functions.php:126
+#: functions.php:111
 msgid "Your Website"
 msgstr "Deine Website"
 
-#: header.php:33
+#: header.php:21
 msgid "Skip to main content"
 msgstr "Springe zum Hauptinhalt"
 
@@ -518,45 +518,3 @@ msgstr "Nächster Beitrag &raquo;"
 #: template-parts/post-card.php:47
 msgid "read more"
 msgstr "Mehr lesen"
-
-#~ msgid "Home page"
-#~ msgstr "Startseite"
-
-#~ msgid "open menu"
-#~ msgstr "öffne Menü"
-
-#~ msgid "Search"
-#~ msgstr "Suche"
-
-#~ msgid "Line height in paragraphs"
-#~ msgstr "Zeilenhöhe in Absätzen"
-
-#~ msgid "Menu style"
-#~ msgstr "Menü Style"
-
-#~ msgid "Show share area"
-#~ msgstr "Teilen-Bereich anzeigen"
-
-#, fuzzy
-#~| msgid "Background color dark mode"
-#~ msgid "Background color dark modeneo_blog"
-#~ msgstr "Hintergrundfarbe im dunklen Modus"
-
-#, fuzzy
-#~| msgid "Light"
-#~ msgid "Right"
-#~ msgstr "Hell"
-
-#~ msgid "Dark Mode"
-#~ msgstr "Dark Mode"
-
-#, fuzzy
-#~| msgid "Number of posts"
-#~ msgid "Number of posts:"
-#~ msgstr "Anzahl der Beiträge"
-
-#~ msgid "Category:"
-#~ msgstr "Kategorie:"
-
-#~ msgid "Tag:"
-#~ msgstr "Tag:"

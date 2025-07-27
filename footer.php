@@ -11,12 +11,6 @@
     <div class="neo_blog_footer_info">
         <div>
             <a href="https://wordpress.org/themes/neo-blog/" target="_blank">Neo Blog WordPress Theme</a>
-        <?php
-                printf(
-                    esc_html__('created by %1$s', 'neo-blog'),
-                    '<a href="https://ricoswebsite.com/" target="_blank" rel="designer">Rico</a>'
-                );
-            ?>
         </div>
     </div>
 </footer>

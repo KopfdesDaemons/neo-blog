@@ -25,6 +25,9 @@ Elevate your blogging experience with Neo Blog.
 
 == Changelog ==
 
+    = 1.1.0 =
+        - removed theme author website link
+
     = 1.0.5 =
         - Header meta tags removed (plugin territory)
         - more detailed copyright information for images and theme
